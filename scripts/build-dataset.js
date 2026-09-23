@@ -5,6 +5,18 @@ const RAW = path.join(__dirname, '..', 'data', 'raw');
 const kr = JSON.parse(fs.readFileSync(path.join(RAW, 'kr-details.json'), 'utf8'));
 const tw = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-details.json'), 'utf8'));
 
+const splitPath = path.join(RAW, 'kr-item-split.json');
+const splitEntries = fs.existsSync(splitPath) ? JSON.parse(fs.readFileSync(splitPath, 'utf8')) : [];
+const splitMap = new Map(); // noticeId -> entries[]
+for (const e of splitEntries) {
+  if (!splitMap.has(e.noticeId)) splitMap.set(e.noticeId, []);
+  splitMap.get(e.noticeId).push(e);
+}
+// Generic promo/event entries that surface inside a fashion notice's image set but aren't
+// themselves a cosmetic item (store cashback, attendance streak rewards, etc.) — keep them out
+// of the per-item split since they'd just be noise on a fashion timeline.
+const NON_FASHION_TITLE = /페이백|출석 이벤트|스토어 활동|쿠폰 지급/;
+
 function imgKey(url) {
   // extract the /community/{date}/{uuid}/ part which is shared between KR/TW when assets are reused
   const m = url.match(/\/community\/\d+\/([a-f0-9-]{36})\//);
@@ -84,6 +96,46 @@ function categorize(title) {
   return '其他商城';
 }
 
+// Parse a Korean sale-date string like "2025년 4월 24일(목) 점검 후 ~ 2025년 5월 22일(목) 05:59까지"
+// or "2025/12/18(목) 점검 후 ~ ..." into the site's "YYYY.MM.DD" convention. Returns null if
+// no recognizable date is found (caller falls back to the parent notice's date).
+function parseStartDate(text) {
+  if (!text) return null;
+  const m = text.match(/(\d{4})[년/](\d{1,2})[월/](\d{1,2})일?/);
+  if (!m) return null;
+  const [, y, mo, d] = m;
+  return `${y}.${mo.padStart(2, '0')}.${d.padStart(2, '0')}`;
+}
+
+// Match a single raw image URL against the TW image index and return { released, fully, date, titles }.
+function matchTwForImages(rawImageUrls, legendaryMatch) {
+  const matchedThreads = new Map();
+  let matchedImageCount = 0;
+  for (const img of rawImageUrls) {
+    const k = imgKey(img);
+    const t = k && twIndex.get(k);
+    if (t) {
+      matchedImageCount++;
+      matchedThreads.set(t.threadId, t);
+    }
+  }
+  if (legendaryMatch && !matchedThreads.has(legendaryMatch.twThreadId)) {
+    const t = tw.find(x => x.threadId === legendaryMatch.twThreadId);
+    if (t) matchedThreads.set(t.threadId, t);
+  }
+  const twThreadsMatched = [...matchedThreads.values()].sort((a, b) => a.createDate - b.createDate);
+  const twDates = [...new Set(twThreadsMatched.map(t => t.createDate))];
+  return {
+    twReleased: matchedThreads.size > 0,
+    twFullyReleased: !!legendaryMatch || (matchedImageCount > 0 && matchedImageCount === rawImageUrls.length),
+    twMatchedImageCount: matchedImageCount,
+    twTotalImageCount: rawImageUrls.length,
+    twDate: twDates.length ? twDates[0] : null,
+    twDates,
+    twTitles: [...new Set(twThreadsMatched.map(t => t.title))],
+  };
+}
+
 const skipPatterns = [
   /획득 종료 일정/, /추가 능력치 관련 보상/, /소급 시스템/, /의상 수정 관련/,
   /당첨 안내/, /지급완료/, /인증 이벤트/, /언박싱 댓글 이벤트/,
@@ -97,33 +149,40 @@ for (const r of kr) {
   const category = categorize(r.title);
   if (category === '公告更正') continue;
 
-  // Match each KR image independently against TW's image index — a KR notice can bundle
-  // several distinct pieces, and TW may release them piecemeal across different threads/dates
-  // rather than all at once, so a single "first match" flag would misrepresent partial releases.
-  const matchedThreads = new Map(); // threadId -> tw thread
-  let matchedImageCount = 0;
-  for (const img of r.contentImages) {
-    const k = imgKey(img);
-    const t = k && twIndex.get(k);
-    if (t) {
-      matchedImageCount++;
-      matchedThreads.set(t.threadId, t);
-    }
-  }
   const name = cleanName(r.title);
-
-  // For legendary sets, prefer the verified title-based mapping over image matching — TW almost
-  // always re-renders its own marketing banner with a fresh CDN UUID even when reusing the same
-  // costume, so image-UUID matching alone misses most legendary launches (only catches cases
-  // where individual character-pose renders happen to be reused verbatim).
   const legendaryMatch = category === '套組時裝' ? LEGENDARY_TW_MAP[name] : null;
-  if (legendaryMatch && !matchedThreads.has(legendaryMatch.twThreadId)) {
-    const t = tw.find(x => x.threadId === legendaryMatch.twThreadId);
-    if (t) matchedThreads.set(t.threadId, t);
+
+  const splitForNotice = (splitMap.get(r.id) || []).filter(
+    e => e.titleKr && !NON_FASHION_TITLE.test(e.titleKr)
+  );
+
+  if (splitForNotice.length > 0) {
+    // Each entry in the notice's image bundle is an independently named, independently sold
+    // item (e.g. a "럭키박스 & 패션샵" notice bundles several unrelated costume sets in one
+    // announcement) — split into one card per item, each matched against TW individually so a
+    // notice isn't shown as fully "not released" just because one piece in the bundle isn't.
+    for (const entry of splitForNotice) {
+      const idxMatch = entry.imageFile.match(/_(\d+)\.webp$/);
+      const imgIndex = idxMatch ? parseInt(idxMatch[1], 10) : 0;
+      const rawUrl = r.contentImages[imgIndex];
+      if (!rawUrl) continue;
+      const twInfo = matchTwForImages([rawUrl], null);
+      items.push({
+        id: `${r.id}_${imgIndex}`,
+        title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
+        name: entry.titleKr,
+        displayName: entry.titleKr,
+        category,
+        krDate: parseStartDate(entry.saleDateText) || r.date,
+        images: [rawUrl],
+        sourceUrl: r.url,
+        ...twInfo,
+      });
+    }
+    continue;
   }
 
-  const twThreadsMatched = [...matchedThreads.values()].sort((a, b) => a.createDate - b.createDate);
-  const twDates = [...new Set(twThreadsMatched.map(t => t.createDate))];
+  const twInfo = matchTwForImages(r.contentImages, legendaryMatch);
   const twNameOverride = legendaryMatch ? legendaryMatch.twName : null;
 
   items.push({
@@ -135,25 +194,24 @@ for (const r of kr) {
     krDate: r.date,
     images: r.contentImages,
     sourceUrl: r.url,
-    twReleased: matchedThreads.size > 0,
-    twFullyReleased: !!legendaryMatch || (matchedImageCount > 0 && matchedImageCount === r.contentImages.length),
-    twMatchedImageCount: matchedImageCount,
-    twTotalImageCount: r.contentImages.length,
-    twDate: twDates.length ? twDates[0] : null, // earliest TW date among matched pieces
-    twDates,
-    twTitles: [...new Set(twThreadsMatched.map(t => t.title))],
+    ...twInfo,
   });
 }
 
 items.sort((a, b) => (a.krDate || '').localeCompare(b.krDate || ''));
 
-// Preserve already-downloaded/optimized localImages from a previous run, keyed by id.
+// Preserve already-downloaded/optimized localImages from a previous run, keyed by id. For
+// freshly split items (new ids like "2839212_1"), fall back to the single local image path
+// matching the original filename convention "{noticeId}_{imageIndex}.webp" downloaded earlier
+// from the un-split notice, since download-images.js keys off the notice id + index too.
 const outPath = path.join(__dirname, '..', 'data', 'fashion.json');
 if (fs.existsSync(outPath)) {
   const prev = JSON.parse(fs.readFileSync(outPath, 'utf8'));
   const prevMap = new Map(prev.map(p => [p.id, p.localImages]));
   items.forEach(i => {
-    if (prevMap.has(i.id)) i.localImages = prevMap.get(i.id);
+    if (prevMap.has(i.id)) {
+      i.localImages = prevMap.get(i.id);
+    }
   });
 }
 
@@ -165,3 +223,4 @@ console.log(byCat);
 console.log('TW released (any piece):', items.filter(i => i.twReleased).length);
 console.log('TW fully released (all pieces):', items.filter(i => i.twFullyReleased).length);
 console.log('TW partially released:', items.filter(i => i.twReleased && !i.twFullyReleased).length);
+console.log('Items missing localImages:', items.filter(i => !i.localImages).length);

@@ -1,0 +1,625 @@
+[
+  {
+    "noticeId": "2839212",
+    "imageFile": "assets/fashion-web/2839212_0.webp",
+    "titleKr": "정열의 춤: 카르메나 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 4월 24일(목) 점검 후 ~ 2025년 5월 22일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2839212",
+    "imageFile": "assets/fashion-web/2839212_1.webp",
+    "titleKr": "고요한 심판: 솔리드 엠버 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 4월 24일(목) 점검 후 ~ 2025년 5월 22일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2839212",
+    "imageFile": "assets/fashion-web/2839212_2.webp",
+    "titleKr": "신규 펫: 아기 늑대 획득 가능!",
+    "itemType": "pet",
+    "saleDateText": "2025년 4월 24일(목) 점검 후 ~ 2025년 6월 19일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3100668",
+    "imageFile": "assets/fashion-web/3100668_0.webp",
+    "titleKr": "두근두근 탐험대: 스카우터 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 8월 21일(목) 점검 후 ~ 2025년 9월 24일(수) 23:59까지"
+  },
+  {
+    "noticeId": "3100668",
+    "imageFile": "assets/fashion-web/3100668_1.webp",
+    "titleKr": "싱그러운 바람: 브리즈 트래블 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 8월 21일(목) 점검 후 ~ 2025년 9월 24일(수) 23:59까지"
+  },
+  {
+    "noticeId": "3100668",
+    "imageFile": "assets/fashion-web/3100668_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3100668",
+    "imageFile": "assets/fashion-web/3100668_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3311101",
+    "imageFile": "assets/fashion-web/3311101_0.webp",
+    "titleKr": "헬로키티: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2025년 12월 18일(목) 점검 후 ~ 2026년 1월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3311101",
+    "imageFile": "assets/fashion-web/3311101_1.webp",
+    "titleKr": "쿠로미: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2025년 12월 18일(목) 점검 후 ~ 2026년 1월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3311101",
+    "imageFile": "assets/fashion-web/3311101_2.webp",
+    "titleKr": "멍멍! 폼폼푸린: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2025년 12월 18일(목) 점검 후 ~ 2026년 1월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3311101",
+    "imageFile": "assets/fashion-web/3311101_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3373326",
+    "imageFile": "assets/fashion-web/3373326_0.webp",
+    "titleKr": "장밋빛 설렘: 스위트 카페 쇼콜라 세트",
+    "itemType": "costume",
+    "saleDateText": "2026년 2월 12일(목) 점검 후 ~ 2026년 3월 26일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3373326",
+    "imageFile": "assets/fashion-web/3373326_1.webp",
+    "titleKr": "달콤한 고백: 러블리 밸런타인 세트",
+    "itemType": "costume",
+    "saleDateText": "2026년 2월 12일(목) 점검 후 ~ 2026년 3월 26일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3373326",
+    "imageFile": "assets/fashion-web/3373326_2.webp",
+    "titleKr": "아기 늑대: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2026년 2월 12일(목) 점검 후 ~ 2026년 3월 26일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3373326",
+    "imageFile": "assets/fashion-web/3373326_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3447996",
+    "imageFile": "assets/fashion-web/3447996_0.webp",
+    "titleKr": "디어 그레이스: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 5월 21일(목) 점검 후 ~ 2026년 6월 24일(수) 23:59까지"
+  },
+  {
+    "noticeId": "3447996",
+    "imageFile": "assets/fashion-web/3447996_1.webp",
+    "titleKr": "젠틀 그레이스: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 5월 21일(목) 점검 후 ~ 2026년 6월 24일(수) 23:59까지"
+  },
+  {
+    "noticeId": "3447996",
+    "imageFile": "assets/fashion-web/3447996_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3505478",
+    "imageFile": "assets/fashion-web/3505478_0.webp",
+    "titleKr": "게코 도마뱀: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2026년 7월 23일(목) 점검 후 ~ 2026년 9월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3505478",
+    "imageFile": "assets/fashion-web/3505478_1.webp",
+    "titleKr": "시추: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2026년 7월 23일(목) 점검 후 ~ 2026년 12월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3545054",
+    "imageFile": "assets/fashion-web/3545054_0.webp",
+    "titleKr": "클라우드 래미: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 9월 17일(목) 점검 후 ~ 2026년 10월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3545054",
+    "imageFile": "assets/fashion-web/3545054_1.webp",
+    "titleKr": "루센트 오스: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 9월 17일(목) 점검 후 ~ 2026년 10월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3545054",
+    "imageFile": "assets/fashion-web/3545054_2.webp",
+    "titleKr": "달빛 서고의 한복 & 별빛 서고의 한복",
+    "itemType": "costume",
+    "saleDateText": "2026년 9월 17일(목) 점검 후 ~ 2026년 10월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3545054",
+    "imageFile": "assets/fashion-web/3545054_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "2906352",
+    "imageFile": "assets/fashion-web/2906352_0.webp",
+    "titleKr": "봄 운동회 : 봄바람 트랙 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 5월 22일(목) 점검 후 ~ 2025년 6월 19일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2906352",
+    "imageFile": "assets/fashion-web/2906352_1.webp",
+    "titleKr": "빛나는 응원 : 램스타즈 응원단 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 5월 22일(목) 점검 후 ~ 2025년 6월 19일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2906352",
+    "imageFile": "assets/fashion-web/2906352_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3147457",
+    "imageFile": "assets/fashion-web/3147457_0.webp",
+    "titleKr": "거룩한 신념 : 디바인 저지먼트 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 9월 25일(목) 점검 후 ~ 2025년 10월 30일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3147457",
+    "imageFile": "assets/fashion-web/3147457_1.webp",
+    "titleKr": "정화의 빛 : 루멘 솔렘니스 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 9월 25일(목) 점검 후 ~ 2025년 10월 30일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3147457",
+    "imageFile": "assets/fashion-web/3147457_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3147457",
+    "imageFile": "assets/fashion-web/3147457_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3311096",
+    "imageFile": "assets/fashion-web/3311096_0.webp",
+    "titleKr": "겨울의 오솔길 : 코니 테디베어 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 12월 18일(목) 점검 후 ~ 2026년 1월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3311096",
+    "imageFile": "assets/fashion-web/3311096_1.webp",
+    "titleKr": "빙해의 숨결 : 빈터 크리거 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 12월 18일(목) 점검 후 ~ 2026년 1월 15일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3311096",
+    "imageFile": "assets/fashion-web/3311096_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3311096",
+    "imageFile": "assets/fashion-web/3311096_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3407264",
+    "imageFile": "assets/fashion-web/3407264_0.webp",
+    "titleKr": "피어나는 햇살 : 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 3월 26일(목) 점검 후 ~ 2026년 4월 23일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3407264",
+    "imageFile": "assets/fashion-web/3407264_1.webp",
+    "titleKr": "하이스쿨 크러쉬 : 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 3월 26일(목) 점검 후 ~ 2026년 4월 23일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3407264",
+    "imageFile": "assets/fashion-web/3407264_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3407264",
+    "imageFile": "assets/fashion-web/3407264_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3481577",
+    "imageFile": "assets/fashion-web/3481577_0.webp",
+    "titleKr": "스위트 문나이트 : 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 6월 25일(목) 점검 후 ~ 2026년 7월 16일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3481577",
+    "imageFile": "assets/fashion-web/3481577_1.webp",
+    "titleKr": "벨크레스트 : 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 6월 25일(목) 점검 후 ~ 2026년 7월 16일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3481577",
+    "imageFile": "assets/fashion-web/3481577_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3481577",
+    "imageFile": "assets/fashion-web/3481577_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3545055",
+    "imageFile": "assets/fashion-web/3545055_0.webp",
+    "titleKr": "그랜드 앙상블 토탈 패키지",
+    "itemType": "other",
+    "saleDateText": "2026년 9월 17일(목) 점검 후 ~ 2026년 12월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3545055",
+    "imageFile": "assets/fashion-web/3545055_1.webp",
+    "titleKr": null,
+    "itemType": "mount",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3545055",
+    "imageFile": "assets/fashion-web/3545055_2.webp",
+    "titleKr": null,
+    "itemType": "mount",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3545055",
+    "imageFile": "assets/fashion-web/3545055_3.webp",
+    "titleKr": null,
+    "itemType": "costume",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "2957846",
+    "imageFile": "assets/fashion-web/2957846_0.webp",
+    "titleKr": "달그림자 기사단: 베일문 가디언 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 6월 19일(목) 점검 후 ~ 2025년 7월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2957846",
+    "imageFile": "assets/fashion-web/2957846_1.webp",
+    "titleKr": "서리꽃의 연회: 에델 그레이스 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 6월 19일(목) 점검 후 ~ 2025년 7월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2957846",
+    "imageFile": "assets/fashion-web/2957846_2.webp",
+    "titleKr": "아기 올빼미: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2025년 6월 19일(목) 점검 후 ~ 2025년 8월 21일(목) 05:59까지"
+  },
+  {
+    "noticeId": "2957846",
+    "imageFile": "assets/fashion-web/2957846_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3201524",
+    "imageFile": "assets/fashion-web/3201524_0.webp",
+    "titleKr": "은은한 끌림: 엘레강트 뮤즈 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 10월 30일(목) 점검 후 ~ 2025년 11월 27일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3201524",
+    "imageFile": "assets/fashion-web/3201524_1.webp",
+    "titleKr": "연회의 주인: 타임리스 미뉴엣 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 10월 30일(목) 점검 후 ~ 2025년 11월 27일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3201524",
+    "imageFile": "assets/fashion-web/3201524_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3201524",
+    "imageFile": "assets/fashion-web/3201524_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3311070",
+    "imageFile": "assets/fashion-web/3311070_0.webp",
+    "titleKr": "데이지의 작은 패션 아틀리에 반짝 오픈!",
+    "itemType": "other",
+    "saleDateText": "2025/12/18(목) 점검 후 ~ 2026/01/15(목) 05:59"
+  },
+  {
+    "noticeId": "3311070",
+    "imageFile": "assets/fashion-web/3311070_1.webp",
+    "titleKr": "반짝반짝! 던바튼의 크리스마스 이벤트",
+    "itemType": "other",
+    "saleDateText": "2025/12/18(목) 점검 후 ~ 2026/01/15(목) 05:59"
+  },
+  {
+    "noticeId": "3311070",
+    "imageFile": "assets/fashion-web/3311070_2.webp",
+    "titleKr": "갤럭시 스토어 20% 페이백 이벤트",
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3311070",
+    "imageFile": "assets/fashion-web/3311070_3.webp",
+    "titleKr": "추석맞이 매일매일 출석 이벤트",
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3407263",
+    "imageFile": "assets/fashion-web/3407263_0.webp",
+    "titleKr": "노르웨이 숲: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2026년 3월 26일(목) 점검 후 ~ 2026년 5월 21일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3407263",
+    "imageFile": "assets/fashion-web/3407263_1.webp",
+    "titleKr": "아기 올빼미: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2026년 3월 26일(목) 점검 후 ~ 2026년 7월 9일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3416432",
+    "imageFile": "assets/fashion-web/3416432_0.webp",
+    "titleKr": "Galaxy S26 Ultra 나오 액세서리 에디션 출시",
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3416432",
+    "imageFile": "assets/fashion-web/3416432_1.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3416432",
+    "imageFile": "assets/fashion-web/3416432_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3416432",
+    "imageFile": "assets/fashion-web/3416432_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3521633",
+    "imageFile": "assets/fashion-web/3521633_0.webp",
+    "titleKr": "폼폼 소다 비치웨어: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 8월 13일(목) 점검 후 ~ 2026년 9월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3521633",
+    "imageFile": "assets/fashion-web/3521633_1.webp",
+    "titleKr": "트로피컬 선라이즈: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 8월 13일(목) 점검 후 ~ 2026년 9월 17일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3521633",
+    "imageFile": "assets/fashion-web/3521633_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null
+  },
+  {
+    "noticeId": "3037067",
+    "imageFile": "assets/fashion-web/3037067_0.webp",
+    "titleKr": "잔물결의 기억: 코지 크로셰 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 7월 17일(목) 점검 후 ~ 2025년 8월 21일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3037067",
+    "imageFile": "assets/fashion-web/3037067_1.webp",
+    "titleKr": "해변의 풍경: 블룸 코스트 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 7월 17일(목) 점검 후 ~ 2025년 8월 21일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3037067",
+    "imageFile": "assets/fashion-web/3037067_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Face sticker/decal accessory shown on character portraits (front/side views), no title text overlay visible"
+  },
+  {
+    "noticeId": "3037067",
+    "imageFile": "assets/fashion-web/3037067_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Second variant of face sticker/decal accessory, no title text overlay visible"
+  },
+  {
+    "noticeId": "3272483",
+    "imageFile": "assets/fashion-web/3272483_0.webp",
+    "titleKr": "대양의 기상: 스토미 캡틴 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 11월 27일(목) 점검 후 ~ 2025년 12월 18일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3272483",
+    "imageFile": "assets/fashion-web/3272483_1.webp",
+    "titleKr": "자유의 파도: 제스티 보야지 세트",
+    "itemType": "costume",
+    "saleDateText": "2025년 11월 27일(목) 점검 후 ~ 2025년 12월 18일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3272483",
+    "imageFile": "assets/fashion-web/3272483_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Eye patch/bandage face accessory shown on character portraits, no title text overlay visible"
+  },
+  {
+    "noticeId": "3272483",
+    "imageFile": "assets/fashion-web/3272483_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Second variant of eye patch face accessory, no title text overlay visible"
+  },
+  {
+    "noticeId": "3345414",
+    "imageFile": "assets/fashion-web/3345414_0.webp",
+    "titleKr": "겨울날의 여정: 겨울 숲 탐험가 세트",
+    "itemType": "costume",
+    "saleDateText": "2026년 1월 15일(목) 점검 후 ~ 2026년 2월 12일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3345414",
+    "imageFile": "assets/fashion-web/3345414_1.webp",
+    "titleKr": "고요한 동행: 겨울 숲 파수꾼 세트",
+    "itemType": "costume",
+    "saleDateText": "2026년 1월 15일(목) 점검 후 ~ 2026년 2월 12일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3345414",
+    "imageFile": "assets/fashion-web/3345414_2.webp",
+    "titleKr": "예언의 은둔자: 사일런트 플렛지 세트",
+    "itemType": "costume",
+    "saleDateText": "2026년 1월 15일(목) 점검 후 ~ 2026년 2월 12일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3345414",
+    "imageFile": "assets/fashion-web/3345414_3.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Woven/knit face covering accessory over eyes, no title text overlay visible"
+  },
+  {
+    "noticeId": "3414447",
+    "imageFile": "assets/fashion-web/3414447_0.webp",
+    "titleKr": "바람 따라 다람쥐: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 4월 2일(목) 점검 후 ~ 2026년 4월 23일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3414447",
+    "imageFile": "assets/fashion-web/3414447_1.webp",
+    "titleKr": "도토리 햄스터: 펫 럭키박스",
+    "itemType": "pet",
+    "saleDateText": "2026년 4월 2일(목) 점검 후 ~ 2026년 4월 23일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3428346",
+    "imageFile": "assets/fashion-web/3428346_0.webp",
+    "titleKr": "스트릿 비트: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 4월 23일(목) 점검 후 ~ 2026년 5월 21일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3428346",
+    "imageFile": "assets/fashion-web/3428346_1.webp",
+    "titleKr": "아르젠트 크레스트: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 4월 23일(목) 점검 후 ~ 2026년 5월 21일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3428346",
+    "imageFile": "assets/fashion-web/3428346_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Black/red face mask accessory shown on character portraits, no title text overlay visible"
+  },
+  {
+    "noticeId": "3500246",
+    "imageFile": "assets/fashion-web/3500246_0.webp",
+    "titleKr": "펄 오션 비치웨어: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 7월 16일(목) 점검 후 ~ 2026년 8월 13일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3500246",
+    "imageFile": "assets/fashion-web/3500246_1.webp",
+    "titleKr": "마린 웨이브 유니폼: 패션 럭키박스",
+    "itemType": "costume",
+    "saleDateText": "2026년 7월 16일(목) 점검 후 ~ 2026년 8월 13일(목) 05:59까지"
+  },
+  {
+    "noticeId": "3500246",
+    "imageFile": "assets/fashion-web/3500246_2.webp",
+    "titleKr": null,
+    "itemType": "other",
+    "saleDateText": null,
+    "note": "Round sunglasses face accessory shown on character portraits, no title text overlay visible"
+  }
+]

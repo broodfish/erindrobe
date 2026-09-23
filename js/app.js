@@ -87,29 +87,50 @@
     img.addEventListener("click", () => openLightbox(imgs, idx));
     media.appendChild(img);
 
+    function setIdx(i) {
+      idx = (i + imgs.length) % imgs.length;
+      img.src = imgs[idx];
+      if (media._dots) {
+        [...media._dots.children].forEach((d, di) => d.classList.toggle("active", di === idx));
+      }
+      if (media._counter) media._counter.textContent = `${idx + 1}/${imgs.length}`;
+    }
+
     if (imgs.length > 1) {
+      const prevBtn = document.createElement("button");
+      prevBtn.className = "img-arrow prev";
+      prevBtn.type = "button";
+      prevBtn.setAttribute("aria-label", "上一張圖");
+      prevBtn.textContent = "‹";
+      prevBtn.addEventListener("click", (e) => { e.stopPropagation(); setIdx(idx - 1); });
+
+      const nextBtn = document.createElement("button");
+      nextBtn.className = "img-arrow next";
+      nextBtn.type = "button";
+      nextBtn.setAttribute("aria-label", "下一張圖");
+      nextBtn.textContent = "›";
+      nextBtn.addEventListener("click", (e) => { e.stopPropagation(); setIdx(idx + 1); });
+
       const nav = document.createElement("div");
       nav.className = "img-nav";
       imgs.forEach((_, i) => {
-        const dot = document.createElement("span");
+        const dot = document.createElement("button");
+        dot.type = "button";
         dot.className = "img-dot" + (i === 0 ? " active" : "");
+        dot.setAttribute("aria-label", `第 ${i + 1} 張圖`);
+        dot.addEventListener("click", (e) => { e.stopPropagation(); setIdx(i); });
         nav.appendChild(dot);
       });
+      media._dots = nav;
+      media.appendChild(prevBtn);
+      media.appendChild(nextBtn);
       media.appendChild(nav);
-      media.addEventListener("mouseenter", () => {
-        media.dataset.hover = "1";
-        cycle();
-      });
-      media.addEventListener("mouseleave", () => {
-        media.dataset.hover = "0";
-      });
-      function cycle() {
-        if (media.dataset.hover !== "1") return;
-        idx = (idx + 1) % imgs.length;
-        img.src = imgs[idx];
-        [...nav.children].forEach((d, i) => d.classList.toggle("active", i === idx));
-        setTimeout(cycle, 900);
-      }
+
+      const counter = document.createElement("span");
+      counter.className = "img-counter";
+      counter.textContent = `1/${imgs.length}`;
+      media.appendChild(counter);
+      media._counter = counter;
     }
 
     const badge = document.createElement("span");

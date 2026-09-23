@@ -30,55 +30,113 @@
     ]
   },
   {
-    "id": "2839212",
+    "id": "2839212_0",
     "title": "(추가) 럭키 박스&아이템샵 안내",
-    "name": "럭키 박스&아이템샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "정열의 춤: 카르메나 세트",
+    "displayName": "정열의 춤: 카르메나 세트",
     "category": "幸運箱",
     "krDate": "2025.04.24",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250424/9f74bdfe-ccb0-4a80-8d5e-498964286702/image202504240905463.jpeg",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250424/7bbbf544-545d-4403-b7b7-0977761cd4b4/image202504240905464.jpeg",
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250424/9f74bdfe-ccb0-4a80-8d5e-498964286702/image202504240905463.jpeg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2839212",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/2839212_0_0.webp"
+    ]
+  },
+  {
+    "id": "2839212_1",
+    "title": "(추가) 럭키 박스&아이템샵 안내",
+    "name": "고요한 심판: 솔리드 엠버 세트",
+    "displayName": "고요한 심판: 솔리드 엠버 세트",
+    "category": "幸運箱",
+    "krDate": "2025.04.24",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250424/7bbbf544-545d-4403-b7b7-0977761cd4b4/image202504240905464.jpeg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2839212",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/2839212_1_0.webp"
+    ]
+  },
+  {
+    "id": "2839212_2",
+    "title": "(추가) 럭키 박스&아이템샵 안내",
+    "name": "신규 펫: 아기 늑대 획득 가능!",
+    "displayName": "신규 펫: 아기 늑대 획득 가능!",
+    "category": "幸運箱",
+    "krDate": "2025.04.24",
+    "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250424/c9703f5e-2f55-478d-a766-a36d98b45362/image202504240905465.jpeg"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2839212",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 3,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/2839212_0.webp",
-      "assets/fashion-web/2839212_1.webp",
-      "assets/fashion-web/2839212_2.webp"
+      "assets/fashion-web/2839212_2_0.webp"
     ]
   },
   {
-    "id": "2906352",
+    "id": "2906352_0",
     "title": "럭키박스&패션샵 안내",
-    "name": "럭키박스&패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "봄 운동회 : 봄바람 트랙 세트",
+    "displayName": "봄 운동회 : 봄바람 트랙 세트",
     "category": "幸運箱",
     "krDate": "2025.05.22",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250521/5b1b0c3c-6e2d-4d16-92fa-926210dcec16/4%EC%8B%A0%EA%B7%9CBM%EC%83%81%ED%92%88%EB%B4%84%EB%B0%94%EB%9E%8C%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.jpg",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250521/f855f657-b77f-4a14-827d-b4bda7615b00/4%EC%8B%A0%EA%B7%9CBM%EC%83%81%ED%92%88%EB%A0%98%EC%8A%A4%ED%83%80%EC%A6%88%EC%9D%91%EC%9B%90%EB%8B%A8%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.jpg",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250521/2a977830-0c19-451a-bc29-49d088528a66/4%EC%8B%A0%EA%B7%9CBM%EC%83%81%ED%92%88%EB%A0%98%EC%8A%A4%ED%83%80%EC%A6%88%EC%9D%91%EC%9B%90%EB%8B%A8%EC%84%B8%ED%8A%B8%ED%94%8C%EB%9D%BC%EC%9B%8C%EB%B3%BC%EC%9D%B4%EB%AF%B8%EC%A7%80%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250521/5b1b0c3c-6e2d-4d16-92fa-926210dcec16/4%EC%8B%A0%EA%B7%9CBM%EC%83%81%ED%92%88%EB%B4%84%EB%B0%94%EB%9E%8C%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.jpg"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2906352",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 3,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/2906352_0.webp",
-      "assets/fashion-web/2906352_1.webp",
-      "assets/fashion-web/2906352_2.webp"
+      "assets/fashion-web/2906352_0_0.webp"
+    ]
+  },
+  {
+    "id": "2906352_1",
+    "title": "럭키박스&패션샵 안내",
+    "name": "빛나는 응원 : 램스타즈 응원단 세트",
+    "displayName": "빛나는 응원 : 램스타즈 응원단 세트",
+    "category": "幸運箱",
+    "krDate": "2025.05.22",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250521/f855f657-b77f-4a14-827d-b4bda7615b00/4%EC%8B%A0%EA%B7%9CBM%EC%83%81%ED%92%88%EB%A0%98%EC%8A%A4%ED%83%80%EC%A6%88%EC%9D%91%EC%9B%90%EB%8B%A8%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.jpg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2906352",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/2906352_1_0.webp"
     ]
   },
   {
@@ -141,65 +199,113 @@
     ]
   },
   {
-    "id": "2957846",
+    "id": "2957846_0",
     "title": "럭키박스 & 패션샵 안내",
-    "name": "럭키박스 & 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "달그림자 기사단: 베일문 가디언 세트",
+    "displayName": "달그림자 기사단: 베일문 가디언 세트",
     "category": "幸運箱",
     "krDate": "2025.06.19",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/6010cf4c-df0e-41de-8511-f0d2ba51e27f/5%EB%8B%AC%EA%B7%B8%EB%A6%BC%EC%9E%90%EA%B8%B0%EC%82%AC%EB%8B%A8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/03080fed-b73a-4b6c-9113-f10d282b49c8/4%EC%84%9C%EB%A6%AC%EA%BD%83%EC%9D%98%EC%97%B0%ED%9A%8C%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/70835c29-1755-4c1e-a086-0acc62b7b2df/7%EC%8B%A0%EA%B7%9C%ED%8E%AB%EC%95%84%EA%B8%B0%EC%98%AC%EB%B9%BC%EB%AF%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/9a2c40ae-db0a-4fe2-9e00-55273109b950/%EB%B2%84%EB%93%9C%EB%B0%94%EC%9D%B8%EC%95%84%EC%9D%B4%EB%B0%B4%EB%93%9C.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/b36590f2-7b8f-4b62-993b-aa8c706f6b3d/%EB%B2%84%ED%84%B0%ED%94%8C%EB%9D%BC%EC%9D%B4%EB%93%9C%EB%A1%AD%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/f0c676cb-fe1d-497b-98db-043105936fae/%EB%A6%AC%ED%94%84%EC%8B%B1%EA%B8%80%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/6010cf4c-df0e-41de-8511-f0d2ba51e27f/5%EB%8B%AC%EA%B7%B8%EB%A6%BC%EC%9E%90%EA%B8%B0%EC%82%AC%EB%8B%A8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2957846",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 6,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/2957846_0.webp",
-      "assets/fashion-web/2957846_1.webp",
-      "assets/fashion-web/2957846_2.webp",
-      "assets/fashion-web/2957846_3.webp"
+      "assets/fashion-web/2957846_0_0.webp"
     ]
   },
   {
-    "id": "3037067",
+    "id": "2957846_1",
+    "title": "럭키박스 & 패션샵 안내",
+    "name": "서리꽃의 연회: 에델 그레이스 세트",
+    "displayName": "서리꽃의 연회: 에델 그레이스 세트",
+    "category": "幸運箱",
+    "krDate": "2025.06.19",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/03080fed-b73a-4b6c-9113-f10d282b49c8/4%EC%84%9C%EB%A6%AC%EA%BD%83%EC%9D%98%EC%97%B0%ED%9A%8C%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2957846",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/2957846_1_0.webp"
+    ]
+  },
+  {
+    "id": "2957846_2",
+    "title": "럭키박스 & 패션샵 안내",
+    "name": "아기 올빼미: 펫 럭키박스",
+    "displayName": "아기 올빼미: 펫 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2025.06.19",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250618/70835c29-1755-4c1e-a086-0acc62b7b2df/7%EC%8B%A0%EA%B7%9C%ED%8E%AB%EC%95%84%EA%B8%B0%EC%98%AC%EB%B9%BC%EB%AF%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2957846",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/2957846_2_0.webp"
+    ]
+  },
+  {
+    "id": "3037067_0",
     "title": "(추가) 7/17(목) 럭키박스 & 패션샵 안내",
-    "name": "럭키박스 & 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "잔물결의 기억: 코지 크로셰 세트",
+    "displayName": "잔물결의 기억: 코지 크로셰 세트",
     "category": "幸運箱",
     "krDate": "2025.07.16",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/ad23906f-f3e2-4db4-96ec-3e13588c4fde/%EC%97%90%EC%8A%A4%EB%8B%89%EC%88%98%EC%98%81%EB%B3%B5%EC%BD%94%EC%A7%80%ED%81%AC%EB%A1%9C%EC%85%B0%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/b99e9b4c-2946-4fa7-afc2-dde4279313fc/%EC%82%B0%ED%98%B8%EC%88%98%EC%98%81%EB%B3%B5%EB%B8%94%EB%A3%B8%EC%BD%94%EC%8A%A4%ED%8A%B8%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/3f140d58-b878-487e-acc2-325182366610/%EC%94%A8%EC%82%AC%EC%9D%B4%EB%93%9C%ED%8E%98%EC%9D%B8%ED%8C%85%EC%84%B1%EC%9D%B8%EB%82%A8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/aef57c4f-ac58-429b-b583-566a323ea16c/%EC%94%A8%EC%82%AC%EC%9D%B4%EB%93%9C%ED%8E%98%EC%9D%B8%ED%8C%85%EC%84%B1%EC%9D%B8%EC%97%AC.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/dfa6417b-e456-4160-aca7-baf474e6649b/%EC%94%A8%EC%82%AC%EC%9D%B4%EB%93%9C%ED%8E%98%EC%9D%B8%ED%8C%85%EC%97%AC%EC%95%84.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/cceee7d8-ed6e-42ac-a780-1f5550480d55/%EB%9F%AC%EB%B8%94%EB%A6%AC%EC%84%9C%EB%A8%B8%ED%8E%98%EC%9D%B8%ED%8C%85%EC%84%B1%EC%9D%B8%EB%82%A8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/429dfa20-3ade-4997-a900-2fd7b13e5661/%EB%9F%AC%EB%B8%94%EB%A6%AC%EC%84%9C%EB%A8%B8%ED%8E%98%EC%9D%B8%ED%8C%85%EC%84%B1%EC%9D%B8%EC%97%AC.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/ec578595-d80d-45d1-b959-29a8e0db0bc8/%EB%9F%AC%EB%B8%94%EB%A6%AC%EC%84%9C%EB%A8%B8%ED%8E%98%EC%9D%B8%ED%8C%85%EC%97%AC%EC%95%84.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/ad23906f-f3e2-4db4-96ec-3e13588c4fde/%EC%97%90%EC%8A%A4%EB%8B%89%EC%88%98%EC%98%81%EB%B3%B5%EC%BD%94%EC%A7%80%ED%81%AC%EB%A1%9C%EC%85%B0%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3037067",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 8,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3037067_0.webp",
-      "assets/fashion-web/3037067_1.webp",
-      "assets/fashion-web/3037067_2.webp",
-      "assets/fashion-web/3037067_3.webp"
+      "assets/fashion-web/3037067_0_0.webp"
+    ]
+  },
+  {
+    "id": "3037067_1",
+    "title": "(추가) 7/17(목) 럭키박스 & 패션샵 안내",
+    "name": "해변의 풍경: 블룸 코스트 세트",
+    "displayName": "해변의 풍경: 블룸 코스트 세트",
+    "category": "幸運箱",
+    "krDate": "2025.07.16",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/b99e9b4c-2946-4fa7-afc2-dde4279313fc/%EC%82%B0%ED%98%B8%EC%88%98%EC%98%81%EB%B3%B5%EB%B8%94%EB%A3%B8%EC%BD%94%EC%8A%A4%ED%8A%B8%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3037067",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3037067_1_0.webp"
     ]
   },
   {
@@ -225,32 +331,47 @@
     ]
   },
   {
-    "id": "3100668",
+    "id": "3100668_0",
     "title": "(수정) 8/21(목) 패션 럭키박스 & 패션샵 안내",
-    "name": "패션 럭키박스 & 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "두근두근 탐험대: 스카우터 세트",
+    "displayName": "두근두근 탐험대: 스카우터 세트",
     "category": "幸運箱",
     "krDate": "2025.08.20",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250911/4c8e7d93-5a4f-475f-bb70-38afc7c31a8b/821%EB%AA%A9%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%ED%8C%A8%EC%85%98%EC%83%B5%EC%95%88%EB%82%B41.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250911/bd2baa6b-84fe-4156-99d6-0dbfd28e5ba1/821%EB%AA%A9%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%ED%8C%A8%EC%85%98%EC%83%B5%EC%95%88%EB%82%B42.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250820/ea79726f-bcf2-4d4f-a240-8a2703212ed7/image2025082011255916.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250820/50f89c37-81ae-4949-ab3d-f70fa271b13b/image2025082011260717.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250820/b419e24e-e658-48cf-80c4-c77f8f5dcd2c/image2025082011261518.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250911/4c8e7d93-5a4f-475f-bb70-38afc7c31a8b/821%EB%AA%A9%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%ED%8C%A8%EC%85%98%EC%83%B5%EC%95%88%EB%82%B41.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3100668",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 5,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3100668_0.webp",
-      "assets/fashion-web/3100668_1.webp",
-      "assets/fashion-web/3100668_2.webp",
-      "assets/fashion-web/3100668_3.webp"
+      "assets/fashion-web/3100668_0_0.webp"
+    ]
+  },
+  {
+    "id": "3100668_1",
+    "title": "(수정) 8/21(목) 패션 럭키박스 & 패션샵 안내",
+    "name": "싱그러운 바람: 브리즈 트래블 세트",
+    "displayName": "싱그러운 바람: 브리즈 트래블 세트",
+    "category": "幸運箱",
+    "krDate": "2025.08.20",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250911/bd2baa6b-84fe-4156-99d6-0dbfd28e5ba1/821%EB%AA%A9%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%ED%8C%A8%EC%85%98%EC%83%B5%EC%95%88%EB%82%B42.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3100668",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3100668_1_0.webp"
     ]
   },
   {
@@ -309,33 +430,47 @@
     ]
   },
   {
-    "id": "3147457",
+    "id": "3147457_0",
     "title": "(추가) 9/25(목) 패션 럭키박스 & 패션샵 안내",
-    "name": "패션 럭키박스 & 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "거룩한 신념 : 디바인 저지먼트 세트",
+    "displayName": "거룩한 신념 : 디바인 저지먼트 세트",
     "category": "幸運箱",
     "krDate": "2025.09.24",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250924/93367714-9ea6-4f77-a35e-94070b2b471f/4%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750%EB%94%94%EB%B0%94%EC%9D%B8%EC%A0%80%EC%A7%80%EB%A8%BC%ED%8A%B8%EC%84%B8%ED%8A%B8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250924/b129534b-2bad-419f-a405-9c3fbd285b4f/5%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750%EB%A3%A8%EB%A9%98%EC%86%94%EB%A0%98%EB%8B%88%EC%8A%A4%EC%84%B8%ED%8A%B8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250923/7df375ee-8839-4e49-8b37-42c579a5a32d/%EB%B8%94%EB%A0%88%EC%9D%B4%EB%93%9C%ED%81%AC%EB%A1%9C%EC%8A%A4%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250923/140152fb-9a57-4a4e-b707-3c5b6acd80bc/%EB%8D%B0%EB%AA%A8%EB%8B%89%EC%98%A4%EB%B2%84%EB%A1%9C%EB%93%9C%EC%95%84%EC%9D%B4%EB%B0%B4%EB%93%9C.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250923/a1c832ee-1b17-4fca-9706-42453a0f1f3a/%ED%82%B9%EB%8D%A4%EB%82%98%EC%9D%B4%ED%8A%B8%EC%95%84%EC%9D%B4%ED%8C%A8%EC%B9%98.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250923/d03dec4a-6105-4b92-a672-865022dc7ba0/%EC%8B%9C%ED%81%AC%EB%A6%BF%EB%A7%A4%ED%8A%B8%EC%84%A0%EA%B8%80%EB%9D%BC%EC%8A%A4.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250924/93367714-9ea6-4f77-a35e-94070b2b471f/4%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750%EB%94%94%EB%B0%94%EC%9D%B8%EC%A0%80%EC%A7%80%EB%A8%BC%ED%8A%B8%EC%84%B8%ED%8A%B8.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3147457",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 6,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3147457_0.webp",
-      "assets/fashion-web/3147457_1.webp",
-      "assets/fashion-web/3147457_2.webp",
-      "assets/fashion-web/3147457_3.webp"
+      "assets/fashion-web/3147457_0_0.webp"
+    ]
+  },
+  {
+    "id": "3147457_1",
+    "title": "(추가) 9/25(목) 패션 럭키박스 & 패션샵 안내",
+    "name": "정화의 빛 : 루멘 솔렘니스 세트",
+    "displayName": "정화의 빛 : 루멘 솔렘니스 세트",
+    "category": "幸運箱",
+    "krDate": "2025.09.24",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250924/b129534b-2bad-419f-a405-9c3fbd285b4f/5%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750%EB%A3%A8%EB%A9%98%EC%86%94%EB%A0%98%EB%8B%88%EC%8A%A4%EC%84%B8%ED%8A%B8.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3147457",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3147457_1_0.webp"
     ]
   },
   {
@@ -361,93 +496,157 @@
     ]
   },
   {
-    "id": "3201524",
+    "id": "3201524_0",
     "title": "(수정) 10/30(목) 패션 럭키박스 & 패션샵 안내",
-    "name": "패션 럭키박스 & 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "은은한 끌림: 엘레강트 뮤즈 세트",
+    "displayName": "은은한 끌림: 엘레강트 뮤즈 세트",
     "category": "幸運箱",
     "krDate": "2025.10.29",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/a1efa354-b1da-4c84-9715-f187b3ee638e/5%EC%9D%80%EC%9D%80%ED%95%9C%EB%81%8C%EB%A6%BC%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/23e40205-6f58-4778-9df0-e6cf75b04bfd/6%EC%97%B0%ED%9A%8C%EC%9D%98%EC%A3%BC%EC%9D%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/703dad7c-2548-4802-9be7-d7e39db7915c/%EB%85%B8%EB%B8%94%ED%8C%8C%ED%8B%B0%EB%A7%88%EC%8A%A4%ED%81%AC.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/2cb16fc2-b7aa-42cd-bf42-3ed962d77c74/%EB%A1%9C%EC%A7%80%EB%93%9C%EB%A1%AD%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/a1efa354-b1da-4c84-9715-f187b3ee638e/5%EC%9D%80%EC%9D%80%ED%95%9C%EB%81%8C%EB%A6%BC%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3201524",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 4,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3201524_0.webp",
-      "assets/fashion-web/3201524_1.webp",
-      "assets/fashion-web/3201524_2.webp",
-      "assets/fashion-web/3201524_3.webp"
+      "assets/fashion-web/3201524_0_0.webp"
     ]
   },
   {
-    "id": "3272483",
+    "id": "3201524_1",
+    "title": "(수정) 10/30(목) 패션 럭키박스 & 패션샵 안내",
+    "name": "연회의 주인: 타임리스 미뉴엣 세트",
+    "displayName": "연회의 주인: 타임리스 미뉴엣 세트",
+    "category": "幸運箱",
+    "krDate": "2025.10.29",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/23e40205-6f58-4778-9df0-e6cf75b04bfd/6%EC%97%B0%ED%9A%8C%EC%9D%98%EC%A3%BC%EC%9D%B8%EA%B2%8C%EC%8B%9C%EB%AC%BC900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3201524",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3201524_1_0.webp"
+    ]
+  },
+  {
+    "id": "3272483_0",
     "title": "(수정) 11/27(목) 패션 럭키박스 & 패션샵 안내",
-    "name": "패션 럭키박스 & 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "대양의 기상: 스토미 캡틴 세트",
+    "displayName": "대양의 기상: 스토미 캡틴 세트",
     "category": "幸運箱",
     "krDate": "2025.11.26",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/3348fd14-8109-421b-ba65-e8c720bd7224/1%EB%8C%80%EC%96%91%EC%9D%98%EA%B8%B0%EC%83%81%EC%8A%A4%ED%86%A0%EB%AF%B8%EC%BA%A1%ED%8B%B4%EC%84%B8%ED%8A%B8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/f4c93511-c51c-4a61-8e70-1444e76763a3/2%EC%9E%90%EC%9C%A0%EC%9D%98%ED%8C%8C%EB%8F%84%EC%A0%9C%EC%8A%A4%ED%8B%B0%EB%B3%B4%EC%95%BC%EC%A7%80%EC%84%B8%ED%8A%B8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/85310ede-cd56-4d49-8ad1-3bc60cc29bf3/01.%EB%A0%88%EC%9D%B4%EC%96%B4%EB%93%9C%EC%95%84%EC%9D%B4%EB%B0%B4%EB%94%94%EC%A7%80.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/6877911b-40cf-4457-9e9d-de746256cfb6/02.%ED%94%8C%EB%9E%AB%EC%95%84%EC%9D%B4%EB%93%9C%EB%A0%88%EC%8B%B1.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/c4c8e55e-d1f6-4932-ae3e-6c3a45f06590/03.%ED%81%AC%EB%9D%BC%EC%BC%84%EB%A0%88%EB%8D%94%EC%95%84%EC%9D%B4%EA%B0%80%EB%93%9C.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/3348fd14-8109-421b-ba65-e8c720bd7224/1%EB%8C%80%EC%96%91%EC%9D%98%EA%B8%B0%EC%83%81%EC%8A%A4%ED%86%A0%EB%AF%B8%EC%BA%A1%ED%8B%B4%EC%84%B8%ED%8A%B8.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3272483",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 5,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3272483_0.webp",
-      "assets/fashion-web/3272483_1.webp",
-      "assets/fashion-web/3272483_2.webp",
-      "assets/fashion-web/3272483_3.webp"
+      "assets/fashion-web/3272483_0_0.webp"
     ]
   },
   {
-    "id": "3311101",
+    "id": "3272483_1",
+    "title": "(수정) 11/27(목) 패션 럭키박스 & 패션샵 안내",
+    "name": "자유의 파도: 제스티 보야지 세트",
+    "displayName": "자유의 파도: 제스티 보야지 세트",
+    "category": "幸運箱",
+    "krDate": "2025.11.26",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251126/f4c93511-c51c-4a61-8e70-1444e76763a3/2%EC%9E%90%EC%9C%A0%EC%9D%98%ED%8C%8C%EB%8F%84%EC%A0%9C%EC%8A%A4%ED%8B%B0%EB%B3%B4%EC%95%BC%EC%A7%80%EC%84%B8%ED%8A%B8.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3272483",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3272483_1_0.webp"
+    ]
+  },
+  {
+    "id": "3311101_0",
     "title": "마비노기모바일X산리오캐릭터즈 콜라보 상품 안내",
-    "name": "마비노기모바일X산리오캐릭터즈 콜라보 상품 안내",
-    "displayName": "瑪奇手機版 X Sanrio 聯名",
+    "name": "헬로키티: 패션 럭키박스",
+    "displayName": "헬로키티: 패션 럭키박스",
     "category": "聯動",
     "krDate": "2025.12.17",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/ef9484a3-10f6-422e-b2cf-cb644d8a9d99/1%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/8620b148-7c22-454a-a3e1-ba9bd6a845cc/2%EC%BF%A0%EB%A1%9C%EB%AF%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/eb7477b1-f416-492c-931d-5097f736f5d4/3%EB%A9%8D%EB%A9%8D%ED%8F%BC%ED%8F%BC%ED%91%B8%EB%A6%B0%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/2aa7c99f-9743-471e-8407-5f5be4342b50/%EC%BF%A0%EB%A1%9C%EB%AF%B8%EC%9D%98%ED%8A%B8%EB%A6%AC%ED%82%A4%ED%94%84%EB%A6%AC%ED%8B%B0%ED%94%BC%EC%95%84%EB%85%B8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/ff8211b9-73fe-4455-bc4c-85810cc8290a/%EC%8B%9C%EB%82%98%EB%AA%A8%EB%A1%A4%EC%9D%98%ED%8C%8C%EC%8A%A4%ED%85%94%EB%93%9C%EB%A6%BC%EB%A7%8C%EB%8F%8C%EB%A6%B0.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/a124424b-8112-493a-a3ed-06fc6b0ea755/%ED%8F%BC%ED%8F%BC%ED%91%B8%EB%A6%B0%EC%9D%98%EC%8A%A4%EC%9C%84%ED%8A%B8%ED%91%B8%EB%94%A9%EB%B0%94%EC%9D%B4%EC%98%AC%EB%A6%B0.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/e708cdd2-d53a-4685-ac8a-0f3a49de38e0/%EC%82%B0%EB%A6%AC%EC%98%A4%EC%BA%90%EB%A6%AD%ED%84%B0%EC%A6%88%EA%B0%80%EB%B0%A9%EC%95%A1%ED%84%B0%EC%82%B0%EB%A6%AC%EC%98%A4%EC%A0%9C%EC%B6%9C%EC%B5%9C%EC%A2%85.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/ad260612-0e4e-49ea-8dca-66a2b1afc7e4/%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%EA%B8%80%EB%9E%98%EC%8A%A4%EC%95%A1%ED%84%B0%EC%82%B0%EB%A6%AC%EC%98%A4%EC%A0%9C%EC%B6%9C%EC%B5%9C%EC%A2%85.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/f024ad64-1da5-4df0-8168-ef497e926d37/%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%EC%9D%B4%EC%96%B4%EB%A7%81%EC%95%A1%ED%84%B0%EC%82%B0%EB%A6%AC%EC%98%A4%EC%A0%9C%EC%B6%9C%EC%B5%9C%EC%A2%85.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/ef9484a3-10f6-422e-b2cf-cb644d8a9d99/1%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3311101",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 9,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3311101_0.webp",
-      "assets/fashion-web/3311101_1.webp",
-      "assets/fashion-web/3311101_2.webp",
-      "assets/fashion-web/3311101_3.webp"
+      "assets/fashion-web/3311101_0_0.webp"
+    ]
+  },
+  {
+    "id": "3311101_1",
+    "title": "마비노기모바일X산리오캐릭터즈 콜라보 상품 안내",
+    "name": "쿠로미: 패션 럭키박스",
+    "displayName": "쿠로미: 패션 럭키박스",
+    "category": "聯動",
+    "krDate": "2025.12.17",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/8620b148-7c22-454a-a3e1-ba9bd6a845cc/2%EC%BF%A0%EB%A1%9C%EB%AF%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3311101",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3311101_1_0.webp"
+    ]
+  },
+  {
+    "id": "3311101_2",
+    "title": "마비노기모바일X산리오캐릭터즈 콜라보 상품 안내",
+    "name": "멍멍! 폼폼푸린: 펫 럭키박스",
+    "displayName": "멍멍! 폼폼푸린: 펫 럭키박스",
+    "category": "聯動",
+    "krDate": "2025.12.17",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/eb7477b1-f416-492c-931d-5097f736f5d4/3%EB%A9%8D%EB%A9%8D%ED%8F%BC%ED%8F%BC%ED%91%B8%EB%A6%B0%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3311101",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3311101_2_0.webp"
     ]
   },
   {
@@ -484,33 +683,47 @@
     ]
   },
   {
-    "id": "3311096",
+    "id": "3311096_0",
     "title": "12/18(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "겨울의 오솔길 : 코니 테디베어 세트",
+    "displayName": "겨울의 오솔길 : 코니 테디베어 세트",
     "category": "幸運箱",
     "krDate": "2025.12.17",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/8da766fd-c9ef-4650-9d13-fd84d13c69e9/2%EA%B2%A8%EC%9A%B8%EC%9D%98%EC%98%A4%EC%86%94%EA%B8%B8%EC%BD%94%EB%8B%88%ED%85%8C%EB%94%94%EB%B2%A0%EC%96%B4%EC%84%B8%ED%8A%B8900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/7552f8de-9782-4a8e-9b64-e7e580148b0b/3%EB%B9%99%ED%95%B4%EC%9D%98%EC%88%A8%EA%B2%B0%EB%B9%88%ED%84%B0%ED%81%AC%EB%A6%AC%EA%B1%B0%EC%84%B8%ED%8A%B8900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/9e23fa92-200b-44c9-ac12-dabd1c1ccddf/%EC%8A%A4%EB%85%B8%EC%9A%B0%EC%97%A3%EC%A7%80%ED%8E%98%EC%9D%B8%ED%8C%85%EC%A0%95%EB%A9%B4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/d24f48de-0ef9-4354-bec3-6b805a380724/%EC%8A%A4%EB%85%B8%EC%9A%B0%EC%97%A3%EC%A7%80%ED%8E%98%EC%9D%B8%ED%8C%85%EC%B8%A1%EB%A9%B4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/b83516ee-0b75-407f-b64c-0e679c7dcbd8/%EC%8A%A4%EB%85%B8%EC%9A%B0%EB%B3%BC%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/ab629161-5b5e-4d5b-840c-62860b4e3695/%EA%B8%80%EB%A1%9C%EC%9E%89%EB%85%B8%EC%A6%88.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/8da766fd-c9ef-4650-9d13-fd84d13c69e9/2%EA%B2%A8%EC%9A%B8%EC%9D%98%EC%98%A4%EC%86%94%EA%B8%B8%EC%BD%94%EB%8B%88%ED%85%8C%EB%94%94%EB%B2%A0%EC%96%B4%EC%84%B8%ED%8A%B8900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3311096",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 6,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3311096_0.webp",
-      "assets/fashion-web/3311096_1.webp",
-      "assets/fashion-web/3311096_2.webp",
-      "assets/fashion-web/3311096_3.webp"
+      "assets/fashion-web/3311096_0_0.webp"
+    ]
+  },
+  {
+    "id": "3311096_1",
+    "title": "12/18(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "빙해의 숨결 : 빈터 크리거 세트",
+    "displayName": "빙해의 숨결 : 빈터 크리거 세트",
+    "category": "幸運箱",
+    "krDate": "2025.12.17",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/7552f8de-9782-4a8e-9b64-e7e580148b0b/3%EB%B9%99%ED%95%B4%EC%9D%98%EC%88%A8%EA%B2%B0%EB%B9%88%ED%84%B0%ED%81%AC%EB%A6%AC%EA%B1%B0%EC%84%B8%ED%8A%B8900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3311096",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3311096_1_0.webp"
     ]
   },
   {
@@ -536,101 +749,179 @@
     ]
   },
   {
-    "id": "3311070",
+    "id": "3311070_0",
     "title": "데이지의 작은 패션 아틀리에 ＆ 반짝반짝 던바튼의 크리스마스! 이벤트 안내",
-    "name": "데이지의 작은 패션 아틀리에 ＆ 반짝반짝 던바튼의 크리스마스! 이벤트 안내",
-    "displayName": "聖誕主題時裝活動",
+    "name": "데이지의 작은 패션 아틀리에 반짝 오픈!",
+    "displayName": "데이지의 작은 패션 아틀리에 반짝 오픈!",
     "category": "其他商城",
     "krDate": "2025.12.18",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20250925/25cdb521-6291-4412-bdcb-c2d599f43a48/Property1%EC%9D%B4%EB%B2%A4%ED%8A%B8.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/299542c0-4a83-4d3a-9532-124bff4a7686/1%EA%B2%8C%EC%8B%9C%EA%B8%80%EB%82%B4%EB%B6%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x75001.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/4523ad8b-c074-4778-918c-5969a47e891f/%EC%82%B0%EB%A6%AC%EC%98%A4%EC%BA%90%EB%A6%AD%ED%84%B0%EC%A6%88%ED%8B%B0%EC%85%94%EC%B8%A0.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/8fa44e07-1688-4435-ae1c-38b62c622cbf/%EC%82%B0%EB%A6%AC%EC%98%A4%EC%BA%90%EB%A6%AD%ED%84%B0%EC%A6%88%ED%8E%98%EC%9D%B4%EC%8A%A4%EC%8A%A4%ED%8B%B0%EC%BB%A44%EC%A2%85.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/177e990a-6520-46af-81c1-d3697f45d1d2/1%EA%B2%8C%EC%8B%9C%EA%B8%80%EB%82%B4%EB%B6%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x75002.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/5639c0ed-cd47-4280-8dd2-c4bb04524254/%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B3%B5%EC%A7%80%EC%8D%B8%EB%84%A4%EC%9D%BC770X2803.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/21fb84a0-c0b6-4185-88fb-12a589b1a668/CPQ770X280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/4874597b-62c2-4d60-bc40-f52d17d61a37/1%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/8a02ae3e-ae6d-4032-856a-59067f324b31/1%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/5bfdefd1-ec11-436f-8fea-25174f7d6b90/2%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/7a8978a4-6301-4355-a464-d9e5cab8245b/3%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/36a627cc-afad-4fc6-922c-afd725dc4388/4%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/1affc3ea-08a9-48f4-b79a-06a81b3aa53b/6%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/2e4d6c0d-965c-45e8-b4b6-56af74318e9e/13%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/6a742380-f4bb-41a3-9747-74407d5c9326/9%EC%9D%B4%EB%B2%A4%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%8D%B8%EB%84%A4%EC%9D%BC770x280.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20250925/25cdb521-6291-4412-bdcb-c2d599f43a48/Property1%EC%9D%B4%EB%B2%A4%ED%8A%B8.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Events/3311070",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 15,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3311070_0.webp",
-      "assets/fashion-web/3311070_1.webp",
-      "assets/fashion-web/3311070_2.webp",
-      "assets/fashion-web/3311070_3.webp"
+      "assets/fashion-web/3311070_0_0.webp"
     ]
   },
   {
-    "id": "3345414",
+    "id": "3311070_1",
+    "title": "데이지의 작은 패션 아틀리에 ＆ 반짝반짝 던바튼의 크리스마스! 이벤트 안내",
+    "name": "반짝반짝! 던바튼의 크리스마스 이벤트",
+    "displayName": "반짝반짝! 던바튼의 크리스마스 이벤트",
+    "category": "其他商城",
+    "krDate": "2025.12.18",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251217/299542c0-4a83-4d3a-9532-124bff4a7686/1%EA%B2%8C%EC%8B%9C%EA%B8%80%EB%82%B4%EB%B6%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x75001.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Events/3311070",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3311070_1_0.webp"
+    ]
+  },
+  {
+    "id": "3345414_0",
     "title": "(수정) 1/15(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "겨울날의 여정: 겨울 숲 탐험가 세트",
+    "displayName": "겨울날의 여정: 겨울 숲 탐험가 세트",
     "category": "幸運箱",
     "krDate": "2026.01.14",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/494899cd-ef82-4f92-85d6-2c80c83193e5/3%EA%B2%A8%EC%9A%B8%EB%82%A0%EC%9D%98%EC%97%AC%EC%A0%95%EA%B2%A8%EC%9A%B8%EC%88%B2%ED%83%90%ED%97%98%EA%B0%80%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/540ae1cd-46aa-412f-a923-08e8a7e14b92/4%EA%B3%A0%EC%9A%94%ED%95%9C%EB%8F%99%ED%96%89%EA%B2%A8%EC%9A%B8%EC%88%B2%ED%8C%8C%EC%88%98%EA%BE%BC%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/6dd143ac-c836-410d-a4ef-8eb7a724e7ee/2%EC%98%88%EC%96%B8%EC%9D%98%EC%9D%80%EB%91%94%EC%9E%90%EC%82%AC%EC%9D%BC%EB%9F%B0%ED%8A%B8%ED%94%8C%EB%A0%9B%EC%A7%80%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/b3054021-bb12-4f9d-82e6-242d867f0172/%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%94%94%EB%93%9C%EC%86%8C%EC%9A%B8%EB%A7%88%EC%8A%A4%ED%81%AC.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/6df54f8f-5dd0-499c-a2c7-89034d8f3309/%EC%8A%A4%ED%8B%B8%EB%A7%88%EC%9D%B8%EB%93%9C%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/d96b2ff1-04a2-4167-9ca7-03799c42989c/%ED%8E%98%EC%9D%B4%ED%8A%B8%EC%9A%B0%EB%B8%90%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/494899cd-ef82-4f92-85d6-2c80c83193e5/3%EA%B2%A8%EC%9A%B8%EB%82%A0%EC%9D%98%EC%97%AC%EC%A0%95%EA%B2%A8%EC%9A%B8%EC%88%B2%ED%83%90%ED%97%98%EA%B0%80%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3345414",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 6,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3345414_0.webp",
-      "assets/fashion-web/3345414_1.webp",
-      "assets/fashion-web/3345414_2.webp",
-      "assets/fashion-web/3345414_3.webp"
+      "assets/fashion-web/3345414_0_0.webp"
     ]
   },
   {
-    "id": "3373326",
+    "id": "3345414_1",
+    "title": "(수정) 1/15(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "고요한 동행: 겨울 숲 파수꾼 세트",
+    "displayName": "고요한 동행: 겨울 숲 파수꾼 세트",
+    "category": "幸運箱",
+    "krDate": "2026.01.14",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/540ae1cd-46aa-412f-a923-08e8a7e14b92/4%EA%B3%A0%EC%9A%94%ED%95%9C%EB%8F%99%ED%96%89%EA%B2%A8%EC%9A%B8%EC%88%B2%ED%8C%8C%EC%88%98%EA%BE%BC%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3345414",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3345414_1_0.webp"
+    ]
+  },
+  {
+    "id": "3345414_2",
+    "title": "(수정) 1/15(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "예언의 은둔자: 사일런트 플렛지 세트",
+    "displayName": "예언의 은둔자: 사일런트 플렛지 세트",
+    "category": "幸運箱",
+    "krDate": "2026.01.14",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260114/6dd143ac-c836-410d-a4ef-8eb7a724e7ee/2%EC%98%88%EC%96%B8%EC%9D%98%EC%9D%80%EB%91%94%EC%9E%90%EC%82%AC%EC%9D%BC%EB%9F%B0%ED%8A%B8%ED%94%8C%EB%A0%9B%EC%A7%80%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3345414",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3345414_2_0.webp"
+    ]
+  },
+  {
+    "id": "3373326_0",
     "title": "(수정) 2/12(목) 패션 럭키박스 ＆ 펫 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 펫 럭키박스 ＆ 패션샵 안내",
-    "displayName": "寵物幸運箱",
+    "name": "장밋빛 설렘: 스위트 카페 쇼콜라 세트",
+    "displayName": "장밋빛 설렘: 스위트 카페 쇼콜라 세트",
     "category": "幸運箱",
     "krDate": "2026.02.11",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/4c544185-5c24-4f17-8f59-b4d4dc21888e/2%EC%9E%A5%EB%B0%8B%EB%B9%9B%EC%84%A4%EB%A0%98%EC%8A%A4%EC%9C%84%ED%8A%B8%EC%B9%B4%ED%8E%98%EC%87%BC%EC%BD%9C%EB%9D%BC%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/c55a257d-91c4-49eb-9863-686ffaa8346c/3%EB%8B%AC%EC%BD%A4%ED%95%9C%EA%B3%A0%EB%B0%B1%EB%9F%AC%EB%B8%94%EB%A6%AC%EB%B0%B8%EB%9F%B0%ED%83%80%EC%9D%B8%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/3d223e23-35d2-40d1-965d-c1c1f27ae4df/4%EC%95%84%EA%B8%B0%EB%8A%91%EB%8C%80%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/9e5c5171-36a5-4680-b617-4724d940aa8e/%EC%BD%94%ED%8A%BC%EB%B2%A0%EC%96%B4%EB%B0%B1%ED%8C%A9.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/6a2a01f2-3b43-44fc-9060-7c9d1aa7469d/%EC%98%A4%EB%A6%AC%EC%97%94%ED%83%88%ED%83%9C%EC%8A%AC%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/4c544185-5c24-4f17-8f59-b4d4dc21888e/2%EC%9E%A5%EB%B0%8B%EB%B9%9B%EC%84%A4%EB%A0%98%EC%8A%A4%EC%9C%84%ED%8A%B8%EC%B9%B4%ED%8E%98%EC%87%BC%EC%BD%9C%EB%9D%BC%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3373326",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 5,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3373326_0.webp",
-      "assets/fashion-web/3373326_1.webp",
-      "assets/fashion-web/3373326_2.webp",
-      "assets/fashion-web/3373326_3.webp"
+      "assets/fashion-web/3373326_0_0.webp"
+    ]
+  },
+  {
+    "id": "3373326_1",
+    "title": "(수정) 2/12(목) 패션 럭키박스 ＆ 펫 럭키박스 ＆ 패션샵 안내",
+    "name": "달콤한 고백: 러블리 밸런타인 세트",
+    "displayName": "달콤한 고백: 러블리 밸런타인 세트",
+    "category": "幸運箱",
+    "krDate": "2026.02.11",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/c55a257d-91c4-49eb-9863-686ffaa8346c/3%EB%8B%AC%EC%BD%A4%ED%95%9C%EA%B3%A0%EB%B0%B1%EB%9F%AC%EB%B8%94%EB%A6%AC%EB%B0%B8%EB%9F%B0%ED%83%80%EC%9D%B8%EC%84%B8%ED%8A%B8%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3373326",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3373326_1_0.webp"
+    ]
+  },
+  {
+    "id": "3373326_2",
+    "title": "(수정) 2/12(목) 패션 럭키박스 ＆ 펫 럭키박스 ＆ 패션샵 안내",
+    "name": "아기 늑대: 펫 럭키박스",
+    "displayName": "아기 늑대: 펫 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.02.11",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/3d223e23-35d2-40d1-965d-c1c1f27ae4df/4%EC%95%84%EA%B8%B0%EB%8A%91%EB%8C%80%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3373326",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3373326_2_0.webp"
     ]
   },
   {
@@ -682,167 +973,245 @@
     ]
   },
   {
-    "id": "3407264",
+    "id": "3407264_0",
     "title": "(수정) 3/26(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "피어나는 햇살 : 패션 럭키박스",
+    "displayName": "피어나는 햇살 : 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.03.25",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260324/e2dfb8dd-0f66-46fd-93dc-8c4508428980/2%ED%94%BC%EC%96%B4%EB%82%98%EB%8A%94%ED%96%87%EC%82%B4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260324/92e85529-e8f2-42b0-a2bc-e8a9e8ecea33/3%ED%95%98%EC%9D%B4%EC%8A%A4%EC%BF%A8%ED%81%AC%EB%9F%AC%EC%89%AC%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260325/18731228-80ec-459a-bd70-d30eec6abc29/%EB%8D%B0%EC%9D%BC%EB%A6%AC%ED%8A%B8%EB%A6%BD%EB%B0%B0%EB%82%AD.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260325/a1cf61c9-efce-423a-bf42-06894706d538/%ED%8D%BC%EB%8B%88%EB%AA%A8%EB%A8%BC%ED%8A%B8%EB%B0%B4%EB%93%9C.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260324/e2dfb8dd-0f66-46fd-93dc-8c4508428980/2%ED%94%BC%EC%96%B4%EB%82%98%EB%8A%94%ED%96%87%EC%82%B4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3407264",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 4,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3407264_0.webp",
-      "assets/fashion-web/3407264_1.webp",
-      "assets/fashion-web/3407264_2.webp",
-      "assets/fashion-web/3407264_3.webp"
+      "assets/fashion-web/3407264_0_0.webp"
     ]
   },
   {
-    "id": "3407263",
-    "title": "3/26(목) 펫 럭키박스 안내",
-    "name": "펫 럭키박스 안내",
-    "displayName": "寵物幸運箱",
+    "id": "3407264_1",
+    "title": "(수정) 3/26(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "하이스쿨 크러쉬 : 패션 럭키박스",
+    "displayName": "하이스쿨 크러쉬 : 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.03.25",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260325/94fa0670-f8e0-402a-ac82-ada3ad52adb3/5%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%88%B2%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260324/92e85529-e8f2-42b0-a2bc-e8a9e8ecea33/3%ED%95%98%EC%9D%B4%EC%8A%A4%EC%BF%A8%ED%81%AC%EB%9F%AC%EC%89%AC%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3407264",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3407264_1_0.webp"
+    ]
+  },
+  {
+    "id": "3407263_0",
+    "title": "3/26(목) 펫 럭키박스 안내",
+    "name": "노르웨이 숲: 펫 럭키박스",
+    "displayName": "노르웨이 숲: 펫 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.03.25",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260325/94fa0670-f8e0-402a-ac82-ada3ad52adb3/5%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%88%B2%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3407263",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3407263_0_0.webp"
+    ]
+  },
+  {
+    "id": "3407263_1",
+    "title": "3/26(목) 펫 럭키박스 안내",
+    "name": "아기 올빼미: 펫 럭키박스",
+    "displayName": "아기 올빼미: 펫 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.03.25",
+    "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260325/5f039b66-a4e8-441c-960a-88ae8c41638b/6%EC%95%84%EA%B8%B0%EC%98%AC%EB%B9%BC%EB%AF%B8%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3407263",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 2,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3407263_0.webp",
-      "assets/fashion-web/3407263_1.webp"
+      "assets/fashion-web/3407263_1_0.webp"
     ]
   },
   {
-    "id": "3414447",
+    "id": "3414447_0",
     "title": "4/2(목) 패션 럭키박스 ＆ 펫 럭키박스 안내",
-    "name": "패션 럭키박스 ＆ 펫 럭키박스 안내",
-    "displayName": "寵物幸運箱",
+    "name": "바람 따라 다람쥐: 패션 럭키박스",
+    "displayName": "바람 따라 다람쥐: 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.04.01",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260401/e2e53b3f-8cfd-42c8-9f55-87afed3536a2/%EB%B0%94%EB%9E%8C%EB%94%B0%EB%9D%BC%EB%8B%A4%EB%9E%8C%EC%A5%90%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260401/e2e53b3f-8cfd-42c8-9f55-87afed3536a2/%EB%B0%94%EB%9E%8C%EB%94%B0%EB%9D%BC%EB%8B%A4%EB%9E%8C%EC%A5%90%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3414447",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3414447_0_0.webp"
+    ]
+  },
+  {
+    "id": "3414447_1",
+    "title": "4/2(목) 패션 럭키박스 ＆ 펫 럭키박스 안내",
+    "name": "도토리 햄스터: 펫 럭키박스",
+    "displayName": "도토리 햄스터: 펫 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.04.01",
+    "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260401/5ee2babd-5c8c-4c67-8b04-59f2dda4377b/4%EB%8F%84%ED%86%A0%EB%A6%AC%ED%96%84%EC%8A%A4%ED%84%B0%ED%8E%AB%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3414447",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 2,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3414447_0.webp",
-      "assets/fashion-web/3414447_1.webp"
+      "assets/fashion-web/3414447_1_0.webp"
     ]
   },
   {
-    "id": "3416432",
+    "id": "3416432_0",
     "title": "1주년 기념 ‘Galaxy S26 Ultra 나오 액세서리 에디션’ 판매 안내",
-    "name": "Galaxy S26 Ultra 나오 액세서리 에디션",
-    "displayName": "Galaxy 聯名週邊配件",
+    "name": "Galaxy S26 Ultra 나오 액세서리 에디션 출시",
+    "displayName": "Galaxy S26 Ultra 나오 액세서리 에디션 출시",
     "category": "其他商城",
     "krDate": "2026.04.06",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20251127/a9f255d4-5706-438a-ab3d-1a4e40f05cf3/Property1%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260406/9a80b111-39f3-4ba7-8a5f-4cbd5a39e750/%EA%B3%B5%EC%A7%80%EC%9D%B4%EB%AF%B8%EC%A7%801080x1080v2.jpg",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/7d13f515-add8-4d73-8207-18f0b3c63658/image202604031728241.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/17e6d1d5-a191-489a-a3d7-166af0290783/image202604031728242.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/b204812b-5ff6-4d64-a6c3-b2ab7cda0921/image202604031728243.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/4b711c53-cebf-44c0-8c63-d1d2f4560706/image202604031728244.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/f260c6cc-6667-4201-b2e6-70f113c6c47b/image202604031728245.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/89048e6b-85ff-4be5-b098-a083b5062820/image202604031728246.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/e4313d69-9f45-465a-aba5-f75428fb488e/image202604031728247.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/281cb3a9-c101-440e-815c-44127708db63/image202604031728248.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260403/a6ddea42-b0b1-4c96-a2f1-e7b1c4d5aba0/image202604031728249.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260406/1fcc957b-ac9e-46fa-85e9-1d537539b053/ingamelogo.jpg"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20251127/a9f255d4-5706-438a-ab3d-1a4e40f05cf3/Property1%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3416432",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 12,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3416432_0.webp",
-      "assets/fashion-web/3416432_1.webp",
-      "assets/fashion-web/3416432_2.webp",
-      "assets/fashion-web/3416432_3.webp"
+      "assets/fashion-web/3416432_0_0.webp"
     ]
   },
   {
-    "id": "3428346",
+    "id": "3428346_0",
     "title": "4/23(목) 신규 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "신규 패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "스트릿 비트: 패션 럭키박스",
+    "displayName": "스트릿 비트: 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.04.22",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260422/1ada8c9a-b3a6-43a3-b7ee-5e38677bd242/1%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260422/58a29bf3-1271-4c00-81eb-3c732c02a3ad/2%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260422/af7b32c8-38cf-4761-91f4-3c8a9e082e07/%EC%86%94%EB%A6%AC%EB%93%9C%EC%BD%94%EC%96%B4%EB%A7%88%EC%8A%A4%ED%81%AC.jpg"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260422/1ada8c9a-b3a6-43a3-b7ee-5e38677bd242/1%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3428346",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 3,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3428346_0.webp",
-      "assets/fashion-web/3428346_1.webp",
-      "assets/fashion-web/3428346_2.webp"
+      "assets/fashion-web/3428346_0_0.webp"
     ]
   },
   {
-    "id": "3447996",
+    "id": "3428346_1",
+    "title": "4/23(목) 신규 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "아르젠트 크레스트: 패션 럭키박스",
+    "displayName": "아르젠트 크레스트: 패션 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.04.22",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260422/58a29bf3-1271-4c00-81eb-3c732c02a3ad/2%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3428346",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3428346_1_0.webp"
+    ]
+  },
+  {
+    "id": "3447996_0",
     "title": "5/21(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "디어 그레이스: 패션 럭키박스",
+    "displayName": "디어 그레이스: 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.05.20",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/f77f3ab4-9ab8-4e6c-973d-63dbba90c723/%EB%94%94%EC%96%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/3d941384-3628-4eb6-b9da-944ce6967438/%EC%A0%A0%ED%8B%80%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/66d3142e-12ec-4a6e-a97f-18321fe6b0e4/%EC%9D%B4%ED%84%B0%EB%84%90%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4%EC%9D%B4%EC%96%B4%EB%A7%81260521.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/f77f3ab4-9ab8-4e6c-973d-63dbba90c723/%EB%94%94%EC%96%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3447996",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 3,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3447996_0.webp",
-      "assets/fashion-web/3447996_1.webp",
-      "assets/fashion-web/3447996_2.webp"
+      "assets/fashion-web/3447996_0_0.webp"
+    ]
+  },
+  {
+    "id": "3447996_1",
+    "title": "5/21(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "젠틀 그레이스: 패션 럭키박스",
+    "displayName": "젠틀 그레이스: 패션 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.05.20",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/3d941384-3628-4eb6-b9da-944ce6967438/%EC%A0%A0%ED%8B%80%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%8A%A4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3447996",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3447996_1_0.webp"
     ]
   },
   {
@@ -894,83 +1263,135 @@
     ]
   },
   {
-    "id": "3481577",
+    "id": "3481577_0",
     "title": "6/25(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "스위트 문나이트 : 패션 럭키박스",
+    "displayName": "스위트 문나이트 : 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.06.24",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/3b34e864-33a3-4895-b5d6-05de93462868/%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%AC%B8%EB%82%98%EC%9D%B4%ED%8A%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/7a35dc28-3804-4547-a0c6-1c2a7a4b7a4f/%EB%B2%A8%ED%81%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/8bb8685d-2c54-4e34-b0f8-983383273689/%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%AC%B8%EB%82%98%EC%9D%B4%ED%8A%B8%EB%93%9C%EB%A6%BC%EB%A7%88%EC%8A%A4%ED%81%AC%EB%82%A8%EC%9E%90.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/e24b36ab-5669-47ec-926b-8561f914b862/%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%AC%B8%EB%82%98%EC%9D%B4%ED%8A%B8%EB%93%9C%EB%A6%BC%EB%A7%88%EC%8A%A4%ED%81%AC%EC%97%AC%EC%9E%90.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/c0877f75-0b60-4f8f-9e78-213474959c93/%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%AC%B8%EB%82%98%EC%9D%B4%ED%8A%B8%EB%93%9C%EB%A6%BC%EB%A7%88%EC%8A%A4%ED%81%AC%EB%82%A8%EC%95%84.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/30782d79-8830-454b-a4a3-cd22b3213176/%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%AC%B8%EB%82%98%EC%9D%B4%ED%8A%B8%EB%93%9C%EB%A6%BC%EB%A7%88%EC%8A%A4%ED%81%AC%EC%97%AC%EC%95%84.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/3b34e864-33a3-4895-b5d6-05de93462868/%EC%8A%A4%EC%9C%84%ED%8A%B8%EB%AC%B8%EB%82%98%EC%9D%B4%ED%8A%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3481577",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 6,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3481577_0.webp",
-      "assets/fashion-web/3481577_1.webp",
-      "assets/fashion-web/3481577_2.webp",
-      "assets/fashion-web/3481577_3.webp"
+      "assets/fashion-web/3481577_0_0.webp"
     ]
   },
   {
-    "id": "3500246",
+    "id": "3481577_1",
+    "title": "6/25(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "벨크레스트 : 패션 럭키박스",
+    "displayName": "벨크레스트 : 패션 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.06.24",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260623/7a35dc28-3804-4547-a0c6-1c2a7a4b7a4f/%EB%B2%A8%ED%81%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3481577",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3481577_1_0.webp"
+    ]
+  },
+  {
+    "id": "3500246_0",
     "title": "7/16(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "펄 오션 비치웨어: 패션 럭키박스",
+    "displayName": "펄 오션 비치웨어: 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.07.15",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260715/3fa33bea-ab5c-47cf-86ad-db42def53896/2%ED%8E%84%EC%98%A4%EC%85%98%EB%B9%84%EC%B9%98%EC%9B%A8%EC%96%B4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260715/1e252655-608a-449d-ba11-9af49e138aea/%EB%A7%88%EB%A6%B0%EC%9B%A8%EC%9D%B4%EB%B8%8C%EC%9C%A0%EB%8B%88%ED%8F%BC%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260715/73050dc6-8d4c-43b3-8557-b403c9b260ac/%EB%AF%B8%EC%8A%A4%ED%8B%B0%EB%9D%BC%EC%9A%B4%EB%93%9C%EC%84%A0%EA%B8%80%EB%9D%BC%EC%8A%A4.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260715/3fa33bea-ab5c-47cf-86ad-db42def53896/2%ED%8E%84%EC%98%A4%EC%85%98%EB%B9%84%EC%B9%98%EC%9B%A8%EC%96%B4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3500246",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 3,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3500246_0.webp",
-      "assets/fashion-web/3500246_1.webp",
-      "assets/fashion-web/3500246_2.webp"
+      "assets/fashion-web/3500246_0_0.webp"
     ]
   },
   {
-    "id": "3505478",
+    "id": "3500246_1",
+    "title": "7/16(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "마린 웨이브 유니폼: 패션 럭키박스",
+    "displayName": "마린 웨이브 유니폼: 패션 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.07.15",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260715/1e252655-608a-449d-ba11-9af49e138aea/%EB%A7%88%EB%A6%B0%EC%9B%A8%EC%9D%B4%EB%B8%8C%EC%9C%A0%EB%8B%88%ED%8F%BC%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3500246",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3500246_1_0.webp"
+    ]
+  },
+  {
+    "id": "3505478_0",
     "title": "7/23(목) 펫 럭키박스 안내",
-    "name": "펫 럭키박스 안내",
-    "displayName": "寵物幸運箱",
+    "name": "게코 도마뱀: 펫 럭키박스",
+    "displayName": "게코 도마뱀: 펫 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.07.22",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/39648d71-ad58-470d-b905-414310e72a6b/6%EA%B2%8C%EC%BD%94%EB%8F%84%EB%A7%88%EB%B1%80%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/39648d71-ad58-470d-b905-414310e72a6b/6%EA%B2%8C%EC%BD%94%EB%8F%84%EB%A7%88%EB%B1%80%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3505478",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3505478_0_0.webp"
+    ]
+  },
+  {
+    "id": "3505478_1",
+    "title": "7/23(목) 펫 럭키박스 안내",
+    "name": "시추: 펫 럭키박스",
+    "displayName": "시추: 펫 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.07.22",
+    "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/37a36e04-883b-4707-9a1d-2cf7dc60cb27/5%EC%8B%9C%EC%B6%94%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3505478",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 2,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3505478_0.webp",
-      "assets/fashion-web/3505478_1.webp"
+      "assets/fashion-web/3505478_1_0.webp"
     ]
   },
   {
@@ -996,29 +1417,47 @@
     ]
   },
   {
-    "id": "3521633",
+    "id": "3521633_0",
     "title": "8/13(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "폼폼 소다 비치웨어: 패션 럭키박스",
+    "displayName": "폼폼 소다 비치웨어: 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.08.12",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/1a9b2052-b0c1-40d6-9781-ad636f1fca5e/2%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/ca9e067b-8706-4b2e-9dc4-719300196515/3%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/51befadb-4786-4f18-93fe-374b3717d6e1/%EB%A9%9C%ED%8B%B0%EC%8A%A4%EC%9C%84%ED%8A%B8%EC%95%84%EC%9D%B4%EC%8A%A4%EB%B0%94.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/1a9b2052-b0c1-40d6-9781-ad636f1fca5e/2%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3521633",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 3,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3521633_0.webp",
-      "assets/fashion-web/3521633_1.webp",
-      "assets/fashion-web/3521633_2.webp"
+      "assets/fashion-web/3521633_0_0.webp"
+    ]
+  },
+  {
+    "id": "3521633_1",
+    "title": "8/13(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "트로피컬 선라이즈: 패션 럭키박스",
+    "displayName": "트로피컬 선라이즈: 패션 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.08.12",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/ca9e067b-8706-4b2e-9dc4-719300196515/3%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3521633",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3521633_1_0.webp"
     ]
   },
   {
@@ -1070,75 +1509,91 @@
     ]
   },
   {
-    "id": "3545055",
+    "id": "3545055_0",
     "title": "그랜드 앙상블 토탈 패키지 종합 안내",
-    "name": "그랜드 앙상블 토탈 패키지 종합 안내",
-    "displayName": "豪華全套組合包",
+    "name": "그랜드 앙상블 토탈 패키지",
+    "displayName": "그랜드 앙상블 토탈 패키지",
     "category": "其他商城",
     "krDate": "2026.09.16",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/c6e12ff5-645e-4736-b1b9-8879859a33ec/%ED%86%A0%ED%83%88%ED%8C%A8%ED%82%A4%EC%A7%80%EA%B2%8C%EC%8B%9C%EB%AC%BC%EC%9D%B4%EB%AF%B8%EC%A7%80900x750B.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/8b907c0a-2157-4c41-b978-04a07650c201/%EC%97%98%EB%A6%AC%ED%8A%B83.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/619afc28-5260-49be-85cf-537fd5073a80/%EC%97%98%EB%A6%AC%ED%8A%B84.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/3ef872c9-295f-412a-a34f-32f6409bf000/%EA%B8%B0%EC%81%A8%EC%9D%98%EB%A6%AC%EB%93%AC%EB%82%A8%EC%95%84.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/e262f89a-c52b-40b7-acd3-41b25c953a90/%EA%B8%B0%EC%81%A8%EC%9D%98%EB%A6%AC%EB%93%AC%EC%97%AC%EC%9E%90.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/ba12f1bd-591f-4d97-9c68-038192d4fa99/%EA%B8%B0%EC%81%A8%EC%9D%98%ED%99%98%ED%98%B8%EB%82%A8%EC%9E%90.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/2544e1c8-2bbc-4f59-a1e9-4f9c284019b1/%EA%B8%B0%EC%81%A8%EC%9D%98%ED%99%98%ED%98%B8%EC%97%AC%EC%95%84.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/16ea9e29-f0be-4c83-9dd4-30e5c65a3a8d/%EA%B8%B0%EC%81%A8%EC%9D%98%EB%B0%95%EC%88%98%EB%82%A8%EC%95%84.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/40ec3a9e-edb9-46af-935c-d6c9249f18ab/%EA%B8%B0%EC%81%A8%EC%9D%98%EB%B0%95%EC%88%98%EC%97%AC%EC%9E%90.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/bfa4791e-49ab-490e-a945-5a7d7bdab9ec/%EC%85%94%ED%94%8C%EB%8C%84%EC%8A%A4%EB%82%A8%EC%9E%90.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/e23b13d1-2c8e-4d5e-9644-44f72da067f6/%EC%85%94%ED%94%8C%EB%8C%84%EC%8A%A4%EC%97%AC%EC%95%84.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/dcdfbe0d-fe68-4536-98fb-028ba21ec4e1/%EB%B2%84%EB%93%9C%EB%8C%84%EC%8A%A4%EB%82%A8%EC%95%84.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/bfd102a4-cbd2-4773-93e5-b60d3d9a8757/%EB%B2%84%EB%93%9C%EB%8C%84%EC%8A%A4%EC%97%AC%EC%9E%90.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/8ee77373-0583-4215-9019-3c52597ed4f0/%ED%8F%B4%EC%A7%9D%EB%8C%84%EC%8A%A4%EB%82%A8%EC%95%84.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/5bad2412-371c-430c-b70c-c44084e5f3d5/%ED%8F%B4%EC%A7%9D%EB%8C%84%EC%8A%A4%EC%97%AC%EC%9E%90.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/1184c300-6848-459c-bccd-967d4d7bfec1/%EC%A0%84%EC%84%A4%ED%83%88%EA%B2%83%EB%8B%B9%EB%82%98%EA%B7%80%EC%84%9C%EC%9E%88%EA%B8%B0.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/1893024d-e0d3-4863-b319-51e439609cdd/%EC%A0%84%EC%84%A4%ED%83%88%EA%B2%83%EB%8B%B9%EB%82%98%EA%B7%80%EC%9D%B4%EB%8F%99.gif",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/38cf9b25-202f-4c5f-8a67-eb2a5189c452/%EC%97%90%ED%94%BD1.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260915/cfeaa70f-6dde-43a0-aa79-436354a9f324/%EC%97%90%ED%94%BD2.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/c6e12ff5-645e-4736-b1b9-8879859a33ec/%ED%86%A0%ED%83%88%ED%8C%A8%ED%82%A4%EC%A7%80%EA%B2%8C%EC%8B%9C%EB%AC%BC%EC%9D%B4%EB%AF%B8%EC%A7%80900x750B.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3545055",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 19,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3545055_0.webp",
-      "assets/fashion-web/3545055_1.webp",
-      "assets/fashion-web/3545055_2.webp",
-      "assets/fashion-web/3545055_3.webp"
+      "assets/fashion-web/3545055_0_0.webp"
     ]
   },
   {
-    "id": "3545054",
+    "id": "3545054_0",
     "title": "(수정) 9/17(목) 패션 럭키박스 ＆ 패션샵 안내",
-    "name": "패션 럭키박스 ＆ 패션샵 안내",
-    "displayName": "時裝幸運箱 & 時裝商店",
+    "name": "클라우드 래미: 패션 럭키박스",
+    "displayName": "클라우드 래미: 패션 럭키박스",
     "category": "幸運箱",
     "krDate": "2026.09.16",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/65bf6c16-9ba6-44b9-82eb-2cc0f16aacb7/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%9E%98%EB%AF%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/3b9f6fff-1e65-49cc-a895-9e77ee9ea298/%EB%A3%A8%EC%84%BC%ED%8A%B8%EC%98%A4%EC%8A%A4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/21e610e1-6397-4a6f-9d16-0b2479cfc43a/%EB%8B%AC%EB%B9%9B%EC%84%9C%EA%B3%A0%EB%B3%84%EB%B9%9B%EC%84%9C%EA%B3%A0%ED%95%9C%EB%B3%B5%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/0c86c467-a3f3-4259-87bd-90eb2c6d1403/%EB%82%A8%EC%95%84.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/b9b940e3-9a8e-4e0d-bcac-f68869fb0ab6/%EC%97%AC%EC%95%84%EA%BC%AC%EB%A6%AC%EB%8D%AE%EC%9D%8C.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/65bf6c16-9ba6-44b9-82eb-2cc0f16aacb7/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EB%9E%98%EB%AF%B8%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3545054",
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 5,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDates": [],
     "twTitles": [],
     "localImages": [
-      "assets/fashion-web/3545054_0.webp",
-      "assets/fashion-web/3545054_1.webp",
-      "assets/fashion-web/3545054_2.webp",
-      "assets/fashion-web/3545054_3.webp"
+      "assets/fashion-web/3545054_0_0.webp"
+    ]
+  },
+  {
+    "id": "3545054_1",
+    "title": "(수정) 9/17(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "루센트 오스: 패션 럭키박스",
+    "displayName": "루센트 오스: 패션 럭키박스",
+    "category": "幸運箱",
+    "krDate": "2026.09.16",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/3b9f6fff-1e65-49cc-a895-9e77ee9ea298/%EB%A3%A8%EC%84%BC%ED%8A%B8%EC%98%A4%EC%8A%A4%ED%8C%A8%EC%85%98%EB%9F%AD%ED%82%A4%EB%B0%95%EC%8A%A4%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3545054",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3545054_1_0.webp"
+    ]
+  },
+  {
+    "id": "3545054_2",
+    "title": "(수정) 9/17(목) 패션 럭키박스 ＆ 패션샵 안내",
+    "name": "달빛 서고의 한복 & 별빛 서고의 한복",
+    "displayName": "달빛 서고의 한복 & 별빛 서고의 한복",
+    "category": "幸運箱",
+    "krDate": "2026.09.16",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260916/21e610e1-6397-4a6f-9d16-0b2479cfc43a/%EB%8B%AC%EB%B9%9B%EC%84%9C%EA%B3%A0%EB%B3%84%EB%B9%9B%EC%84%9C%EA%B3%A0%ED%95%9C%EB%B3%B5%EA%B2%8C%EC%8B%9C%EA%B8%80%EC%9D%B4%EB%AF%B8%EC%A7%80900x750.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3545054",
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDates": [],
+    "twTitles": [],
+    "localImages": [
+      "assets/fashion-web/3545054_2_0.webp"
     ]
   },
   {
