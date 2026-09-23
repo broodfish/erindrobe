@@ -1,0 +1,21 @@
+{
+  "name": "mabinogi-mobile-fashion-timeline",
+  "version": "1.0.0",
+  "description": "瑪奇 Mobile 時裝未來視 - 韓服時裝時間軸與台服比對（非官方粉絲整理）",
+  "private": true,
+  "scripts": {
+    "scrape:kr-lists": "node scripts/scrape-kr-lists.js",
+    "filter:kr-candidates": "node scripts/filter-kr-candidates.js",
+    "scrape:kr-details": "node scripts/scrape-kr-details.js",
+    "scrape:tw-lists": "node scripts/scrape-tw-lists.js",
+    "scrape:tw-details": "node scripts/scrape-tw-details.js",
+    "build:dataset": "node scripts/build-dataset.js",
+    "build:images": "node scripts/download-images.js && node scripts/optimize-images.js",
+    "serve": "python3 -m http.server 8080"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "sharp": "^0.35.4"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "boardId": "7126",
+    "threadNew": false,
+    "communityId": "652",
+    "title": "活動 Event",
+    "isHeadline": true,
+    "release": "ON",
+    "boardType": "NORMAL",
+    "threadAuthority": "ADMIN",
+    "commentAuthority": "ADMIN",
+    "boardHeadlines": [
+      {
+        "headlineId": "5333",
+        "title": "活動"
+      },
+      {
+        "headlineId": "5334",
+        "title": "已結束"
+      },
+      {
+        "headlineId": "5335",
+        "title": "得獎名單"
+      }
+    ],
+    "liveThreadCount": 64,
+    "boardHideType": "NONE",
+    "templateRelease": "OFF",
+    "popularCommentRelease": "OFF",
+    "boardHeaderRelease": "OFF"
+  }
+}

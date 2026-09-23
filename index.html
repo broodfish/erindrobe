@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>瑪奇 Mobile 時裝未來視｜韓服時裝時間軸</title>
+<meta name="description" content="非官方粉絲整理:瑪奇手機版(Mabinogi Mobile)韓服時裝上線時間軸,並標示台服發行狀態。" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>瑪奇 Mobile 時裝未來視</h1>
+    <p class="subtitle">韓服時裝時間軸,對照台服發行進度｜非官方粉絲整理</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="notice">
+    <p>
+      本站資料來自韓服 <a href="https://mabinogimobile.nexon.com/" target="_blank" rel="noopener">mabinogimobile.nexon.com</a>
+      公告及台服 <a href="https://tw.nexon.com/mabinogimobile/" target="_blank" rel="noopener">tw.nexon.com/mabinogimobile</a>
+      公告整理,圖片版權屬於 NEXON / devCAT。本站為非官方粉絲工具,僅供參考,實際上線內容與時間請以官方公告為準。
+    </p>
+  </section>
+
+  <section class="controls">
+    <div class="filter-group" id="categoryFilters">
+      <button class="chip active" data-category="all">全部</button>
+    </div>
+    <div class="filter-group secondary">
+      <label class="toggle">
+        <input type="checkbox" id="twOnlyToggle" />
+        <span>只看台服尚未發行</span>
+      </label>
+      <input type="search" id="searchBox" placeholder="搜尋時裝名稱..." />
+    </div>
+  </section>
+
+  <section class="stats" id="stats"></section>
+
+  <section class="timeline" id="timeline"></section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Fan-made project ｜ Data &amp; images © NEXON Co., Ltd. &amp; devCAT CO., LTD.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
