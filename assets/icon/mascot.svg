@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect x="0" y="0" width="128" height="128" fill="#211a2c"/>
+
+  <!-- body: round wardrobe spirit -->
+  <path d="
+    M 64 34
+    C 90 34 104 56 104 80
+    C 104 100 88 112 64 112
+    C 40 112 24 100 24 80
+    C 24 56 38 34 64 34
+    Z"
+    fill="#f2e8d5"/>
+
+  <!-- hat brim -->
+  <ellipse cx="64" cy="40" rx="26" ry="8" fill="#c9a44e"/>
+
+  <!-- hat cone, blunt rounded tip -->
+  <path d="
+    M 46 40
+    C 46 22 56 8 64 8
+    C 72 8 82 22 82 40
+    C 82 44 74 46 64 46
+    C 54 46 46 44 46 40
+    Z"
+    fill="#c9a44e"/>
+
+  <!-- tiny star charm on hat tip -->
+  <circle cx="64" cy="10" r="5" fill="#f2e8d5"/>
+
+  <!-- eyes -->
+  <circle cx="52" cy="78" r="5.5" fill="#c9a44e"/>
+  <circle cx="76" cy="78" r="5.5" fill="#c9a44e"/>
+
+  <!-- tiny mouth -->
+  <path d="M 60 90 Q 64 94 68 90" stroke="#c9a44e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>
