@@ -20,17 +20,22 @@ function parseTotalPackageName(text) {
   if (!text) return null;
   const normalized = String(text).replace(/\s+/g, ' ').trim();
   const patterns = [
-    /✨\s*([^✨]{2,24}?)\s*토탈\s*패키지/u,
-    /(?:^|\s)([가-힣A-Za-z0-9][가-힣A-Za-z0-9\s·&-]{1,24}?)\s*토탈\s*패키지/u,
+    /✨\s*([^✨]{2,30}?)\s*토탈\s*패키지/gu,
+    /(?:^|\s)([가-힣A-Za-z0-9][가-힣A-Za-z0-9\s·&-]{1,30}?)\s*토탈\s*패키지/gu,
   ];
+  const candidates = [];
   for (const pattern of patterns) {
-    const match = normalized.match(pattern);
-    if (match) {
+    for (const match of normalized.matchAll(pattern)) {
       const name = match[1].trim().replace(/^(?:종합\s*안내|안내)\s*/u, '');
-      if (name) return name;
+      const after = normalized.slice(match.index + match[0].length);
+      const hasHeadingBoundary = /^(?:\s*(?:🌟|◼|와|종합\s*안내|$))/u.test(after);
+      if (name && hasHeadingBoundary && !/토탈\s*패키지|구매|제공되는|리워드|주요상품/u.test(name)) {
+        candidates.push({ name, index: match.index });
+      }
     }
   }
-  return null;
+  candidates.sort((a, b) => a.index - b.index);
+  return candidates.length ? candidates[0].name : null;
 }
 
 function parseDateFromContext(text) {

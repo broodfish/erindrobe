@@ -4,6 +4,8 @@ const path = require('path');
 const RAW = path.join(__dirname, '..', 'data', 'raw');
 const kr = JSON.parse(fs.readFileSync(path.join(RAW, 'kr-details.json'), 'utf8'));
 const tw = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-details.json'), 'utf8'));
+const { parseLuckyBoxNotice, parseTotalPackageName, parseChoiceBoxes } = require('./parse-kr-text.js');
+const { normalizeName, deriveTwStatus, createEvidence } = require('./tw-match.js');
 
 // Must exactly replicate download-images.js's pickImages() — the vision-extraction subagents
 // read the LOCAL files it produced (assets/fashion-web/{noticeId}_{i}.webp), and those file
@@ -15,8 +17,9 @@ const tw = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-details.json'), 'utf8')
 // vision agent actually read and labeled "데이지의 작은 패션 아틀리에 반짝 오픈!" — was really
 // raw image 1, a 900x750 banner-dimension image that pickImages sorted to the front).
 function pickImages(images, max = 4) {
-  const banner = images.filter(u => /\d{3,4}x\d{3,4}/.test(decodeURIComponent(u)));
-  const rest = images.filter(u => !banner.includes(u));
+  const stills = images.filter(u => !/\.gif(\?|$)/i.test(u));
+  const banner = stills.filter(u => /\d{3,4}x\d{3,4}/.test(decodeURIComponent(u)));
+  const rest = stills.filter(u => !banner.includes(u));
   return [...banner, ...rest].slice(0, max);
 }
 
@@ -47,35 +50,10 @@ for (const t of tw) {
   }
 }
 
-// Verified KR->TW item mapping, keyed by the final dataset item id (not name — several pet-box
-// themes like "아기 올빼미: 펫 럭키박스" recur verbatim across multiple unrelated KR release
-// cycles, so name-only keys would wrongly mark every recurrence as released). Matched by title,
-// not image-UUID, since TW almost always re-renders its own marketing banners with a fresh CDN
-// UUID even when it reuses the same costume/pet — UUID matching alone misses most releases.
-// Built two ways:
-//  1. Legendary sets: searching TW notices for the "傳說時裝裝備『...』" announcement pattern.
-//  2. Everything else: vision-reading the Chinese title text baked into TW's own bundle-notice
-//     banner images (see scripts/download-tw-raw.js + data/raw/tw-item-split.json), then pairing
-//     each KR item's name with its thematically-matching TW translation by inspection. TW does
-//     NOT release a KR week's items together or in KR's original order — it reshuffles KR's
-//     back catalog into its own ~4-week bundles — so this has to be maintained as explicit
-//     verified pairs rather than inferred from any date/order heuristic.
-// Extend this map by running scripts/download-tw-raw.js against new TW bundle threads, vision-
-// reading the images (see kr-item-split.json's approach for KR), and adding confirmed pairs here.
-// Key format: "{noticeId}" for non-split (aggregate) items, "{noticeId}_{imageIndex}" for split items.
-const VERIFIED_TW_MAP = {
-  '2757708': { twName: '宇宙星之子', twThreadId: '3504848' },       // 코스믹 스타차일드
-  '2957849': { twName: '古樹統治者', twThreadId: '3541066' },       // 엘더우드 소버린
-  '2839212_2': { twName: '幼狼：寵物幸運箱', twThreadId: '3527227' },              // 신규 펫: 아기 늑대
-  '2839212_1': { twName: '寂靜的審判：純琥珀套裝', twThreadId: '3541055' },        // 고요한 심판: 솔리드 엠버 세트
-  '2839212_0': { twName: '熱情之舞：卡門套裝', twThreadId: '3527227' },            // 정열의 춤: 카르메나 세트
-  '2906352_0': { twName: '春季運動會：春風運動套裝', twThreadId: '3527227' },      // 봄 운동회: 봄바람 트랙 세트
-  '2906352_1': { twName: '閃耀的應援：公羊星啦啦隊套裝', twThreadId: '3527227' },  // 빛나는 응원: 램스타즈 응원단 세트
-  '2957846_2': { twName: '幼貓頭鷹：寵物幸運箱', twThreadId: '3541055' },          // 아기 올빼미: 펫 럭키박스 (2025.06.19 debut)
-  '3037067_0': { twName: '漣漪記憶：舒適針織套裝', twThreadId: '3505035' },        // 잔물결의 기억: 코지 크로셰 세트
-  '3201524_0': { twName: '淡雅誘惑：優雅繆思套裝', twThreadId: '3541055' },        // 은은한 끌림: 엘레강트 뮤즈 세트
-  '3201524_1': { twName: '盛宴的主人：永恆小步舞曲套裝', twThreadId: '3541055' },  // 연회의 주인: 타임리스 미뉴엣 세트
-};
+const twMatchRecords = fs.existsSync(path.join(RAW, 'tw-kr-matches.json'))
+  ? JSON.parse(fs.readFileSync(path.join(RAW, 'tw-kr-matches.json'), 'utf8'))
+  : [];
+const VERIFIED_TW_MAP = Object.fromEntries(twMatchRecords.map(record => [record.krId, record]));
 
 function decodeEntities(s) {
   return s
@@ -96,13 +74,19 @@ function cleanName(title) {
     .trim();
 }
 
+function parseTotalPackageTitle(title) {
+  const normalized = cleanName(title).replace(/\s+/g, ' ').trim();
+  const match = normalized.match(/^(.+?)\s+토탈\s*패키지/u);
+  return match && match[1] !== '토탈' ? match[1].trim() : null;
+}
+
 function displayName(title, category, name) {
   if (category === '幸運箱') {
     if (/펫/.test(title)) return '寵物幸運箱';
     return '時裝幸運箱 & 時裝商店';
   }
   if (category === '通行證') return '冒險家高級通行證 & 系列包';
-  if (category === '套組時裝') return name; // keep original Korean proper noun (not yet officially localized)
+  if (category === '傳說時裝') return name; // keep original Korean proper noun (not yet officially localized)
   if (category === '聯動') {
     if (/산리오/.test(title)) return '瑪奇手機版 X Sanrio 聯名';
     return name;
@@ -110,7 +94,6 @@ function displayName(title, category, name) {
   if (category === '其他商城') {
     if (/염색약/.test(title)) return '染色藥選擇箱';
     if (/신규 패키지/.test(title)) return '新商城套裝 & 時裝商店';
-    if (/그랜드 앙상블/.test(title)) return '豪華全套組合包';
     if (/Galaxy/.test(title)) return 'Galaxy 聯名週邊配件';
     if (/아틀리에|크리스마스/.test(title)) return '聖誕主題時裝活動';
     return name;
@@ -119,7 +102,8 @@ function displayName(title, category, name) {
 }
 
 function categorize(title) {
-  if (/전설 패션 장비|에픽 패션/.test(title)) return '套組時裝';
+  if (/전설 패션 장비|에픽 패션/.test(title)) return '傳說時裝';
+  if (/토탈 패키지/.test(title)) return '套組時裝';
   if (/펫 럭키박스/.test(title)) return '幸運箱';
   if (/패션 럭키박스|럭키박스|럭키 박스/.test(title)) return '幸運箱';
   if (/프리미엄 패스|시즌패스|시즌 패스|통행증/.test(title)) return '通行證';
@@ -152,8 +136,9 @@ function parseStartDate(text) {
   return `${y}.${mo.padStart(2, '0')}.${d.padStart(2, '0')}`;
 }
 
-// Match a single raw image URL against the TW image index and return { released, fully, date, titles }.
-function matchTwForImages(rawImageUrls, verifiedMatch) {
+// Match a single item's images against TW evidence. Shared image UUIDs are retained as useful
+// clues, but they cannot establish a release without a semantic/manual name match.
+function matchTwForImages(rawImageUrls, verifiedMatch, krId, krName) {
   const matchedThreads = new Map();
   let matchedImageCount = 0;
   for (const img of rawImageUrls) {
@@ -170,14 +155,50 @@ function matchTwForImages(rawImageUrls, verifiedMatch) {
   }
   const twThreadsMatched = [...matchedThreads.values()].sort((a, b) => a.createDate - b.createDate);
   const twDates = [...new Set(twThreadsMatched.map(t => t.createDate))];
+  const normalizedKrName = normalizeName(krName);
+  const directNameMatch = normalizedKrName && twThreadsMatched.some(thread => {
+    const normalizedTwTitle = normalizeName(thread.title);
+    return normalizedTwTitle === normalizedKrName
+      || normalizedTwTitle.includes(normalizedKrName)
+      || normalizedKrName.includes(normalizedTwTitle);
+  });
+  const manualMatch = Boolean(verifiedMatch);
+  const nameMatch = manualMatch || directNameMatch;
+  const imageMatch = matchedImageCount > 0;
+  const twStatus = deriveTwStatus({ nameMatch, imageMatch, manualMatch });
+  const twEvidence = [];
+  if (verifiedMatch) {
+    const thread = twThreadsMatched.find(item => item.threadId === verifiedMatch.twThreadId);
+    twEvidence.push(createEvidence({
+      krId,
+      krName,
+      twThreadId: verifiedMatch.twThreadId,
+      twName: verifiedMatch.twName || thread?.title,
+      twDate: thread?.createDate,
+      method: verifiedMatch.method || 'manual-name-and-image',
+      note: verifiedMatch.note || '人工核對韓文／中文語意與圖片。',
+    }));
+  } else {
+    twThreadsMatched.forEach(thread => twEvidence.push(createEvidence({
+      krId,
+      krName,
+      twThreadId: thread.threadId,
+      twName: thread.title,
+      twDate: thread.createDate,
+      method: 'image-uuid-only',
+      note: '圖片 UUID 相符，但尚未完成韓文／中文名稱語意核對。',
+    })));
+  }
   return {
-    twReleased: matchedThreads.size > 0,
-    twFullyReleased: !!verifiedMatch || (matchedImageCount > 0 && matchedImageCount === rawImageUrls.length),
+    twStatus,
+    twReleased: twStatus === 'confirmed',
+    twFullyReleased: twStatus === 'confirmed',
     twMatchedImageCount: matchedImageCount,
     twTotalImageCount: rawImageUrls.length,
     twDate: twDates.length ? twDates[0] : null,
     twDates,
     twTitles: [...new Set(twThreadsMatched.map(t => t.title))],
+    twEvidence,
   };
 }
 
@@ -194,21 +215,32 @@ for (const r of kr) {
   const category = categorize(r.title);
   if (category === '公告更正') continue;
 
-  const name = cleanName(r.title);
+  const name = category === '套組時裝'
+    ? (parseTotalPackageTitle(r.title) || parseTotalPackageName(r.fullText) || cleanName(r.title))
+    : cleanName(r.title);
   const verifiedMatch = VERIFIED_TW_MAP[r.id];
 
-  if (INSTRUMENT_SPLIT[r.id]) {
-    INSTRUMENT_SPLIT[r.id].forEach((box, boxIdx) => {
-      const rawUrls = box.imageIndices.map(i => r.contentImages[i]).filter(Boolean);
+  const isChoiceBoxNotice = category === '商城樂器' || /염색약/.test(r.title);
+  const choiceBoxes = isChoiceBoxNotice && r.fullText ? parseChoiceBoxes(r.fullText) : [];
+  if (choiceBoxes.length > 0) {
+    choiceBoxes.forEach((box, boxIdx) => {
+      const manualImageConfig = INSTRUMENT_SPLIT[r.id]?.[boxIdx];
+      const rawUrls = manualImageConfig
+        ? manualImageConfig.imageIndices.map(i => r.contentImages[i]).filter(Boolean)
+        : (r.contentImages[0] ? [r.contentImages[0]] : []);
       if (!rawUrls.length) return;
-      const twInfo = matchTwForImages(rawUrls, VERIFIED_TW_MAP[`${r.id}_box${boxIdx}`]);
+      const itemId = `${r.id}_box${boxIdx}`;
+      const choiceMatch = VERIFIED_TW_MAP[itemId];
+      const twInfo = matchTwForImages(rawUrls, choiceMatch, itemId, box.name);
       items.push({
-        id: `${r.id}_box${boxIdx}`,
+        id: itemId,
         title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
         name: box.name,
-        displayName: box.displayName,
+        displayName: manualImageConfig?.displayName || box.name,
         category,
-        krDate: r.date,
+        choiceKind: box.kind,
+        componentsText: box.componentsText,
+        krDate: box.saleDate || r.date,
         images: rawUrls,
         sourceUrl: r.url,
         ...twInfo,
@@ -217,22 +249,78 @@ for (const r of kr) {
     continue;
   }
 
-  const splitForNotice = (splitMap.get(r.id) || []).filter(
+  // 套組時裝 (total-package bundles) are a single coherent product, not a bundle of independently
+  // named items — skip the per-image split path entirely so they use the aggregate branch below
+  // with parseTotalPackageName(), instead of an old vision-read title from before this category
+  // existed (it would otherwise still match a stale kr-item-split.json entry).
+  const splitForNotice = category === '套組時裝' ? [] : (splitMap.get(r.id) || []).filter(
     e => e.titleKr && !NON_FASHION_TITLE.test(e.titleKr)
   );
 
+  // Prefer the notice's own body text over vision-read image banners for naming: the text
+  // contains the authoritative official box name (e.g. "정열의 춤 : 패션 럭키박스"), while vision
+  // extraction only saw a promotional banner and could invent a plausible-but-wrong name (it
+  // previously produced "정열의 춤: 카르메나 세트" — "카르메나" is the equipment set's internal
+  // prefix, not part of the box's real title). Vision is still used to pick which image belongs
+  // to which box, matched by substring containment against the vision-read title/prefix.
+  const textBoxes = category === '套組時裝' ? [] : (r.fullText ? parseLuckyBoxNotice(r.fullText) : []);
+
+  if (textBoxes.length > 0) {
+    const usedEntries = new Set();
+    const fallbackImages = pickImages(r.contentImages);
+    const usedFallbackIdx = new Set();
+    textBoxes.forEach((box, boxOrderIdx) => {
+      let match = splitForNotice.find(e => !usedEntries.has(e) && e.titleKr.includes(box.boxName));
+      if (!match && box.setNamePrefix) {
+        match = splitForNotice.find(e => !usedEntries.has(e) && e.titleKr.includes(box.setNamePrefix));
+      }
+      if (!match && splitForNotice.length > 0) {
+        // Positional fallback among same-type entries (펫 vs 패션) in original order.
+        const wantPet = box.boxType.includes('펫');
+        match = splitForNotice.find(e => !usedEntries.has(e) && (/펫/.test(e.titleKr) === wantPet));
+      }
+      let imgIndex;
+      if (match) {
+        usedEntries.add(match);
+        const idxMatch = match.imageFile.match(/_(\d+)\.webp$/);
+        imgIndex = idxMatch ? parseInt(idxMatch[1], 10) : 0;
+      } else {
+        // No vision data at all for this notice (e.g. it had only one raw image, so it was never
+        // sent through the vision-extraction batches) — fall back to positional order against
+        // the notice's own picked images directly.
+        imgIndex = [...fallbackImages.keys()].find(i => !usedFallbackIdx.has(i));
+        if (imgIndex === undefined) return;
+        usedFallbackIdx.add(imgIndex);
+      }
+      const rawUrl = fallbackImages[imgIndex];
+      if (!rawUrl) return;
+      const entryVerifiedMatch = VERIFIED_TW_MAP[`${r.id}_${imgIndex}`];
+      const twInfo = matchTwForImages([rawUrl], entryVerifiedMatch, `${r.id}_${imgIndex}`, box.boxName);
+      items.push({
+        id: `${r.id}_${imgIndex}`,
+        title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
+        name: box.boxName,
+        displayName: entryVerifiedMatch ? entryVerifiedMatch.twName : box.boxName,
+        category,
+        krDate: box.date || r.date,
+        images: [rawUrl],
+        sourceUrl: r.url,
+        ...twInfo,
+      });
+    });
+    continue;
+  }
+
   if (splitForNotice.length > 0) {
-    // Each entry in the notice's image bundle is an independently named, independently sold
-    // item (e.g. a "럭키박스 & 패션샵" notice bundles several unrelated costume sets in one
-    // announcement) — split into one card per item, each matched against TW individually so a
-    // notice isn't shown as fully "not released" just because one piece in the bundle isn't.
+    // Fallback for notices where text parsing found nothing (a handful of older/differently-
+    // formatted notices) — still split per bundled item, but name comes from vision only.
     for (const entry of splitForNotice) {
       const idxMatch = entry.imageFile.match(/_(\d+)\.webp$/);
       const imgIndex = idxMatch ? parseInt(idxMatch[1], 10) : 0;
       const rawUrl = pickImages(r.contentImages)[imgIndex];
       if (!rawUrl) continue;
       const entryVerifiedMatch = VERIFIED_TW_MAP[`${r.id}_${imgIndex}`];
-      const twInfo = matchTwForImages([rawUrl], entryVerifiedMatch);
+      const twInfo = matchTwForImages([rawUrl], entryVerifiedMatch, `${r.id}_${imgIndex}`, entry.titleKr);
       items.push({
         id: `${r.id}_${imgIndex}`,
         title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
@@ -248,7 +336,7 @@ for (const r of kr) {
     continue;
   }
 
-  const twInfo = matchTwForImages(r.contentImages, verifiedMatch);
+  const twInfo = matchTwForImages(r.contentImages, verifiedMatch, r.id, name);
   const twNameOverride = verifiedMatch ? verifiedMatch.twName : null;
 
   items.push({

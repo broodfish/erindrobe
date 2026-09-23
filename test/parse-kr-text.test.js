@@ -11,6 +11,10 @@ test('extracts the themed name from a total-package heading', () => {
     parseTotalPackageName('그랜드 앙상블 토탈 패키지 종합 안내'),
     '그랜드 앙상블',
   );
+  assert.equal(
+    parseTotalPackageName('✨ 토탈 패키지 구매 횟수에 따라 제공되는 보상! 미스틱 아르카나 토탈 패키지'),
+    '미스틱 아르카나',
+  );
 });
 
 test('splits dye choice boxes into one product per official name', () => {
