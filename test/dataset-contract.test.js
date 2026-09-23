@@ -27,6 +27,8 @@ test('Taiwan release flags carry semantic/image evidence', () => {
   const released = items.filter(item => item.twReleased);
   assert.equal(released.length, 13);
   assert.ok(released.every(item => item.twStatus === 'confirmed'));
+  assert.ok(released.every(item => item.twNameMatch));
+  assert.ok(released.every(item => item.twManualMatch));
   assert.ok(released.every(item => item.twEvidence?.some(evidence => evidence.method === 'manual-name-and-image')));
   assert.ok(items.every(item => item.twReleased === (item.twStatus === 'confirmed')));
 });

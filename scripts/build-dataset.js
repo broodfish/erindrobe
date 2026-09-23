@@ -191,6 +191,9 @@ function matchTwForImages(rawImageUrls, verifiedMatch, krId, krName) {
   }
   return {
     twStatus,
+    twNameMatch: Boolean(nameMatch),
+    twImageMatch: Boolean(imageMatch),
+    twManualMatch: manualMatch,
     twReleased: twStatus === 'confirmed',
     twFullyReleased: twStatus === 'confirmed',
     twMatchedImageCount: matchedImageCount,
