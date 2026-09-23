@@ -113,8 +113,16 @@
     }
 
     const badge = document.createElement("span");
-    badge.className = "tw-badge " + (item.twReleased ? "released" : "pending");
-    badge.textContent = item.twReleased ? "台服已發行" : "台服未發行";
+    if (item.twReleased && !item.twFullyReleased) {
+      badge.className = "tw-badge partial";
+      badge.textContent = "台服部分發行";
+    } else if (item.twReleased) {
+      badge.className = "tw-badge released";
+      badge.textContent = "台服已發行";
+    } else {
+      badge.className = "tw-badge pending";
+      badge.textContent = "台服未發行";
+    }
     media.appendChild(badge);
 
     const body = document.createElement("div");

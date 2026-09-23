@@ -78,6 +78,7 @@ body {
 }
 .notice a { color: var(--accent); text-decoration: none; }
 .notice a:hover { text-decoration: underline; }
+.notice-sub { margin: 10px 0 0; font-size: 0.78rem; color: var(--text-faint); }
 
 /* Controls */
 .controls {
@@ -238,6 +239,7 @@ body {
   backdrop-filter: blur(4px);
 }
 .tw-badge.released { background: rgba(79, 195, 184, 0.85); color: #06221f; }
+.tw-badge.partial { background: rgba(230, 178, 66, 0.9); color: #2b1a00; }
 .tw-badge.pending { background: rgba(240, 111, 160, 0.85); color: #2a0416; }
 
 .card-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 6px; flex: 1; }

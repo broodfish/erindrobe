@@ -20,6 +20,18 @@ for (const t of tw) {
   }
 }
 
+// Verified KR->TW legendary fashion set name mapping, found by searching TW notices for the
+// "傳說時裝裝備『...』" announcement pattern (title-based, not image-UUID based — TW usually
+// re-renders its own marketing banners with a fresh CDN UUID even when it reuses the same
+// costume, so UUID matching alone misses most legendary-set launches). Confirmed against TW
+// thread content as of this scrape; update this list by re-running the search below when TW
+// releases more legendary sets:
+//   grep title for /傳說時裝装備|傳說時裝裝備/ across tw-notice-all / tw-event-all
+const LEGENDARY_TW_MAP = {
+  '코스믹 스타차일드': { twName: '宇宙星之子', twThreadId: '3504848' },
+  '엘더우드 소버린': { twName: '古樹統治者', twThreadId: '3541066' },
+};
+
 function decodeEntities(s) {
   return s
     .replace(/&amp;/g, '&')
@@ -85,26 +97,51 @@ for (const r of kr) {
   const category = categorize(r.title);
   if (category === '公告更正') continue;
 
-  // find TW match via shared image uuid
-  let twMatch = null;
+  // Match each KR image independently against TW's image index — a KR notice can bundle
+  // several distinct pieces, and TW may release them piecemeal across different threads/dates
+  // rather than all at once, so a single "first match" flag would misrepresent partial releases.
+  const matchedThreads = new Map(); // threadId -> tw thread
+  let matchedImageCount = 0;
   for (const img of r.contentImages) {
     const k = imgKey(img);
-    if (k && twIndex.has(k)) { twMatch = twIndex.get(k); break; }
+    const t = k && twIndex.get(k);
+    if (t) {
+      matchedImageCount++;
+      matchedThreads.set(t.threadId, t);
+    }
+  }
+  const name = cleanName(r.title);
+
+  // For legendary sets, prefer the verified title-based mapping over image matching — TW almost
+  // always re-renders its own marketing banner with a fresh CDN UUID even when reusing the same
+  // costume, so image-UUID matching alone misses most legendary launches (only catches cases
+  // where individual character-pose renders happen to be reused verbatim).
+  const legendaryMatch = category === '套組時裝' ? LEGENDARY_TW_MAP[name] : null;
+  if (legendaryMatch && !matchedThreads.has(legendaryMatch.twThreadId)) {
+    const t = tw.find(x => x.threadId === legendaryMatch.twThreadId);
+    if (t) matchedThreads.set(t.threadId, t);
   }
 
-  const name = cleanName(r.title);
+  const twThreadsMatched = [...matchedThreads.values()].sort((a, b) => a.createDate - b.createDate);
+  const twDates = [...new Set(twThreadsMatched.map(t => t.createDate))];
+  const twNameOverride = legendaryMatch ? legendaryMatch.twName : null;
+
   items.push({
     id: r.id,
     title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
     name,
-    displayName: displayName(r.title, category, name),
+    displayName: twNameOverride || displayName(r.title, category, name),
     category,
     krDate: r.date,
     images: r.contentImages,
     sourceUrl: r.url,
-    twReleased: !!twMatch,
-    twDate: twMatch ? twMatch.createDate : null,
-    twTitle: twMatch ? twMatch.title : null,
+    twReleased: matchedThreads.size > 0,
+    twFullyReleased: !!legendaryMatch || (matchedImageCount > 0 && matchedImageCount === r.contentImages.length),
+    twMatchedImageCount: matchedImageCount,
+    twTotalImageCount: r.contentImages.length,
+    twDate: twDates.length ? twDates[0] : null, // earliest TW date among matched pieces
+    twDates,
+    twTitles: [...new Set(twThreadsMatched.map(t => t.title))],
   });
 }
 
@@ -125,4 +162,6 @@ console.log('Built', items.length, 'items');
 const byCat = {};
 items.forEach(i => byCat[i.category] = (byCat[i.category] || 0) + 1);
 console.log(byCat);
-console.log('TW released count:', items.filter(i => i.twReleased).length);
+console.log('TW released (any piece):', items.filter(i => i.twReleased).length);
+console.log('TW fully released (all pieces):', items.filter(i => i.twFullyReleased).length);
+console.log('TW partially released:', items.filter(i => i.twReleased && !i.twFullyReleased).length);

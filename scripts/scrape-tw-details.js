@@ -21,15 +21,14 @@ function isContentImage(url) {
   await page.waitForTimeout(1000);
 
   const outDir = path.join(__dirname, '..', 'data', 'raw');
-  const notice = JSON.parse(fs.readFileSync(path.join(outDir, 'tw-notice-product.json'), 'utf8'));
   const noticeAll = JSON.parse(fs.readFileSync(path.join(outDir, 'tw-notice-all.json'), 'utf8'));
   const eventAll = JSON.parse(fs.readFileSync(path.join(outDir, 'tw-event-all.json'), 'utf8'));
+  const updateAll = JSON.parse(fs.readFileSync(path.join(outDir, 'tw-update-all.json'), 'utf8'));
 
-  // Merge unique threads: product-tagged notices are priority; also include any notice/event title containing fashion keywords
-  const KW = ['時裝', '套組', '幸運箱', '通行證', '造型', '聯名', '合作', '染色', '寵物', '坐騎'];
-  const extra = [...noticeAll, ...eventAll].filter(i => KW.some(k => i.title && i.title.includes(k)));
+  // Fetch details for every thread across all boards (not just keyword-filtered) so partial/staggered
+  // TW releases of items from a single KR batch are still caught by image-level matching.
   const map = new Map();
-  [...notice, ...extra].forEach(i => map.set(i.threadId, i));
+  [...noticeAll, ...eventAll, ...updateAll].forEach(i => map.set(i.threadId, i));
   const jobs = [...map.values()];
   console.log('total detail jobs:', jobs.length);
 
