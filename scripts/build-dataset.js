@@ -32,16 +32,34 @@ for (const t of tw) {
   }
 }
 
-// Verified KR->TW legendary fashion set name mapping, found by searching TW notices for the
-// "傳說時裝裝備『...』" announcement pattern (title-based, not image-UUID based — TW usually
-// re-renders its own marketing banners with a fresh CDN UUID even when it reuses the same
-// costume, so UUID matching alone misses most legendary-set launches). Confirmed against TW
-// thread content as of this scrape; update this list by re-running the search below when TW
-// releases more legendary sets:
-//   grep title for /傳說時裝装備|傳說時裝裝備/ across tw-notice-all / tw-event-all
-const LEGENDARY_TW_MAP = {
-  '코스믹 스타차일드': { twName: '宇宙星之子', twThreadId: '3504848' },
-  '엘더우드 소버린': { twName: '古樹統治者', twThreadId: '3541066' },
+// Verified KR->TW item mapping, keyed by the final dataset item id (not name — several pet-box
+// themes like "아기 올빼미: 펫 럭키박스" recur verbatim across multiple unrelated KR release
+// cycles, so name-only keys would wrongly mark every recurrence as released). Matched by title,
+// not image-UUID, since TW almost always re-renders its own marketing banners with a fresh CDN
+// UUID even when it reuses the same costume/pet — UUID matching alone misses most releases.
+// Built two ways:
+//  1. Legendary sets: searching TW notices for the "傳說時裝裝備『...』" announcement pattern.
+//  2. Everything else: vision-reading the Chinese title text baked into TW's own bundle-notice
+//     banner images (see scripts/download-tw-raw.js + data/raw/tw-item-split.json), then pairing
+//     each KR item's name with its thematically-matching TW translation by inspection. TW does
+//     NOT release a KR week's items together or in KR's original order — it reshuffles KR's
+//     back catalog into its own ~4-week bundles — so this has to be maintained as explicit
+//     verified pairs rather than inferred from any date/order heuristic.
+// Extend this map by running scripts/download-tw-raw.js against new TW bundle threads, vision-
+// reading the images (see kr-item-split.json's approach for KR), and adding confirmed pairs here.
+// Key format: "{noticeId}" for non-split (aggregate) items, "{noticeId}_{imageIndex}" for split items.
+const VERIFIED_TW_MAP = {
+  '2757708': { twName: '宇宙星之子', twThreadId: '3504848' },       // 코스믹 스타차일드
+  '2957849': { twName: '古樹統治者', twThreadId: '3541066' },       // 엘더우드 소버린
+  '2839212_2': { twName: '幼狼：寵物幸運箱', twThreadId: '3527227' },              // 신규 펫: 아기 늑대
+  '2839212_1': { twName: '寂靜的審判：純琥珀套裝', twThreadId: '3541055' },        // 고요한 심판: 솔리드 엠버 세트
+  '2839212_0': { twName: '熱情之舞：卡門套裝', twThreadId: '3527227' },            // 정열의 춤: 카르메나 세트
+  '2906352_0': { twName: '春季運動會：春風運動套裝', twThreadId: '3527227' },      // 봄 운동회: 봄바람 트랙 세트
+  '2906352_1': { twName: '閃耀的應援：公羊星啦啦隊套裝', twThreadId: '3527227' },  // 빛나는 응원: 램스타즈 응원단 세트
+  '2957846_2': { twName: '幼貓頭鷹：寵物幸運箱', twThreadId: '3541055' },          // 아기 올빼미: 펫 럭키박스 (2025.06.19 debut)
+  '3037067_0': { twName: '漣漪記憶：舒適針織套裝', twThreadId: '3505035' },        // 잔물결의 기억: 코지 크로셰 세트
+  '3201524_0': { twName: '淡雅誘惑：優雅繆思套裝', twThreadId: '3541055' },        // 은은한 끌림: 엘레강트 뮤즈 세트
+  '3201524_1': { twName: '盛宴的主人：永恆小步舞曲套裝', twThreadId: '3541055' },  // 연회의 주인: 타임리스 미뉴엣 세트
 };
 
 function decodeEntities(s) {
@@ -92,9 +110,21 @@ function categorize(title) {
   if (/프리미엄 패스|시즌패스|시즌 패스|통행증/.test(title)) return '通行證';
   if (/컬렉션 백|컬렉션백/.test(title)) return '通行證';
   if (/콜라보|컬래버|산리오/.test(title)) return '聯動';
+  if (/악기/.test(title)) return '商城樂器';
   if (/의상 수정|획득 종료|추가 능력치|소급/.test(title)) return '公告更正';
   return '其他商城';
 }
+
+// One-off manual split for the KR cash-shop instrument-skin notice: it bundles two separate
+// "選擇箱" products (each offering a choice of recolored instrument skins), not distinct named
+// costume sets, so it doesn't fit the automatic per-image title-split pipeline used for fashion
+// lucky boxes — grouped here into one card per box instead of one per individual color variant.
+const INSTRUMENT_SPLIT = {
+  '2918992': [
+    { name: '꾸러기 응원단 악기 선택 상자', displayName: '調皮應援團樂器選擇箱', imageIndices: [0, 1, 2, 4] },
+    { name: '봄의 선율 악기 선택 상자', displayName: '春之旋律樂器選擇箱', imageIndices: [8, 9, 14, 20] },
+  ],
+};
 
 // Parse a Korean sale-date string like "2025년 4월 24일(목) 점검 후 ~ 2025년 5월 22일(목) 05:59까지"
 // or "2025/12/18(목) 점검 후 ~ ..." into the site's "YYYY.MM.DD" convention. Returns null if
@@ -108,7 +138,7 @@ function parseStartDate(text) {
 }
 
 // Match a single raw image URL against the TW image index and return { released, fully, date, titles }.
-function matchTwForImages(rawImageUrls, legendaryMatch) {
+function matchTwForImages(rawImageUrls, verifiedMatch) {
   const matchedThreads = new Map();
   let matchedImageCount = 0;
   for (const img of rawImageUrls) {
@@ -119,15 +149,15 @@ function matchTwForImages(rawImageUrls, legendaryMatch) {
       matchedThreads.set(t.threadId, t);
     }
   }
-  if (legendaryMatch && !matchedThreads.has(legendaryMatch.twThreadId)) {
-    const t = tw.find(x => x.threadId === legendaryMatch.twThreadId);
+  if (verifiedMatch && !matchedThreads.has(verifiedMatch.twThreadId)) {
+    const t = tw.find(x => x.threadId === verifiedMatch.twThreadId);
     if (t) matchedThreads.set(t.threadId, t);
   }
   const twThreadsMatched = [...matchedThreads.values()].sort((a, b) => a.createDate - b.createDate);
   const twDates = [...new Set(twThreadsMatched.map(t => t.createDate))];
   return {
     twReleased: matchedThreads.size > 0,
-    twFullyReleased: !!legendaryMatch || (matchedImageCount > 0 && matchedImageCount === rawImageUrls.length),
+    twFullyReleased: !!verifiedMatch || (matchedImageCount > 0 && matchedImageCount === rawImageUrls.length),
     twMatchedImageCount: matchedImageCount,
     twTotalImageCount: rawImageUrls.length,
     twDate: twDates.length ? twDates[0] : null,
@@ -150,7 +180,27 @@ for (const r of kr) {
   if (category === '公告更正') continue;
 
   const name = cleanName(r.title);
-  const legendaryMatch = category === '套組時裝' ? LEGENDARY_TW_MAP[name] : null;
+  const verifiedMatch = VERIFIED_TW_MAP[r.id];
+
+  if (INSTRUMENT_SPLIT[r.id]) {
+    INSTRUMENT_SPLIT[r.id].forEach((box, boxIdx) => {
+      const rawUrls = box.imageIndices.map(i => r.contentImages[i]).filter(Boolean);
+      if (!rawUrls.length) return;
+      const twInfo = matchTwForImages(rawUrls, VERIFIED_TW_MAP[`${r.id}_box${boxIdx}`]);
+      items.push({
+        id: `${r.id}_box${boxIdx}`,
+        title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
+        name: box.name,
+        displayName: box.displayName,
+        category,
+        krDate: r.date,
+        images: rawUrls,
+        sourceUrl: r.url,
+        ...twInfo,
+      });
+    });
+    continue;
+  }
 
   const splitForNotice = (splitMap.get(r.id) || []).filter(
     e => e.titleKr && !NON_FASHION_TITLE.test(e.titleKr)
@@ -166,12 +216,13 @@ for (const r of kr) {
       const imgIndex = idxMatch ? parseInt(idxMatch[1], 10) : 0;
       const rawUrl = r.contentImages[imgIndex];
       if (!rawUrl) continue;
-      const twInfo = matchTwForImages([rawUrl], null);
+      const entryVerifiedMatch = VERIFIED_TW_MAP[`${r.id}_${imgIndex}`];
+      const twInfo = matchTwForImages([rawUrl], entryVerifiedMatch);
       items.push({
         id: `${r.id}_${imgIndex}`,
         title: decodeEntities(r.title).replace(/\s+/g, ' ').trim(),
         name: entry.titleKr,
-        displayName: entry.titleKr,
+        displayName: entryVerifiedMatch ? entryVerifiedMatch.twName : entry.titleKr,
         category,
         krDate: parseStartDate(entry.saleDateText) || r.date,
         images: [rawUrl],
@@ -182,8 +233,8 @@ for (const r of kr) {
     continue;
   }
 
-  const twInfo = matchTwForImages(r.contentImages, legendaryMatch);
-  const twNameOverride = legendaryMatch ? legendaryMatch.twName : null;
+  const twInfo = matchTwForImages(r.contentImages, verifiedMatch);
+  const twNameOverride = verifiedMatch ? verifiedMatch.twName : null;
 
   items.push({
     id: r.id,

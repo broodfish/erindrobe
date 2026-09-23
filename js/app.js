@@ -1,5 +1,5 @@
 (async function () {
-  const CATEGORY_ORDER = ["套組時裝", "幸運箱", "通行證", "聯動", "其他商城"];
+  const CATEGORY_ORDER = ["套組時裝", "幸運箱", "通行證", "聯動", "商城樂器", "其他商城"];
 
   const state = {
     items: [],

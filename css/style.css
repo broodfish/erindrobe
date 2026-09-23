@@ -18,6 +18,8 @@
   --cat-collab-bg: rgba(240, 111, 160, 0.12);
   --cat-other: #8a91a8;
   --cat-other-bg: rgba(138, 145, 168, 0.12);
+  --cat-instrument: #6fa8dc;
+  --cat-instrument-bg: rgba(111, 168, 220, 0.12);
 
   --radius: 12px;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -133,6 +135,7 @@ body {
 .chip[data-category="通行證"].active { background: var(--cat-pass); border-color: var(--cat-pass); }
 .chip[data-category="聯動"].active { background: var(--cat-collab); border-color: var(--cat-collab); }
 .chip[data-category="其他商城"].active { background: var(--cat-other); border-color: var(--cat-other); }
+.chip[data-category="商城樂器"].active { background: var(--cat-instrument); border-color: var(--cat-instrument); }
 
 .toggle {
   display: inline-flex;
@@ -312,6 +315,7 @@ body {
 .cat-tag.通行證 { background: var(--cat-pass-bg); color: var(--cat-pass); }
 .cat-tag.聯動 { background: var(--cat-collab-bg); color: var(--cat-collab); }
 .cat-tag.其他商城 { background: var(--cat-other-bg); color: var(--cat-other); }
+.cat-tag.商城樂器 { background: var(--cat-instrument-bg); color: var(--cat-instrument); }
 
 .card-name {
   font-size: 0.95rem;
