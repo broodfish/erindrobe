@@ -5,6 +5,21 @@ const RAW = path.join(__dirname, '..', 'data', 'raw');
 const kr = JSON.parse(fs.readFileSync(path.join(RAW, 'kr-details.json'), 'utf8'));
 const tw = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-details.json'), 'utf8'));
 
+// Must exactly replicate download-images.js's pickImages() — the vision-extraction subagents
+// read the LOCAL files it produced (assets/fashion-web/{noticeId}_{i}.webp), and those file
+// indices only correspond to position i in THIS reordered/truncated selection, not to position i
+// in the notice's raw contentImages array. Indexing raw contentImages directly by the local
+// file's suffix silently pairs the wrong image with a split entry's title whenever a notice had
+// >4 images or a non-banner-first original order (confirmed bug: e.g. notice 3311070's raw
+// image 0 is a generic "이벤트" section-header banner, but local file "..._0.webp" — the one the
+// vision agent actually read and labeled "데이지의 작은 패션 아틀리에 반짝 오픈!" — was really
+// raw image 1, a 900x750 banner-dimension image that pickImages sorted to the front).
+function pickImages(images, max = 4) {
+  const banner = images.filter(u => /\d{3,4}x\d{3,4}/.test(decodeURIComponent(u)));
+  const rest = images.filter(u => !banner.includes(u));
+  return [...banner, ...rest].slice(0, max);
+}
+
 const splitPath = path.join(RAW, 'kr-item-split.json');
 const splitEntries = fs.existsSync(splitPath) ? JSON.parse(fs.readFileSync(splitPath, 'utf8')) : [];
 const splitMap = new Map(); // noticeId -> entries[]
@@ -214,7 +229,7 @@ for (const r of kr) {
     for (const entry of splitForNotice) {
       const idxMatch = entry.imageFile.match(/_(\d+)\.webp$/);
       const imgIndex = idxMatch ? parseInt(idxMatch[1], 10) : 0;
-      const rawUrl = r.contentImages[imgIndex];
+      const rawUrl = pickImages(r.contentImages)[imgIndex];
       if (!rawUrl) continue;
       const entryVerifiedMatch = VERIFIED_TW_MAP[`${r.id}_${imgIndex}`];
       const twInfo = matchTwForImages([rawUrl], entryVerifiedMatch);
