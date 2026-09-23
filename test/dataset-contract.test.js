@@ -20,6 +20,7 @@ test('build output keeps corrected categories and expanded choice-box records', 
       ['2918992_box1', 'instrument'],
     ],
   );
+  assert.equal(items.filter(item => !item.localImages?.length).length, 0);
 });
 
 test('Taiwan release flags carry semantic/image evidence', () => {

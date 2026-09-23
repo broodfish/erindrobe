@@ -121,6 +121,9 @@
         "method": "manual-name-and-image",
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
+    ],
+    "localImages": [
+      "assets/fashion-web/2839212_0_0.webp"
     ]
   },
   {
@@ -159,6 +162,9 @@
         "method": "manual-name-and-image",
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
+    ],
+    "localImages": [
+      "assets/fashion-web/2839212_1_0.webp"
     ]
   },
   {
@@ -197,6 +203,9 @@
         "method": "manual-name-and-image",
         "note": "既有人工核對韓文／中文主題與寵物圖像。"
       }
+    ],
+    "localImages": [
+      "assets/fashion-web/2839212_2_0.webp"
     ]
   },
   {
@@ -305,7 +314,10 @@
     "twDate": null,
     "twDates": [],
     "twTitles": [],
-    "twEvidence": []
+    "twEvidence": [],
+    "localImages": [
+      "assets/fashion-web/2906348_0.webp"
+    ]
   },
   {
     "id": "2906348_box1",
@@ -331,7 +343,10 @@
     "twDate": null,
     "twDates": [],
     "twTitles": [],
-    "twEvidence": []
+    "twEvidence": [],
+    "localImages": [
+      "assets/fashion-web/2906348_0.webp"
+    ]
   },
   {
     "id": "2918992_box0",

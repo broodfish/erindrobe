@@ -358,16 +358,36 @@ for (const r of kr) {
 items.sort((a, b) => (a.krDate || '').localeCompare(b.krDate || ''));
 
 // Preserve already-downloaded/optimized localImages from a previous run, keyed by id. For
-// freshly split items (new ids like "2839212_1"), fall back to the single local image path
-// matching the original filename convention "{noticeId}_{imageIndex}.webp" downloaded earlier
-// from the un-split notice, since download-images.js keys off the notice id + index too.
+// freshly split items, also recover existing assets from the legacy fashion-web directory. This
+// prevents a rebuilt dataset from emitting <img src=""> just because a split item's id is new.
 const outPath = path.join(__dirname, '..', 'data', 'fashion.json');
+const webAssetDir = path.join(__dirname, '..', 'assets', 'fashion-web');
+const webAssetFiles = fs.existsSync(webAssetDir)
+  ? fs.readdirSync(webAssetDir).filter(file => /\.(?:webp|png|jpe?g)$/i.test(file))
+  : [];
+
+function existingWebAssets(itemId) {
+  const exactPrefix = `${itemId}_`;
+  let matches = webAssetFiles.filter(file => file.startsWith(exactPrefix));
+  if (!matches.length) {
+    const noticeId = itemId.replace(/_box\d+$/u, '');
+    if (noticeId !== itemId) matches = webAssetFiles.filter(file => file.startsWith(`${noticeId}_`));
+  }
+  return matches
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(file => `assets/fashion-web/${file}`);
+}
+
 if (fs.existsSync(outPath)) {
   const prev = JSON.parse(fs.readFileSync(outPath, 'utf8'));
   const prevMap = new Map(prev.map(p => [p.id, p.localImages]));
   items.forEach(i => {
     if (prevMap.has(i.id)) {
       i.localImages = prevMap.get(i.id);
+    }
+    if (!i.localImages?.length) {
+      const recovered = existingWebAssets(i.id);
+      if (recovered.length) i.localImages = recovered;
     }
   });
 }
