@@ -6,6 +6,7 @@ const kr = JSON.parse(fs.readFileSync(path.join(RAW, 'kr-details.json'), 'utf8')
 const tw = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-details.json'), 'utf8'));
 const { parseLuckyBoxNotice, parseTotalPackageName, parseChoiceBoxes } = require('./parse-kr-text.js');
 const { normalizeName, deriveTwStatus, createEvidence } = require('./tw-match.js');
+const { annotateRepeatItems } = require('./timeline-history.js');
 
 // Must exactly replicate download-images.js's pickImages() — the vision-extraction subagents
 // read the LOCAL files it produced (assets/fashion-web/{noticeId}_{i}.webp), and those file
@@ -54,6 +55,13 @@ const twMatchRecords = fs.existsSync(path.join(RAW, 'tw-kr-matches.json'))
   ? JSON.parse(fs.readFileSync(path.join(RAW, 'tw-kr-matches.json'), 'utf8'))
   : [];
 const VERIFIED_TW_MAP = Object.fromEntries(twMatchRecords.map(record => [record.krId, record]));
+// A small number of Korean product notices are missing from kr-details.json even though the
+// official notice still exists. Keep those intentional, source-linked rows in raw data instead
+// of silently dropping the products from the timeline.
+const manualItemsPath = path.join(RAW, 'kr-manual-items.json');
+const manualItems = fs.existsSync(manualItemsPath)
+  ? JSON.parse(fs.readFileSync(manualItemsPath, 'utf8'))
+  : [];
 
 function decodeEntities(s) {
   return s
@@ -120,7 +128,7 @@ function categorize(title) {
 // lucky boxes — grouped here into one card per box instead of one per individual color variant.
 const INSTRUMENT_SPLIT = {
   '2918992': [
-    { name: '꾸러기 응원단 악기 선택 상자', displayName: '調皮應援團樂器選擇箱', imageIndices: [0, 1, 2, 4] },
+    { name: '꾸러기 응원단 악기 선택 상자', displayName: '調皮啦啦隊樂器選擇箱', imageIndices: [0, 1, 2, 4] },
     { name: '봄의 선율 악기 선택 상자', displayName: '春之旋律樂器選擇箱', imageIndices: [8, 9, 14, 20] },
   ],
 };
@@ -243,6 +251,7 @@ for (const r of kr) {
         category,
         choiceKind: box.kind,
         componentsText: box.componentsText,
+        ...(box.components?.length ? { components: box.components } : {}),
         krDate: box.saleDate || r.date,
         images: rawUrls,
         sourceUrl: r.url,
@@ -355,7 +364,17 @@ for (const r of kr) {
   });
 }
 
+for (const manual of manualItems) {
+  const verifiedMatch = VERIFIED_TW_MAP[manual.id];
+  const twInfo = matchTwForImages(manual.images || [], verifiedMatch, manual.id, manual.name);
+  items.push({
+    ...manual,
+    ...twInfo,
+  });
+}
+
 items.sort((a, b) => (a.krDate || '').localeCompare(b.krDate || ''));
+const annotatedItems = annotateRepeatItems(items);
 
 // Preserve already-downloaded/optimized localImages from a previous run, keyed by id. For
 // freshly split items, also recover existing assets from the legacy fashion-web directory. This
@@ -380,10 +399,12 @@ function existingWebAssets(itemId) {
 
 if (fs.existsSync(outPath)) {
   const prev = JSON.parse(fs.readFileSync(outPath, 'utf8'));
-  const prevMap = new Map(prev.map(p => [p.id, p.localImages]));
-  items.forEach(i => {
-    if (prevMap.has(i.id)) {
-      i.localImages = prevMap.get(i.id);
+  const prevMap = new Map(prev.map(p => [p.id, { localImages: p.localImages, lightboxImages: p.lightboxImages }]));
+  annotatedItems.forEach(i => {
+    const previous = prevMap.get(i.id);
+    if (previous) {
+      i.localImages = previous.localImages;
+      if (previous.lightboxImages?.length) i.lightboxImages = previous.lightboxImages;
     }
     if (!i.localImages?.length) {
       const recovered = existingWebAssets(i.id);
@@ -392,12 +413,13 @@ if (fs.existsSync(outPath)) {
   });
 }
 
-fs.writeFileSync(outPath, JSON.stringify(items, null, 2));
-console.log('Built', items.length, 'items');
+fs.writeFileSync(outPath, JSON.stringify(annotatedItems, null, 2));
+console.log('Built', annotatedItems.length, 'items');
 const byCat = {};
-items.forEach(i => byCat[i.category] = (byCat[i.category] || 0) + 1);
+annotatedItems.forEach(i => byCat[i.category] = (byCat[i.category] || 0) + 1);
 console.log(byCat);
-console.log('TW released (any piece):', items.filter(i => i.twReleased).length);
-console.log('TW fully released (all pieces):', items.filter(i => i.twFullyReleased).length);
-console.log('TW partially released:', items.filter(i => i.twReleased && !i.twFullyReleased).length);
-console.log('Items missing localImages:', items.filter(i => !i.localImages).length);
+console.log('Reruns:', annotatedItems.filter(i => i.isRerun).length);
+console.log('TW released (any piece):', annotatedItems.filter(i => i.twReleased).length);
+console.log('TW fully released (all pieces):', annotatedItems.filter(i => i.twFullyReleased).length);
+console.log('TW partially released:', annotatedItems.filter(i => i.twReleased && !i.twFullyReleased).length);
+console.log('Items missing localImages:', annotatedItems.filter(i => !i.localImages).length);

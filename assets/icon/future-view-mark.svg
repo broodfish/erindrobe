@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">瑪奇 Mobile 未來視</title>
+  <desc id="desc">橘色圓形鏡頭與地平線標記</desc>
+  <circle cx="48" cy="48" r="44" fill="#E56B3C"/>
+  <circle cx="48" cy="48" r="32" fill="#F7F2E7"/>
+  <path d="M21 55c8-11 17-16 27-16s19 5 27 16" fill="none" stroke="#173E39" stroke-linecap="round" stroke-width="5"/>
+  <path d="M25 62h46" fill="none" stroke="#173E39" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="48" cy="30" r="4" fill="#E56B3C"/>
+</svg>

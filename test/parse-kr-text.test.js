@@ -47,6 +47,29 @@ test('splits instrument choice boxes and retains component context', () => {
   assert.match(boxes[0].componentsText, /레츠고 만돌린/);
 });
 
+test('extracts every instrument choice from the full notice tables', () => {
+  const text = [
+    '꾸러기 응원단 악기 선택 상자 ◼ 판매 기간: 2025년 5월 29일',
+    '상품명 구성품 수량 가격 구매 제한 꾸러기 응원단 악기 선택 상자',
+    '스카이하이 레츠고 만돌린 파스텔드림 레츠고 만돌린 스위트베리 레츠고 만돌린 블랙펑크 레츠고 만돌린',
+    '스카이하이 어텐션 플루트 파스텔드림 어텐션 플루트 스위트베리 어텐션 플루트 블랙펑크 어텐션 플루트',
+    '2 화음 스카이하이 레츠고 만돌린 2 화음 파스텔드림 레츠고 만돌린 2 화음 스위트베리 레츠고 만돌린 2 화음 블랙펑크 레츠고 만돌린',
+    '3 화음 스카이하이 레츠고 만돌린 3 화음 파스텔드림 레츠고 만돌린 3 화음 스위트베리 레츠고 만돌린 3 화음 블랙펑크 레츠고 만돌린',
+    '. 봄의旋律 악기 선택 상자 ◼ 판매 기간: 2025년 5월 29일',
+    '상품명 구성품 수량 가격 구매 제한 봄의旋律 악기 선택 상자',
+    '화이트 플로럴 류트 화이트 플로럴 플루트 화이트 플로럴 바이올린 화이트 플로럴 샬루모 화이트 플로럴 만돌린 화이트 플로럴 실로폰',
+    '2 화음 화이트 플로럴 류트 2 화음 화이트 플로럴 만돌린',
+    '3 화음 화이트 플로럴 류트 3 화음 화이트 플로럴 만돌린',
+  ].join(' ');
+
+  const boxes = parseChoiceBoxes(text);
+  assert.equal(boxes[0].components.length, 16);
+  assert.ok(boxes[0].components.includes('스카이하이 레츠고 만돌린 2 화음'));
+  assert.ok(boxes[0].components.includes('블랙펑크 레츠고 만돌린 3 화음'));
+  assert.equal(boxes[1].components.length, 10);
+  assert.ok(boxes[1].components.includes('화이트 플로럴 류트 3 화음'));
+});
+
 test('keeps lucky-box parsing behavior and returns no choice boxes for unrelated text', () => {
   const lucky = [
     '패션 럭키박스 ◼ 판매 기간 : 2025 년 4월 24일',

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2757703_0",
+    "title": "(수정) 기간제 패키지 안내( ~4/24 14:59)",
+    "name": "피어나는 봄빛",
+    "displayName": "綻放春光：春之慶典套裝",
+    "category": "幸運箱",
+    "krDate": "2025.03.27",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/6fa13660-bff0-47ff-9908-5db87ff2dc12/09900x750.jpg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2757703",
+    "localImages": [
+      "data/raw/tw-images/3505035_0.jpg"
+    ]
+  },
+  {
+    "id": "2757703_1",
+    "title": "(수정) 기간제 패키지 안내( ~4/24 14:59)",
+    "name": "별의 서약",
+    "displayName": "星之誓約：榮耀守衛套裝",
+    "category": "幸運箱",
+    "krDate": "2025.03.27",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/9de9113a-98a0-4a46-8445-f237ed33080c/10900x750.jpg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2757703",
+    "localImages": [
+      "data/raw/tw-images/3505035_1.jpg"
+    ]
+  }
+]

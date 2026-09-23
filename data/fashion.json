@@ -38,10 +38,25 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2757708",
+    "firstReleaseDate": "2025.03.27",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2757708_0.webp",
       "assets/fashion-web/2757708_1.webp",
       "assets/fashion-web/2757708_2.webp"
+    ],
+    "lightboxImages": [
+      {
+        "src": "assets/fashion-web/2757708_0.webp"
+      },
+      {
+        "src": "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/528b7e9c-073e-496f-b207-9ee336f0e574/%EC%BD%94%EB%AF%B9%EC%8A%A4%EC%8A%A4%ED%83%80%EC%B0%A8%EC%9D%BC%EB%93%9C%EC%84%B8%ED%8A%B8%EC%95%A1%ED%84%B0.png",
+        "fallback": "assets/fashion-web/2757708_1.webp",
+        "className": "lightbox-image-official-full",
+        "note": "台服官方高清同套裝圖（男女完整）"
+      }
     ]
   },
   {
@@ -81,9 +96,103 @@
         "note": "既有人工核對韓文／中文主題與套組圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2757709",
+    "firstReleaseDate": "2025.03.27",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2757709_0.webp"
     ]
+  },
+  {
+    "id": "2757703_0",
+    "title": "(수정) 기간제 패키지 안내( ~4/24 14:59)",
+    "name": "피어나는 봄빛",
+    "displayName": "綻放春光：春之慶典套裝",
+    "category": "幸運箱",
+    "krDate": "2025.03.27",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/6fa13660-bff0-47ff-9908-5db87ff2dc12/09900x750.jpg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2757703",
+    "localImages": [
+      "data/raw/tw-images/3505035_0.jpg"
+    ],
+    "twStatus": "confirmed",
+    "twNameMatch": true,
+    "twImageMatch": true,
+    "twManualMatch": true,
+    "twReleased": true,
+    "twFullyReleased": true,
+    "twMatchedImageCount": 1,
+    "twTotalImageCount": 1,
+    "twDate": 1784649600,
+    "twDates": [
+      1784649600
+    ],
+    "twTitles": [
+      "幸運箱與道具商店"
+    ],
+    "twEvidence": [
+      {
+        "krId": "2757703_0",
+        "krName": "피어나는 봄빛",
+        "twThreadId": "3505035",
+        "twName": "綻放春光：春之慶典套裝",
+        "twDate": 1784649600,
+        "method": "official-notice-name-and-image",
+        "note": "韓服官方公告 2757703 列出「피어나는 봄빛／봄의 축제」；台服官方公告 3505035 列出「綻放春光：春之慶典套裝」，並以官方商品圖核對。"
+      }
+    ],
+    "isRerun": false,
+    "firstReleaseId": "2757703_0",
+    "firstReleaseDate": "2025.03.27",
+    "rerunIndex": 0
+  },
+  {
+    "id": "2757703_1",
+    "title": "(수정) 기간제 패키지 안내( ~4/24 14:59)",
+    "name": "별의 서약",
+    "displayName": "星之誓約：榮耀守衛套裝",
+    "category": "幸運箱",
+    "krDate": "2025.03.27",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260721/9de9113a-98a0-4a46-8445-f237ed33080c/10900x750.jpg"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2757703",
+    "localImages": [
+      "data/raw/tw-images/3505035_1.jpg"
+    ],
+    "twStatus": "confirmed",
+    "twNameMatch": true,
+    "twImageMatch": true,
+    "twManualMatch": true,
+    "twReleased": true,
+    "twFullyReleased": true,
+    "twMatchedImageCount": 1,
+    "twTotalImageCount": 1,
+    "twDate": 1784649600,
+    "twDates": [
+      1784649600
+    ],
+    "twTitles": [
+      "幸運箱與道具商店"
+    ],
+    "twEvidence": [
+      {
+        "krId": "2757703_1",
+        "krName": "별의 서약",
+        "twThreadId": "3505035",
+        "twName": "星之誓約：榮耀守衛套裝",
+        "twDate": 1784649600,
+        "method": "official-notice-name-and-image",
+        "note": "韓服官方公告 2757703 列出「별의 서약／글로리가드」；台服官方公告 3505035 列出「星之誓約：榮耀守衛套裝」，並以官方商品圖核對。"
+      }
+    ],
+    "isRerun": false,
+    "firstReleaseId": "2757703_1",
+    "firstReleaseDate": "2025.03.27",
+    "rerunIndex": 0
   },
   {
     "id": "2839212_0",
@@ -122,6 +231,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2839212_0",
+    "firstReleaseDate": "2025.04.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2839212_0_0.webp"
     ]
@@ -163,6 +276,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2839212_1",
+    "firstReleaseDate": "2025.04.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2839212_1_0.webp"
     ]
@@ -204,6 +321,10 @@
         "note": "既有人工核對韓文／中文主題與寵物圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2839212_2",
+    "firstReleaseDate": "2025.04.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2839212_2_0.webp"
     ]
@@ -245,6 +366,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2906352_0",
+    "firstReleaseDate": "2025.05.22",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2906352_0_0.webp"
     ]
@@ -286,6 +411,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2906352_1",
+    "firstReleaseDate": "2025.05.22",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2906352_1_0.webp"
     ]
@@ -315,6 +444,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "2906348_box0",
+    "firstReleaseDate": "2025.05.22",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2906348_0.webp"
     ]
@@ -344,6 +477,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "2906348_box1",
+    "firstReleaseDate": "2025.05.22",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2906348_0.webp"
     ]
@@ -352,10 +489,28 @@
     "id": "2918992_box0",
     "title": "아이템샵 안내(꾸러기 응원단 악기&봄의 선율 악기)",
     "name": "꾸러기 응원단 악기 선택 상자",
-    "displayName": "調皮應援團樂器選擇箱",
+    "displayName": "調皮啦啦隊樂器選擇箱",
     "category": "商城樂器",
     "choiceKind": "instrument",
     "componentsText": ": 2025 년 5월 29일(목) 점검 후 ~ 2025년 6월 19일(목) 오전 5시 59분까지 ◼ 판매 위치: [ 게임 내 메뉴] → [캐시샵] → [아이템샵] → [캐시샵 포인트] ◼ 판매 가격 : 2,000 캐시샵 포인트 ◼ 판매 상품 종류 및 상세 내용 - ‘ 꾸러기 응원단 악기 선택 상자’를 구매하시면 구성품 중 1종을 1개 선택하여 획득할 수 있습니다. * 구성품 선택 후 획득하신 아이템은 교환 등의 도움이 불가하니 꼭 확인해 주세요. 상품명 구성품 수량 가격 구매 제한 꾸러기 응원단 악기 선택 상자 스카이하이 레츠고 만돌린 1 개 2,000 캐시샵 포인트 구매제한 없음 파스텔드림 레츠고 만돌린 스위트베리 레츠고 만돌린 블랙펑크 레츠고 만돌린 스카이하이 어텐션 플루트 파스텔드림 어텐션 플루트 스위트베리 어텐션 플루트 블랙펑크 어텐션 플루트 2 화음 스카이하이 레츠고 만돌린 2 화음 파스텔드림 레츠고 만돌린 2 화음 스위트베리 레츠고 만돌린 2 화음 블랙펑크 레츠고 만돌린 3 화음 스카이하이 레츠고 만돌린 3 화음 파스텔드림 레츠고 만돌린 3 화음 스위트베리 레츠고 만돌린 3 화음 블랙펑크 레츠고 만돌린 ※ 꾸러기 응원단 악기 선택 상자는 상자 형태로 보관하고 있을 경우, 공용 보관함 이용이 가능합니다 ※ 구성품의 상세 설명은 게임 내 아이템 아이콘 터치 시 노출되는 아이템 카드를 통해 확인하실 수 있습니다",
+    "components": [
+      "스카이하이 레츠고 만돌린",
+      "파스텔드림 레츠고 만돌린",
+      "스위트베리 레츠고 만돌린",
+      "블랙펑크 레츠고 만돌린",
+      "스카이하이 어텐션 플루트",
+      "파스텔드림 어텐션 플루트",
+      "스위트베리 어텐션 플루트",
+      "블랙펑크 어텐션 플루트",
+      "스카이하이 레츠고 만돌린 2 화음",
+      "파스텔드림 레츠고 만돌린 2 화음",
+      "스위트베리 레츠고 만돌린 2 화음",
+      "블랙펑크 레츠고 만돌린 2 화음",
+      "스카이하이 레츠고 만돌린 3 화음",
+      "파스텔드림 레츠고 만돌린 3 화음",
+      "스위트베리 레츠고 만돌린 3 화음",
+      "블랙펑크 레츠고 만돌린 3 화음"
+    ],
     "krDate": "2025.05.29",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250528/5e38eea9-2150-4dd1-8e4e-8b25fbbe708d/%EB%A0%88%EC%B8%A0%EA%B3%A0%EB%A7%8C%EB%8F%8C%EB%A6%B0%EC%8A%A4%EC%B9%B4%EC%9D%B4%ED%95%98%EC%9D%B4.jpg",
@@ -364,18 +519,36 @@
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250528/894eacd1-8d70-4f7b-86d8-3e65e445e5ac/%EC%96%B4%ED%85%90%EC%85%98%ED%94%8C%EB%A3%A8%ED%8A%B8%EC%8A%A4%EC%B9%B4%EC%9D%B4%ED%95%98%EC%9D%B4.jpg"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2918992",
-    "twStatus": "unmatched",
-    "twNameMatch": false,
+    "twStatus": "confirmed",
+    "twNameMatch": true,
     "twImageMatch": false,
-    "twManualMatch": false,
-    "twReleased": false,
-    "twFullyReleased": false,
+    "twManualMatch": true,
+    "twReleased": true,
+    "twFullyReleased": true,
     "twMatchedImageCount": 0,
     "twTotalImageCount": 4,
-    "twDate": null,
-    "twDates": [],
-    "twTitles": [],
-    "twEvidence": [],
+    "twDate": 1787092877,
+    "twDates": [
+      1787092877
+    ],
+    "twTitles": [
+      "8/19(三) 更新日誌"
+    ],
+    "twEvidence": [
+      {
+        "krId": "2918992_box0",
+        "krName": "꾸러기 응원단 악기 선택 상자",
+        "twThreadId": "3527491",
+        "twName": "調皮啦啦隊樂器選擇箱",
+        "twDate": 1787092877,
+        "method": "official-notice-name",
+        "note": "台服 2026.08.19 更新日誌列出「調皮啦啦隊樂器選擇箱」；韓文品名語意相符，官方更新頁未提供可供圖片比對的商品圖。"
+      }
+    ],
+    "isRerun": false,
+    "firstReleaseId": "2918992_box0",
+    "firstReleaseDate": "2025.05.29",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2918992_box0_0.webp",
       "assets/fashion-web/2918992_box0_1.webp",
@@ -390,7 +563,39 @@
     "displayName": "春之旋律樂器選擇箱",
     "category": "商城樂器",
     "choiceKind": "instrument",
-    "componentsText": ": 2025 년 5월 29일(목) 점검 후 ~ 2025년 6월 19일(목) 오전 5시 59분까지 ◼ 판매 위치: [ 게임 내 메뉴] → [캐시샵] → [아이템샵] → [캐시샵 포인트] ◼ 판매 가격 : 2,000 캐시샵 포인트 ◼ 판매 상품 종류 및 상세 내용 - ‘ 봄의 선율 악기 선택 상자’를 구매하시면 구성품 중 1종을 1개 선택하여 획득할 수 있습니다. * 구성품 선택 후 획득하신 아",
+    "componentsText": ": 2025 년 5월 29일(목) 점검 후 ~ 2025년 6월 19일(목) 오전 5시 59분까지 ◼ 판매 위치: [ 게임 내 메뉴] → [캐시샵] → [아이템샵] → [캐시샵 포인트] ◼ 판매 가격 : 2,000 캐시샵 포인트 ◼ 판매 상품 종류 및 상세 내용 - ‘ 봄의 선율 악기 선택 상자’를 구매하시면 구성품 중 1종을 1개 선택하여 획득할 수 있습니다. * 구성품 선택 후 획득하신 아이템은 교환 등의 도움이 불가하니 꼭 확인해 주세요. 상품명 구성품 수량 가격 구매 제한 봄의 선율 악기 선택 상자 화이트 플로럴 류트 1 개 2,000 캐시샵 포인트 구매 제한 없음 화이트 플로럴 플루트 화이트 플로럴 바이올린 화이트 플로럴 샬루모 화이트 플로럴 만돌린 화이트 플로럴 실로폰 미드나이트 플로럴 류트 미드나이트 플로럴 플루트 미드나이트 플로럴 바이올린 미드나이트 플로럴 샬루모 미드나이트 플로럴 만돌린 미드나이트 플로럴 실로폰 체리 플로럴 류트 체리 플로럴 플루트 체리 플로럴 바이올린 체리 플로럴 샬루모 체리 플로럴 만돌린 체리 플로럴 실로폰 2 화음 화이트 플로럴 류트 2 화음 미드나이트 플로럴 류트 2 화음 체리 플로럴 류트 2 화음 화이트 플로럴 만돌린 2 화음 미드나이트 플로럴 만돌린 2 화음 체리 플로럴 만돌린 3 화음 화이트 플로럴 류트 3 화음 미드나이트 플로럴 류트 3 화음 체리 플로럴 류트 3 화음 화이트 플로럴 만돌린 3 화음 미드나이트 플로럴 만돌린 3 화음 체리 플로럴 만돌린 ※ 봄의 선율 악기 선택 상자는 상자 형태로 보관하고 있을 경우, 공용 보관함 이용이 가능합니다. ※ 구성품의 상세 설명은 게임 내 아이템 아이콘 터치 시 노출되는 아이템 카드를 통해 확인하실 수 있습니다. ◼ 구성품 미리보기 - 해당 상품은 게임 내에서 미리보기 기능이 지원되지 않습니다. - 공지를 통해 안내된 미리보기 이미지를 꼭 확인 부탁드립니다. ✨ 꾸러기 응원단 악기 선택 상자 스카이하이 레츠고 만돌린 파스텔드림 레츠고 만돌린 스위트베리 레츠고 만돌린 블랙펑크 레츠고 만돌린 스카이하이 어텐션 플루트 파스텔드림 어텐션 플루트 스위트베리 어텐션 플루트 블랙펑크 어텐션 플루트 ✨ 봄의 선율 악기 선택 상자 화이트 플로럴 류트 화이트 플로럴 플루트 화이트 플로럴 바이올린 화이트 플로럴 샬루모 화이트 플로럴 만돌린 화이트 플로럴 실로폰 미드나이트 플로럴 류트 미드나이트 플로럴 플루트 미드나이트 플로럴 바이올린 미드나이트 플로럴 샬루모 미드나이트 플로럴 만돌린 미드나이트 플로럴 실로폰 체리 플로럴 류트 체리 플로럴 플루트 체리 플로럴 바이올린 체리 플로럴 샬루모 체리 플로럴 만돌린 체리 플로럴 실로폰 📢 유의사항 - 게임 내 재화를 통해 구매하는 아이템/패키지는 구매 취소가 가능하지 않습니다. - 상품 구매 및 구성품 이용 시 아이템 정보와 사용할 캐릭터를 꼭 확인 부탁드립니다. - 상품/패키지 구매 후 획득한 캐릭터 귀속 사양의 아이템은 다른 캐릭터로의 이동 등의 도움을 드릴 수 없습니다. - 패키지 개별 구성품의 상세 설명은 게임 내 아이템 아이콘 터치 시 노출되는 아이템 카드를 통해 확인하실 수 있습니다. - 확률형 아이템의 개별 확률은 [확률형 아이템] 페이지를 통해 확인하실 수 있습니다. 목록 전체 안내 점검 완료 주요상품 최신글순 좋아요순 제목+내용 제목+내용 제목 내용 태그 안내 9/24(목) 정기점검 미진행 안내 마비노기모바일 0 2026.09.22 완료 (완료) 9/22(화) 임시점검 안내 (06:00 ~ 08:45) 마비노기모바일 3 2026.09.21 완료 (완료) (추가) 9/18(금) 임시점검 안내 (18:40 ~ 20:40) 마비노기모바일 4 2026.09.18 완료 (완료)(추가) 9/18(금) 임시점검 안내 (05:55 ~ 08:30) 마비노기모바일 0 2026.09.17 완료 (완료)(추가) 9/17(목) 임시점검 안내 (16:10 ~ 17:45) 마비노기모바일 1 2026.09.17 안내 9/17(목) 게임 운영정책 변경 안내 마비노기모바일 1 2026.09.17 주요상품 9/17(목) 신규 스타터 패키지 안내 마비노기모바일 2 2026.09.16 주요상품 신규 전설 패션 장비 '하베스티아 블레싱' 안내 마비노기모바일 2 2026.09.16 주요상품 그랜드 앙상블 토탈 패키지 종합 안내 마비노기모바일 2 2026.09.16 주요상품 (수정) 9/17(목) 패션 럭키박스 ＆ 패션샵 안내 마비노기모바일 2 2026.09.16 1 2 3 4 5 6 7 8 9 10 회사소개 채용안내 이용약관 게임이용등급안내 개인정보처리방침 청소년보호정책 운영정책 넥슨PC방 (주)넥슨코리아 대표이사 강대현·김정욱 경기도 성남시 분당구 판교로 256번길 7 전화 : 1588-7701 팩스 : 0502-258-8322 E-mail : contact-us@nexon.co.kr 사업자등록번호 : 220-87-17483호 통신판매업 신고번호 : 제2013-경기성남-1659호 사업자정보확인 &copy; 2025 NEXON Korea Corp. & devCAT CO., LTD. All Rights reserved. 오늘 그만 보기 확인 신고하기 해당 댓글을 아래와 같은 사유로 신고합니다. 허위 신고 시 운영정책에 따라 조치될 수 있습니다. 제목 작성자 신고하는 사유 다른 고객에게 불쾌감(모욕감)을 주는 행동 (욕설, 비방, 도배) 원활한 커뮤니티 이용 및 운영 방해 상업적 목적의 광고, 현금 거래 시도 및 정보 유출 시스템(버그) 악용 및 어뷰징, 불법 프로그램 사용/유포 불건전 명칭 또는 프로필 이미지 사용 기타 취소 확인",
+    "components": [
+      "화이트 플로럴 류트",
+      "화이트 플로럴 플루트",
+      "화이트 플로럴 바이올린",
+      "화이트 플로럴 샬루모",
+      "화이트 플로럴 만돌린",
+      "화이트 플로럴 실로폰",
+      "미드나이트 플로럴 류트",
+      "미드나이트 플로럴 플루트",
+      "미드나이트 플로럴 바이올린",
+      "미드나이트 플로럴 샬루모",
+      "미드나이트 플로럴 만돌린",
+      "미드나이트 플로럴 실로폰",
+      "체리 플로럴 류트",
+      "체리 플로럴 플루트",
+      "체리 플로럴 바이올린",
+      "체리 플로럴 샬루모",
+      "체리 플로럴 만돌린",
+      "체리 플로럴 실로폰",
+      "화이트 플로럴 류트 2 화음",
+      "미드나이트 플로럴 류트 2 화음",
+      "체리 플로럴 류트 2 화음",
+      "화이트 플로럴 만돌린 2 화음",
+      "미드나이트 플로럴 만돌린 2 화음",
+      "체리 플로럴 만돌린 2 화음",
+      "화이트 플로럴 류트 3 화음",
+      "미드나이트 플로럴 류트 3 화음",
+      "체리 플로럴 류트 3 화음",
+      "화이트 플로럴 만돌린 3 화음",
+      "미드나이트 플로럴 만돌린 3 화음",
+      "체리 플로럴 만돌린 3 화음"
+    ],
     "krDate": "2025.05.29",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250528/a762d235-1807-4425-b250-ef7f46c238be/%ED%94%8C%EB%A1%9C%EB%9F%B4%EB%A5%98%ED%8A%B8%ED%99%94%EC%9D%B4%ED%8A%B8.jpg",
@@ -399,18 +604,36 @@
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250528/e2c93228-5bc6-457d-9b98-90df5a4e7a1f/%ED%94%8C%EB%A1%9C%EB%9F%B4%EB%A5%98%ED%8A%B8%ED%95%91%ED%81%AC.jpg"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2918992",
-    "twStatus": "unmatched",
-    "twNameMatch": false,
+    "twStatus": "confirmed",
+    "twNameMatch": true,
     "twImageMatch": false,
-    "twManualMatch": false,
-    "twReleased": false,
-    "twFullyReleased": false,
+    "twManualMatch": true,
+    "twReleased": true,
+    "twFullyReleased": true,
     "twMatchedImageCount": 0,
     "twTotalImageCount": 4,
-    "twDate": null,
-    "twDates": [],
-    "twTitles": [],
-    "twEvidence": [],
+    "twDate": 1784649600,
+    "twDates": [
+      1784649600
+    ],
+    "twTitles": [
+      "幸運箱與道具商店"
+    ],
+    "twEvidence": [
+      {
+        "krId": "2918992_box1",
+        "krName": "봄의 선율 악기 선택 상자",
+        "twThreadId": "3505035",
+        "twName": "春之旋律樂器選擇箱",
+        "twDate": 1784649600,
+        "method": "official-notice-name",
+        "note": "台服官方公告 3505035 列出「春之旋律樂器選擇箱」；韓文品名語意相符，公告以商品文字列出，未提供可供單品圖片比對的商品圖。"
+      }
+    ],
+    "isRerun": false,
+    "firstReleaseId": "2918992_box1",
+    "firstReleaseDate": "2025.05.29",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2918992_box1_0.webp",
       "assets/fashion-web/2918992_box1_1.webp",
@@ -463,6 +686,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2957849",
+    "firstReleaseDate": "2025.06.19",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957849_0.webp",
       "assets/fashion-web/2957849_1.webp",
@@ -493,6 +720,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "2957846_0",
+    "firstReleaseDate": "2025.06.19",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_0_0.webp"
     ]
@@ -520,6 +751,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "2957846_1",
+    "firstReleaseDate": "2025.06.19",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_1_0.webp"
     ]
@@ -561,6 +796,10 @@
         "note": "既有人工核對韓文／中文主題與寵物圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2957846_2",
+    "firstReleaseDate": "2025.06.19",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_2_0.webp"
     ]
@@ -616,6 +855,10 @@
         "note": "既有人工核對韓文／中文主題與套組圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "2957955",
+    "firstReleaseDate": "2025.06.19",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957955_0.webp",
       "assets/fashion-web/2957955_1.webp",
@@ -660,6 +903,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "3037067_0",
+    "firstReleaseDate": "2025.07.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3037067_0_0.webp"
     ]
@@ -687,6 +934,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3037067_1",
+    "firstReleaseDate": "2025.07.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3037067_1_0.webp"
     ]
@@ -714,6 +965,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3064408",
+    "firstReleaseDate": "2025.07.30",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3064408_0.webp"
     ]
@@ -741,6 +996,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3100668_0",
+    "firstReleaseDate": "2025.08.21",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_0_0.webp"
     ]
@@ -768,6 +1027,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3100668_1",
+    "firstReleaseDate": "2025.08.21",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_1_0.webp"
     ]
@@ -795,6 +1058,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3100667_0",
+    "firstReleaseDate": "2025.08.21",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100667_0_0.webp"
     ]
@@ -830,6 +1097,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3147458",
+    "firstReleaseDate": "2025.09.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147458_0.webp",
       "assets/fashion-web/3147458_1.webp",
@@ -879,6 +1150,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3147459",
+    "firstReleaseDate": "2025.09.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147459_0.webp",
       "assets/fashion-web/3147459_1.webp",
@@ -909,6 +1184,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3147457_0",
+    "firstReleaseDate": "2025.09.25",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147457_0_0.webp"
     ]
@@ -936,6 +1215,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3147457_1",
+    "firstReleaseDate": "2025.09.25",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147457_1_0.webp"
     ]
@@ -963,6 +1246,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3190409_0",
+    "firstReleaseDate": "2025.10.23",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3190409_0_0.webp"
     ]
@@ -1004,6 +1291,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "3201524_0",
+    "firstReleaseDate": "2025.10.30",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201524_0_0.webp"
     ]
@@ -1045,6 +1336,10 @@
         "note": "既有人工核對韓文／中文主題與服裝圖像。"
       }
     ],
+    "isRerun": false,
+    "firstReleaseId": "3201524_1",
+    "firstReleaseDate": "2025.10.30",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201524_1_0.webp"
     ]
@@ -1072,6 +1367,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3272483_0",
+    "firstReleaseDate": "2025.11.27",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3272483_0_0.webp"
     ]
@@ -1099,6 +1398,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3272483_1",
+    "firstReleaseDate": "2025.11.27",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3272483_1_0.webp"
     ]
@@ -1134,6 +1437,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311099",
+    "firstReleaseDate": "2025.12.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311099_0.webp",
       "assets/fashion-web/3311099_1.webp",
@@ -1182,6 +1489,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311098",
+    "firstReleaseDate": "2025.12.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311098_0.webp",
       "assets/fashion-web/3311098_1.webp",
@@ -1212,6 +1523,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311101_0",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311101_0_0.webp"
     ]
@@ -1239,6 +1554,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311101_1",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311101_1_0.webp"
     ]
@@ -1266,6 +1585,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311101_2",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311101_2_0.webp"
     ]
@@ -1293,6 +1616,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311096_0",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311096_0_0.webp"
     ]
@@ -1320,6 +1647,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311096_1",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311096_1_0.webp"
     ]
@@ -1347,6 +1678,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311095_0",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311095_0_0.webp"
     ]
@@ -1374,6 +1709,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311070_0",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311070_0_0.webp"
     ]
@@ -1401,6 +1740,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3311070_1",
+    "firstReleaseDate": "2025.12.18",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311070_1_0.webp"
     ]
@@ -1428,6 +1771,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3345414_0",
+    "firstReleaseDate": "2026.01.15",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_0_0.webp"
     ]
@@ -1455,6 +1802,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3345414_1",
+    "firstReleaseDate": "2026.01.15",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_1_0.webp"
     ]
@@ -1482,6 +1833,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3345414_2",
+    "firstReleaseDate": "2026.01.15",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_2_0.webp"
     ]
@@ -1509,6 +1864,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3373326_0",
+    "firstReleaseDate": "2026.02.12",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373326_0_0.webp"
     ]
@@ -1536,6 +1895,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3373326_1",
+    "firstReleaseDate": "2026.02.12",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373326_1_0.webp"
     ]
@@ -1563,6 +1926,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": true,
+    "firstReleaseId": "2839212_2",
+    "firstReleaseDate": "2025.04.24",
+    "rerunIndex": 1,
     "localImages": [
       "assets/fashion-web/3373326_2_0.webp"
     ]
@@ -1590,6 +1957,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3398065_0",
+    "firstReleaseDate": "2026.03.12",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3398065_0_0.webp"
     ]
@@ -1619,6 +1990,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3407266",
+    "firstReleaseDate": "2026.03.25",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407266_0.webp",
       "assets/fashion-web/3407266_1.webp",
@@ -1670,6 +2045,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3407265",
+    "firstReleaseDate": "2026.03.25",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407265_0.webp",
       "assets/fashion-web/3407265_1.webp",
@@ -1700,6 +2079,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3407264_0",
+    "firstReleaseDate": "2026.03.26",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407264_0_0.webp"
     ]
@@ -1727,6 +2110,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3407264_1",
+    "firstReleaseDate": "2026.03.26",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407264_1_0.webp"
     ]
@@ -1754,6 +2141,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3407263_0",
+    "firstReleaseDate": "2026.03.26",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407263_0_0.webp"
     ]
@@ -1781,6 +2172,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": true,
+    "firstReleaseId": "2957846_2",
+    "firstReleaseDate": "2025.06.19",
+    "rerunIndex": 1,
     "localImages": [
       "assets/fashion-web/3407263_1_0.webp"
     ]
@@ -1808,6 +2203,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3414447_0",
+    "firstReleaseDate": "2026.04.02",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3414447_0_0.webp"
     ]
@@ -1835,6 +2234,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3414447_1",
+    "firstReleaseDate": "2026.04.02",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3414447_1_0.webp"
     ]
@@ -1862,6 +2265,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3416432_0",
+    "firstReleaseDate": "2026.04.06",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3416432_0_0.webp"
     ]
@@ -1889,6 +2296,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3428346_0",
+    "firstReleaseDate": "2026.04.23",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428346_0_0.webp"
     ]
@@ -1916,6 +2327,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3428346_1",
+    "firstReleaseDate": "2026.04.23",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428346_1_0.webp"
     ]
@@ -1943,6 +2358,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3447996_0",
+    "firstReleaseDate": "2026.05.21",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447996_0_0.webp"
     ]
@@ -1970,6 +2389,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3447996_1",
+    "firstReleaseDate": "2026.05.21",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447996_1_0.webp"
     ]
@@ -1997,6 +2420,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3447994_0",
+    "firstReleaseDate": "2026.05.21",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447994_0_0.webp"
     ]
@@ -2026,6 +2453,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3481579",
+    "firstReleaseDate": "2026.06.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481579_0.webp",
       "assets/fashion-web/3481579_1.webp",
@@ -2075,6 +2506,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3481578",
+    "firstReleaseDate": "2026.06.24",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481578_0.webp",
       "assets/fashion-web/3481578_1.webp",
@@ -2105,6 +2540,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3481577_0",
+    "firstReleaseDate": "2026.06.25",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481577_0_0.webp"
     ]
@@ -2132,6 +2571,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3481577_1",
+    "firstReleaseDate": "2026.06.25",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481577_1_0.webp"
     ]
@@ -2159,6 +2602,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3500246_0",
+    "firstReleaseDate": "2026.07.16",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3500246_0_0.webp"
     ]
@@ -2186,6 +2633,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3500246_1",
+    "firstReleaseDate": "2026.07.16",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3500246_1_0.webp"
     ]
@@ -2213,6 +2664,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3505478_0",
+    "firstReleaseDate": "2026.07.23",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3505478_0_0.webp"
     ]
@@ -2240,6 +2695,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": true,
+    "firstReleaseId": "3100667_0",
+    "firstReleaseDate": "2025.08.21",
+    "rerunIndex": 1,
     "localImages": [
       "assets/fashion-web/3505478_1_0.webp"
     ]
@@ -2267,6 +2726,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3516480",
+    "firstReleaseDate": "2026.08.05",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3516480_0.webp"
     ]
@@ -2294,6 +2757,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3521633_0",
+    "firstReleaseDate": "2026.08.13",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521633_0_0.webp"
     ]
@@ -2321,6 +2788,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3521633_1",
+    "firstReleaseDate": "2026.08.13",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521633_1_0.webp"
     ]
@@ -2348,6 +2819,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3527888",
+    "firstReleaseDate": "2026.08.19",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3527888_0.webp"
     ]
@@ -2377,6 +2852,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545058",
+    "firstReleaseDate": "2026.09.16",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545058_0.webp",
       "assets/fashion-web/3545058_1.webp",
@@ -2424,6 +2903,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545055",
+    "firstReleaseDate": "2026.09.16",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545055_0.webp",
       "assets/fashion-web/3545055_1.webp",
@@ -2454,6 +2937,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545050",
+    "firstReleaseDate": "2026.09.16",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545050_0.webp"
     ]
@@ -2481,6 +2968,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545054_0",
+    "firstReleaseDate": "2026.09.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545054_0_0.webp"
     ]
@@ -2508,6 +2999,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545054_1",
+    "firstReleaseDate": "2026.09.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545054_1_0.webp"
     ]
@@ -2535,6 +3030,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545054_2",
+    "firstReleaseDate": "2026.09.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545054_2_0.webp"
     ]
@@ -2562,6 +3061,10 @@
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
+    "isRerun": false,
+    "firstReleaseId": "3545053_0",
+    "firstReleaseDate": "2026.09.17",
+    "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545053_0_0.webp"
     ]

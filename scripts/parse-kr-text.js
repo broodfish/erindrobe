@@ -47,6 +47,47 @@ function parseDateFromContext(text) {
   return `${year}.${String(month).padStart(2, '0')}.${String(day).padStart(2, '0')}`;
 }
 
+const INSTRUMENT_COMPONENT_PATTERNS = [
+  /(?:스카이하이|파스텔드림|스위트베리|블랙펑크)\s+(?:레츠고\s+만돌린|어텐션\s+플루트)/gu,
+  /(?:화이트\s+플로럴|미드나이트\s+플로럴|체리\s+플로럴)\s+(?:류트|플루트|바이올린|샬루모|만돌린|실로폰)/gu,
+];
+
+function collectInstrumentNames(text, suffix = '') {
+  const matches = [];
+  INSTRUMENT_COMPONENT_PATTERNS.forEach((pattern) => {
+    for (const match of text.matchAll(pattern)) {
+      matches.push({
+        index: match.index,
+        name: `${match[0].replace(/\s+/g, ' ').trim()}${suffix}`,
+      });
+    }
+  });
+  return matches.sort((a, b) => a.index - b.index).map((match) => match.name);
+}
+
+function parseInstrumentComponents(section) {
+  // The notice extractor flattens an HTML table into text. In the flattened text, the
+  // first "2 화음" / "3 화음" marker separates the chord groups from the base products;
+  // the repeated markers inside each group are table-column noise, so the product names
+  // are collected from the whole segment and the group suffix is restored here.
+  const previewIndex = section.search(/(?:◼|※)\s*구성품\s*미리보기/u);
+  const table = previewIndex >= 0 ? section.slice(0, previewIndex) : section;
+  const twoChordIndex = table.search(/2\s*화음/u);
+  const threeChordIndex = table.search(/3\s*화음/u);
+  const baseEnd = twoChordIndex >= 0 ? twoChordIndex : table.length;
+  const twoEnd = threeChordIndex >= 0 ? threeChordIndex : table.length;
+  const components = [
+    ...collectInstrumentNames(table.slice(0, baseEnd)),
+    ...(twoChordIndex >= 0
+      ? collectInstrumentNames(table.slice(twoChordIndex, twoEnd), ' 2 화음')
+      : []),
+    ...(threeChordIndex >= 0
+      ? collectInstrumentNames(table.slice(threeChordIndex), ' 3 화음')
+      : []),
+  ];
+  return [...new Set(components)];
+}
+
 function parseChoiceBoxes(text) {
   const source = String(text || '').replace(/\s+/g, ' ').trim();
   if (!source) return [];
@@ -69,13 +110,15 @@ function parseChoiceBoxes(text) {
   instrumentMatches.forEach((item, index) => {
     const next = instrumentMatches[index + 1];
     const contentStart = item.index + item[0].length;
-    const contentEnd = next ? next.index : Math.min(source.length, contentStart + 220);
+    const contentEnd = next ? next.index : source.length;
+    const contentText = source.slice(contentStart, contentEnd).trim();
     matches.push({
       index: item.index,
       name: `${item[1].trim()} 악기 선택 상자`,
       kind: 'instrument',
       saleDate: parseDateFromContext(source),
-      componentsText: source.slice(contentStart, contentEnd).trim(),
+      componentsText: contentText,
+      components: parseInstrumentComponents(contentText),
     });
   });
 

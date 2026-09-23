@@ -7,8 +7,11 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 const items = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), 'utf8'));
 
 function pickImages(images, max = 4) {
-  const banner = images.filter(u => /\d{3,4}x\d{3,4}/.test(decodeURIComponent(u)));
-  const rest = images.filter(u => !banner.includes(u));
+  // Exclude animated .gif "showcase spin" clips — some run tens of MB uncompressed and the static
+  // banner images already show the item; keeping them out avoids multi-MB animated-webp bloat.
+  const stills = images.filter(u => !/\.gif(\?|$)/i.test(u));
+  const banner = stills.filter(u => /\d{3,4}x\d{3,4}/.test(decodeURIComponent(u)));
+  const rest = stills.filter(u => !banner.includes(u));
   return [...banner, ...rest].slice(0, max);
 }
 
