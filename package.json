@@ -11,6 +11,7 @@
     "scrape:tw-details": "node scripts/scrape-tw-details.js",
     "build:dataset": "node scripts/build-dataset.js",
     "build:images": "node scripts/download-images.js && node scripts/optimize-images.js",
+    "validate:data": "node scripts/validate-raw-data.js",
     "test": "node --test",
     "serve": "python3 -m http.server 8080"
   },

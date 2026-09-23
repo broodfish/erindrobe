@@ -1,6 +1,7 @@
 // Fetch all list pages for KR mabinogimobile.nexon.com News boards and save raw item lists.
 const fs = require('fs');
 const path = require('path');
+const { validateRecords, writeJsonAtomically } = require('./validate-raw-data.js');
 
 const BASE = 'https://mabinogimobile.nexon.com';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
@@ -95,7 +96,18 @@ async function scrapeBoard(board) {
   fs.mkdirSync(outDir, { recursive: true });
   for (const board of BOARDS) {
     const items = await scrapeBoard(board);
-    fs.writeFileSync(path.join(outDir, `kr-${board.key}.json`), JSON.stringify(items, null, 2));
+    const validation = validateRecords(items, {
+      label: `kr-${board.key}`,
+      requiredFields: ['id', 'title'],
+      minCount: 1,
+    });
+    if (!validation.ok) {
+      console.error(`[${board.key}] refusing to overwrite raw list:`);
+      validation.errors.forEach(error => console.error(`  - ${error}`));
+      process.exitCode = 1;
+      return;
+    }
+    writeJsonAtomically(path.join(outDir, `kr-${board.key}.json`), items);
     console.log(`[${board.key}] saved ${items.length} items`);
   }
   console.log('DONE');
