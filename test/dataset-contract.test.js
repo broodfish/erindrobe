@@ -258,6 +258,16 @@ test('pending Korean notices stay out of the published dataset until apply', () 
   for (const record of pending.records) assert.equal(publishedIds.has(record.id), false);
 });
 
+test('published local images use the tracked web asset directory', () => {
+  const items = require('../data/fashion.json');
+  const localImages = items.flatMap(item => item.localImages || []);
+  assert.equal(localImages.some(image => image.startsWith('assets/fashion/')), false);
+  for (const image of localImages) {
+    assert.equal(image.startsWith('assets/fashion-web/'), true, image);
+    assert.equal(fs.existsSync(path.join(root, image)), true, image);
+  }
+});
+
 test('parses shop products from mixed lucky-box notices', () => {
   const notices = require('../data/raw/kr-details.json');
   const notice = notices.find(item => item.id === '2957846');

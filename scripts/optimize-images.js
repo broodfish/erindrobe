@@ -6,6 +6,12 @@ const SRC_DIR = path.join(__dirname, '..', 'assets', 'fashion');
 const OUT_DIR = path.join(__dirname, '..', 'assets', 'fashion-web');
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
+function canonicalWebPath(rel) {
+  const base = path.basename(rel).replace(/\.\w+$/u, '');
+  const candidate = `assets/fashion-web/${base}.webp`;
+  return fs.existsSync(path.join(__dirname, '..', candidate)) ? candidate : rel;
+}
+
 const allItems = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), 'utf8'));
 const requestedIds = process.env.MBC_IMAGE_IDS
   ? new Set(process.env.MBC_IMAGE_IDS.split(',').map(id => id.trim()).filter(Boolean))
@@ -53,6 +59,9 @@ const items = requestedIds ? allItems.filter(item => requestedIds.has(item.id)) 
       if (rebuiltById.has(item.id)) allItems[index] = rebuiltById.get(item.id);
     });
   }
+  allItems.forEach(item => {
+    if (Array.isArray(item.localImages)) item.localImages = item.localImages.map(canonicalWebPath);
+  });
   fs.writeFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), JSON.stringify(allItems, null, 2));
   console.log(`Total: ${(before/1024/1024).toFixed(1)}MB -> ${(after/1024/1024).toFixed(1)}MB`);
 })();

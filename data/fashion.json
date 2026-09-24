@@ -334,7 +334,7 @@
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/2757703",
     "localImages": [
-      "assets/fashion/2757703_0_0.jpg"
+      "assets/fashion-web/2757703_0_0.webp"
     ],
     "twStatus": "confirmed",
     "twNameMatch": true,
@@ -623,7 +623,7 @@
     "firstReleaseDate": "2025.04.24",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2839212_0_0.jpeg"
+      "assets/fashion-web/2839212_0_0.webp"
     ]
   },
   {
@@ -873,7 +873,7 @@
     "firstReleaseDate": "2025.05.22",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2906352_0_0.jpg"
+      "assets/fashion-web/2906352_0_0.webp"
     ]
   },
   {
@@ -1145,10 +1145,10 @@
     "firstReleaseDate": "2025.05.29",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2918992_box0_0.jpg",
-      "assets/fashion/2918992_box0_1.jpg",
-      "assets/fashion/2918992_box0_2.jpg",
-      "assets/fashion/2918992_box0_3.jpg"
+      "assets/fashion-web/2918992_box0_0.webp",
+      "assets/fashion-web/2918992_box0_1.webp",
+      "assets/fashion-web/2918992_box0_2.webp",
+      "assets/fashion-web/2918992_box0_3.webp"
     ]
   },
   {
@@ -1329,7 +1329,7 @@
     "firstReleaseDate": "2025.05.29",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2918987_0.png"
+      "assets/fashion-web/2918987_0.webp"
     ]
   },
   {
@@ -1730,7 +1730,7 @@
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2957846_0_0.png"
+      "assets/fashion-web/2957846_0_0.webp"
     ]
   },
   {
@@ -2155,7 +2155,7 @@
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2957791_0.png"
+      "assets/fashion-web/2957791_0.webp"
     ]
   },
   {
@@ -2218,7 +2218,7 @@
     "firstReleaseDate": "2025.07.03",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/2998805_0.png"
+      "assets/fashion-web/2998805_0.webp"
     ]
   },
   {
@@ -2541,7 +2541,7 @@
     "firstReleaseDate": "2025.07.16",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3037089_0.png"
+      "assets/fashion-web/3037089_0.webp"
     ]
   },
   {
@@ -2587,7 +2587,8 @@
     "isRerun": false,
     "firstReleaseId": "3037067_shop0",
     "firstReleaseDate": "2025.07.17",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3037067_shop1",
@@ -2644,7 +2645,8 @@
     "isRerun": false,
     "firstReleaseId": "3037067_shop1",
     "firstReleaseDate": "2025.07.17",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3037067_shop2",
@@ -2701,7 +2703,8 @@
     "isRerun": false,
     "firstReleaseId": "3037067_shop2",
     "firstReleaseDate": "2025.07.17",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3037067_0",
@@ -2768,7 +2771,7 @@
     "firstReleaseDate": "2025.07.17",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3037067_0_0.png"
+      "assets/fashion-web/3037067_0_0.webp"
     ]
   },
   {
@@ -2987,7 +2990,7 @@
     "firstReleaseDate": "2025.07.30",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3063593_0.png"
+      "assets/fashion-web/3063593_0.webp"
     ]
   },
   {
@@ -3051,7 +3054,7 @@
     "firstReleaseDate": "2025.08.04",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3075719_0.png"
+      "assets/fashion-web/3075719_0.webp"
     ]
   },
   {
@@ -3751,7 +3754,7 @@
     "firstReleaseDate": "2025.08.21",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3100668_0_0.png"
+      "assets/fashion-web/3100668_0_0.webp"
     ]
   },
   {
@@ -4040,11 +4043,11 @@
     "firstReleaseDate": "2025.09.24",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3147459_0.png",
-      "assets/fashion/3147459_1.png",
-      "assets/fashion/3147459_2.png",
-      "assets/fashion/3147459_3.png",
-      "assets/fashion/3147459_4.png"
+      "assets/fashion-web/3147459_0.webp",
+      "assets/fashion-web/3147459_1.webp",
+      "assets/fashion-web/3147459_2.webp",
+      "assets/fashion-web/3147459_3.webp",
+      "assets/fashion-web/3147459_4.webp"
     ]
   },
   {
@@ -4715,7 +4718,8 @@
     "isRerun": false,
     "firstReleaseId": "3147457_shop2",
     "firstReleaseDate": "2025.09.25",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3147457_shop3",
@@ -4766,7 +4770,8 @@
     "isRerun": false,
     "firstReleaseId": "3147457_shop3",
     "firstReleaseDate": "2025.09.25",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3147457_0",
@@ -4817,7 +4822,7 @@
     "firstReleaseDate": "2025.09.25",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3147457_0_0.png"
+      "assets/fashion-web/3147457_0_0.webp"
     ]
   },
   {
@@ -4929,7 +4934,7 @@
     "firstReleaseDate": "2025.10.01",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3163638_0.png"
+      "assets/fashion-web/3163638_0.webp"
     ]
   },
   {
@@ -5605,7 +5610,7 @@
     "firstReleaseDate": "2025.10.30",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3201524_0_0.png"
+      "assets/fashion-web/3201524_0_0.webp"
     ]
   },
   {
@@ -5785,7 +5790,7 @@
     "firstReleaseDate": "2025.11.12",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3213444_0.png"
+      "assets/fashion-web/3213444_0.webp"
     ]
   },
   {
@@ -6160,7 +6165,7 @@
     "firstReleaseDate": "2025.11.26",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3272481_0.png"
+      "assets/fashion-web/3272481_0.webp"
     ]
   },
   {
@@ -6212,7 +6217,8 @@
     "isRerun": false,
     "firstReleaseId": "3272483_shop0",
     "firstReleaseDate": "2025.11.27",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3272483_shop1",
@@ -6263,7 +6269,8 @@
     "isRerun": false,
     "firstReleaseId": "3272483_shop1",
     "firstReleaseDate": "2025.11.27",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3272483_shop2",
@@ -6314,7 +6321,8 @@
     "isRerun": false,
     "firstReleaseId": "3272483_shop2",
     "firstReleaseDate": "2025.11.27",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3272483_0",
@@ -6365,7 +6373,7 @@
     "firstReleaseDate": "2025.11.27",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3272483_0_0.png"
+      "assets/fashion-web/3272483_0_0.webp"
     ]
   },
   {
@@ -6862,11 +6870,11 @@
     "firstReleaseDate": "2025.12.17",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3311098_0.png",
-      "assets/fashion/3311098_1.png",
-      "assets/fashion/3311098_2.png",
-      "assets/fashion/3311098_3.png",
-      "assets/fashion/3311098_4.png"
+      "assets/fashion-web/3311098_0.webp",
+      "assets/fashion-web/3311098_1.webp",
+      "assets/fashion-web/3311098_2.webp",
+      "assets/fashion-web/3311098_3.webp",
+      "assets/fashion-web/3311098_4.webp"
     ]
   },
   {
@@ -7340,7 +7348,7 @@
     "firstReleaseDate": "2025.12.17",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3311069_0.png"
+      "assets/fashion-web/3311069_0.webp"
     ]
   },
   {
@@ -7401,7 +7409,7 @@
     "firstReleaseDate": "2025.12.17",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3311067_0.png"
+      "assets/fashion-web/3311067_0.webp"
     ]
   },
   {
@@ -7453,7 +7461,7 @@
     "firstReleaseDate": "2025.12.18",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3311101_0_0.png"
+      "assets/fashion-web/3311101_0_0.webp"
     ]
   },
   {
@@ -7609,7 +7617,8 @@
     "isRerun": false,
     "firstReleaseId": "3311096_shop0",
     "firstReleaseDate": "2025.12.18",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "localImages": []
   },
   {
     "id": "3311096_shop1",
@@ -7768,7 +7777,7 @@
     "firstReleaseDate": "2025.12.18",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3311096_0_0.png"
+      "assets/fashion-web/3311096_0_0.webp"
     ]
   },
   {
@@ -7919,8 +7928,8 @@
     "firstReleaseDate": "2025.12.18",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3311070_0_0.png",
-      "assets/fashion/3311070_0_1.png"
+      "assets/fashion-web/3311070_0_0.webp",
+      "assets/fashion-web/3311070_0_1.webp"
     ]
   },
   {
@@ -8374,7 +8383,7 @@
     "firstReleaseDate": "2026.01.15",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3345414_0_0.png"
+      "assets/fashion-web/3345414_0_0.webp"
     ]
   },
   {
@@ -8589,7 +8598,7 @@
     "firstReleaseDate": "2026.01.28",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3359489_0.jpg"
+      "assets/fashion-web/3359489_0.webp"
     ]
   },
   {
@@ -9226,7 +9235,7 @@
     "firstReleaseDate": "2026.02.11",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3373322_0.png"
+      "assets/fashion-web/3373322_0.webp"
     ]
   },
   {
@@ -9286,7 +9295,7 @@
     "firstReleaseDate": "2026.02.11",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3373321_0.png"
+      "assets/fashion-web/3373321_0.webp"
     ]
   },
   {
@@ -9346,7 +9355,7 @@
     "firstReleaseDate": "2026.02.11",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3373319_0.png"
+      "assets/fashion-web/3373319_0.webp"
     ]
   },
   {
@@ -9509,7 +9518,7 @@
     "firstReleaseDate": "2026.02.12",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3373326_0_0.png"
+      "assets/fashion-web/3373326_0_0.webp"
     ]
   },
   {
@@ -9722,7 +9731,7 @@
     "firstReleaseDate": "2026.03.11",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3398052_0.png"
+      "assets/fashion-web/3398052_0.webp"
     ]
   },
   {
@@ -9782,7 +9791,7 @@
     "firstReleaseDate": "2026.03.11",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3398055_0.png"
+      "assets/fashion-web/3398055_0.webp"
     ]
   },
   {
@@ -9846,8 +9855,8 @@
     "firstReleaseDate": "2026.03.11",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3398043_0.jpg",
-      "assets/fashion/3398043_1.jpg"
+      "assets/fashion-web/3398043_0.webp",
+      "assets/fashion-web/3398043_1.webp"
     ]
   },
   {
@@ -10310,11 +10319,11 @@
     "firstReleaseDate": "2026.03.25",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3407265_0.png",
-      "assets/fashion/3407265_1.png",
-      "assets/fashion/3407265_2.png",
-      "assets/fashion/3407265_3.png",
-      "assets/fashion/3407265_4.png"
+      "assets/fashion-web/3407265_0.webp",
+      "assets/fashion-web/3407265_1.webp",
+      "assets/fashion-web/3407265_2.webp",
+      "assets/fashion-web/3407265_3.webp",
+      "assets/fashion-web/3407265_4.webp"
     ]
   },
   {
@@ -10370,7 +10379,7 @@
     "firstReleaseDate": "2026.03.25",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3407262_0.png"
+      "assets/fashion-web/3407262_0.webp"
     ]
   },
   {
@@ -11032,7 +11041,7 @@
     "firstReleaseDate": "2026.03.25",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3406748_0.png"
+      "assets/fashion-web/3406748_0.webp"
     ]
   },
   {
@@ -11099,8 +11108,8 @@
     "firstReleaseDate": "2026.03.25",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3406750_0.png",
-      "assets/fashion/3406750_1.png"
+      "assets/fashion-web/3406750_0.webp",
+      "assets/fashion-web/3406750_1.webp"
     ]
   },
   {
@@ -11263,7 +11272,7 @@
     "firstReleaseDate": "2026.03.26",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3407264_0_0.png"
+      "assets/fashion-web/3407264_0_0.webp"
     ]
   },
   {
@@ -11365,7 +11374,7 @@
     "firstReleaseDate": "2026.03.26",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3407263_0_0.png"
+      "assets/fashion-web/3407263_0_0.webp"
     ]
   },
   {
@@ -11465,7 +11474,7 @@
     "firstReleaseDate": "2026.04.02",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3414447_0_0.png"
+      "assets/fashion-web/3414447_0_0.webp"
     ]
   },
   {
@@ -12005,7 +12014,7 @@
     "firstReleaseDate": "2026.04.22",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3428241_0.png"
+      "assets/fashion-web/3428241_0.webp"
     ]
   },
   {
@@ -12111,7 +12120,7 @@
     "firstReleaseDate": "2026.04.23",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3428346_0_0.png"
+      "assets/fashion-web/3428346_0_0.webp"
     ]
   },
   {
@@ -12673,7 +12682,7 @@
     "firstReleaseDate": "2026.05.21",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3447996_0_0.png"
+      "assets/fashion-web/3447996_0_0.webp"
     ]
   },
   {
@@ -12834,7 +12843,7 @@
     "firstReleaseDate": "2026.06.02",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3466205_0.png"
+      "assets/fashion-web/3466205_0.webp"
     ]
   },
   {
@@ -13052,7 +13061,7 @@
     "firstReleaseDate": "2026.06.10",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3473710_0.png"
+      "assets/fashion-web/3473710_0.webp"
     ]
   },
   {
@@ -13408,11 +13417,11 @@
     "firstReleaseDate": "2026.06.24",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3481578_0.png",
-      "assets/fashion/3481578_1.png",
-      "assets/fashion/3481578_2.png",
-      "assets/fashion/3481578_3.png",
-      "assets/fashion/3481578_4.png"
+      "assets/fashion-web/3481578_0.webp",
+      "assets/fashion-web/3481578_1.webp",
+      "assets/fashion-web/3481578_2.webp",
+      "assets/fashion-web/3481578_3.webp",
+      "assets/fashion-web/3481578_4.webp"
     ]
   },
   {
@@ -14039,7 +14048,7 @@
     "firstReleaseDate": "2026.06.25",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3481577_0_0.png"
+      "assets/fashion-web/3481577_0_0.webp"
     ]
   },
   {
@@ -14583,8 +14592,8 @@
     "firstReleaseDate": "2026.07.15",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3500234_0.png",
-      "assets/fashion/3500234_1.png"
+      "assets/fashion-web/3500234_0.webp",
+      "assets/fashion-web/3500234_1.webp"
     ]
   },
   {
@@ -14690,7 +14699,7 @@
     "firstReleaseDate": "2026.07.16",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3500246_0_0.png"
+      "assets/fashion-web/3500246_0_0.webp"
     ]
   },
   {
@@ -14791,7 +14800,7 @@
     "firstReleaseDate": "2026.07.23",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3505478_0_0.png"
+      "assets/fashion-web/3505478_0_0.webp"
     ]
   },
   {
@@ -14951,12 +14960,12 @@
     "firstReleaseDate": "2026.07.29",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3511363_0.jpg",
-      "assets/fashion/3511363_1.jpg",
-      "assets/fashion/3511363_2.jpg",
-      "assets/fashion/3511363_3.jpg",
-      "assets/fashion/3511363_4.jpg",
-      "assets/fashion/3511363_5.jpg"
+      "assets/fashion-web/3511363_0.webp",
+      "assets/fashion-web/3511363_1.webp",
+      "assets/fashion-web/3511363_2.webp",
+      "assets/fashion-web/3511363_3.webp",
+      "assets/fashion-web/3511363_4.webp",
+      "assets/fashion-web/3511363_5.webp"
     ]
   },
   {
@@ -15149,48 +15158,48 @@
     "firstReleaseDate": "2026.07.29",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3511361_0.jpg",
-      "assets/fashion/3511361_1.jpg",
-      "assets/fashion/3511361_2.jpg",
-      "assets/fashion/3511361_3.jpg",
-      "assets/fashion/3511361_4.jpg",
-      "assets/fashion/3511361_5.jpg",
-      "assets/fashion/3511361_6.jpg",
-      "assets/fashion/3511361_7.jpg",
-      "assets/fashion/3511361_8.jpg",
-      "assets/fashion/3511361_9.jpg",
-      "assets/fashion/3511361_10.jpg",
-      "assets/fashion/3511361_11.jpg",
-      "assets/fashion/3511361_12.jpg",
-      "assets/fashion/3511361_13.jpg",
-      "assets/fashion/3511361_14.jpg",
-      "assets/fashion/3511361_15.jpg",
-      "assets/fashion/3511361_16.jpg",
-      "assets/fashion/3511361_17.jpg",
-      "assets/fashion/3511361_18.jpg",
-      "assets/fashion/3511361_19.jpg",
-      "assets/fashion/3511361_20.jpg",
-      "assets/fashion/3511361_21.jpg",
-      "assets/fashion/3511361_22.jpg",
-      "assets/fashion/3511361_23.jpg",
-      "assets/fashion/3511361_24.jpg",
-      "assets/fashion/3511361_25.jpg",
-      "assets/fashion/3511361_26.jpg",
-      "assets/fashion/3511361_27.jpg",
-      "assets/fashion/3511361_28.jpg",
-      "assets/fashion/3511361_29.jpg",
-      "assets/fashion/3511361_30.jpg",
-      "assets/fashion/3511361_31.jpg",
-      "assets/fashion/3511361_32.jpg",
-      "assets/fashion/3511361_33.jpg",
-      "assets/fashion/3511361_34.jpg",
-      "assets/fashion/3511361_35.jpg",
-      "assets/fashion/3511361_36.jpg",
-      "assets/fashion/3511361_37.jpg",
-      "assets/fashion/3511361_38.jpg",
-      "assets/fashion/3511361_39.jpg",
-      "assets/fashion/3511361_40.jpg",
-      "assets/fashion/3511361_41.jpg"
+      "assets/fashion-web/3511361_0.webp",
+      "assets/fashion-web/3511361_1.webp",
+      "assets/fashion-web/3511361_2.webp",
+      "assets/fashion-web/3511361_3.webp",
+      "assets/fashion-web/3511361_4.webp",
+      "assets/fashion-web/3511361_5.webp",
+      "assets/fashion-web/3511361_6.webp",
+      "assets/fashion-web/3511361_7.webp",
+      "assets/fashion-web/3511361_8.webp",
+      "assets/fashion-web/3511361_9.webp",
+      "assets/fashion-web/3511361_10.webp",
+      "assets/fashion-web/3511361_11.webp",
+      "assets/fashion-web/3511361_12.webp",
+      "assets/fashion-web/3511361_13.webp",
+      "assets/fashion-web/3511361_14.webp",
+      "assets/fashion-web/3511361_15.webp",
+      "assets/fashion-web/3511361_16.webp",
+      "assets/fashion-web/3511361_17.webp",
+      "assets/fashion-web/3511361_18.webp",
+      "assets/fashion-web/3511361_19.webp",
+      "assets/fashion-web/3511361_20.webp",
+      "assets/fashion-web/3511361_21.webp",
+      "assets/fashion-web/3511361_22.webp",
+      "assets/fashion-web/3511361_23.webp",
+      "assets/fashion-web/3511361_24.webp",
+      "assets/fashion-web/3511361_25.webp",
+      "assets/fashion-web/3511361_26.webp",
+      "assets/fashion-web/3511361_27.webp",
+      "assets/fashion-web/3511361_28.webp",
+      "assets/fashion-web/3511361_29.webp",
+      "assets/fashion-web/3511361_30.webp",
+      "assets/fashion-web/3511361_31.webp",
+      "assets/fashion-web/3511361_32.webp",
+      "assets/fashion-web/3511361_33.webp",
+      "assets/fashion-web/3511361_34.webp",
+      "assets/fashion-web/3511361_35.webp",
+      "assets/fashion-web/3511361_36.webp",
+      "assets/fashion-web/3511361_37.webp",
+      "assets/fashion-web/3511361_38.webp",
+      "assets/fashion-web/3511361_39.webp",
+      "assets/fashion-web/3511361_40.webp",
+      "assets/fashion-web/3511361_41.webp"
     ]
   },
   {
@@ -15760,7 +15769,7 @@
     "firstReleaseDate": "2026.08.12",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3521642_0.png"
+      "assets/fashion-web/3521642_0.webp"
     ]
   },
   {
@@ -15866,7 +15875,7 @@
     "firstReleaseDate": "2026.08.13",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3521633_0_0.png"
+      "assets/fashion-web/3521633_0_0.webp"
     ]
   },
   {
@@ -16412,11 +16421,11 @@
     "firstReleaseDate": "2026.09.16",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3545055_0.png",
-      "assets/fashion/3545055_1.png",
-      "assets/fashion/3545055_2.png",
-      "assets/fashion/3545055_3.png",
-      "assets/fashion/3545055_4.png"
+      "assets/fashion-web/3545055_0.webp",
+      "assets/fashion-web/3545055_1.webp",
+      "assets/fashion-web/3545055_2.webp",
+      "assets/fashion-web/3545055_3.webp",
+      "assets/fashion-web/3545055_4.webp"
     ]
   },
   {
@@ -17025,7 +17034,7 @@
     "firstReleaseDate": "2026.09.17",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion/3545054_0_0.png"
+      "assets/fashion-web/3545054_0_0.webp"
     ]
   },
   {
