@@ -74,6 +74,11 @@
     return index >= 0 ? (item.localImages?.[index] || source) : source;
   }
 
+  function resolveCardImage(item, source) {
+    return resolveLocalImage(item, source)
+      .replace(/^assets\/fashion-web\//u, "assets/fashion-thumb/");
+  }
+
   function createDyeCardArt(item) {
     const art = document.createElement("div");
     art.className = "dye-card-art";
@@ -213,14 +218,16 @@
     media.className = "card-media";
     const isDye = item.productType === "染色劑選擇箱";
     const images = getCardImageSources(item).map((source) => resolveLocalImage(item, source));
+    const cardImages = getCardImageSources(item).map((source) => resolveCardImage(item, source));
 
     if (isDye && item.colorCodes?.length) {
       media.appendChild(createDyeCardArt(item));
     } else if (images.length) {
       const image = document.createElement("img");
-      image.src = images[0];
-      image.alt = item.name;
+      image.src = cardImages[0];
+      image.alt = item.displayName || item.name || "瑪奇 Mobile 商品預覽";
       image.loading = "lazy";
+      image.decoding = "async";
       media.appendChild(image);
     } else if (item.isShopProduct) {
       const emptyMedia = document.createElement("div");

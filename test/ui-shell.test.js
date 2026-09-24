@@ -7,6 +7,7 @@ const root = path.join(__dirname, '..');
 const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const appJs = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const styleCss = fs.readFileSync(path.join(root, 'css/style.css'), 'utf8');
+const thumbnailBuilder = fs.readFileSync(path.join(root, 'scripts/build-thumbnails.js'), 'utf8');
 const robotsTxt = fs.readFileSync(path.join(root, 'robots.txt'), 'utf8');
 const sitemapXml = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 
@@ -39,4 +40,12 @@ test('robots and sitemap point crawlers at the canonical GitHub Pages URL', () =
   assert.match(robotsTxt, /^Sitemap: https:\/\/broodfish\.github\.io\/erindrobe\/sitemap\.xml$/m);
   assert.match(sitemapXml, /<loc>https:\/\/broodfish\.github\.io\/erindrobe\/<\/loc>/);
   assert.doesNotMatch(sitemapXml, /refresh=/);
+});
+
+test('timeline cards use generated thumbnails while the lightbox keeps full images', () => {
+  assert.match(appJs, /function resolveCardImage\(item, source\)/);
+  assert.match(appJs, /assets\/fashion-thumb/);
+  assert.match(appJs, /image\.decoding = "async"/);
+  assert.match(thumbnailBuilder, /fashion-thumb/);
+  assert.match(thumbnailBuilder, /resize\(\{ width: 360, withoutEnlargement: true \}\)/);
 });
