@@ -59,6 +59,7 @@ test('classifies the official product types from title and notice body', () => {
   assert.equal(classifyKrProduct({ title: '이벤트 패션 안내', sourceBoard: '/News/Events' }).productType, '活動時裝');
   assert.equal(classifyKrProduct({ title: '패션샵 신규 상품 안내' }).productType, '商店時裝');
   assert.equal(classifyKrProduct({ title: '8/13 신규 상품 안내', fullText: '신규 환생 전용 헤어 미리보기 헤어 쿠폰' }).productType, '髮型');
+  assert.equal(classifyKrProduct({ title: '신규 외형 안내', fullText: '[ 눈] 눈 - 순진한 눈 [ 입] 입 - 도톰한 입' }).productType, '外觀');
 });
 
 test('keeps special event lottery boxes as the primary type and records embedded preview types', () => {

@@ -3,7 +3,7 @@
 
 const PRODUCT_TYPES = [
   '時裝幸運盒', '寵物幸運盒', '傳說時裝', '套組', '通行證', '活動時裝',
-  '聯名時裝', '商店時裝', '樂器', '染色劑選擇箱', '新造型', '髮型', '動作', '特殊活動抽獎盒',
+  '聯名時裝', '商店時裝', '樂器', '染色劑選擇箱', '新造型', '髮型', '外觀', '動作', '特殊活動抽獎盒',
 ];
 
 function normalized(value) {
@@ -102,7 +102,8 @@ function classifyKrProduct({ title = '', fullText = '', sourceBoard = '', source
   else if (/토탈\s*패키지/u.test(titleText)) productType = '套組';
   else if (/프리미엄\s*패스|시즌\s*패스|통행증/u.test(titleText)) productType = '通行證';
   else if (/콜라보|컬래버|산리오/u.test(titleText)) productType = '聯名時裝';
-  else if (/헤어|헤어스타일|신규\s*외형/u.test(titleText)) productType = '髮型';
+  else if (/신규\s*외형/u.test(titleText)) productType = '外觀';
+  else if (/헤어|헤어스타일/u.test(titleText)) productType = '髮型';
   else if (/악기/u.test(titleText)) productType = '樂器';
   else if (/패션샵|패션\s*상점/u.test(titleText)) productType = '商店時裝';
   else if (sourceBoard === '/News/Events'
@@ -118,7 +119,8 @@ function classifyKrProduct({ title = '', fullText = '', sourceBoard = '', source
   else if (/토탈\s*패키지/u.test(bodyText)) productType = '套組';
   else if (/프리미엄\s*패스|시즌\s*패스|통행증/u.test(bodyText)) productType = '通行證';
   else if (/콜라보|컬래버|산리오/u.test(bodyText)) productType = '聯名時裝';
-  else if (/헤어\s*(?:쿠폰|패키지|미리보기)|헤어스타일|신규\s*(?:헤어|외형)|환생\s*전용\s*헤어/u.test(bodyText)) productType = '髮型';
+  else if (/신규\s*외형|\[\s*(?:눈|입|얼굴\s*꾸미|몸\s*꾸미)\s*\]/u.test(bodyText)) productType = '外觀';
+  else if (/헤어\s*(?:쿠폰|패키지|미리보기)|헤어스타일|신규\s*헤어|환생\s*전용\s*헤어/u.test(bodyText)) productType = '髮型';
   else if (/악기\s*(?:선택\s*)?상자|악기/u.test(bodyText)) productType = '樂器';
   else if (sourceBoard === '/News/Events' && /패션|의상|외형|아틀리에/u.test(bodyText)) productType = '活動時裝';
   else if (/패션샵|패션\s*상점|캐시샵|신규\s*상품|패키지/u.test(bodyText)) productType = '商店時裝';

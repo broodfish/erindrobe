@@ -1534,6 +1534,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.06.19",
     "images": [
@@ -1586,6 +1588,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.06.19",
     "images": [
@@ -1638,6 +1642,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.06.19",
     "images": [
@@ -2552,6 +2558,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "얼굴 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.07.17",
     "images": [
@@ -2614,6 +2622,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "얼굴 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.07.17",
     "images": [
@@ -3500,6 +3510,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.08.21",
     "images": [
@@ -3556,6 +3568,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.08.21",
     "images": [
@@ -3612,6 +3626,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "robe",
+    "officialSlot": "로브",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.08.21",
     "images": [
@@ -4526,6 +4542,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.09.25",
     "images": [
@@ -4580,6 +4598,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.09.25",
     "images": [
@@ -4634,6 +4654,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.09.25",
     "images": [
@@ -4686,6 +4708,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.09.25",
     "images": [
@@ -5303,6 +5327,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2025.10.29",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/41ea5236-8e1a-46f0-99df-d4b2c1140f11/%EB%A0%88%EC%9D%B4%EC%96%B4%EB%93%9C%EB%AF%B9%EC%8A%A4%EC%88%8F%ED%97%A4%EC%96%B4%EB%82%A8.png"
@@ -5351,6 +5378,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2025.10.29",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20251029/21d4c73e-49cb-4848-926c-a925c9e58ca5/%ED%8A%B8%EC%9C%88%EB%B2%88%EB%AF%B9%EC%8A%A4%ED%97%A4%EC%96%B4%EC%97%AC.png"
@@ -5399,6 +5429,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.10.30",
     "images": [
@@ -5454,6 +5486,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.10.30",
     "images": [
@@ -6133,6 +6167,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.11.27",
     "images": [
@@ -6185,6 +6221,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.11.27",
     "images": [
@@ -6237,6 +6275,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.11.27",
     "images": [
@@ -7533,6 +7573,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "얼굴 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.12.18",
     "images": [
@@ -7585,6 +7627,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.12.18",
     "images": [
@@ -7639,6 +7683,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "얼굴 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2025.12.18",
     "images": [
@@ -8133,6 +8179,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.01.15",
     "images": [
@@ -8188,6 +8236,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.01.15",
     "images": [
@@ -8243,6 +8293,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.01.15",
     "images": [
@@ -8566,6 +8618,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.02.11",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/29f211d0-9fa8-4637-8533-aa11712c9277/%ED%97%A4%EC%96%B4%EA%B3%B5%ED%86%B5%EC%97%90%EC%96%B4%EB%A6%AC%EB%A1%B1%EC%9B%A8%EC%9D%B4%EB%B8%8C%ED%8E%8C%EB%82%A8.png",
@@ -8618,6 +8673,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.02.11",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/b04b716e-ea63-4637-8ef4-6c82e9ed5a22/%ED%97%A4%EC%96%B4%EA%B3%B5%ED%86%B5%EC%96%B8%EB%8D%94%EC%BB%B7%EB%A0%88%EC%9D%B4%EC%96%B4%EB%93%9C%ED%97%A4%EC%96%B4%EB%82%A8.png",
@@ -8670,6 +8728,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.02.11",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/c5e77f64-dfeb-4ca1-a937-89c3f8e59d2d/%ED%97%A4%EC%96%B4%EB%82%A8%ED%8F%AC%EB%A9%80%EC%98%AC%EB%B0%B1.png"
@@ -8718,6 +8779,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.02.11",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260211/f996f64b-1c90-4447-9ab2-e4c1ddc3669a/%ED%97%A4%EC%96%B4%EC%97%AC%EB%B8%8C%EB%A0%88%EC%9D%B4%EB%93%9C%ED%8A%B8%EC%9C%88%ED%85%8C%EC%9D%BC%EC%88%98%EC%A0%95.png"
@@ -9323,6 +9387,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "robe",
+    "officialSlot": "로브",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.02.12",
     "images": [
@@ -9377,7 +9443,9 @@
     "displayName": "오리엔탈 태슬 이어링",
     "category": "其他商城",
     "productTypeOverride": "新造型",
-    "shopProductKind": "accessory",
+    "shopProductKind": "robe",
+    "officialSlot": "로브",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.02.12",
     "images": [
@@ -11077,6 +11145,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "robe",
+    "officialSlot": "로브",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.03.26",
     "images": [
@@ -11131,7 +11201,9 @@
     "displayName": "퍼니 모먼트 밴드",
     "category": "其他商城",
     "productTypeOverride": "新造型",
-    "shopProductKind": "accessory",
+    "shopProductKind": "robe",
+    "officialSlot": "로브",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.03.26",
     "images": [
@@ -11982,6 +12054,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "얼굴 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.04.23",
     "images": [
@@ -12140,6 +12214,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.05.20",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/ab361969-c989-4a06-adb7-743dd49010c8/%ED%8A%B8%EC%9C%88%EB%B2%88%EB%A1%B1%ED%97%A4%EC%96%B4.png"
@@ -12188,6 +12265,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.05.20",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/93b5467f-394a-4768-bba6-63aa1ce112d5/%EC%BB%AC%EB%A6%AC%EB%A6%AC%ED%94%84%ED%8E%8C.png"
@@ -12236,6 +12316,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.05.20",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/ab5e8398-6ee7-4b4e-a7f6-bb6e42e3f249/%ED%92%80%EB%B1%85%EB%A1%A4%EB%A7%81%EB%B2%881.png",
@@ -12288,6 +12371,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.05.20",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260520/0605b8a5-2e02-466d-8220-f5c7f33e97d0/%EC%9C%88%EB%93%9C%EC%BB%B7%EC%88%8F%ED%97%A4%EC%96%B41.png",
@@ -12544,6 +12630,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "귀장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.05.21",
     "images": [
@@ -12811,6 +12899,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.06.10",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260610/4d6fcab9-00f5-49d3-805f-e9d531a2e1f5/%ED%92%80%EB%B1%85%EB%A1%B1%ED%97%A4%EC%96%B41.png",
@@ -12863,6 +12954,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.06.10",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260610/f71151ef-f431-4bcf-9c9a-24136300d8e7/%EC%8B%9C%ED%81%AC%EB%A6%BF%EB%AF%B9%EC%8A%A4%EC%88%8F%ED%97%A4%EC%96%B41.png",
@@ -12915,6 +13009,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.06.10",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260610/57a4a63b-d486-4fff-aa0b-3066324221dd/%EC%82%AC%EC%9D%B4%EB%93%9C%ED%8C%8C%ED%8A%B8%EC%88%8F%ED%97%A4%EC%96%B41.png",
@@ -13898,6 +13995,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.06.25",
     "images": [
@@ -14561,6 +14660,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "눈 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.07.16",
     "images": [
@@ -15219,6 +15320,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.08.12",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/fe653494-7a8f-4661-89d1-a52d02699e09/%ED%95%98%ED%94%84%EC%97%85%EB%A1%B1%EB%A3%A8%EC%A6%88%EC%BB%AC.png"
@@ -15267,6 +15371,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.08.12",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260812/34415424-ef8b-4bf0-a885-e44decf380a0/%EC%82%AC%EC%9D%B4%EB%93%9C%EC%8A%A4%EC%9C%95%EC%96%B8%EB%8D%94%EC%BB%B7.png"
@@ -15737,6 +15844,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "accessory",
+    "officialSlot": "얼굴 장식",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.08.13",
     "images": [
@@ -15947,6 +16056,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.08.26",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260826/0574f9b0-a261-49ad-aef9-1cdf2336c1b6/%EB%B8%8C%EB%A0%88%EC%9D%B4%EB%93%9C%ED%95%98%ED%94%84%ED%8F%AC%EB%8B%88%ED%85%8C%EC%9D%BC.png"
@@ -15995,6 +16107,9 @@
     "category": "其他商城",
     "productTypeOverride": "髮型",
     "choiceKind": "hair",
+    "appearanceSlot": "hair",
+    "officialSlot": "헤어",
+    "slotDomain": "character-appearance",
     "krDate": "2026.08.26",
     "images": [
       "https://dszw1qtcnsa5e.cloudfront.net/community/20260826/226eb748-ff92-41d0-8874-16d3b75a66ec/%EB%A3%A8%EC%A6%88%EC%BB%AC%EB%A1%9C%EC%9A%B0%ED%8F%AC%EB%8B%88%ED%85%8C%EC%9D%BC.png"
@@ -16892,6 +17007,8 @@
     "category": "其他商城",
     "productTypeOverride": "新造型",
     "shopProductKind": "robe",
+    "officialSlot": "로브",
+    "slotDomain": "fashion-equipment",
     "isShopProduct": true,
     "krDate": "2026.09.17",
     "images": [

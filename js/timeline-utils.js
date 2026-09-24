@@ -34,7 +34,8 @@
     '商店時裝': '造型',
     '染色劑選擇箱': '染色劑',
     '新造型': '造型',
-    '髮型': '髮型',
+    '髮型': '外觀',
+    '外觀': '外觀',
     '動作': '動作',
   });
 
@@ -48,7 +49,8 @@
     '商店時裝': '造型',
     '染色劑選擇箱': '染色劑',
     '新造型': '造型',
-    '髮型': '髮型',
+    '髮型': '外觀',
+    '外觀': '外觀',
     '動作': '動作',
   });
 
@@ -67,11 +69,21 @@
     return Number.isFinite(count) && count > 1 ? '+' + (count - 1) : '';
   }
 
-  function getCategoryDisplayName(category) {
+  function getCategorySource(categoryOrItem) {
+    if (categoryOrItem && typeof categoryOrItem === 'object') {
+      if (categoryOrItem.slotDomain === 'character-appearance') return '外觀';
+      return categoryOrItem.productType || categoryOrItem.category;
+    }
+    return categoryOrItem;
+  }
+
+  function getCategoryDisplayName(categoryOrItem) {
+    const category = getCategorySource(categoryOrItem);
     return CATEGORY_DISPLAY_NAMES[category] || category;
   }
 
-  function getCategoryFilterKey(category) {
+  function getCategoryFilterKey(categoryOrItem) {
+    const category = getCategorySource(categoryOrItem);
     return CATEGORY_FILTER_GROUPS[category] || category;
   }
 
@@ -93,7 +105,7 @@
     const normalizedQuery = String(query).trim().toLocaleLowerCase();
 
     return items.filter((item) => {
-      if (category !== 'all' && getCategoryFilterKey(item.productType || item.category) !== category) return false;
+      if (category !== 'all' && getCategoryFilterKey(item) !== category) return false;
       if (twStatus !== 'all' && getPublicTwStatus(item) !== twStatus) return false;
       if (month !== 'all' && String(item.krDate || '').slice(0, 7).replace('.', '-') !== month) return false;
       if (normalizedQuery) {

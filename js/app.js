@@ -1,7 +1,7 @@
 (async function () {
   const CATEGORY_ORDER = [
     "時裝", "寵物", "傳說", "套組", "通行證", "活動",
-    "樂器", "染色劑", "造型", "髮型", "動作",
+    "樂器", "染色劑", "外觀", "造型", "動作",
   ];
   const HIDDEN_CHOICE_KINDS = [];
   const utils = window.timelineUtils;
@@ -159,7 +159,7 @@
   function buildCategoryFilters() {
     const counts = {};
     state.items.forEach((item) => {
-      const type = utils.getCategoryFilterKey(item.productType || item.category);
+      const type = utils.getCategoryFilterKey(item);
       counts[type] = (counts[type] || 0) + 1;
     });
     filtersEl.innerHTML = "";
@@ -279,7 +279,7 @@
     const productType = item.productType || item.category;
     const category = document.createElement("span");
     category.className = `cat-tag ${productType}`;
-    category.textContent = utils.getCategoryDisplayName(productType);
+    category.textContent = utils.getCategoryDisplayName(item);
     labels.appendChild(category);
     if (showRerunStatus && item.isRerun) {
       const rerun = document.createElement("span");
@@ -388,7 +388,7 @@
     lightboxImg.src = image.src;
     lightboxImg.alt = lightboxItem.name;
     lightboxCounter.textContent = `${lightboxIndex + 1} / ${images.length}`;
-    lightboxCategory.textContent = utils.getCategoryDisplayName(lightboxItem.productType || lightboxItem.category);
+    lightboxCategory.textContent = utils.getCategoryDisplayName(lightboxItem);
     lightboxTitle.textContent = lightboxItem.displayName || lightboxItem.name;
     const componentNote = lightboxItem.choiceKind === "instrument" && lightboxItem.components?.length
       ? ` · ${lightboxItem.components.length} 種可選樂器`

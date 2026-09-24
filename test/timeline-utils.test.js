@@ -46,7 +46,33 @@ test('uses compact labels for long category filter names', () => {
   assert.equal(getCategoryDisplayName('寵物幸運盒'), '寵物');
   assert.equal(getCategoryDisplayName('傳說時裝'), '傳說');
   assert.equal(getCategoryDisplayName('動作'), '動作');
-  assert.equal(getCategoryDisplayName('髮型'), '髮型');
+  assert.equal(getCategoryDisplayName('髮型'), '外觀');
+});
+
+test('uses the official slot domain instead of the slot name to group appearance and fashion equipment', () => {
+  const appearanceItems = [
+    { id: 'hair', productType: '髮型' },
+    { id: 'eyes', productType: '外觀', slotDomain: 'character-appearance', appearanceSlot: 'eyes' },
+    { id: 'body', productType: '外觀', slotDomain: 'character-appearance', appearanceSlot: 'body' },
+    { id: 'face', productType: '外觀', slotDomain: 'character-appearance', appearanceSlot: 'face' },
+    { id: 'shop-eye', productType: '新造型', slotDomain: 'fashion-equipment', officialSlot: '눈 장식' },
+    { id: 'fashion-face', productType: '時裝幸運盒', slotDomain: 'fashion-equipment', officialSlot: '패션 얼굴 장식' },
+  ];
+
+  assert.deepEqual(filterTimelineItems(appearanceItems, { category: '外觀' }).map(item => item.id), [
+    'hair', 'eyes', 'body', 'face',
+  ]);
+  assert.deepEqual(filterTimelineItems(appearanceItems, { category: '造型' }).map(item => item.id), ['shop-eye']);
+  assert.deepEqual(filterTimelineItems(appearanceItems, { category: '時裝' }).map(item => item.id), ['fashion-face']);
+  assert.equal(getCategoryFilterKey(appearanceItems[0]), '外觀');
+  assert.equal(getCategoryFilterKey(appearanceItems[1]), '外觀');
+  assert.equal(getCategoryFilterKey(appearanceItems[2]), '外觀');
+  assert.equal(getCategoryFilterKey(appearanceItems[3]), '外觀');
+  assert.equal(getCategoryFilterKey(appearanceItems[4]), '造型');
+  assert.equal(getCategoryFilterKey(appearanceItems[5]), '時裝');
+  assert.equal(getCategoryDisplayName(appearanceItems[1]), '外觀');
+  assert.equal(getCategoryDisplayName(appearanceItems[4]), '造型');
+  assert.equal(appearanceItems[0].productType, '髮型');
 });
 
 test('groups shop fashion and new-style records under one style filter', () => {

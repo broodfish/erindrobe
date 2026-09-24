@@ -7,6 +7,7 @@ const {
   parseChoiceBoxes,
   parseLuckyBoxNotice,
   parseFashionShopProducts,
+  parseAppearanceProducts,
 } = require('../scripts/parse-kr-text.js');
 
 test('extracts the themed name from a total-package heading', () => {
@@ -55,6 +56,34 @@ test('parses accessory products from the newer 꾸미기 shop heading', () => {
     '✨ 신규 패션샵 상품 미리보기 멜티 스위트 아이스바 📢 유의사항',
   ].join(' ');
   assert.deepEqual(parseFashionShopProducts(text).map(product => product.name), ['멜티 스위트 아이스바']);
+  assert.deepEqual(parseFashionShopProducts(text)[0], {
+    name: '멜티 스위트 아이스바',
+    kind: 'accessory',
+    saleDate: '2026.08.13',
+    officialSlot: '얼굴 장식',
+    slotDomain: 'fashion-equipment',
+  });
+});
+
+test('parses character appearance sections without confusing fashion equipment slots', () => {
+  const text = [
+    '◼ 커스터마이징 - 환생 시 선택할 수 있는 새로운 외형이 추가되었습니다.',
+    '[ 헤어] 헤어(공통) - 내추럴 윈드펌',
+    '[ 눈] 눈 - 순진한 눈 눈 - 통찰하는 눈',
+    '[ 입] 입 - 도톰한 입',
+    '[ 얼굴꾸밈] 얼굴꾸밈 - 달의 인장',
+    '[ 몸꾸밈] 몸꾸밈 - 인연의 매듭',
+    '클래스/룬 ◼ 전사 계열',
+  ].join(' ');
+
+  assert.deepEqual(parseAppearanceProducts(text), [
+    { name: '내추럴 윈드펌', appearanceSlot: 'hair', officialSlot: '헤어', slotDomain: 'character-appearance' },
+    { name: '순진한 눈', appearanceSlot: 'eyes', officialSlot: '눈', slotDomain: 'character-appearance' },
+    { name: '통찰하는 눈', appearanceSlot: 'eyes', officialSlot: '눈', slotDomain: 'character-appearance' },
+    { name: '도톰한 입', appearanceSlot: 'mouth', officialSlot: '입', slotDomain: 'character-appearance' },
+    { name: '달의 인장', appearanceSlot: 'face', officialSlot: '얼굴꾸밈', slotDomain: 'character-appearance' },
+    { name: '인연의 매듭', appearanceSlot: 'body', officialSlot: '몸꾸밈', slotDomain: 'character-appearance' },
+  ]);
 });
 
 test('parses continuation accessory rows and ignores editorial preview suffixes', () => {
@@ -68,6 +97,9 @@ test('parses continuation accessory rows and ignores editorial preview suffixes'
   ].join(' ');
   assert.deepEqual(parseFashionShopProducts(text).map(product => product.name), [
     '내추럴 리프 이어링', '언밸런스 페더 이어링', '어드벤처 패션 백팩',
+  ]);
+  assert.deepEqual(parseFashionShopProducts(text).map(product => product.officialSlot), [
+    '귀장식', '귀장식', '로브',
   ]);
 
   const revisedPreview = [

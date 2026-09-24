@@ -59,3 +59,10 @@ test('view switch uses Google Material Symbols and exposes timeline/grid modes',
   assert.match(appJs, /gallery-grid/);
   assert.match(styleCss, /\.view-button::after/);
 });
+
+test('category chips group appearance items without a standalone hair chip', () => {
+  assert.match(appJs, /"外觀", "造型", "動作"/);
+  assert.doesNotMatch(appJs, /"造型", "髮型", "動作"/);
+  assert.match(appJs, /getCategoryFilterKey\(item\)/);
+  assert.match(appJs, /getCategoryDisplayName\(item\)/);
+});

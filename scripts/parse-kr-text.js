@@ -302,6 +302,12 @@ function parseFashionShopProducts(text) {
     const rarityPattern = '(?:(?:에픽|엘리트|레어|고급|희귀)\\s+){0,2}';
     const rowRe = new RegExp(`([^\\d]{2,70}?)\\s+${slotPattern}\\s+${rarityPattern}\\d+\\s*개(?:\\s+\\d[\\d,]*\\s*M\\s*캐시)?`, 'gu');
     const reverseRowRe = new RegExp(`${slotPattern}\\s*(?:\\([^)]*\\))?\\s+${rarityPattern}([^\\d]{2,70}?)\\s+\\d+\\s*개(?:\\s+\\d[\\d,]*\\s*M\\s*캐시)?`, 'gu');
+    const inferPriorSlot = rawName => {
+      const nameIndex = tableBody.indexOf(String(rawName || '').trim());
+      if (nameIndex < 0) return '';
+      const slots = [...tableBody.slice(0, nameIndex).matchAll(new RegExp(slotPattern, 'gu'))];
+      return slots.at(-1)?.[1] || '';
+    };
     const addProduct = (rawName, slot = '') => {
       let name = rawName.replace(/\s+/g, ' ').trim();
       name = name.replace(/^.*(?:구매\s*제한|지급\s*수량|가격)\s+/u, '').trim();
@@ -315,7 +321,13 @@ function parseFashionShopProducts(text) {
       name = name.replace(/\s+(?:에픽|엘리트|레어|고급|희귀)$/u, '').trim();
       if (!name || /^(?:아이템명|장착|부위|희귀도|수량|가격|구매|제한|에픽|엘리트|레어|고급|희귀)$/u.test(name)) return;
       if (name.length > 45) name = name.slice(-45).trim();
-      products.push({ name, kind: /로브/u.test(slot) ? 'robe' : 'accessory', saleDate });
+      const officialSlot = String(slot || '').replace(/\s+/g, ' ').trim();
+      products.push({
+        name,
+        kind: /로브/u.test(officialSlot) ? 'robe' : 'accessory',
+        saleDate,
+        ...(officialSlot ? { officialSlot, slotDomain: 'fashion-equipment' } : {}),
+      });
     };
     for (const match of tableBody.matchAll(rowRe)) addProduct(match[1], match[2]);
     for (const match of tableBody.matchAll(reverseRowRe)) addProduct(match[2], match[1]);
@@ -328,13 +340,13 @@ function parseFashionShopProducts(text) {
     const tableRowMetaTailRe = /(?:모자|상의|하의|장갑|신발|부츠|얼굴\s*장식|얼굴장식|귀\s*장식|귀장식|눈\s*장식|눈장식|머리\s*장식|머리장식|로브)\s+(?:에픽|엘리트|레어|고급|희귀)(?:\s+(?:에픽|엘리트|레어|고급|희귀))?$/u;
     for (const match of continuationTable.matchAll(continuationRe)) {
       if (tableRowMetaTailRe.test(match[1].trim())) continue;
-      addProduct(match[1]);
+      addProduct(match[1], inferPriorSlot(match[1]));
     }
 
     // Some tables omit the repeated slot and rarity on later rows (for example the third item in
     // the 1/15 accessory notice). The final "name 1개" row is still unambiguous before the preview.
     const trailingRe = /([^\d]{2,50}?)\s+\d+\s*개(?=\s*(?:✨|$))/gu;
-    for (const match of tableBody.matchAll(trailingRe)) addProduct(match[1]);
+    for (const match of tableBody.matchAll(trailingRe)) addProduct(match[1], inferPriorSlot(match[1]));
   }
 
   const seen = new Set();
@@ -370,6 +382,31 @@ function parseFashionShopProducts(text) {
     const baseName = name => name.replace(/\s+\([^)]*\)$/u, '');
     return source.indexOf(baseName(a.name)) - source.indexOf(baseName(b.name));
   });
+}
+
+function parseAppearanceProducts(text) {
+  const source = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!/\b커스터마이징\b|환생\s*시\s*선택할\s*수\s*있는\s*(?:새로운\s*)?외형/u.test(source)) return [];
+
+  const slotMap = new Map([
+    ['헤어', 'hair'],
+    ['눈', 'eyes'],
+    ['입', 'mouth'],
+    ['얼굴꾸밈', 'face'],
+    ['얼굴 꾸밈', 'face'],
+    ['몸꾸밈', 'body'],
+    ['몸 꾸밈', 'body'],
+  ]);
+  const products = [];
+  const itemRe = /(헤어(?:\s*\([^)]*\))?|눈|입|얼굴\s*꾸밈|몸\s*꾸밈)\s*[-–]\s*(.+?)(?=\s+(?:헤어(?:\s*\([^)]*\))?|눈|입|얼굴\s*꾸밈|몸\s*꾸밈)\s*[-–]|\s+\[|\s+클래스\s*\/\s*룬|$)/gu;
+  for (const match of source.matchAll(itemRe)) {
+    const officialSlot = match[1].replace(/\s*\([^)]*\)\s*/gu, '').replace(/\s+/g, ' ').trim();
+    const name = match[2].replace(/\s*\*.*$/u, '').trim();
+    const appearanceSlot = slotMap.get(officialSlot);
+    if (!appearanceSlot || !name || products.some(product => product.name === name && product.appearanceSlot === appearanceSlot)) continue;
+    products.push({ name, appearanceSlot, officialSlot, slotDomain: 'character-appearance' });
+  }
+  return products;
 }
 
 function parseHairProducts(text, images = []) {
@@ -464,6 +501,7 @@ if (require.main === module) {
 module.exports = {
   parseActionPreviews,
   parseFashionShopProducts,
+  parseAppearanceProducts,
   parseHairProducts,
   parseLuckyBoxNotice,
   parseDateRange,
