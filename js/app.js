@@ -18,8 +18,6 @@
   };
 
   const timelineEl = document.getElementById("timeline");
-  const controlsEl = document.querySelector(".controls");
-  const controlsSentinel = document.querySelector(".controls-sentinel");
   const statsEl = document.getElementById("stats");
   const filtersEl = document.getElementById("categoryFilters");
   const searchBox = document.getElementById("searchBox");
@@ -129,14 +127,6 @@
       button.textContent = `${utils.getCategoryDisplayName(label)} ${count}`;
       filtersEl.appendChild(button);
     });
-  }
-
-  function setupCondensedControls() {
-    if (!controlsEl || !controlsSentinel || !window.IntersectionObserver) return;
-    const observer = new IntersectionObserver(([entry]) => {
-      controlsEl.classList.toggle("is-condensed", utils.shouldCondenseControls(entry.isIntersecting));
-    }, { threshold: 0 });
-    observer.observe(controlsSentinel);
   }
 
   function buildMonthFilter() {
@@ -498,7 +488,6 @@
     buildMonthFilter();
     updateLatestData();
     render();
-    setupCondensedControls();
   } catch (error) {
     timelineEl.innerHTML = "";
     const empty = document.createElement("div");

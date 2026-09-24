@@ -10,7 +10,6 @@ const {
   isCardMediaTarget,
   isPublicTimelineItem,
   UI_VISIBILITY,
-  shouldCondenseControls,
   sortTimelineItems,
   summarizeTimeline,
 } = require('../js/timeline-utils.js');
@@ -81,11 +80,6 @@ test('keeps Taiwan and rerun metadata hidden in the current Korean-future-view m
     showTaiwanStatus: false,
     showRerunStatus: false,
   });
-});
-
-test('condenses sticky controls only after the sentinel leaves the viewport', () => {
-  assert.equal(shouldCondenseControls(true), false);
-  assert.equal(shouldCondenseControls(false), true);
 });
 
 test('exposes only confirmed or not-yet-released Taiwan status to the UI', () => {

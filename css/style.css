@@ -159,7 +159,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   gap: 24px;
 }
 
-.section-heading h2, .controls-heading h2 {
+.section-heading h2 {
   margin: 5px 0 0;
   color: var(--color-text);
   font-size: 1.5rem;
@@ -188,8 +188,6 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .stat-card-primary { background: var(--color-brand-subtle); }
 .stat-card-primary strong { color: var(--color-brand); }
 
-.controls-sentinel { height: 1px; margin-bottom: -1px; }
-
 .controls {
   position: sticky;
   top: 0;
@@ -203,10 +201,6 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   backdrop-filter: blur(12px);
 }
 
-.controls-heading { margin-bottom: 14px; }
-.controls.is-condensed { padding-top: 9px; padding-bottom: 9px; }
-.controls.is-condensed .controls-heading { display: none; }
-.controls.is-condensed .category-row { margin-top: 10px; }
 .control-row { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
 
 .search-field {
@@ -358,7 +352,6 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   .stat-card:nth-child(2) { border-right: 0; }
   .stat-card:nth-child(-n + 2) { border-bottom: 1px solid var(--color-border); }
   .controls { padding-top: 14px; padding-bottom: 14px; }
-  .controls.is-condensed { padding-top: 8px; padding-bottom: 8px; }
   .control-row { display: grid; grid-template-columns: 1fr 1fr; }
   .search-field { grid-column: 1 / -1; }
   .select-field { min-width: 0; }

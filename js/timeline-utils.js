@@ -70,10 +70,6 @@
     return CATEGORY_FILTER_GROUPS[category] || category;
   }
 
-  function shouldCondenseControls(sentinelIntersecting) {
-    return !sentinelIntersecting;
-  }
-
   function filterTimelineItems(items, filters = {}) {
     const {
       category = 'all',
@@ -138,7 +134,6 @@
     getPublicTwStatus,
     isCardMediaTarget,
     isPublicTimelineItem,
-    shouldCondenseControls,
     sortTimelineItems,
     summarizeTimeline,
     UI_VISIBILITY,
