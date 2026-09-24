@@ -51,6 +51,13 @@ for (const e of splitEntries) {
 const NON_FASHION_TITLE = /페이백|출석 이벤트|스토어 활동|쿠폰 지급/;
 const GENERIC_TIMELINE_NAME = /^(?:신규\s+(?:패키지|상품|아이템샵|스페셜\s+패키지)\s+안내|기간제\s+패키지\s+안내(?:\s*\([^)]*\))?|(?:에픽|엘리트|레어|고급|희귀))$/u;
 
+function luckyBoxProductType(value) {
+  const signal = String(value || '');
+  if (/펫|pet/iu.test(signal)) return '寵物幸運盒';
+  if (/패션|costume/iu.test(signal)) return '時裝幸運盒';
+  return undefined;
+}
+
 function imgKey(url) {
   // extract the /community/{date}/{uuid}/ part which is shared between KR/TW when assets are reused
   const m = url.match(/\/community\/\d+\/([a-f0-9-]{36})\//);
@@ -646,6 +653,7 @@ for (const r of kr) {
         name: box.boxName,
         displayName: entryVerifiedMatch ? entryVerifiedMatch.twName : box.boxName,
         category,
+        derivedProductType: luckyBoxProductType(box.boxType),
         krDate: box.date || r.date,
         images: [rawUrl],
         sourceUrl: r.url,
@@ -671,6 +679,7 @@ for (const r of kr) {
         name: entry.titleKr,
         displayName: entryVerifiedMatch ? entryVerifiedMatch.twName : entry.titleKr,
         category,
+        derivedProductType: luckyBoxProductType(entry.itemType),
         krDate: parseStartDate(entry.saleDateText) || r.date,
         images: [rawUrl],
         sourceUrl: r.url,
@@ -723,7 +732,7 @@ for (const item of items) {
     sourceBoard: source?.boardPath || '',
     sourceCategory: source?.category || '',
   });
-  let productType = item.productTypeOverride || product.productType;
+  let productType = item.productTypeOverride || item.derivedProductType || product.productType;
   // Event notices can mention dye/action rewards in their explanatory text, but they are not
   // standalone shop products. Their dedicated derived preview cards are only created from
   // official product notices, so keep the parent event card in the activity group.
@@ -743,6 +752,7 @@ for (const item of items) {
     productType = petSignal ? '寵物幸運盒' : '時裝幸運盒';
   }
   item.productType = productType;
+  delete item.derivedProductType;
   item.relatedTypes = product.relatedTypes.filter(type => type !== productType);
   item.shopPath = product.shopPath;
   item.colorCodes = productType === '染色劑選擇箱'

@@ -33,6 +33,17 @@ test('build output keeps corrected categories and expanded choice-box records', 
   assert.equal(imageBearingItems.filter(item => !item.localImages?.length).length, 0);
 });
 
+test('keeps mixed fashion and pet lucky boxes in their respective filters', () => {
+  const items = require('../data/fashion.json');
+  const squirrel = items.find(item => item.id === '3414447_0');
+  const hamster = items.find(item => item.id === '3414447_1');
+
+  assert.equal(squirrel.name, '바람 따라 다람쥐');
+  assert.equal(squirrel.productType, '時裝幸運盒');
+  assert.equal(hamster.name, '도토리 햄스터');
+  assert.equal(hamster.productType, '寵物幸運盒');
+});
+
 test('repeated official products remain in the timeline and are marked as reruns', () => {
   const wolf = require('../data/fashion.json').filter(item => item.name === '아기 늑대');
   assert.deepEqual(wolf.map(item => [item.krDate, item.isRerun]), [
