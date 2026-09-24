@@ -26,6 +26,7 @@ test('dye cards hide swatch codes and open a dedicated color dialog', () => {
 });
 
 test('homepage exposes crawlable SEO metadata and canonical URL', () => {
+  assert.match(indexHtml, /<meta name="google-site-verification" content="pj9KWfodoGkUhqiVbKQaw6Y8bl8c9KFRMRxCXTEq_mw" \/>/);
   assert.match(indexHtml, /<link rel="canonical" href="https:\/\/broodfish\.github\.io\/erindrobe\/" \/>/);
   assert.match(indexHtml, /<meta property="og:url" content="https:\/\/broodfish\.github\.io\/erindrobe\/" \/>/);
   assert.match(indexHtml, /<meta name="twitter:card" content="summary_large_image" \/>/);
