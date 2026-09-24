@@ -1,6 +1,6 @@
 (async function () {
   const CATEGORY_ORDER = [
-    "時裝", "寵物", "傳說", "套組", "通行證", "活動", "聯名",
+    "時裝", "寵物", "傳說", "套組", "通行證", "活動",
     "樂器", "染色劑", "造型", "髮型", "動作",
   ];
   const HIDDEN_CHOICE_KINDS = [];

@@ -35,7 +35,7 @@ test('filters by category, Taiwan status, month and bilingual search fields', ()
 
 test('uses compact labels for long category filter names', () => {
   assert.equal(getCategoryDisplayName('活動時裝'), '活動');
-  assert.equal(getCategoryDisplayName('聯名時裝'), '聯名');
+  assert.equal(getCategoryDisplayName('聯名時裝'), '活動');
   assert.equal(getCategoryDisplayName('商店時裝'), '造型');
   assert.equal(getCategoryDisplayName('染色劑選擇箱'), '染色劑');
   assert.equal(getCategoryDisplayName('新造型'), '造型');
@@ -63,9 +63,10 @@ test('groups activity and special-lottery records under one filter category', ()
   const activityItems = [
     { id: 'activity', productType: '活動時裝' },
     { id: 'special', productType: '特殊活動抽獎盒' },
+    { id: 'collab', productType: '聯名時裝' },
   ];
   assert.deepEqual(filterTimelineItems(activityItems, { category: '活動' }).map(item => item.id), [
-    'activity', 'special',
+    'activity', 'special', 'collab',
   ]);
 });
 
