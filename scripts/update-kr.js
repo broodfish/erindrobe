@@ -1,8 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const { execFileSync } = require('node:child_process');
 
 const { mergeBoardItems, scanBoardSince } = require('./kr-incremental.js');
-const { writeJsonAtomically } = require('./validate-raw-data.js');
+const { validateRecords, writeJsonAtomically } = require('./validate-raw-data.js');
 
 const BASE = 'https://mabinogimobile.nexon.com';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
@@ -302,12 +303,139 @@ function printReview(pendingPath = path.join(RAW, 'kr-pending.json')) {
   return pending;
 }
 
+function parseApplyIds(argv) {
+  const args = [...argv];
+  const ids = [];
+  let applyAll = false;
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    if (arg === '--all') {
+      applyAll = true;
+      continue;
+    }
+    if (arg === '--ids') {
+      const value = args[++i];
+      if (!value) throw new Error('--ids requires a comma-separated value');
+      ids.push(...value.split(',').map(id => id.trim()).filter(Boolean));
+      continue;
+    }
+    throw new Error(`Unknown apply option: ${arg}`);
+  }
+  const uniqueIds = [...new Set(ids)];
+  if (applyAll && uniqueIds.length) throw new Error('use either --ids or --all, not both');
+  if (!applyAll && !uniqueIds.length) throw new Error('apply requires an explicit --ids or --all selection');
+  return { ids: uniqueIds, applyAll };
+}
+
+function listFileForSourceBoard(sourceBoard) {
+  return BOARDS.find(board => board.key === sourceBoard)?.file || null;
+}
+
+function listRecordFromPending(record) {
+  return {
+    id: String(record.id),
+    category: record.category || null,
+    title: record.title || record.pageTitle || null,
+    date: record.date || null,
+  };
+}
+
+function mergeRecordsById(existing, additions) {
+  const byId = new Map(existing.map(item => [String(item.id), item]));
+  for (const item of additions) {
+    const id = String(item.id);
+    if (!byId.has(id)) byId.set(id, item);
+  }
+  return [...byId.values()];
+}
+
+function runBuildScript(scriptName) {
+  execFileSync(process.execPath, [`scripts/${scriptName}`], { cwd: ROOT, stdio: 'inherit' });
+}
+
+async function applyPending({
+  ids = [],
+  applyAll = false,
+  rawDir = RAW,
+  buildCandidates = () => {},
+  buildDataset = () => {},
+} = {}) {
+  const pendingPath = path.join(rawDir, 'kr-pending.json');
+  const pending = normalizePending(loadJson(pendingPath, emptyPending()));
+  const selectedIds = applyAll ? pending.records.map(record => String(record.id)) : [...new Set(ids.map(String))];
+  if (!selectedIds.length) throw new Error('no pending records to apply');
+
+  const pendingById = new Map(pending.records.map(record => [String(record.id), record]));
+  const missing = selectedIds.filter(id => !pendingById.has(id));
+  if (missing.length) throw new Error(`IDs not pending: ${missing.join(', ')}`);
+  const selected = selectedIds.map(id => pendingById.get(id));
+  for (const record of selected) {
+    if (!record.id || typeof record.fullText !== 'string' || !record.fullText.trim()) {
+      throw new Error(`pending record ${record.id || '?'} is missing fullText`);
+    }
+  }
+
+  const detailPath = path.join(rawDir, 'kr-details.json');
+  const details = loadJson(detailPath, []);
+  const detailValidation = validateRecords(details, { label: 'kr-details', requiredFields: ['id'] });
+  if (!detailValidation.ok) throw new Error(detailValidation.errors.join('; '));
+  const mergedDetails = mergeRecordsById(details, selected);
+
+  const listUpdates = new Map();
+  for (const record of selected) {
+    const sourceBoards = record.sourceBoards?.length
+      ? record.sourceBoards
+      : [BOARDS.find(board => board.path === record.boardPath)?.key].filter(Boolean);
+    for (const sourceBoard of sourceBoards) {
+      const file = listFileForSourceBoard(sourceBoard);
+      if (!file) continue;
+      if (!listUpdates.has(file)) listUpdates.set(file, loadJson(path.join(rawDir, file), []));
+      listUpdates.set(file, mergeRecordsById(listUpdates.get(file), [listRecordFromPending(record)]));
+    }
+  }
+
+  const remainingPending = {
+    version: 1,
+    updatedAt: pending.updatedAt,
+    records: pending.records.filter(record => !selectedIds.includes(String(record.id))),
+  };
+  const detailsCheck = validateRecords(mergedDetails, { label: 'kr-details', requiredFields: ['id'], requireNonEmpty: ['fullText'] });
+  if (!detailsCheck.ok) throw new Error(detailsCheck.errors.join('; '));
+
+  writeJsonAtomically(detailPath, mergedDetails);
+  for (const [file, records] of listUpdates) {
+    writeJsonAtomically(path.join(rawDir, file), records);
+  }
+  writeJsonAtomically(pendingPath, remainingPending);
+  await buildCandidates();
+  await buildDataset();
+
+  return {
+    rawDir,
+    appliedIds: selectedIds,
+    details: mergedDetails,
+    remainingPending,
+  };
+}
+
+async function runApply(argv) {
+  const { ids, applyAll } = parseApplyIds(argv);
+  const result = await applyPending({
+    ids,
+    applyAll,
+    buildCandidates: () => runBuildScript('filter-kr-candidates.js'),
+    buildDataset: () => runBuildScript('build-dataset.js'),
+  });
+  console.log(`Applied ${result.appliedIds.length} Korean pending records: ${result.appliedIds.join(', ')}`);
+  return result;
+}
+
 function usage() {
-  console.log('Usage: node scripts/update-kr.js <scan|review>');
+  console.log('Usage: node scripts/update-kr.js <scan|review|apply> [--ids id1,id2 | --all]');
 }
 
 async function main(argv = process.argv.slice(2)) {
-  const [command] = argv;
+  const [command, ...rest] = argv;
   if (command === 'scan') {
     const result = await runScan();
     console.log(`Scanned Korean notices: ${result.report.newIds.length} new pending records`);
@@ -319,6 +447,10 @@ async function main(argv = process.argv.slice(2)) {
   }
   if (command === 'review') {
     printReview();
+    return;
+  }
+  if (command === 'apply') {
+    await runApply(rest);
     return;
   }
   usage();
@@ -339,7 +471,9 @@ module.exports = {
   loadSyncState,
   parseListHtml,
   parseDetailHtml,
+  parseApplyIds,
   renderReviewMarkdown,
+  applyPending,
   scanIncrementally,
   runScan,
 };

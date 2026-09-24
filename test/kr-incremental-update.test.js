@@ -9,7 +9,11 @@ const {
   mergeBoardItems,
   scanBoardSince,
 } = require('../scripts/kr-incremental.js');
-const { scanIncrementally } = require('../scripts/update-kr.js');
+const {
+  applyPending,
+  parseApplyIds,
+  scanIncrementally,
+} = require('../scripts/update-kr.js');
 
 function fixturePage(ids) {
   return {
@@ -47,9 +51,44 @@ function createFixtureRawDir({ pendingRecords = [] } = {}) {
     lastScanAt: '2026-09-23T00:00:00.000Z',
     boards: {},
   });
+  writeJson(path.join(rawDir, 'kr-details.json'), [
+    { id: '102', boardPath: '/News/Notice', fullText: '既有明細' },
+  ]);
   const finalPath = path.join(root, 'fashion.json');
   writeJson(finalPath, [{ id: 'existing-final-item' }]);
   return { root, rawDir, finalPath };
+}
+
+function fixtureApplyOptions() {
+  const pendingRecords = [
+    {
+      id: '103',
+      boardPath: '/News/Notice',
+      sourceBoards: ['notice-info'],
+      status: 'pending',
+      title: '新公告 103',
+      date: '2026.09.24',
+      fullText: '完整公告 103',
+      contentImages: [],
+    },
+    {
+      id: '104',
+      boardPath: '/News/Notice',
+      sourceBoards: ['notice-info'],
+      status: 'pending',
+      title: '新公告 104',
+      date: '2026.09.24',
+      fullText: '完整公告 104',
+      contentImages: [],
+    },
+  ];
+  const fixture = createFixtureRawDir({ pendingRecords });
+  return {
+    ...fixture,
+    ids: ['103'],
+    buildCandidates: async () => {},
+    buildDataset: async () => {},
+  };
 }
 
 function fixtureIncrementalOptions(overrides = {}) {
@@ -139,4 +178,35 @@ test('a failed board keeps previous pending records and reports the failure', as
 
   assert.deepEqual(result.pending.records.map(item => item.id), ['104', '103', '101']);
   assert.equal(result.report.failures[0].board, 'events-all');
+});
+
+test('parses explicit apply IDs and rejects an empty selection', () => {
+  assert.deepEqual(parseApplyIds(['--ids', '103, 104']), {
+    ids: ['103', '104'],
+    applyAll: false,
+  });
+  assert.deepEqual(parseApplyIds(['--all']), { ids: [], applyAll: true });
+  assert.throws(() => parseApplyIds([]), /explicit --ids or --all/iu);
+});
+
+test('apply requires explicit IDs and removes only applied pending records', async () => {
+  const result = await applyPending(fixtureApplyOptions());
+  const details = JSON.parse(fs.readFileSync(path.join(result.rawDir, 'kr-details.json'), 'utf8'));
+
+  assert.deepEqual(result.appliedIds, ['103']);
+  assert.deepEqual(result.remainingPending.records.map(item => item.id), ['104']);
+  assert.ok(details.some(item => item.id === '103'));
+});
+
+test('apply rejects an ID that is not pending without changing raw data', async () => {
+  const options = fixtureApplyOptions();
+  const detailsPath = path.join(options.rawDir, 'kr-details.json');
+  const before = crypto.createHash('sha256').update(fs.readFileSync(detailsPath)).digest('hex');
+
+  await assert.rejects(
+    () => applyPending({ ...options, ids: ['999'] }),
+    /not pending/iu,
+  );
+  const after = crypto.createHash('sha256').update(fs.readFileSync(detailsPath)).digest('hex');
+  assert.equal(after, before);
 });
