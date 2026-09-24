@@ -36,8 +36,14 @@
   const lightboxCategory = document.getElementById("lightboxCategory");
   const lightboxTitle = document.getElementById("lightboxTitle");
   const lightboxMeta = document.getElementById("lightboxMeta");
+  const dyeDialog = document.getElementById("dyeDialog");
+  const dyeDialogClose = document.getElementById("dyeDialogClose");
+  const dyeDialogTitle = document.getElementById("dyeDialogTitle");
+  const dyeDialogMeta = document.getElementById("dyeDialogMeta");
+  const dyeDialogColors = document.getElementById("dyeDialogColors");
   let lightboxItem = null;
   let lightboxIndex = 0;
+  let dyeDialogItem = null;
 
   function updateLightboxImageQuality() {
     const isLowResolution = lightboxImg.complete
@@ -72,16 +78,38 @@
     const art = document.createElement("div");
     art.className = "dye-card-art";
     art.setAttribute("aria-label", "染色劑色碼預覽");
-    item.colorCodes.forEach((code) => {
+    item.colorCodes.forEach((code, index) => {
       const swatch = document.createElement("span");
       swatch.className = "dye-card-swatch";
       swatch.style.backgroundColor = code;
-      swatch.textContent = code;
-      swatch.title = code;
-      swatch.setAttribute("aria-label", code);
+      swatch.textContent = "";
+      swatch.setAttribute("aria-label", `第 ${index + 1} 個色票`);
       art.appendChild(swatch);
     });
     return art;
+  }
+
+  function openDyeDialog(item) {
+    if (!item.colorCodes?.length) return;
+    dyeDialogItem = item;
+    dyeDialogTitle.textContent = item.displayName || item.name;
+    dyeDialogMeta.textContent = `共 ${item.colorCodes.length} 種顏色 · 點擊外側或按 Esc 關閉`;
+    dyeDialogColors.replaceChildren();
+    item.colorCodes.forEach((code, index) => {
+      const entry = document.createElement("div");
+      entry.className = "dye-dialog-color";
+      const swatch = document.createElement("span");
+      swatch.className = "dye-dialog-swatch";
+      swatch.style.backgroundColor = code;
+      swatch.setAttribute("aria-label", `第 ${index + 1} 個色票 ${code}`);
+      const label = document.createElement("code");
+      label.textContent = code;
+      entry.append(swatch, label);
+      dyeDialogColors.appendChild(entry);
+    });
+    dyeDialog.classList.add("open");
+    dyeDialog.setAttribute("aria-hidden", "false");
+    dyeDialogClose.focus();
   }
 
   function twTimestampToDateStr(timestamp) {
@@ -309,11 +337,11 @@
     body.appendChild(source);
 
     card.append(media, body);
-    if (images.length) {
+    if (images.length || (isDye && item.colorCodes?.length)) {
       media.tabIndex = 0;
       media.setAttribute("role", "button");
-      media.setAttribute("aria-label", `查看${primaryName}圖片`);
-      const openMedia = () => openLightbox(item);
+      media.setAttribute("aria-label", isDye ? `查看${primaryName}的所有顏色與色碼` : `查看${primaryName}圖片`);
+      const openMedia = () => isDye ? openDyeDialog(item) : openLightbox(item);
       card.addEventListener("click", (event) => {
         if (utils.isCardMediaTarget(event.target)) openMedia();
       });
@@ -376,6 +404,13 @@
     if (!lightboxItem || !getLightboxImages(lightboxItem).length) return;
     lightboxIndex += delta;
     updateLightbox();
+  }
+
+  function closeDyeDialog() {
+    dyeDialog.classList.remove("open");
+    dyeDialog.setAttribute("aria-hidden", "true");
+    dyeDialogColors.replaceChildren();
+    dyeDialogItem = null;
   }
 
   function render() {
@@ -475,11 +510,16 @@
   lightboxPrev.addEventListener("click", () => shiftLightbox(-1));
   lightboxNext.addEventListener("click", () => shiftLightbox(1));
   lightbox.addEventListener("click", (event) => { if (event.target === lightbox) closeLightbox(); });
+  dyeDialogClose.addEventListener("click", closeDyeDialog);
+  dyeDialog.addEventListener("click", (event) => { if (event.target === dyeDialog) closeDyeDialog(); });
   document.addEventListener("keydown", (event) => {
-    if (!lightbox.classList.contains("open")) return;
-    if (event.key === "Escape") closeLightbox();
-    if (event.key === "ArrowLeft") shiftLightbox(-1);
-    if (event.key === "ArrowRight") shiftLightbox(1);
+    if (lightbox.classList.contains("open")) {
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") shiftLightbox(-1);
+      if (event.key === "ArrowRight") shiftLightbox(1);
+      return;
+    }
+    if (dyeDialogItem && event.key === "Escape") closeDyeDialog();
   });
 
   try {
