@@ -57,6 +57,11 @@
     showRerunStatus: false,
   });
 
+  const VIEW_MODE_LABELS = Object.freeze({
+    timeline: '時間軸',
+    grid: '網格',
+  });
+
   function getImageCountHint(imageCount) {
     const count = Number(imageCount);
     return Number.isFinite(count) && count > 1 ? '+' + (count - 1) : '';
@@ -68,6 +73,14 @@
 
   function getCategoryFilterKey(category) {
     return CATEGORY_FILTER_GROUPS[category] || category;
+  }
+
+  function getViewModeLabel(mode) {
+    return VIEW_MODE_LABELS[mode] || VIEW_MODE_LABELS.timeline;
+  }
+
+  function normalizeViewMode(mode) {
+    return mode === 'grid' ? 'grid' : 'timeline';
   }
 
   function filterTimelineItems(items, filters = {}) {
@@ -130,8 +143,10 @@
     getCategoryFilterKey,
     getCategoryDisplayName,
     getImageCountHint,
+    getViewModeLabel,
     getMonthOptions,
     getPublicTwStatus,
+    normalizeViewMode,
     isCardMediaTarget,
     isPublicTimelineItem,
     sortTimelineItems,

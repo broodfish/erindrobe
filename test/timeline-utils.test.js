@@ -6,6 +6,8 @@ const {
   getMonthOptions,
   getCategoryDisplayName,
   getImageCountHint,
+  getViewModeLabel,
+  normalizeViewMode,
   getPublicTwStatus,
   isCardMediaTarget,
   isPublicTimelineItem,
@@ -74,6 +76,13 @@ test('provides a compact hint only for cards with multiple images', () => {
   assert.equal(getImageCountHint(1), '');
   assert.equal(getImageCountHint(2), '+1');
   assert.equal(getImageCountHint(8), '+7');
+});
+
+test('supports the timeline and grid view labels', () => {
+  assert.equal(getViewModeLabel('timeline'), '時間軸');
+  assert.equal(getViewModeLabel('grid'), '網格');
+  assert.equal(normalizeViewMode('grid'), 'grid');
+  assert.equal(normalizeViewMode('unknown'), 'timeline');
 });
 
 test('keeps Taiwan and rerun metadata hidden in the current Korean-future-view mode', () => {

@@ -15,6 +15,7 @@
     month: "all",
     order: "asc",
     query: "",
+    view: "timeline",
   };
 
   const timelineEl = document.getElementById("timeline");
@@ -26,6 +27,7 @@
   const sortOrder = document.getElementById("sortOrder");
   const jumpToday = document.getElementById("jumpToday");
   const clearFilters = document.getElementById("clearFilters");
+  const viewButtons = [...document.querySelectorAll(".view-button")];
   const dataLatest = document.getElementById("dataLatest");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
@@ -44,6 +46,21 @@
   let lightboxItem = null;
   let lightboxIndex = 0;
   let dyeDialogItem = null;
+
+  function updateViewButtons() {
+    const activeMode = utils.normalizeViewMode(state.view);
+    state.view = activeMode;
+    viewButtons.forEach((button) => {
+      const isActive = button.dataset.viewMode === activeMode;
+      const label = utils.getViewModeLabel(button.dataset.viewMode);
+      const viewLabel = `${label}視圖`;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+      button.setAttribute("aria-label", viewLabel);
+      button.title = viewLabel;
+      button.dataset.tooltip = viewLabel;
+    });
+  }
 
   function updateLightboxImageQuality() {
     const isLowResolution = lightboxImg.complete
@@ -421,6 +438,7 @@
   }
 
   function render() {
+    updateViewButtons();
     const filtered = utils.filterTimelineItems(state.items, {
       category: state.category,
       twStatus: showTaiwanStatus ? state.twStatus : "all",
@@ -431,6 +449,7 @@
     statsEl.textContent = `顯示 ${filtered.length} / ${state.items.length} 筆 · ${state.order === "asc" ? "由舊到新" : "由新到舊"}`;
     clearFilters.hidden = !(state.category !== "all" || (showTaiwanStatus && state.twStatus !== "all") || state.month !== "all" || state.query);
     timelineEl.innerHTML = "";
+    timelineEl.classList.toggle("is-grid-view", state.view === "grid");
     if (!ordered.length) {
       const empty = document.createElement("div");
       empty.className = "empty-state";
@@ -440,6 +459,14 @@
       hint.textContent = "試著放寬搜尋字詞或清除篩選條件。";
       empty.append(title, hint);
       timelineEl.appendChild(empty);
+      return;
+    }
+
+    if (state.view === "grid") {
+      const grid = document.createElement("div");
+      grid.className = "gallery-grid";
+      ordered.forEach((item) => grid.appendChild(createCard(item)));
+      timelineEl.appendChild(grid);
       return;
     }
 
@@ -490,6 +517,12 @@
     [...filtersEl.children].forEach((chip) => chip.classList.toggle("active", chip === button));
     render();
   });
+  viewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.view = utils.normalizeViewMode(button.dataset.viewMode);
+      render();
+    });
+  });
   searchBox.addEventListener("input", (event) => { state.query = event.target.value.trim(); render(); });
   statusFilter?.addEventListener("change", (event) => { state.twStatus = event.target.value; render(); });
   monthFilter.addEventListener("change", (event) => { state.month = event.target.value; render(); });
@@ -511,7 +544,9 @@
     state.month = target.slice(0, 7).replace(".", "-");
     monthFilter.value = state.month;
     render();
-    document.querySelector(`.date-group[data-date="${target}"]`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (state.view === "timeline") {
+      document.querySelector(`.date-group[data-date="${target}"]`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
   lightboxClose.addEventListener("click", closeLightbox);
   lightboxPrev.addEventListener("click", () => shiftLightbox(-1));
@@ -530,6 +565,7 @@
   });
 
   try {
+    updateViewButtons();
     state.items = await loadData();
     buildCategoryFilters();
     buildMonthFilter();

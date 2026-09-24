@@ -49,3 +49,13 @@ test('timeline cards use generated thumbnails while the lightbox keeps full imag
   assert.match(thumbnailBuilder, /fashion-thumb/);
   assert.match(thumbnailBuilder, /resize\(\{ width: 360, withoutEnlargement: true \}\)/);
 });
+
+test('view switch uses Google Material Symbols and exposes timeline/grid modes', () => {
+  assert.match(indexHtml, /fonts\.googleapis\.com\/css2\?family=Material\+Symbols\+Outlined/);
+  assert.match(indexHtml, /data-view-mode="timeline"/);
+  assert.match(indexHtml, /data-view-mode="grid"/);
+  assert.match(indexHtml, />view_timeline<\/span>/);
+  assert.match(indexHtml, />grid_view<\/span>/);
+  assert.match(appJs, /gallery-grid/);
+  assert.match(styleCss, /\.view-button::after/);
+});
