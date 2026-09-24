@@ -402,13 +402,41 @@ async function applyPending({
   const detailsCheck = validateRecords(mergedDetails, { label: 'kr-details', requiredFields: ['id'], requireNonEmpty: ['fullText'] });
   if (!detailsCheck.ok) throw new Error(detailsCheck.errors.join('; '));
 
-  writeJsonAtomically(detailPath, mergedDetails);
-  for (const [file, records] of listUpdates) {
-    writeJsonAtomically(path.join(rawDir, file), records);
+  const rollbackPaths = new Set([
+    detailPath,
+    pendingPath,
+    path.join(rawDir, 'kr-notice-merged.json'),
+    path.join(rawDir, 'kr-events-merged.json'),
+    path.join(rawDir, 'kr-candidates.json'),
+    path.join(ROOT, 'data', 'fashion.json'),
+  ]);
+  for (const file of listUpdates.keys()) rollbackPaths.add(path.join(rawDir, file));
+  const snapshots = new Map([...rollbackPaths].map(file => [
+    file,
+    fs.existsSync(file) ? fs.readFileSync(file) : null,
+  ]));
+  const restore = () => {
+    for (const [file, contents] of snapshots) {
+      if (contents === null) {
+        if (fs.existsSync(file)) fs.unlinkSync(file);
+      } else {
+        fs.writeFileSync(file, contents);
+      }
+    }
+  };
+
+  try {
+    writeJsonAtomically(detailPath, mergedDetails);
+    for (const [file, records] of listUpdates) {
+      writeJsonAtomically(path.join(rawDir, file), records);
+    }
+    writeJsonAtomically(pendingPath, remainingPending);
+    await buildCandidates();
+    await buildDataset();
+  } catch (error) {
+    restore();
+    throw error;
   }
-  writeJsonAtomically(pendingPath, remainingPending);
-  await buildCandidates();
-  await buildDataset();
 
   return {
     rawDir,

@@ -210,3 +210,16 @@ test('apply rejects an ID that is not pending without changing raw data', async 
   const after = crypto.createHash('sha256').update(fs.readFileSync(detailsPath)).digest('hex');
   assert.equal(after, before);
 });
+
+test('apply restores raw files when the rebuild step fails', async () => {
+  const options = fixtureApplyOptions();
+  const detailsPath = path.join(options.rawDir, 'kr-details.json');
+  const pendingPath = path.join(options.rawDir, 'kr-pending.json');
+  const beforeDetails = fs.readFileSync(detailsPath);
+  const beforePending = fs.readFileSync(pendingPath);
+  options.buildDataset = async () => { throw new Error('fixture rebuild failure'); };
+
+  await assert.rejects(() => applyPending(options), /fixture rebuild failure/iu);
+  assert.deepEqual(fs.readFileSync(detailsPath), beforeDetails);
+  assert.deepEqual(fs.readFileSync(pendingPath), beforePending);
+});
