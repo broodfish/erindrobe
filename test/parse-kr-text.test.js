@@ -81,6 +81,20 @@ test('parses continuation accessory rows and ignores editorial preview suffixes'
   ]);
 });
 
+test('does not duplicate an accessory with its rarity and slot prefix', () => {
+  const text = [
+    '패션샵 ◼ 판매 기간: 2025년 7월 17일(목) 점검 후',
+    '패션샵 추가 상품 [ 액세서리] 희귀도 장착 부위 아이템명 수량 가격',
+    '엘리트 희귀도 패션 얼굴 장식 씨사이드 페인팅 1 개 66 660 M 캐시 서버당 주 1회',
+    '러블리 서머 페인팅 1 개 66 660 M 캐시 서버당 주 1회',
+    '✨ 신규 액세서리 미리보기 씨사이드 페인팅 러블리 서머 페인팅 📢 유의사항',
+  ].join(' ');
+
+  assert.deepEqual(parseFashionShopProducts(text).map(product => product.name), [
+    '씨사이드 페인팅', '러블리 서머 페인팅',
+  ]);
+});
+
 test('parses every accessory in a table with purchase limits and preview names', () => {
   const text = [
     '패션샵 ◼ 판매 기간: 2025 년 11월 27일(목) 점검 후 ~ 별도 안내 시까지',

@@ -309,6 +309,7 @@ function parseFashionShopProducts(text) {
       name = name.replace(/^\d+\s+서버당\s+\S+\s+\d+\s*회\s+/u, '').trim();
       name = name.replace(/^\d+\s+/u, '').trim();
       name = name.replace(/^(?:아이템명|장착\s*부위|희귀도|수량)\s+/u, '').trim();
+      name = name.replace(/^(?:(?:에픽|엘리트|레어|고급|희귀)(?:\s+희귀도)?\s+)+패션\s+(?:모자|상의|하의|장갑|신발|부츠|얼굴\s*장식|얼굴장식|귀\s*장식|귀장식|눈\s*장식|눈장식|머리\s*장식|머리장식|로브)\s+/u, '').trim();
       name = name.replace(/^(?:회|없음)\s+/u, '').trim();
       name = name.replace(/\s+(?:모자|상의|하의|장갑|신발|부츠|얼굴\s*장식|얼굴장식|귀\s*장식|귀장식|눈\s*장식|눈장식|머리\s*장식|머리장식|로브)(?:\s+(?:에픽|엘리트|레어|고급|희귀))?$/u, '').trim();
       name = name.replace(/\s+(?:에픽|엘리트|레어|고급|희귀)$/u, '').trim();

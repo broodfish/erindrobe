@@ -2547,52 +2547,6 @@
   {
     "id": "3037067_shop0",
     "title": "(추가) 7/17(목) 럭키박스 & 패션샵 안내",
-    "name": "엘리트 희귀도 패션 얼굴 장식 씨사이드 페인팅",
-    "displayName": "엘리트 희귀도 패션 얼굴 장식 씨사이드 페인팅",
-    "category": "其他商城",
-    "productTypeOverride": "新造型",
-    "shopProductKind": "accessory",
-    "isShopProduct": true,
-    "krDate": "2025.07.17",
-    "images": [],
-    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3037067",
-    "twStatus": "unmatched",
-    "twNameMatch": false,
-    "twImageMatch": false,
-    "twManualMatch": false,
-    "twReleased": false,
-    "twFullyReleased": false,
-    "twMatchedImageCount": 0,
-    "twTotalImageCount": 0,
-    "twDate": null,
-    "twDateSource": null,
-    "twSaleDateText": null,
-    "twDates": [],
-    "twTitles": [],
-    "twEvidence": [],
-    "productType": "新造型",
-    "relatedTypes": [
-      "預覽"
-    ],
-    "shopPath": [
-      "캐시샵",
-      "럭키박스"
-    ],
-    "colorCodes": [],
-    "includePreviewImages": true,
-    "legacyCategory": "其他商城",
-    "sourceBoard": "/News/Notice",
-    "galleryImages": [],
-    "cardImages": [],
-    "isRerun": false,
-    "firstReleaseId": "3037067_shop0",
-    "firstReleaseDate": "2025.07.17",
-    "rerunIndex": 0,
-    "localImages": []
-  },
-  {
-    "id": "3037067_shop1",
-    "title": "(추가) 7/17(목) 럭키박스 & 패션샵 안내",
     "name": "씨사이드 페인팅",
     "displayName": "씨사이드 페인팅",
     "category": "其他商城",
@@ -2643,13 +2597,17 @@
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/dfa6417b-e456-4160-aca7-baf474e6649b/%EC%94%A8%EC%82%AC%EC%9D%B4%EB%93%9C%ED%8E%98%EC%9D%B8%ED%8C%85%EC%97%AC%EC%95%84.png"
     ],
     "isRerun": false,
-    "firstReleaseId": "3037067_shop1",
+    "firstReleaseId": "3037067_shop0",
     "firstReleaseDate": "2025.07.17",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [
+      "assets/fashion-web/3037067_shop0_0.webp",
+      "assets/fashion-web/3037067_shop0_1.webp",
+      "assets/fashion-web/3037067_shop0_2.webp"
+    ]
   },
   {
-    "id": "3037067_shop2",
+    "id": "3037067_shop1",
     "title": "(추가) 7/17(목) 럭키박스 & 패션샵 안내",
     "name": "러블리 서머 페인팅",
     "displayName": "러블리 서머 페인팅",
@@ -2701,10 +2659,9 @@
       "https://dszw1qtcnsa5e.cloudfront.net/community/20250716/ec578595-d80d-45d1-b959-29a8e0db0bc8/%EB%9F%AC%EB%B8%94%EB%A6%AC%EC%84%9C%EB%A8%B8%ED%8E%98%EC%9D%B8%ED%8C%85%EC%97%AC%EC%95%84.png"
     ],
     "isRerun": false,
-    "firstReleaseId": "3037067_shop2",
+    "firstReleaseId": "3037067_shop1",
     "firstReleaseDate": "2025.07.17",
-    "rerunIndex": 0,
-    "localImages": []
+    "rerunIndex": 0
   },
   {
     "id": "3037067_0",
