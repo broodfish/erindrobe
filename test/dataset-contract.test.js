@@ -1,6 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
+const fs = require('node:fs');
 const path = require('node:path');
 const { parseFashionShopProducts } = require('../scripts/parse-kr-text.js');
 
@@ -249,6 +250,12 @@ test('excludes the silent pledge correction notice from the timeline', () => {
   execFileSync(process.execPath, ['scripts/build-dataset.js'], { cwd: root, stdio: 'ignore' });
   const items = require('../data/fashion.json');
   assert.equal(items.some(item => item.id === '3398563'), false);
+});
+
+test('pending Korean notices stay out of the published dataset until apply', () => {
+  const pending = JSON.parse(fs.readFileSync(path.join(root, 'data/raw/kr-pending.json'), 'utf8'));
+  const publishedIds = new Set(require('../data/fashion.json').map(item => item.id));
+  for (const record of pending.records) assert.equal(publishedIds.has(record.id), false);
 });
 
 test('parses shop products from mixed lucky-box notices', () => {

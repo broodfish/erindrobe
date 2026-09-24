@@ -73,6 +73,30 @@ npm run serve
 # 開瀏覽器看 http://localhost:8080
 ```
 
+## 每週增量更新(建議流程)
+
+一般更新只需要查找新的韓服公告，不會重新搜尋或重新抓取過往公告。執行前請先開啟韓國出口 VPN:
+
+```bash
+# 1) 掃描新公告；只寫入 pending，不會改動正式時間軸
+npm run update:kr:scan
+
+# 2) 查看待確認公告的 ID、標題、官方連結與圖片數量
+npm run update:kr:review
+# 也可以查看 data/raw/kr-pending-report.md
+
+# 3) 確認公告後，只套用指定 ID
+npm run update:kr:apply -- --ids <ID1,ID2>
+
+# 4) 下載與壓縮這次新增卡片的圖片
+MBC_IMAGE_IDS=<ID1,ID2> npm run build:images
+
+# 5) 發布前驗證
+npm test && npm run validate:data && git diff --check
+```
+
+`update:kr:apply` 會同步更新累積原始資料、候選清單與 `data/fashion.json`；只有明確使用 `--all` 才會套用全部 pending。歷史公告需要回補時，才使用完整抓取流程或指定公告 ID 的手動處理方式。
+
 ## 部署到 GitHub Pages
 
 這是純靜態網站,不需要建置流程:
