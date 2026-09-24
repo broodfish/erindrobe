@@ -1,8 +1,12 @@
 (async function () {
-  const CATEGORY_ORDER = ["傳說時裝", "套組時裝", "幸運箱", "通行證", "聯動", "商城樂器", "其他商城"];
-  const HIDDEN_CHOICE_KINDS = ["dye"];
+  const CATEGORY_ORDER = [
+    "時裝", "寵物", "傳說", "套組", "通行證", "活動", "聯名",
+    "樂器", "染色劑", "造型", "髮型", "動作",
+  ];
+  const HIDDEN_CHOICE_KINDS = [];
   const utils = window.timelineUtils;
   const formatRerunNote = window.timelineUiFormatters?.formatRerunNote || (() => "");
+  const { showTaiwanStatus, showRerunStatus } = utils.UI_VISIBILITY;
 
   const state = {
     items: [],
@@ -14,6 +18,8 @@
   };
 
   const timelineEl = document.getElementById("timeline");
+  const controlsEl = document.querySelector(".controls");
+  const controlsSentinel = document.querySelector(".controls-sentinel");
   const statsEl = document.getElementById("stats");
   const filtersEl = document.getElementById("categoryFilters");
   const searchBox = document.getElementById("searchBox");
@@ -42,15 +48,49 @@
   }
 
   function getLightboxImages(item) {
+    if (item.productType === "染色劑選擇箱") return [];
     return item.lightboxImages?.length
       ? item.lightboxImages
-      : (item.localImages || []).map((src) => ({ src }));
+      : (item.galleryImages?.length || item.localImages?.length
+        ? (item.galleryImages?.length
+          ? item.galleryImages.map((src, index) => ({ src: item.localImages?.[index] || src }))
+          : item.localImages.map((src) => ({ src })))
+        : (item.images || []).map((src) => ({ src })));
+  }
+
+  function getCardImageSources(item) {
+    if (item.productType === "染色劑選擇箱") return [];
+    return item.cardImages?.length
+      ? item.cardImages
+      : (item.galleryImages?.length ? item.galleryImages : (item.images || []));
+  }
+
+  function resolveLocalImage(item, source) {
+    const index = (item.galleryImages || []).indexOf(source);
+    return index >= 0 ? (item.localImages?.[index] || source) : source;
+  }
+
+  function createDyeCardArt(item) {
+    const art = document.createElement("div");
+    art.className = "dye-card-art";
+    art.setAttribute("aria-label", "染色劑色碼預覽");
+    item.colorCodes.forEach((code) => {
+      const swatch = document.createElement("span");
+      swatch.className = "dye-card-swatch";
+      swatch.style.backgroundColor = code;
+      swatch.textContent = code;
+      swatch.title = code;
+      swatch.setAttribute("aria-label", code);
+      art.appendChild(swatch);
+    });
+    return art;
   }
 
   function twTimestampToDateStr(timestamp) {
     if (!timestamp) return null;
-    const date = new Date(timestamp * 1000);
-    return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")}`;
+    return new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Taipei" })
+      .format(new Date(timestamp * 1000))
+      .replaceAll("-", ".");
   }
 
   function statusInfo(item) {
@@ -62,7 +102,7 @@
   }
 
   async function loadData() {
-    const response = await fetch("data/fashion.json?v=timeline-12");
+    const response = await fetch("data/fashion.json?v=timeline-26");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const items = await response.json();
     return items.filter((item) => utils.isPublicTimelineItem(item, HIDDEN_CHOICE_KINDS));
@@ -70,7 +110,10 @@
 
   function buildCategoryFilters() {
     const counts = {};
-    state.items.forEach((item) => { counts[item.category] = (counts[item.category] || 0) + 1; });
+    state.items.forEach((item) => {
+      const type = utils.getCategoryFilterKey(item.productType || item.category);
+      counts[type] = (counts[type] || 0) + 1;
+    });
     filtersEl.innerHTML = "";
     const categories = [{ key: "all", label: "全部", count: state.items.length }]
       .concat(CATEGORY_ORDER.filter((category) => counts[category]).map((category) => ({
@@ -83,9 +126,17 @@
       button.className = `chip${state.category === key ? " active" : ""}`;
       button.dataset.category = key;
       button.type = "button";
-      button.textContent = `${label} ${count}`;
+      button.textContent = `${utils.getCategoryDisplayName(label)} ${count}`;
       filtersEl.appendChild(button);
     });
+  }
+
+  function setupCondensedControls() {
+    if (!controlsEl || !controlsSentinel || !window.IntersectionObserver) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      controlsEl.classList.toggle("is-condensed", utils.shouldCondenseControls(entry.isIntersecting));
+    }, { threshold: 0 });
+    observer.observe(controlsSentinel);
   }
 
   function buildMonthFilter() {
@@ -142,14 +193,22 @@
 
     const media = document.createElement("div");
     media.className = "card-media";
-    const images = item.localImages?.length ? item.localImages : [];
+    const isDye = item.productType === "染色劑選擇箱";
+    const images = getCardImageSources(item).map((source) => resolveLocalImage(item, source));
 
-    if (images.length) {
+    if (isDye && item.colorCodes?.length) {
+      media.appendChild(createDyeCardArt(item));
+    } else if (images.length) {
       const image = document.createElement("img");
       image.src = images[0];
       image.alt = item.name;
       image.loading = "lazy";
       media.appendChild(image);
+    } else if (item.isShopProduct) {
+      const emptyMedia = document.createElement("div");
+      emptyMedia.className = "media-empty shop-media-empty";
+      emptyMedia.textContent = "官方公告未附獨立商品預覽圖";
+      media.appendChild(emptyMedia);
     } else {
       const emptyMedia = document.createElement("div");
       emptyMedia.className = "media-empty";
@@ -161,17 +220,26 @@
     const info = statusInfo(item);
     badge.className = `tw-badge ${info.status}`;
     badge.textContent = info.label;
-    media.appendChild(badge);
+    if (showTaiwanStatus) media.appendChild(badge);
+    const imageHint = utils.getImageCountHint(images.length);
+    if (imageHint) {
+      const hint = document.createElement("span");
+      hint.className = "image-count-hint";
+      hint.textContent = imageHint;
+      hint.setAttribute("aria-label", images.length + " 張圖片");
+      media.appendChild(hint);
+    }
 
     const body = document.createElement("div");
     body.className = "card-body";
     const labels = document.createElement("div");
     labels.className = "card-labels";
+    const productType = item.productType || item.category;
     const category = document.createElement("span");
-    category.className = `cat-tag ${item.category}`;
-    category.textContent = item.category;
+    category.className = `cat-tag ${productType}`;
+    category.textContent = utils.getCategoryDisplayName(productType);
     labels.appendChild(category);
-    if (item.isRerun) {
+    if (showRerunStatus && item.isRerun) {
       const rerun = document.createElement("span");
       rerun.className = "rerun-tag";
       rerun.textContent = "復刻／再販";
@@ -180,11 +248,27 @@
     }
     body.appendChild(labels);
 
-    const primaryName = info.status === "confirmed" && item.displayName ? item.displayName : item.name;
+    const primaryName = showTaiwanStatus && info.status === "confirmed" && item.displayName
+      ? item.displayName
+      : item.name;
     const name = document.createElement("h3");
     name.className = "card-name";
     name.textContent = primaryName;
-    body.appendChild(name);
+    const nameRow = document.createElement("div");
+    nameRow.className = "card-name-row";
+    nameRow.appendChild(name);
+    if (item.tip) {
+      const tip = document.createElement("span");
+      tip.className = "card-tip";
+      tip.textContent = "i";
+      tip.tabIndex = 0;
+      tip.setAttribute("role", "img");
+      tip.setAttribute("aria-label", item.tip);
+      tip.dataset.tooltip = item.tip;
+      tip.title = item.tip;
+      nameRow.appendChild(tip);
+    }
+    body.appendChild(nameRow);
     const secondaryName = primaryName === item.name ? (item.displayName && item.displayName !== item.name ? `中文：${item.displayName}` : "") : `韓文：${item.name}`;
     if (secondaryName) {
       const secondary = document.createElement("p");
@@ -197,13 +281,13 @@
     date.className = "card-date";
     date.innerHTML = `<span>韓服上線</span>${item.krDate}`;
     body.appendChild(date);
-    if (item.isRerun) {
+    if (showRerunStatus && item.isRerun) {
       const rerunNote = document.createElement("div");
       rerunNote.className = "card-rerun-note";
       rerunNote.textContent = formatRerunNote(item);
       body.appendChild(rerunNote);
     }
-    if (info.status === "confirmed" && item.twDate) {
+    if (showTaiwanStatus && info.status === "confirmed" && item.twDate) {
       const twLine = document.createElement("div");
       twLine.className = "card-tw-line";
       twLine.innerHTML = `<span>台服上線</span>${twTimestampToDateStr(item.twDate)}`;
@@ -262,7 +346,7 @@
     lightboxImg.src = image.src;
     lightboxImg.alt = lightboxItem.name;
     lightboxCounter.textContent = `${lightboxIndex + 1} / ${images.length}`;
-    lightboxCategory.textContent = lightboxItem.category;
+    lightboxCategory.textContent = utils.getCategoryDisplayName(lightboxItem.productType || lightboxItem.category);
     lightboxTitle.textContent = lightboxItem.displayName || lightboxItem.name;
     const componentNote = lightboxItem.choiceKind === "instrument" && lightboxItem.components?.length
       ? ` · ${lightboxItem.components.length} 種可選樂器`
@@ -307,13 +391,13 @@
   function render() {
     const filtered = utils.filterTimelineItems(state.items, {
       category: state.category,
-      twStatus: state.twStatus,
+      twStatus: showTaiwanStatus ? state.twStatus : "all",
       month: state.month,
       query: state.query,
     });
     const ordered = utils.sortTimelineItems(filtered, state.order);
     statsEl.textContent = `顯示 ${filtered.length} / ${state.items.length} 筆 · ${state.order === "asc" ? "由舊到新" : "由新到舊"}`;
-    clearFilters.hidden = !(state.category !== "all" || state.twStatus !== "all" || state.month !== "all" || state.query);
+    clearFilters.hidden = !(state.category !== "all" || (showTaiwanStatus && state.twStatus !== "all") || state.month !== "all" || state.query);
     timelineEl.innerHTML = "";
     if (!ordered.length) {
       const empty = document.createElement("div");
@@ -375,7 +459,7 @@
     render();
   });
   searchBox.addEventListener("input", (event) => { state.query = event.target.value.trim(); render(); });
-  statusFilter.addEventListener("change", (event) => { state.twStatus = event.target.value; render(); });
+  statusFilter?.addEventListener("change", (event) => { state.twStatus = event.target.value; render(); });
   monthFilter.addEventListener("change", (event) => { state.month = event.target.value; render(); });
   sortOrder.addEventListener("change", (event) => { state.order = event.target.value; render(); });
   clearFilters.addEventListener("click", () => {
@@ -384,7 +468,7 @@
     state.month = "all";
     state.query = "";
     searchBox.value = "";
-    statusFilter.value = "all";
+    if (statusFilter) statusFilter.value = "all";
     monthFilter.value = "all";
     buildCategoryFilters();
     render();
@@ -414,6 +498,7 @@
     buildMonthFilter();
     updateLatestData();
     render();
+    setupCondensedControls();
   } catch (error) {
     timelineEl.innerHTML = "";
     const empty = document.createElement("div");

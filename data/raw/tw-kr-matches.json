@@ -1,11 +1,27 @@
 [
   {
+    "krId": "2757707",
+    "krName": "모험가 패스 안내",
+    "twThreadId": "3504636",
+    "twName": "冒險家通行證",
+    "method": "official-notice-title",
+    "note": "台服官方公告 3504636 的標題為「冒險家通行證說明」，核對為韓服首期通行證的台服對應；不同後續期數不視為再販。"
+  },
+  {
     "krId": "2757708",
     "krName": "코스믹 스타차일드",
     "twThreadId": "3504848",
     "twName": "宇宙星之子",
     "method": "manual-name-and-image",
     "note": "既有人工核對韓文／中文主題與服裝圖像。"
+  },
+  {
+    "krId": "2918987",
+    "krName": "코스믹 스타차일드",
+    "twThreadId": "3504848",
+    "twName": "宇宙星之子",
+    "method": "manual-name-and-release-timing",
+    "note": "韓服後續新增的傳說長袍，台服與宇宙星之子傳說時裝同步發售，視為同一例外發行。"
   },
   {
     "krId": "2957849",

@@ -4,15 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>瑪奇 Mobile 時裝未來視｜韓服時裝時間軸</title>
-<meta name="description" content="非官方粉絲整理:瑪奇手機版(Mabinogi Mobile)韓服時裝上線時間軸,並標示台服發行狀態。" />
+<meta name="description" content="非官方粉絲整理：瑪奇手機版(Mabinogi Mobile)韓服時裝與商品預覽時間軸。" />
 <link rel="icon" type="image/svg+xml" href="assets/icon/future-view-mark.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/icon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/icon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/icon-180.png" />
 <meta property="og:title" content="瑪奇 Mobile 時裝未來視" />
-<meta property="og:description" content="韓服時裝時間軸,對照台服發行進度｜非官方粉絲整理" />
+<meta property="og:description" content="韓服時裝與商品預覽時間軸｜非官方粉絲整理" />
 <meta property="og:image" content="assets/icon/icon-512.png" />
-<link rel="stylesheet" href="css/style.css?v=timeline-11" />
+<link rel="stylesheet" href="css/style.css?v=timeline-19" />
 </head>
 <body>
 <header class="site-header">
@@ -25,29 +25,19 @@
       <div>
         <p class="eyebrow">瑪奇 Mobile ／ 時裝未來視</p>
         <h1>瑪奇 Mobile<br /><span>時裝未來視</span></h1>
-        <p class="subtitle">從第一次上線開始，按韓服上線日期整理時裝與台服狀態。</p>
+        <p class="subtitle">從第一次上線開始，按韓服上線日期整理時裝與商品預覽。</p>
       </div>
       <aside class="masthead-aside">
         <img class="brand-mark" src="assets/icon/future-view-mark.svg" alt="" width="64" height="64" />
         <p class="aside-kicker">READ THE RELEASE</p>
-        <p>查閱已發生的公告，不把韓服日期誤讀成台服預告。</p>
+        <p>查閱韓服官方公告，掌握未來的商品與預覽。</p>
       </aside>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <section class="source-note">
-    <div>
-      <p class="section-kicker">ABOUT THIS INDEX</p>
-      <p>資料來自韓服 <a href="https://mabinogimobile.nexon.com/" target="_blank" rel="noopener">官方公告</a> 與台服 <a href="https://tw.nexon.com/mabinogimobile/" target="_blank" rel="noopener">官方公告</a>。品名以公告內文為準，圖片僅作為瀏覽與比對輔助。</p>
-    </div>
-    <div class="source-note-meta">
-      <p class="data-latest">韓服資料最新：<time id="dataLatest">載入中…</time></p>
-      <p class="notice-sub">非官方粉絲工具，實際上線內容與時間請以官方公告為準。</p>
-    </div>
-  </section>
-
+  <div class="controls-sentinel" aria-hidden="true"></div>
   <section class="controls">
     <div class="controls-heading">
       <p class="section-kicker">BROWSE THE TIMELINE</p>
@@ -59,7 +49,6 @@
         <span class="search-mark">⌕</span>
         <input type="search" id="searchBox" placeholder="搜尋名稱、分類或公告 ID" />
       </label>
-      <label class="select-field"><span>台服狀態</span><select id="statusFilter"><option value="all">全部狀態</option><option value="confirmed">台服已上線</option><option value="unmatched">台服未上線</option></select></label>
       <label class="select-field"><span>月份</span><select id="monthFilter"><option value="all">全部月份</option></select></label>
       <label class="select-field"><span>時間順序</span><select id="sortOrder"><option value="asc">由舊到新</option><option value="desc">由新到舊</option></select></label>
       <button class="today-button" id="jumpToday" type="button">跳到今天附近</button>
@@ -78,6 +67,17 @@
   </div>
 
   <section class="timeline" id="timeline"></section>
+
+  <section class="source-note source-note-footer">
+    <div>
+      <p class="section-kicker">ABOUT THIS INDEX</p>
+      <p>資料來自韓服 <a href="https://mabinogimobile.nexon.com/" target="_blank" rel="noopener">官方公告</a> 與台服 <a href="https://tw.nexon.com/mabinogimobile/" target="_blank" rel="noopener">官方公告</a>。品名以公告內文為準，圖片僅作為瀏覽與比對輔助。</p>
+    </div>
+    <div class="source-note-meta">
+      <p class="data-latest">韓服資料最新：<time id="dataLatest">載入中…</time></p>
+      <p class="notice-sub">非官方粉絲工具，實際上線內容與時間請以官方公告為準。</p>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -103,8 +103,8 @@
   </div>
 </div>
 
-<script src="js/timeline-utils.js?v=timeline-12"></script>
-<script src="js/ui-formatters.js?v=timeline-12"></script>
-<script src="js/app.js?v=timeline-12"></script>
+<script src="js/timeline-utils.js?v=timeline-19"></script>
+<script src="js/ui-formatters.js?v=timeline-14"></script>
+<script src="js/app.js?v=timeline-26"></script>
 </body>
 </html>

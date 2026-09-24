@@ -10,6 +10,20 @@ function isContentImage(url) {
   return !CHROME_BLOCKLIST.some(bad => url.includes(bad));
 }
 
+function htmlToText(html) {
+  return String(html || '')
+    .replace(/<br\s*\/?>(\s*)/gi, '\n')
+    .replace(/<\/p>|<\/li>|<\/div>|<\/tr>/gi, '\n')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&#39;/gi, "'")
+    .replace(/&quot;/gi, '"')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n\s*\n+/g, '\n')
+    .trim();
+}
+
 (async () => {
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
@@ -48,6 +62,7 @@ function isContentImage(url) {
         headlineId: j.headlineId,
         title: j.title,
         createDate: j.createDate,
+        contentText: htmlToText(content),
         images: [...new Set(imgs)],
       });
       process.stdout.write(`\r[${i + 1}/${jobs.length}] ${j.threadId} images=${imgs.length}`.padEnd(60));

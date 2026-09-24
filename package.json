@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "scrape:kr-lists": "node scripts/scrape-kr-lists.js",
+    "scrape:kr-search": "node scripts/scrape-kr-search.js",
     "filter:kr-candidates": "node scripts/filter-kr-candidates.js",
     "scrape:kr-details": "node scripts/scrape-kr-details.js",
     "scrape:tw-lists": "node scripts/scrape-tw-lists.js",

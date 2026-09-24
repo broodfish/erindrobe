@@ -24,6 +24,56 @@
     return Boolean(target?.closest?.('.card-media'));
   }
 
+  const CATEGORY_DISPLAY_NAMES = Object.freeze({
+    '時裝幸運盒': '時裝',
+    '寵物幸運盒': '寵物',
+    '傳說時裝': '傳說',
+    '活動時裝': '活動',
+    '特殊活動抽獎盒': '活動',
+    '聯名時裝': '聯名',
+    '商店時裝': '造型',
+    '染色劑選擇箱': '染色劑',
+    '新造型': '造型',
+    '髮型': '髮型',
+    '動作': '動作',
+  });
+
+  const CATEGORY_FILTER_GROUPS = Object.freeze({
+    '時裝幸運盒': '時裝',
+    '寵物幸運盒': '寵物',
+    '傳說時裝': '傳說',
+    '活動時裝': '活動',
+    '特殊活動抽獎盒': '活動',
+    '聯名時裝': '聯名',
+    '商店時裝': '造型',
+    '染色劑選擇箱': '染色劑',
+    '新造型': '造型',
+    '髮型': '髮型',
+    '動作': '動作',
+  });
+
+  const UI_VISIBILITY = Object.freeze({
+    showTaiwanStatus: false,
+    showRerunStatus: false,
+  });
+
+  function getImageCountHint(imageCount) {
+    const count = Number(imageCount);
+    return Number.isFinite(count) && count > 1 ? '+' + (count - 1) : '';
+  }
+
+  function getCategoryDisplayName(category) {
+    return CATEGORY_DISPLAY_NAMES[category] || category;
+  }
+
+  function getCategoryFilterKey(category) {
+    return CATEGORY_FILTER_GROUPS[category] || category;
+  }
+
+  function shouldCondenseControls(sentinelIntersecting) {
+    return !sentinelIntersecting;
+  }
+
   function filterTimelineItems(items, filters = {}) {
     const {
       category = 'all',
@@ -34,11 +84,15 @@
     const normalizedQuery = String(query).trim().toLocaleLowerCase();
 
     return items.filter((item) => {
-      if (category !== 'all' && item.category !== category) return false;
+      if (category !== 'all' && getCategoryFilterKey(item.productType || item.category) !== category) return false;
       if (twStatus !== 'all' && getPublicTwStatus(item) !== twStatus) return false;
       if (month !== 'all' && String(item.krDate || '').slice(0, 7).replace('.', '-') !== month) return false;
       if (normalizedQuery) {
-        const haystack = [item.name, item.displayName, item.title, item.category, item.id]
+        const haystack = [
+          item.name, item.displayName, item.title, item.category, item.productType,
+          ...(item.relatedTypes || []), ...(item.shopPath || []), ...(item.components || []),
+          ...(item.colorCodes || []), item.id,
+        ]
           .filter(Boolean)
           .join(' ')
           .toLocaleLowerCase();
@@ -75,5 +129,18 @@
     return summary;
   }
 
-  return { filterTimelineItems, getMonthOptions, getPublicTwStatus, isCardMediaTarget, isPublicTimelineItem, sortTimelineItems, summarizeTimeline };
+  return {
+    filterTimelineItems,
+    getCategoryFilterKey,
+    getCategoryDisplayName,
+    getImageCountHint,
+    getMonthOptions,
+    getPublicTwStatus,
+    isCardMediaTarget,
+    isPublicTimelineItem,
+    shouldCondenseControls,
+    sortTimelineItems,
+    summarizeTimeline,
+    UI_VISIBILITY,
+  };
 }));

@@ -4,9 +4,13 @@ const path = require('path');
 const OUT_DIR = path.join(__dirname, '..', 'assets', 'fashion');
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
-const items = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), 'utf8'));
+const allItems = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), 'utf8'));
+const requestedIds = process.env.MBC_IMAGE_IDS
+  ? new Set(process.env.MBC_IMAGE_IDS.split(',').map(id => id.trim()).filter(Boolean))
+  : null;
+const items = requestedIds ? allItems.filter(item => requestedIds.has(item.id)) : allItems;
 
-function pickImages(images, max = 4) {
+function pickImages(images, max = Number.POSITIVE_INFINITY) {
   // Exclude animated .gif "showcase spin" clips — some run tens of MB uncompressed and the static
   // banner images already show the item; keeping them out avoids multi-MB animated-webp bloat.
   const stills = images.filter(u => !/\.gif(\?|$)/i.test(u));
@@ -30,23 +34,35 @@ async function download(url, destPath) {
 
 (async () => {
   let total = 0;
+  const remoteToLocal = new Map();
   for (const item of items) {
-    const selected = pickImages(item.images);
+    const sourceImages = item.galleryImages?.length ? item.galleryImages : (item.cardImages ?? item.images);
+    // A reviewed gallery is already scoped to the intended product. Preserve animated previews
+    // in that explicit gallery; broad notice-level fallbacks still use the static-image filter.
+    const selected = sourceImages?.some(url => /\.gif(?:\?|$)/iu.test(url))
+      ? sourceImages
+      : pickImages(sourceImages || []);
     item.localImages = [];
     for (let i = 0; i < selected.length; i++) {
       const url = selected[i];
+      const sharedLocal = remoteToLocal.get(url);
+      if (sharedLocal) {
+        item.localImages.push(sharedLocal);
+        continue;
+      }
       const ext = extFromUrl(url);
       const filename = `${item.id}_${i}.${ext}`;
       const dest = path.join(OUT_DIR, filename);
       try {
-        if (!fs.existsSync(dest)) {
-          const size = await download(url, dest);
-          total++;
-          process.stdout.write(`\r[${total}] ${filename} (${(size / 1024).toFixed(0)}KB)`.padEnd(60));
-        } else {
-          process.stdout.write(`\rskip existing ${filename}`.padEnd(60));
-        }
-        item.localImages.push(`assets/fashion/${filename}`);
+        // Re-fetch on every explicit image build. A split notice can change which remote image
+        // occupies a stable `${item.id}_${index}` filename after the dataset is reclassified;
+        // keeping an old file here silently restores the wrong card image.
+        const size = await download(url, dest);
+        total++;
+        process.stdout.write(`\r[${total}] ${filename} (${(size / 1024).toFixed(0)}KB)`.padEnd(60));
+        const localPath = `assets/fashion/${filename}`;
+        remoteToLocal.set(url, localPath);
+        item.localImages.push(localPath);
       } catch (e) {
         console.error(`\nFailed ${url}:`, e.message);
       }
@@ -54,6 +70,12 @@ async function download(url, destPath) {
     }
   }
   console.log('');
-  fs.writeFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), JSON.stringify(items, null, 2));
+  if (requestedIds) {
+    const rebuiltById = new Map(items.map(item => [item.id, item]));
+    allItems.forEach((item, index) => {
+      if (rebuiltById.has(item.id)) allItems[index] = rebuiltById.get(item.id);
+    });
+  }
+  fs.writeFileSync(path.join(__dirname, '..', 'data', 'fashion.json'), JSON.stringify(allItems, null, 2));
   console.log('Downloaded', total, 'images. Updated fashion.json with localImages.');
 })();

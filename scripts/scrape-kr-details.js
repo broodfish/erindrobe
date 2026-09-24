@@ -35,6 +35,8 @@ async function fetchDetail(id, boardPath) {
     .replace(/&amp;/g, '&')
     .replace(/\s+/g, ' ')
     .trim();
+  const marker = text.indexOf('차단한 게시글 입니다.');
+  const fullText = marker >= 0 ? text.slice(marker + '차단한 게시글 입니다.'.length).trim() : text;
 
   // Try to isolate the actual post title + body (best-effort: look for known marker text)
   const titleM = html.match(/<title>([^<]+)<\/title>/);
@@ -46,7 +48,8 @@ async function fetchDetail(id, boardPath) {
     pageTitle: titleM ? titleM[1].trim() : null,
     exactDate: dateM ? dateM[1] : null,
     contentImages,
-    textPreview: text.slice(0, 4000),
+    fullText,
+    textPreview: fullText.slice(0, 4000),
   };
 }
 
@@ -56,14 +59,17 @@ async function fetchDetail(id, boardPath) {
   fs.mkdirSync(outDir, { recursive: true });
 
   const jobs = [
-    ...candidates.notice.map(i => ({ ...i, boardPath: '/News/Notice' })),
-    ...candidates.events.map(i => ({ ...i, boardPath: '/News/Events' })),
+    ...candidates.notice.map(i => ({ ...i, boardPath: i.boardPath || '/News/Notice' })),
+    ...candidates.events.map(i => ({ ...i, boardPath: i.boardPath || '/News/Events' })),
+    ...(candidates.update || []).map(i => ({ ...i, boardPath: i.boardPath || '/News/Update' })),
   ];
 
-  console.log(`Fetching ${jobs.length} detail pages...`);
+  const uniqueJobs = [...new Map(jobs.map(job => [`${job.boardPath}:${job.id}`, job])).values()];
+
+  console.log(`Fetching ${uniqueJobs.length} detail pages...`);
   const results = [];
-  for (let i = 0; i < jobs.length; i++) {
-    const job = jobs[i];
+  for (let i = 0; i < uniqueJobs.length; i++) {
+    const job = uniqueJobs[i];
     try {
       const detail = await fetchDetail(job.id, job.boardPath);
       results.push({ ...job, ...detail });

@@ -12,6 +12,13 @@ function normalizeProductName(value) {
 function repeatKey(item) {
   const name = normalizeProductName(item.name);
   if (!name || !item.category) return null;
+  // Each premium-pass issue uses the generic notice title "모험가 패스 안내", while the
+  // included fashion set changes every season. Use the notice image as the identity for these
+  // records so a new issue is not presented as a rerun of the first pass.
+  if (item.category === '通行證' && /모험가.*패스/u.test(name)) {
+    const image = item.images?.[0] || item.cardImages?.[0];
+    return image ? `${item.category}|image:${image}` : null;
+  }
   return `${item.category}|${name}`;
 }
 

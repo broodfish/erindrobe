@@ -47,45 +47,111 @@ function parseDateFromContext(text) {
   return `${year}.${String(month).padStart(2, '0')}.${String(day).padStart(2, '0')}`;
 }
 
-const INSTRUMENT_COMPONENT_PATTERNS = [
-  /(?:스카이하이|파스텔드림|스위트베리|블랙펑크)\s+(?:레츠고\s+만돌린|어텐션\s+플루트)/gu,
-  /(?:화이트\s+플로럴|미드나이트\s+플로럴|체리\s+플로럴)\s+(?:류트|플루트|바이올린|샬루모|만돌린|실로폰)/gu,
-];
+function extractColorCodes(text) {
+  return [...new Set([...String(text || '').matchAll(/#[0-9a-f]{6}\b/giu)]
+    .map(match => match[0].toUpperCase()))];
+}
+
+function normalizeImageName(value) {
+  return String(value || '')
+    .toLocaleLowerCase('ko-KR')
+    .replace(/[^\p{L}\p{N}]/gu, '');
+}
+
+const INSTRUMENT_TERMS = '류트|플루트|바이올린|샬루모|만돌린|실로폰|피아노|큰북|하프|심벌즈|하모니카|통기타';
+const INSTRUMENT_METADATA_WORDS = new Set([
+  '상품명', '구성품', '수량', '가격', '구매', '제한', '없음', '개', '당', '회', '화음',
+  '악기', '선택', '상자', '중', '종', '종을', '색상', '지정', '염색약', '게시글을', '게시글', '아이템샵', '안내', '마비노기모바일',
+  '노블리드', '노블브리드', '스포티드', '그레이', '캐릭터당', '서버당', '월', '캐시샵', '포인트', '캐시', '레어', '고급', '탈것', '있습니다', '수',
+  '획득', '선택하여', '확인하실', '시', '미리', '미리보기',
+]);
+
+function cleanInstrumentComponentName(value) {
+  const words = String(value || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .filter(Boolean)
+    .map(word => word.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, ''))
+    .filter(Boolean)
+    .filter(word => !INSTRUMENT_METADATA_WORDS.has(word) && !/^\d[\d,]*(?:회|개|종|종을)?$/.test(word));
+  // The official tables flatten several columns together. The last four words are enough for
+  // the longest current names (for example, "쿠로미의 트리키 프리티 피아노") and discard the
+  // preceding quantity/price column text without relying on a fixed product vocabulary.
+  return words.slice(-4).join(' ');
+}
 
 function collectInstrumentNames(text, suffix = '') {
   const matches = [];
-  INSTRUMENT_COMPONENT_PATTERNS.forEach((pattern) => {
-    for (const match of text.matchAll(pattern)) {
-      matches.push({
-        index: match.index,
-        name: `${match[0].replace(/\s+/g, ' ').trim()}${suffix}`,
-      });
-    }
-  });
-  return matches.sort((a, b) => a.index - b.index).map((match) => match.name);
+  const pattern = new RegExp(`(?:${INSTRUMENT_TERMS})`, 'gu');
+  let previousEnd = 0;
+  for (const match of text.matchAll(pattern)) {
+    const segment = text.slice(previousEnd, match.index);
+    const name = cleanInstrumentComponentName(`${segment} ${match[0]}`);
+    if (name) matches.push({ index: match.index, name: `${name}${suffix}` });
+    previousEnd = match.index + match[0].length;
+  }
+  return matches.sort((a, b) => a.index - b.index).map(match => match.name);
 }
 
 function parseInstrumentComponents(section) {
-  // The notice extractor flattens an HTML table into text. In the flattened text, the
-  // first "2 화음" / "3 화음" marker separates the chord groups from the base products;
-  // the repeated markers inside each group are table-column noise, so the product names
-  // are collected from the whole segment and the group suffix is restored here.
-  const previewIndex = section.search(/(?:◼|※)\s*구성품\s*미리보기/u);
+  // The notice extractor flattens an HTML table into text. Some notices group all base
+  // instruments first, while others interleave each base item with its 2/3-chord rows. Walk
+  // instrument terms in order and carry the previous base name forward when a chord row has
+  // no repeated name of its own.
+  const previewIndex = section.search(/(?:◼|※)\s*구성품\s*미리보기|✨[^.!?。！？]{0,120}미리보기/u);
   const table = previewIndex >= 0 ? section.slice(0, previewIndex) : section;
-  const twoChordIndex = table.search(/2\s*화음/u);
-  const threeChordIndex = table.search(/3\s*화음/u);
-  const baseEnd = twoChordIndex >= 0 ? twoChordIndex : table.length;
-  const twoEnd = threeChordIndex >= 0 ? threeChordIndex : table.length;
-  const components = [
-    ...collectInstrumentNames(table.slice(0, baseEnd)),
-    ...(twoChordIndex >= 0
-      ? collectInstrumentNames(table.slice(twoChordIndex, twoEnd), ' 2 화음')
-      : []),
-    ...(threeChordIndex >= 0
-      ? collectInstrumentNames(table.slice(threeChordIndex), ' 3 화음')
-      : []),
-  ];
+  const components = [];
+  const pattern = new RegExp('(?:' + INSTRUMENT_TERMS + ')', 'gu');
+  let previousEnd = 0;
+  let previousBase = null;
+  for (const match of table.matchAll(pattern)) {
+    let segment = table.slice(previousEnd, match.index);
+    const boxMarker = segment.lastIndexOf('악기 선택 상자');
+    if (boxMarker >= 0) segment = segment.slice(boxMarker + '악기 선택 상자'.length);
+    const chordMatches = [...segment.matchAll(/(?:^|\s)([23])\s*화음/gu)];
+    const chord = chordMatches.length ? chordMatches.at(-1)[1] : null;
+    if (chordMatches.length) segment = segment.slice(chordMatches.at(-1).index + chordMatches.at(-1)[0].length);
+    const base = cleanInstrumentComponentName(segment + ' ' + match[0]) || previousBase;
+    if (base) {
+      components.push(chord ? base + ' ' + chord + ' 화음' : base);
+      if (!chord) previousBase = base;
+    }
+    previousEnd = match.index + match[0].length;
+  }
   return [...new Set(components)];
+}
+
+function extractInstrumentBoxName(source, instrumentIndex) {
+  const prefixStart = Math.max(0, instrumentIndex - 100);
+  const startsMidWord = prefixStart > 0 && !/\s/u.test(source[prefixStart - 1]);
+  let prefix = source.slice(prefixStart, instrumentIndex)
+    .replace(/\s+/g, ' ')
+    .trim();
+  // The context window can begin in the middle of a Korean word. Discard that partial token
+  // before extracting the box name.
+  if (startsMidWord) prefix = prefix.replace(/^\S+\s+/u, '');
+  const markerMatches = [...prefix.matchAll(/(?:상품명|상세\s*내용|미리보기)/gu)];
+  if (markerMatches.length) prefix = prefix.slice(markerMatches.at(-1).index + markerMatches.at(-1)[0].length);
+  const colorMatches = [...prefix.matchAll(/#[0-9a-f]{6}/giu)];
+  if (colorMatches.length) prefix = prefix.slice(colorMatches.at(-1).index + colorMatches.at(-1)[0].length);
+  const boundaryMatches = [...prefix.matchAll(/[.!?。！？]/gu)];
+  if (boundaryMatches.length) prefix = prefix.slice(boundaryMatches.at(-1).index + 1);
+  prefix = prefix
+    .replace(/(?:부채질|음악듣기|반디잡기)/gu, ' ')
+    .replace(/차단하여\s*내용을\s*가립니다\.?/gu, ' ')
+    .replace(/\b\d{4}[./]\d{1,2}[./]\d{1,2}\s+\d{1,2}:\d{2}\s*/gu, ' ')
+    .replace(/\b\d{1,2}\/\d{1,2}\([^)]*\)\s*/gu, ' ')
+    .replace(/\b[0-9a-f]{5,}\b/giu, ' ')
+    .replace(/[‘’'“”]/gu, ' ')
+    .replace(/^[^\p{L}\p{N}]*/u, '')
+    .trim();
+  const words = prefix.split(/\s+/).filter(Boolean)
+    .map(word => word.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, ''))
+    .filter(Boolean)
+    .filter(word => !INSTRUMENT_METADATA_WORDS.has(word) && !/^\d+(?:회|개|종)?$/.test(word));
+  const name = words.slice(-3).join(' ').trim();
+  return name ? `${name} 악기 선택 상자` : null;
 }
 
 function parseChoiceBoxes(text) {
@@ -93,28 +159,39 @@ function parseChoiceBoxes(text) {
   if (!source) return [];
   const matches = [];
 
-  const dyeRe = /염색약\s*선택\s*상자\s*[:：]\s*([^\d]{1,30}?)\s*지정\s*염색약\s*\(([^)]{1,80})\)/gu;
+  const dyeRe = /염색약\s*선택\s*상자\s*[:：]\s*([^\d]{1,40}?)(?=\s+(?:지정\s*)?염색약|\s+\d+\s*개)/gu;
   let match;
   while ((match = dyeRe.exec(source))) {
+    const dyeName = match[1].trim().replace(/[/'’“”]+$/gu, '');
+    if (!dyeName || /[/]|에서는|구성품|판매|상품명/u.test(dyeName)) continue;
+    const nextSection = [
+      source.indexOf('염색약 선택 상자', match.index + match[0].length),
+      source.indexOf('악기 선택 상자', match.index + match[0].length),
+    ].filter(index => index >= 0);
+    const sectionEnd = nextSection.length ? Math.min(...nextSection) : source.length;
+    const colorCodes = extractColorCodes(source.slice(match.index, sectionEnd));
     matches.push({
       index: match.index,
-      name: `염색약 선택 상자: ${match[1].trim()}`,
+      name: `염색약 선택 상자: ${dyeName}`,
       kind: 'dye',
       saleDate: parseDateFromContext(source),
-      componentsText: match[2].trim(),
+      componentsText: source.slice(match.index, sectionEnd).match(/\(([^)]{1,80})\)/u)?.[1] || '',
+      ...(colorCodes.length ? { colorCodes } : {}),
     });
   }
 
-  const instrumentRe = /(?:^|[.!?。！？])\s*([^.!?。！？◼]{1,30}?)\s*악기\s*선택\s*상자\s*◼\s*판매\s*기간/gu;
+  const instrumentRe = /악기\s*선택\s*상자\s*(?:◼\s*판매\s*기간|상세\s*내용)/gu;
   const instrumentMatches = [...source.matchAll(instrumentRe)];
   instrumentMatches.forEach((item, index) => {
     const next = instrumentMatches[index + 1];
     const contentStart = item.index + item[0].length;
     const contentEnd = next ? next.index : source.length;
     const contentText = source.slice(contentStart, contentEnd).trim();
+    const boxName = extractInstrumentBoxName(source, item.index);
+    if (!boxName) return;
     matches.push({
       index: item.index,
-      name: `${item[1].trim()} 악기 선택 상자`,
+      name: boxName,
       kind: 'instrument',
       saleDate: parseDateFromContext(source),
       componentsText: contentText,
@@ -181,6 +258,197 @@ function parseLuckyBoxNotice(text) {
   return results;
 }
 
+// Parse the separately sold fashion-shop products that can appear after lucky-box sections
+// in the same notice. The official text keeps the shop table authoritative; image association
+// is intentionally left to build-dataset.js, where the notice's image filenames are available.
+function parseFashionShopProducts(text) {
+  const source = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!source) return [];
+
+  const headings = [...source.matchAll(/(?:패션샵|꾸미기)\s*◼\s*판매\s*기간/gu)];
+  if (!headings.length) return [];
+  const start = headings[headings.length - 1].index;
+  const endCandidates = [
+    source.indexOf('📢', start),
+    source.indexOf('목록 전체', start),
+  ].filter(index => index >= 0);
+  const end = endCandidates.length ? Math.min(...endCandidates) : source.length;
+  const section = source.slice(start, end);
+  const saleDate = parseDateFromContext(section);
+  const products = [];
+
+  // Keep the older 패션샵/코디 rows supported as well; newer notices use the same table shape
+  // under 꾸미기 for accessories and robes.
+  const coordRe = /([가-힣A-Za-z0-9][가-힣A-Za-z0-9\s·&'’\-]{1,40}?\s*코디)\s*\([^)]*총\s*\d+\s*종\s*부위\)/gu;
+  for (const match of section.matchAll(coordRe)) {
+    const rawName = match[1].replace(/\s+/g, ' ').trim();
+    const nameMatch = rawName.match(/(?:가격|M\s*캐시)\s+(.+?\s+코디)$/u);
+    products.push({
+      name: (nameMatch ? nameMatch[1] : rawName).replace(/\s+/g, ' ').trim(),
+      kind: 'coord',
+      saleDate,
+    });
+  }
+
+  // Newer notices use 꾸미기 instead of 패션샵 and flatten the item table into one line. Start at
+  // the accessory/robe table header (or its first row) so the preceding lucky-box table cannot
+  // leak into the shop products.
+  const tableStart = section.search(/(?:\[\s*(?:액세서리|로브)\s*\]|아이템명\s+장착\s+부위)/u);
+  if (tableStart >= 0) {
+    const table = section.slice(tableStart);
+    const tableEndCandidates = [table.indexOf('✨'), table.indexOf('📢')].filter(index => index >= 0);
+    const tableBody = tableEndCandidates.length ? table.slice(0, Math.min(...tableEndCandidates)) : table;
+    const slotPattern = '(모자|상의|하의|장갑|신발|부츠|얼굴\\s*장식|얼굴장식|귀\\s*장식|귀장식|눈\\s*장식|눈장식|머리\\s*장식|머리장식|로브)';
+    const rarityPattern = '(?:(?:에픽|엘리트|레어|고급|희귀)\\s+){0,2}';
+    const rowRe = new RegExp(`([^\\d]{2,70}?)\\s+${slotPattern}\\s+${rarityPattern}\\d+\\s*개(?:\\s+\\d[\\d,]*\\s*M\\s*캐시)?`, 'gu');
+    const reverseRowRe = new RegExp(`${slotPattern}\\s*(?:\\([^)]*\\))?\\s+${rarityPattern}([^\\d]{2,70}?)\\s+\\d+\\s*개(?:\\s+\\d[\\d,]*\\s*M\\s*캐시)?`, 'gu');
+    const addProduct = (rawName, slot = '') => {
+      let name = rawName.replace(/\s+/g, ' ').trim();
+      name = name.replace(/^.*(?:구매\s*제한|지급\s*수량|가격)\s+/u, '').trim();
+      name = name.replace(/^.*M\s*캐시\s+/u, '').trim();
+      name = name.replace(/^\d+\s+서버당\s+\S+\s+\d+\s*회\s+/u, '').trim();
+      name = name.replace(/^\d+\s+/u, '').trim();
+      name = name.replace(/^(?:아이템명|장착\s*부위|희귀도|수량)\s+/u, '').trim();
+      name = name.replace(/^(?:회|없음)\s+/u, '').trim();
+      name = name.replace(/\s+(?:모자|상의|하의|장갑|신발|부츠|얼굴\s*장식|얼굴장식|귀\s*장식|귀장식|눈\s*장식|눈장식|머리\s*장식|머리장식|로브)(?:\s+(?:에픽|엘리트|레어|고급|희귀))?$/u, '').trim();
+      name = name.replace(/\s+(?:에픽|엘리트|레어|고급|희귀)$/u, '').trim();
+      if (!name || /^(?:아이템명|장착|부위|희귀도|수량|가격|구매|제한|에픽|엘리트|레어|고급|희귀)$/u.test(name)) return;
+      if (name.length > 45) name = name.slice(-45).trim();
+      products.push({ name, kind: /로브/u.test(slot) ? 'robe' : 'accessory', saleDate });
+    };
+    for (const match of tableBody.matchAll(rowRe)) addProduct(match[1], match[2]);
+    for (const match of tableBody.matchAll(reverseRowRe)) addProduct(match[2], match[1]);
+
+    // A continuation row can omit the repeated slot/rarity columns and only keep the item
+    // name, quantity, and price. Match that compact shape directly instead of allowing the
+    // trailing price label to become part of the next item's name.
+    const continuationTable = tableBody.replace(/\d+\s+서버당\s+\S+\s+\d+\s*회/gu, ' ');
+    const continuationRe = /(?:^|\s)([가-힣A-Za-z][가-힣A-Za-z\s·&'’\-]{1,60}?)\s+1\s*개\s+(?:\d[\d,]*\s+){0,3}\d[\d,]*\s*M\s*캐시/gu;
+    const tableRowMetaTailRe = /(?:모자|상의|하의|장갑|신발|부츠|얼굴\s*장식|얼굴장식|귀\s*장식|귀장식|눈\s*장식|눈장식|머리\s*장식|머리장식|로브)\s+(?:에픽|엘리트|레어|고급|희귀)(?:\s+(?:에픽|엘리트|레어|고급|희귀))?$/u;
+    for (const match of continuationTable.matchAll(continuationRe)) {
+      if (tableRowMetaTailRe.test(match[1].trim())) continue;
+      addProduct(match[1]);
+    }
+
+    // Some tables omit the repeated slot and rarity on later rows (for example the third item in
+    // the 1/15 accessory notice). The final "name 1개" row is still unambiguous before the preview.
+    const trailingRe = /([^\d]{2,50}?)\s+\d+\s*개(?=\s*(?:✨|$))/gu;
+    for (const match of tableBody.matchAll(trailingRe)) addProduct(match[1]);
+  }
+
+  const seen = new Set();
+  const uniqueProducts = [];
+  for (const product of products) {
+    if (!product.name) continue;
+    const escapedProductName = product.name.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+    if (new RegExp(`${escapedProductName}\\s+이미지가\\s*삭제되었습니다`, 'u').test(source)) continue;
+    const existingIndex = uniqueProducts.findIndex(existing => existing.name === product.name);
+    if (existingIndex >= 0) {
+      // A reverse-row match can discover the same robe before the complete row match. Prefer the
+      // typed robe record so the resulting card keeps the correct product classification.
+      if (uniqueProducts[existingIndex].kind !== 'robe' && product.kind === 'robe') {
+        uniqueProducts[existingIndex] = product;
+      }
+      continue;
+    }
+    if (seen.has(product.name)) continue;
+    seen.add(product.name);
+    uniqueProducts.push(product);
+  }
+  return uniqueProducts.map(product => {
+    if (product.kind === 'coord') return product;
+    // Some notices use a clarifying parenthetical only in the preview heading, e.g. the
+    // front-facing accessory image is listed as "그라운디드 소울 마스크 (정면)".
+    const escapedName = product.name.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
+    const qualifier = source.match(new RegExp(`${escapedName}\\s*(\\([^)]{1,24}\\))`, 'u'))?.[1];
+    const isEditorialQualifier = /^\((?:수정|취소)\)$/u.test(qualifier || '');
+    return qualifier && !isEditorialQualifier && !product.name.endsWith(qualifier)
+      ? { ...product, name: `${product.name} ${qualifier}` }
+      : product;
+  }).sort((a, b) => {
+    const baseName = name => name.replace(/\s+\([^)]*\)$/u, '');
+    return source.indexOf(baseName(a.name)) - source.indexOf(baseName(b.name));
+  });
+}
+
+function parseHairProducts(text, images = []) {
+  const source = String(text || '').replace(/\s+/g, ' ').trim();
+  const products = [];
+  const hairRe = /헤어\s*쿠폰\s*[:：]\s*([^\d]{2,60}?)(?=\s+(?:\*\s+[^*]*?)?\d+\s*개|\s+프리미엄|\s+환생석|\s+염색약)/gu;
+  for (const match of source.matchAll(hairRe)) {
+    const name = match[1]
+      .replace(/\s*\*.*$/u, '')
+      .trim()
+      .replace(/[/'’“”]+$/gu, '');
+    if (!name || products.some(product => product.name === name)) continue;
+    const normalizedName = normalizeImageName(name);
+    const matchedImages = [...new Set((images || []).filter(url => {
+      if (/\.gif(?:\?|$)/iu.test(url)) return false;
+      const file = decodeURIComponent(String(url)).split('/').pop() || '';
+      return normalizeImageName(file).includes(normalizedName);
+    }))];
+    products.push({ name, images: matchedImages });
+  }
+  return products;
+}
+
+function cleanActionName(value) {
+  return String(value || '')
+    .replace(/\s+/g, ' ')
+    .replace(/[.,:;!?/\\'’“”"()[\]{}]+$/gu, '')
+    .trim();
+}
+
+function parseActionPreviews(text, images = []) {
+  const source = String(text || '').replace(/\s+/g, ' ').trim();
+  const actionImages = [...new Set((images || []).filter(url => /\.gif(?:\?|$)/iu.test(url)))];
+  if (!source || !actionImages.length) return [];
+
+  const names = [];
+  const actionRe = /행동\s*:\s*([가-힣A-Za-z0-9][가-힣A-Za-z0-9·&!?/'’"-]{1,35}?)(?=\s*(?:\d+\s*개|미리보기|행동\s*:|[◼✨*'’".,]|$))/gu;
+  for (const match of source.matchAll(actionRe)) {
+    const name = cleanActionName(match[1]);
+    if (!name || /^(?:미리보기|사용|실제|아이템|상자)$/u.test(name)) continue;
+    if (!names.includes(name)) names.push(name);
+  }
+  if (!names.length) return [];
+
+  const aliasMap = new Map([
+    ['초콜릿선물', ['초콜릿주기']],
+    ['짜잔', ['짜쟌']],
+    ['나아냐', ['나아나']],
+    ['음악듣기', ['음악감상']],
+    ['연설', ['연설하기']],
+  ]);
+  const matchImages = name => {
+    const candidates = [name, ...(aliasMap.get(name) || [])]
+      .map(normalizeImageName)
+      .filter(candidate => candidate.length >= 2);
+    return actionImages.filter(url => {
+      const file = decodeURIComponent(String(url)).split('/').pop() || '';
+      const stem = normalizeImageName(file.replace(/\.[^.]+$/u, ''));
+      return candidates.some(candidate => stem.includes(candidate));
+    });
+  };
+
+  const parsed = names.map(name => {
+    const matchedImages = matchImages(name);
+    return {
+      name: `행동: ${name}`,
+      images: [...new Set(matchedImages)],
+    };
+  });
+
+  // If at least one filename is action-specific, an unmatched name has no trustworthy preview;
+  // dropping it prevents the entire notice GIF gallery from being copied onto unrelated cards.
+  // Some official notices intentionally use a shared success/failure pair for every named
+  // action (for example colour variants), so retain that pair only when no action can be matched.
+  const hasSpecificMatch = parsed.some(product => product.images.length > 0);
+  return hasSpecificMatch
+    ? parsed.filter(product => product.images.length > 0)
+    : parsed.map(product => ({ ...product, images: actionImages }));
+}
+
 if (require.main === module) {
   const testIds = process.argv.slice(2);
   const ids = testIds.length ? testIds : ['2839212', '2906352', '3037067', '3201524', '2957846'];
@@ -193,6 +461,9 @@ if (require.main === module) {
 }
 
 module.exports = {
+  parseActionPreviews,
+  parseFashionShopProducts,
+  parseHairProducts,
   parseLuckyBoxNotice,
   parseDateRange,
   parseTotalPackageName,

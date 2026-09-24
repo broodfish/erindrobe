@@ -26,13 +26,15 @@ function deriveTwStatus({ nameMatch = false, imageMatch = false, manualMatch = f
   return 'unmatched';
 }
 
-function createEvidence({ krId, krName, twThreadId, twName, twDate, method, note } = {}) {
+function createEvidence({ krId, krName, twThreadId, twName, twDate, twDateSource, twSaleDateText, method, note } = {}) {
   const evidence = {};
   if (krId != null) evidence.krId = String(krId);
   if (krName) evidence.krName = krName;
   if (twThreadId != null) evidence.twThreadId = String(twThreadId);
   if (twName) evidence.twName = twName;
   if (twDate != null) evidence.twDate = twDate;
+  if (twDateSource) evidence.twDateSource = twDateSource;
+  if (twSaleDateText) evidence.twSaleDateText = twSaleDateText;
   if (method) evidence.method = method;
   if (note) evidence.note = note;
   return evidence;
