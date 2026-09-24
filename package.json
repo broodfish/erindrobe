@@ -10,6 +10,8 @@
     "scrape:kr-details": "node scripts/scrape-kr-details.js",
     "scrape:tw-lists": "node scripts/scrape-tw-lists.js",
     "scrape:tw-details": "node scripts/scrape-tw-details.js",
+    "update:kr:scan": "node scripts/update-kr.js scan",
+    "update:kr:review": "node scripts/update-kr.js review",
     "build:dataset": "node scripts/build-dataset.js",
     "build:images": "node scripts/download-images.js && node scripts/optimize-images.js",
     "validate:data": "node scripts/validate-raw-data.js",
