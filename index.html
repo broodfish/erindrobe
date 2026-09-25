@@ -53,7 +53,7 @@
   }
 }
 </script>
-<link rel="stylesheet" href="css/style.css?v=timeline-20" />
+<link rel="stylesheet" href="css/style.css?v=timeline-21" />
 </head>
 <body>
 <header class="site-header">
@@ -112,7 +112,54 @@
     </div>
   </div>
 
-  <section class="timeline" id="timeline"></section>
+  <p class="sr-only" id="timelineStatus" role="status" aria-live="polite" aria-atomic="true">時裝資料載入中…</p>
+  <section class="timeline" id="timeline" aria-label="時裝時間軸" aria-busy="true">
+    <div class="month-group skeleton-month" aria-hidden="true">
+      <div class="month-label">
+        <span class="month-index"><span class="skeleton-shape skeleton-line skeleton-index"></span></span>
+        <span class="month-name"><span class="skeleton-shape skeleton-line skeleton-month-name"></span></span>
+        <span class="month-count"><span class="skeleton-shape skeleton-line skeleton-count"></span></span>
+      </div>
+      <div class="card-grid">
+        <article class="card skeleton-card">
+          <div class="card-media skeleton-shape skeleton-media"></div>
+          <div class="card-body">
+            <div class="card-labels"><span class="skeleton-shape skeleton-pill"></span></div>
+            <div class="card-name-row"><span class="skeleton-shape skeleton-line skeleton-title"></span></div>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-wide"></span>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-short"></span>
+          </div>
+        </article>
+        <article class="card skeleton-card">
+          <div class="card-media skeleton-shape skeleton-media"></div>
+          <div class="card-body">
+            <div class="card-labels"><span class="skeleton-shape skeleton-pill"></span><span class="skeleton-shape skeleton-pill skeleton-pill-short"></span></div>
+            <div class="card-name-row"><span class="skeleton-shape skeleton-line skeleton-title skeleton-title-short"></span></div>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-wide"></span>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-mid"></span>
+          </div>
+        </article>
+        <article class="card skeleton-card">
+          <div class="card-media skeleton-shape skeleton-media"></div>
+          <div class="card-body">
+            <div class="card-labels"><span class="skeleton-shape skeleton-pill"></span></div>
+            <div class="card-name-row"><span class="skeleton-shape skeleton-line skeleton-title"></span></div>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-mid"></span>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-short"></span>
+          </div>
+        </article>
+        <article class="card skeleton-card">
+          <div class="card-media skeleton-shape skeleton-media"></div>
+          <div class="card-body">
+            <div class="card-labels"><span class="skeleton-shape skeleton-pill"></span></div>
+            <div class="card-name-row"><span class="skeleton-shape skeleton-line skeleton-title skeleton-title-short"></span></div>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-wide"></span>
+            <span class="skeleton-shape skeleton-line skeleton-copy skeleton-copy-mid"></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section class="source-note source-note-footer">
     <div>
@@ -161,6 +208,6 @@
 
 <script src="js/timeline-utils.js?v=timeline-21"></script>
 <script src="js/ui-formatters.js?v=timeline-14"></script>
-<script src="js/app.js?v=timeline-31"></script>
+<script src="js/app.js?v=timeline-32"></script>
 </body>
 </html>

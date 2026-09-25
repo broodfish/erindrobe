@@ -29,6 +29,7 @@
   const clearFilters = document.getElementById("clearFilters");
   const viewButtons = [...document.querySelectorAll(".view-button")];
   const dataLatest = document.getElementById("dataLatest");
+  const timelineStatus = document.getElementById("timelineStatus");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightboxImg");
   const lightboxClose = document.getElementById("lightboxClose");
@@ -494,6 +495,8 @@
       hint.textContent = "試著放寬搜尋字詞或清除篩選條件。";
       empty.append(title, hint);
       timelineEl.appendChild(empty);
+      timelineEl.setAttribute("aria-busy", "false");
+      timelineStatus.textContent = "";
       return;
     }
 
@@ -502,6 +505,8 @@
       grid.className = "gallery-grid";
       ordered.forEach((item) => grid.appendChild(createCard(item)));
       timelineEl.appendChild(grid);
+      timelineEl.setAttribute("aria-busy", "false");
+      timelineStatus.textContent = "";
       return;
     }
 
@@ -543,6 +548,8 @@
       group.appendChild(grid);
       timelineEl.appendChild(group);
     });
+    timelineEl.setAttribute("aria-busy", "false");
+    timelineStatus.textContent = "";
   }
 
   filtersEl.addEventListener("click", (event) => {
@@ -607,6 +614,8 @@
     updateLatestData();
     render();
   } catch (error) {
+    timelineEl.setAttribute("aria-busy", "false");
+    timelineStatus.textContent = `資料載入失敗：${error.message}`;
     timelineEl.innerHTML = "";
     const empty = document.createElement("div");
     empty.className = "empty-state";

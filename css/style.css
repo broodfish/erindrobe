@@ -244,6 +244,45 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 
 .timeline { position: relative; padding: 10px 0 80px; }
 .timeline.is-grid-view { padding-top: 24px; }
+.skeleton-month { pointer-events: none; }
+.skeleton-month .month-index,
+.skeleton-month .month-name,
+.skeleton-month .month-count { display: flex; align-items: center; }
+.skeleton-shape {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--color-bg-surface-subtle);
+}
+.skeleton-shape::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 15%, rgb(255 255 255 / 0.58) 48%, transparent 82%);
+  content: "";
+  transform: translateX(-100%);
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
+}
+.skeleton-line { height: 10px; border-radius: 2px; }
+.skeleton-index { width: 42px; height: 9px; }
+.skeleton-month-name { width: 126px; height: 19px; }
+.skeleton-count { width: 40px; height: 9px; }
+.skeleton-card { overflow: hidden; }
+.skeleton-card:nth-child(2) .skeleton-shape::after { animation-delay: 120ms; }
+.skeleton-card:nth-child(3) .skeleton-shape::after { animation-delay: 240ms; }
+.skeleton-card:nth-child(4) .skeleton-shape::after { animation-delay: 360ms; }
+.skeleton-media { background: var(--color-bg-surface-muted); }
+.skeleton-card .card-labels { align-items: center; }
+.skeleton-pill { width: 58px; height: 17px; }
+.skeleton-pill-short { width: 40px; }
+.skeleton-title { width: 82%; height: 15px; }
+.skeleton-title-short { width: 63%; }
+.skeleton-copy { height: 9px; }
+.skeleton-copy-wide { width: 92%; }
+.skeleton-copy-mid { width: 74%; }
+.skeleton-copy-short { width: 52%; }
+@keyframes skeleton-shimmer {
+  100% { transform: translateX(100%); }
+}
 .month-group { position: relative; margin: 0 0 58px; scroll-margin-top: 150px; }
 .month-group::before { content: ""; position: absolute; top: 34px; bottom: -32px; left: 18px; width: 1px; background: var(--color-border); }
 .month-group:last-child::before { bottom: 0; }
@@ -400,6 +439,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   .gallery-grid .card { display: flex; }
   .gallery-grid .card-media { min-height: 0; aspect-ratio: 4 / 3; }
   .card-media { min-height: 100%; aspect-ratio: auto; }
+  .skeleton-card .skeleton-media { min-height: 150px; }
   .card-body { padding: 13px 14px; }
   .card-name { font-size: 0.98rem; }
   .card-name-secondary { font-size: 0.7rem; }
@@ -423,4 +463,5 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  .skeleton-shape::after { animation: none; transform: none; background: transparent; }
 }
