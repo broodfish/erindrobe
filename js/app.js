@@ -45,6 +45,7 @@
   const dyeDialogColors = document.getElementById("dyeDialogColors");
   let lightboxItem = null;
   let lightboxIndex = 0;
+  let lightboxImageRequest = 0;
   let dyeDialogItem = null;
 
   function updateViewButtons() {
@@ -75,18 +76,21 @@
         const localIndex = item.localImages?.indexOf(image.src) ?? -1;
         const galleryIndex = item.galleryImages?.indexOf(image.src) ?? -1;
         const motionIndex = localIndex >= 0 ? localIndex : galleryIndex;
-        const motionSrc = image.motionSrc
-          || (motionIndex >= 0 ? item.motionImages?.[motionIndex] : "")
+        const originalSrc = motionIndex >= 0 ? item.galleryImages?.[motionIndex] : "";
+        const fallback = image.fallback
+          || (motionIndex >= 0 ? item.motionImages?.[motionIndex] || item.localImages?.[motionIndex] : "")
           || "";
         return {
           ...image,
-          src: motionSrc || image.src,
+          src: originalSrc && image.src.startsWith("assets/fashion-web/") ? originalSrc : image.src,
+          fallback,
         };
       });
     }
     if (item.galleryImages?.length) {
       return item.galleryImages.map((src, index) => ({
-        src: item.motionImages?.[index] || item.localImages?.[index] || src,
+        src,
+        fallback: item.motionImages?.[index] || item.localImages?.[index] || "",
       }));
     }
     if (item.localImages?.length) {
@@ -401,9 +405,22 @@
     const images = getLightboxImages(lightboxItem);
     lightboxIndex = (lightboxIndex + images.length) % images.length;
     const image = images[lightboxIndex];
+    const imageRequest = ++lightboxImageRequest;
     lightboxImg.className = image.className || "";
     lightboxImg.dataset.fallback = image.fallback || "";
-    lightboxImg.src = image.src;
+    if (image.fallback && image.fallback !== image.src) {
+      lightboxImg.src = image.fallback;
+      const fullResolutionImage = new Image();
+      fullResolutionImage.decoding = "async";
+      fullResolutionImage.onload = () => {
+        if (imageRequest === lightboxImageRequest && lightboxItem) {
+          lightboxImg.src = image.src;
+        }
+      };
+      fullResolutionImage.src = image.src;
+    } else {
+      lightboxImg.src = image.src;
+    }
     lightboxImg.alt = lightboxItem.name;
     lightboxCounter.textContent = `${lightboxIndex + 1} / ${images.length}`;
     lightboxCategory.textContent = utils.getCategoryDisplayName(lightboxItem);
@@ -435,6 +452,7 @@
   }
 
   function closeLightbox() {
+    lightboxImageRequest += 1;
     lightbox.classList.remove("open");
     lightbox.setAttribute("aria-hidden", "true");
     lightboxImg.removeAttribute("src");
