@@ -10,10 +10,21 @@ const path = require('path');
 const kr = require(path.join(__dirname, '..', 'data', 'raw', 'kr-details.json'));
 
 function parseDateRange(text) {
-  const m = text.match(/판매\s*기간\s*[:：]\s*(\d{4})\s*년\s*(\d{1,2})월\s*(\d{1,2})일/);
+  const m = String(text || '').match(/(?:판매\s*기간|획득\s*가능\s*기간)\s*[:：]\s*(\d{4})\s*(?:년|[./-])\s*(\d{1,2})\s*(?:월|[./-])\s*(\d{1,2})\s*일?/u);
   if (!m) return null;
   const [, y, mo, d] = m;
   return `${y}.${mo.padStart(2, '0')}.${d.padStart(2, '0')}`;
+}
+
+function parseEventStartDate(text, notBefore = null) {
+  const periodRe = /(?:이벤트\s*(?:진행|참여)?|진행|참여)\s*기간\s*[:：]?\s*(\d{4})\s*(?:년|[./-])\s*(\d{1,2})\s*(?:월|[./-])\s*(\d{1,2})\s*일?/gu;
+  const dates = [...String(text || '').matchAll(periodRe)].map((match) => {
+    const [, year, month, day] = match;
+    return `${year}.${month.padStart(2, '0')}.${day.padStart(2, '0')}`;
+  });
+  const eligibleDates = notBefore ? dates.filter(date => date >= notBefore) : dates;
+  const candidates = eligibleDates.length ? eligibleDates : dates;
+  return candidates.sort()[0] || null;
 }
 
 function parseTotalPackageName(text) {
@@ -39,6 +50,8 @@ function parseTotalPackageName(text) {
 }
 
 function parseDateFromContext(text) {
+  const labeledDate = parseDateRange(text);
+  if (labeledDate) return labeledDate;
   const m = String(text || '').match(/(\d{4})\s*년\s*(\d{1,2})월\s*(\d{1,2})일|\b(\d{4})[./](\d{1,2})[./](\d{1,2})\b/u);
   if (!m) return null;
   const year = m[1] || m[4];
@@ -505,6 +518,7 @@ module.exports = {
   parseHairProducts,
   parseLuckyBoxNotice,
   parseDateRange,
+  parseEventStartDate,
   parseTotalPackageName,
   parseChoiceBoxes,
 };

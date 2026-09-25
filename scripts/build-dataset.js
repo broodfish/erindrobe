@@ -12,6 +12,8 @@ const {
   parseLuckyBoxNotice,
   parseTotalPackageName,
   parseChoiceBoxes,
+  parseDateRange,
+  parseEventStartDate,
 } = require('./parse-kr-text.js');
 const { normalizeName, deriveTwStatus, createEvidence } = require('./tw-match.js');
 const { annotateRepeatItems } = require('./timeline-history.js');
@@ -298,6 +300,54 @@ function parseStartDate(text) {
   if (!m) return null;
   const [, y, mo, d] = m;
   return `${y}.${mo.padStart(2, '0')}.${d.padStart(2, '0')}`;
+}
+
+function parseKrReleaseDateFromTitle(title, publishedDate) {
+  const match = String(title || '').match(/^\s*(?:\([^)]*\)\s*)*(\d{1,2})\/(\d{1,2})\s*\([월화수목금토일]\)/u);
+  if (!match || !publishedDate) return null;
+  const [, month, day] = match;
+  const [publishedYear, publishedMonth, publishedDay] = publishedDate.split('.').map(Number);
+  let year = publishedYear;
+  if (Number(month) < publishedMonth
+      || (Number(month) === publishedMonth && Number(day) < publishedDay)) {
+    year += 1;
+  }
+  return `${year}.${month.padStart(2, '0')}.${day.padStart(2, '0')}`;
+}
+
+function parseScheduledKrReleaseDate(notice) {
+  const text = String(notice?.fullText || '').replace(/\s+/g, ' ');
+  const match = text.match(/(?:(\d{4})\s*년\s*)?(\d{1,2})\s*월\s*(\d{1,2})일[^.!?。！？]{0,50}정기\s*점검\s*(?:이후|후)[^.!?。！？]{0,180}추가될\s*예정/u);
+  if (!match || !notice?.date) return null;
+  const [, sourceYear, month, day] = match;
+  const [publishedYear, publishedMonth, publishedDay] = notice.date.split('.').map(Number);
+  let year = sourceYear ? Number(sourceYear) : publishedYear;
+  if (!sourceYear
+      && (Number(month) < publishedMonth
+        || (Number(month) === publishedMonth && Number(day) < publishedDay))) {
+    year += 1;
+  }
+  return `${year}.${month.padStart(2, '0')}.${day.padStart(2, '0')}`;
+}
+
+function resolveKrReleaseDate(notice, itemDate) {
+  if (!notice) return itemDate || null;
+  const titleDate = parseKrReleaseDateFromTitle(notice.title, notice.date);
+  if (titleDate) return titleDate;
+
+  // Parsed product dates (for example, a lucky-box section) are more specific than the
+  // publication timestamp. Ignore dates equal to the publication date because old parsers
+  // could mistake the page header for the product's sale start.
+  if (itemDate && itemDate !== notice.date) return itemDate;
+
+  if (notice.boardPath === '/News/Events') {
+    return parseEventStartDate(notice.fullText, notice.date) || itemDate || notice.date || null;
+  }
+  return parseScheduledKrReleaseDate(notice)
+    || parseDateRange(notice.fullText)
+    || itemDate
+    || notice.date
+    || null;
 }
 
 // Resolve a Taiwan release date from the official notice's sale-period text. The notice's
@@ -733,6 +783,7 @@ for (const item of items) {
     .replace(/_(?:box\d+|shop\d+)$/u, '')
     .replace(/_\d+$/u, '');
   const source = krById.get(String(item.id)) || krById.get(baseId);
+  if (source) item.krDate = resolveKrReleaseDate(source, item.krDate);
   const product = classifyKrProduct({
     title: `${item.title || ''} ${item.name || ''}`,
     fullText: source?.fullText || '',
