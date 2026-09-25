@@ -2297,6 +2297,11 @@
       "assets/fashion-web/3037059_action0_0.webp",
       "assets/fashion-web/3037059_action0_1.webp",
       "assets/fashion-web/3037059_action0_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3037059_action0_0.webp",
+      "assets/fashion-motion/3037059_action0_1.webp",
+      "assets/fashion-motion/3037059_action0_2.webp"
     ]
   },
   {
@@ -3191,6 +3196,11 @@
       "assets/fashion-web/3100664_action0_0.webp",
       "assets/fashion-web/3100664_action0_1.webp",
       "assets/fashion-web/3100664_action0_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3100664_action0_0.webp",
+      "assets/fashion-motion/3100664_action0_1.webp",
+      "assets/fashion-motion/3100664_action0_2.webp"
     ]
   },
   {
@@ -3247,6 +3257,11 @@
       "assets/fashion-web/3100664_action1_0.webp",
       "assets/fashion-web/3100664_action1_1.webp",
       "assets/fashion-web/3100664_action1_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3100664_action1_0.webp",
+      "assets/fashion-motion/3100664_action1_1.webp",
+      "assets/fashion-motion/3100664_action1_2.webp"
     ]
   },
   {
@@ -3303,6 +3318,11 @@
       "assets/fashion-web/3100664_action2_0.webp",
       "assets/fashion-web/3100664_action2_1.webp",
       "assets/fashion-web/3100664_action2_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3100664_action2_0.webp",
+      "assets/fashion-motion/3100664_action2_1.webp",
+      "assets/fashion-motion/3100664_action2_2.webp"
     ]
   },
   {
@@ -3359,6 +3379,11 @@
       "assets/fashion-web/3100664_action3_0.webp",
       "assets/fashion-web/3100664_action3_1.webp",
       "assets/fashion-web/3100664_action3_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3100664_action3_0.webp",
+      "assets/fashion-motion/3100664_action3_1.webp",
+      "assets/fashion-motion/3100664_action3_2.webp"
     ]
   },
   {
@@ -3883,6 +3908,10 @@
     "localImages": [
       "assets/fashion-web/3147459_action0_0.webp",
       "assets/fashion-web/3147459_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3147459_action0_0.webp",
+      "assets/fashion-motion/3147459_action0_1.webp"
     ]
   },
   {
@@ -3935,6 +3964,10 @@
     "localImages": [
       "assets/fashion-web/3147459_action1_0.webp",
       "assets/fashion-web/3147459_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3147459_action1_0.webp",
+      "assets/fashion-motion/3147459_action1_1.webp"
     ]
   },
   {
@@ -4207,6 +4240,11 @@
       "assets/fashion-web/3147454_action0_0.webp",
       "assets/fashion-web/3147454_action0_1.webp",
       "assets/fashion-web/3147454_action0_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3147454_action0_0.webp",
+      "assets/fashion-motion/3147454_action0_1.webp",
+      "assets/fashion-motion/3147454_action0_2.webp"
     ]
   },
   {
@@ -4263,6 +4301,11 @@
       "assets/fashion-web/3147454_action1_0.webp",
       "assets/fashion-web/3147454_action1_1.webp",
       "assets/fashion-web/3147454_action1_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3147454_action1_0.webp",
+      "assets/fashion-motion/3147454_action1_1.webp",
+      "assets/fashion-motion/3147454_action1_2.webp"
     ]
   },
   {
@@ -4319,6 +4362,11 @@
       "assets/fashion-web/3147454_action2_0.webp",
       "assets/fashion-web/3147454_action2_1.webp",
       "assets/fashion-web/3147454_action2_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3147454_action2_0.webp",
+      "assets/fashion-motion/3147454_action2_1.webp",
+      "assets/fashion-motion/3147454_action2_2.webp"
     ]
   },
   {
@@ -5017,6 +5065,10 @@
     "localImages": [
       "assets/fashion-web/3201519_action0_0.webp",
       "assets/fashion-web/3201519_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3201519_action0_0.webp",
+      "assets/fashion-motion/3201519_action0_1.webp"
     ]
   },
   {
@@ -5065,6 +5117,9 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201519_action1_0.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3201519_action1_0.webp"
     ]
   },
   {
@@ -5113,6 +5168,9 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201519_action2_0.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3201519_action2_0.webp"
     ]
   },
   {
@@ -5834,6 +5892,10 @@
     "localImages": [
       "assets/fashion-web/3272482_action0_0.webp",
       "assets/fashion-web/3272482_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3272482_action0_0.webp",
+      "assets/fashion-motion/3272482_action0_1.webp"
     ]
   },
   {
@@ -5886,6 +5948,10 @@
     "localImages": [
       "assets/fashion-web/3272482_action1_0.webp",
       "assets/fashion-web/3272482_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3272482_action1_0.webp",
+      "assets/fashion-motion/3272482_action1_1.webp"
     ]
   },
   {
@@ -6631,6 +6697,10 @@
     "localImages": [
       "assets/fashion-web/3311098_action0_0.webp",
       "assets/fashion-web/3311098_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311098_action0_0.webp",
+      "assets/fashion-motion/3311098_action0_1.webp"
     ]
   },
   {
@@ -6683,6 +6753,10 @@
     "localImages": [
       "assets/fashion-web/3311098_action1_0.webp",
       "assets/fashion-web/3311098_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311098_action1_0.webp",
+      "assets/fashion-motion/3311098_action1_1.webp"
     ]
   },
   {
@@ -6735,6 +6809,10 @@
     "localImages": [
       "assets/fashion-web/3311098_action2_0.webp",
       "assets/fashion-web/3311098_action2_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311098_action2_0.webp",
+      "assets/fashion-motion/3311098_action2_1.webp"
     ]
   },
   {
@@ -6787,6 +6865,10 @@
     "localImages": [
       "assets/fashion-web/3311098_action3_0.webp",
       "assets/fashion-web/3311098_action3_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311098_action3_0.webp",
+      "assets/fashion-motion/3311098_action3_1.webp"
     ]
   },
   {
@@ -6973,6 +7055,10 @@
     "localImages": [
       "assets/fashion-web/3311093_action0_0.webp",
       "assets/fashion-web/3311093_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311093_action0_0.webp",
+      "assets/fashion-motion/3311093_action0_1.webp"
     ]
   },
   {
@@ -7025,6 +7111,10 @@
     "localImages": [
       "assets/fashion-web/3311093_action1_0.webp",
       "assets/fashion-web/3311093_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311093_action1_0.webp",
+      "assets/fashion-motion/3311093_action1_1.webp"
     ]
   },
   {
@@ -7077,6 +7167,10 @@
     "localImages": [
       "assets/fashion-web/3311093_action2_0.webp",
       "assets/fashion-web/3311093_action2_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3311093_action2_0.webp",
+      "assets/fashion-motion/3311093_action2_1.webp"
     ]
   },
   {
@@ -8876,6 +8970,11 @@
       "assets/fashion-web/3373324_action0_0.webp",
       "assets/fashion-web/3373324_action0_1.webp",
       "assets/fashion-web/3373324_action0_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3373324_action0_0.webp",
+      "assets/fashion-motion/3373324_action0_1.webp",
+      "assets/fashion-motion/3373324_action0_2.webp"
     ]
   },
   {
@@ -8928,6 +9027,10 @@
     "localImages": [
       "assets/fashion-web/3373324_action1_0.webp",
       "assets/fashion-web/3373324_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3373324_action1_0.webp",
+      "assets/fashion-motion/3373324_action1_1.webp"
     ]
   },
   {
@@ -10040,6 +10143,10 @@
     "localImages": [
       "assets/fashion-web/3407265_action0_0.webp",
       "assets/fashion-web/3407265_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407265_action0_0.webp",
+      "assets/fashion-motion/3407265_action0_1.webp"
     ]
   },
   {
@@ -10092,6 +10199,10 @@
     "localImages": [
       "assets/fashion-web/3407265_action1_0.webp",
       "assets/fashion-web/3407265_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407265_action1_0.webp",
+      "assets/fashion-motion/3407265_action1_1.webp"
     ]
   },
   {
@@ -10140,6 +10251,9 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407265_action2_0.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407265_action2_0.webp"
     ]
   },
   {
@@ -10200,6 +10314,12 @@
       "assets/fashion-web/3407265_action3_1.webp",
       "assets/fashion-web/3407265_action3_2.webp",
       "assets/fashion-web/3407265_action3_3.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407265_action3_0.webp",
+      "assets/fashion-motion/3407265_action3_1.webp",
+      "assets/fashion-motion/3407265_action3_2.webp",
+      "assets/fashion-motion/3407265_action3_3.webp"
     ]
   },
   {
@@ -10260,6 +10380,12 @@
       "assets/fashion-web/3407265_action4_1.webp",
       "assets/fashion-web/3407265_action4_2.webp",
       "assets/fashion-web/3407265_action4_3.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407265_action4_0.webp",
+      "assets/fashion-motion/3407265_action4_1.webp",
+      "assets/fashion-motion/3407265_action4_2.webp",
+      "assets/fashion-motion/3407265_action4_3.webp"
     ]
   },
   {
@@ -10457,6 +10583,10 @@
     "localImages": [
       "assets/fashion-web/3407261_action0_0.webp",
       "assets/fashion-web/3407261_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407261_action0_0.webp",
+      "assets/fashion-motion/3407261_action0_1.webp"
     ]
   },
   {
@@ -10509,6 +10639,10 @@
     "localImages": [
       "assets/fashion-web/3407261_action1_0.webp",
       "assets/fashion-web/3407261_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407261_action1_0.webp",
+      "assets/fashion-motion/3407261_action1_1.webp"
     ]
   },
   {
@@ -10561,6 +10695,10 @@
     "localImages": [
       "assets/fashion-web/3407261_action2_4.webp",
       "assets/fashion-web/3407261_action2_5.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3407261_action2_4.webp",
+      "assets/fashion-motion/3407261_action2_5.webp"
     ]
   },
   {
@@ -11672,6 +11810,14 @@
       "assets/fashion-web/3428339_action0_3.webp",
       "assets/fashion-web/3428339_action0_4.webp",
       "assets/fashion-web/3428339_action0_5.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3428339_action0_0.webp",
+      "assets/fashion-motion/3428339_action0_1.webp",
+      "assets/fashion-motion/3428339_action0_2.webp",
+      "assets/fashion-motion/3428339_action0_3.webp",
+      "assets/fashion-motion/3428339_action0_4.webp",
+      "assets/fashion-motion/3428339_action0_5.webp"
     ]
   },
   {
@@ -11732,6 +11878,12 @@
       "assets/fashion-web/3428339_action1_1.webp",
       "assets/fashion-web/3428339_action1_2.webp",
       "assets/fashion-web/3428339_action1_3.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3428339_action1_0.webp",
+      "assets/fashion-motion/3428339_action1_1.webp",
+      "assets/fashion-motion/3428339_action1_2.webp",
+      "assets/fashion-motion/3428339_action1_3.webp"
     ]
   },
   {
@@ -11780,6 +11932,9 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428339_action2_0.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3428339_action2_0.webp"
     ]
   },
   {
@@ -13225,6 +13380,10 @@
     "localImages": [
       "assets/fashion-web/3481578_action0_0.webp",
       "assets/fashion-web/3481578_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481578_action0_0.webp",
+      "assets/fashion-motion/3481578_action0_1.webp"
     ]
   },
   {
@@ -13277,6 +13436,10 @@
     "localImages": [
       "assets/fashion-web/3481578_action1_0.webp",
       "assets/fashion-web/3481578_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481578_action1_0.webp",
+      "assets/fashion-motion/3481578_action1_1.webp"
     ]
   },
   {
@@ -13333,6 +13496,11 @@
       "assets/fashion-web/3481578_action2_0.webp",
       "assets/fashion-web/3481578_action2_1.webp",
       "assets/fashion-web/3481578_action2_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481578_action2_0.webp",
+      "assets/fashion-motion/3481578_action2_1.webp",
+      "assets/fashion-motion/3481578_action2_2.webp"
     ]
   },
   {
@@ -13389,6 +13557,11 @@
       "assets/fashion-web/3481578_action3_0.webp",
       "assets/fashion-web/3481578_action3_1.webp",
       "assets/fashion-web/3481578_action3_2.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481578_action3_0.webp",
+      "assets/fashion-motion/3481578_action3_1.webp",
+      "assets/fashion-motion/3481578_action3_2.webp"
     ]
   },
   {
@@ -13577,6 +13750,10 @@
     "localImages": [
       "assets/fashion-web/3481571_action0_0.webp",
       "assets/fashion-web/3481571_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481571_action0_0.webp",
+      "assets/fashion-motion/3481571_action0_1.webp"
     ]
   },
   {
@@ -13629,6 +13806,10 @@
     "localImages": [
       "assets/fashion-web/3481571_action1_0.webp",
       "assets/fashion-web/3481571_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481571_action1_0.webp",
+      "assets/fashion-motion/3481571_action1_1.webp"
     ]
   },
   {
@@ -13681,6 +13862,10 @@
     "localImages": [
       "assets/fashion-web/3481571_action2_0.webp",
       "assets/fashion-web/3481571_action2_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3481571_action2_0.webp",
+      "assets/fashion-motion/3481571_action2_1.webp"
     ]
   },
   {
@@ -14209,6 +14394,10 @@
     "localImages": [
       "assets/fashion-web/3500242_action0_0.webp",
       "assets/fashion-web/3500242_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3500242_action0_0.webp",
+      "assets/fashion-motion/3500242_action0_1.webp"
     ]
   },
   {
@@ -14261,6 +14450,10 @@
     "localImages": [
       "assets/fashion-web/3500242_action1_0.webp",
       "assets/fashion-web/3500242_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3500242_action1_0.webp",
+      "assets/fashion-motion/3500242_action1_1.webp"
     ]
   },
   {
@@ -14313,6 +14506,10 @@
     "localImages": [
       "assets/fashion-web/3500242_action2_0.webp",
       "assets/fashion-web/3500242_action2_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3500242_action2_0.webp",
+      "assets/fashion-motion/3500242_action2_1.webp"
     ]
   },
   {
@@ -14365,6 +14562,10 @@
     "localImages": [
       "assets/fashion-web/3500242_action3_0.webp",
       "assets/fashion-web/3500242_action3_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3500242_action3_0.webp",
+      "assets/fashion-motion/3500242_action3_1.webp"
     ]
   },
   {
@@ -15464,6 +15665,10 @@
     "localImages": [
       "assets/fashion-web/3521627_action0_0.webp",
       "assets/fashion-web/3521627_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3521627_action0_0.webp",
+      "assets/fashion-motion/3521627_action0_1.webp"
     ]
   },
   {
@@ -15516,6 +15721,10 @@
     "localImages": [
       "assets/fashion-web/3521627_action1_0.webp",
       "assets/fashion-web/3521627_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3521627_action1_0.webp",
+      "assets/fashion-motion/3521627_action1_1.webp"
     ]
   },
   {
@@ -15568,6 +15777,10 @@
     "localImages": [
       "assets/fashion-web/3521627_action2_0.webp",
       "assets/fashion-web/3521627_action2_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3521627_action2_0.webp",
+      "assets/fashion-motion/3521627_action2_1.webp"
     ]
   },
   {
@@ -16257,6 +16470,10 @@
     "localImages": [
       "assets/fashion-web/3545055_action0_0.webp",
       "assets/fashion-web/3545055_action0_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3545055_action0_0.webp",
+      "assets/fashion-motion/3545055_action0_1.webp"
     ]
   },
   {
@@ -16309,6 +16526,10 @@
     "localImages": [
       "assets/fashion-web/3545055_action1_0.webp",
       "assets/fashion-web/3545055_action1_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3545055_action1_0.webp",
+      "assets/fashion-motion/3545055_action1_1.webp"
     ]
   },
   {
@@ -16361,6 +16582,10 @@
     "localImages": [
       "assets/fashion-web/3545055_action2_0.webp",
       "assets/fashion-web/3545055_action2_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3545055_action2_0.webp",
+      "assets/fashion-motion/3545055_action2_1.webp"
     ]
   },
   {
@@ -16413,6 +16638,10 @@
     "localImages": [
       "assets/fashion-web/3545055_action3_0.webp",
       "assets/fashion-web/3545055_action3_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3545055_action3_0.webp",
+      "assets/fashion-motion/3545055_action3_1.webp"
     ]
   },
   {
@@ -16600,6 +16829,10 @@
     "localImages": [
       "assets/fashion-web/3545049_action_bundle_0.webp",
       "assets/fashion-web/3545049_action_bundle_1.webp"
+    ],
+    "motionImages": [
+      "assets/fashion-motion/3545049_action_bundle_0.webp",
+      "assets/fashion-motion/3545049_action_bundle_1.webp"
     ]
   },
   {

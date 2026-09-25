@@ -26,8 +26,8 @@ const items = requestedIds ? allItems.filter(item => requestedIds.has(item.id)) 
       continue;
     }
     await sharp(sourcePath)
-      .resize({ width: 360, withoutEnlargement: true })
-      .webp({ quality: 60 })
+      .resize({ width: 600, withoutEnlargement: true })
+      .webp({ quality: 74, effort: 5 })
       .toFile(outputPath);
     processed += 1;
     totalBytes += fs.statSync(outputPath).size;

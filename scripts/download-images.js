@@ -11,8 +11,8 @@ const requestedIds = process.env.MBC_IMAGE_IDS
 const items = requestedIds ? allItems.filter(item => requestedIds.has(item.id)) : allItems;
 
 function pickImages(images, max = Number.POSITIVE_INFINITY) {
-  // Exclude animated .gif "showcase spin" clips — some run tens of MB uncompressed and the static
-  // banner images already show the item; keeping them out avoids multi-MB animated-webp bloat.
+  // Exclude animated .gif "showcase spin" clips from broad notice fallbacks. Reviewed product
+  // galleries can keep them; the optimizer stores a still poster separately from the motion file.
   const stills = images.filter(u => !/\.gif(\?|$)/i.test(u));
   const banner = stills.filter(u => /\d{3,4}x\d{3,4}/.test(decodeURIComponent(u)));
   const rest = stills.filter(u => !banner.includes(u));

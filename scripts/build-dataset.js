@@ -843,6 +843,7 @@ if (fs.existsSync(outPath)) {
   const prev = JSON.parse(fs.readFileSync(outPath, 'utf8'));
   const prevMap = new Map(prev.map(p => [p.id, {
     localImages: p.localImages,
+    motionImages: p.motionImages,
     lightboxImages: p.lightboxImages,
     galleryImages: p.galleryImages,
     cardImages: p.cardImages,
@@ -866,6 +867,7 @@ if (fs.existsSync(outPath)) {
       i.localImages = recovered.length === expectedImageCount
         ? recovered
         : previous.localImages;
+      if (previous.motionImages?.length) i.motionImages = previous.motionImages;
       if (previous.lightboxImages?.length) i.lightboxImages = previous.lightboxImages;
     }
     if (!i.localImages?.length) {

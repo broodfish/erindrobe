@@ -70,13 +70,31 @@
 
   function getLightboxImages(item) {
     if (item.productType === "染色劑選擇箱") return [];
-    return item.lightboxImages?.length
-      ? item.lightboxImages
-      : (item.galleryImages?.length || item.localImages?.length
-        ? (item.galleryImages?.length
-          ? item.galleryImages.map((src, index) => ({ src: item.localImages?.[index] || src }))
-          : item.localImages.map((src) => ({ src })))
-        : (item.images || []).map((src) => ({ src })));
+    if (item.lightboxImages?.length) {
+      return item.lightboxImages.map((image) => {
+        const localIndex = item.localImages?.indexOf(image.src) ?? -1;
+        const galleryIndex = item.galleryImages?.indexOf(image.src) ?? -1;
+        const motionIndex = localIndex >= 0 ? localIndex : galleryIndex;
+        const motionSrc = image.motionSrc
+          || (motionIndex >= 0 ? item.motionImages?.[motionIndex] : "")
+          || "";
+        return {
+          ...image,
+          src: motionSrc || image.src,
+        };
+      });
+    }
+    if (item.galleryImages?.length) {
+      return item.galleryImages.map((src, index) => ({
+        src: item.motionImages?.[index] || item.localImages?.[index] || src,
+      }));
+    }
+    if (item.localImages?.length) {
+      return item.localImages.map((src, index) => ({
+        src: item.motionImages?.[index] || src,
+      }));
+    }
+    return (item.images || []).map((src) => ({ src }));
   }
 
   function getCardImageSources(item) {
@@ -406,7 +424,6 @@
     lightboxImg.className = "lightbox-image-low-res";
     lightboxImg.src = fallback;
   });
-
   function openLightbox(item) {
     if (!getLightboxImages(item).length) return;
     lightboxItem = item;
