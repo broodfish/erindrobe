@@ -1,5 +1,30 @@
 {
   "version": 1,
-  "lastScanAt": null,
-  "boards": {}
+  "lastScanAt": "2026-10-05T01:03:28.498Z",
+  "boards": {
+    "notice-info": {
+      "lastPage": 2,
+      "lastSeenId": "3554038"
+    },
+    "notice-done": {
+      "lastPage": 2,
+      "lastSeenId": "3556378"
+    },
+    "notice-major": {
+      "lastPage": 2,
+      "lastSeenId": "3554491"
+    },
+    "update": {
+      "lastPage": 2,
+      "lastSeenId": "3554043"
+    },
+    "events-past": {
+      "lastPage": 1,
+      "lastSeenId": null
+    },
+    "events-all": {
+      "lastPage": 2,
+      "lastSeenId": "3554042"
+    }
+  }
 }

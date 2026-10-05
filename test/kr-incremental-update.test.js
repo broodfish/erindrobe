@@ -180,6 +180,48 @@ test('a failed board keeps previous pending records and reports the failure', as
   assert.equal(result.report.failures[0].board, 'events-all');
 });
 
+test('scan triages new notices and persists auto-exclusions', async () => {
+  const fixture = createFixtureRawDir();
+  const result = await scanIncrementally({
+    rawDir: fixture.rawDir,
+    boards: [{ key: 'notice-info', path: '/News/Notice', headlineId: 2497 }],
+    fetchPage: async (board, page) => page === 1
+      ? fixturePage(['201', '202', '203'])
+      : { items: [], blockStartNo: '1', blockStartKey: 'fixture' },
+    fetchDetail: async item => {
+      const records = {
+        '201': {
+          title: '크리온 패션 장비 미리보기 안내',
+          fullText: '패션 장비 상품의 미리보기 이미지가 포함되어 있습니다.',
+          contentImages: ['https://example.test/fashion.png'],
+        },
+        '202': {
+          category: '안내',
+          title: '(완료) 임시점검 안내',
+          fullText: '서버 점검이 완료되었습니다.',
+          contentImages: [],
+        },
+        '203': {
+          category: '주요상품',
+          title: '신규 패키지 안내',
+          fullText: '신규 패키지 상품이 추가됩니다.',
+          contentImages: ['https://example.test/package.png'],
+        },
+      };
+      return { ...item, boardPath: '/News/Notice', ...records[item.id] };
+    },
+    now: () => '2026-09-24T00:00:00.000Z',
+  });
+
+  assert.deepEqual(result.report.autoIncludeIds, ['201']);
+  assert.deepEqual(result.report.reviewIds, ['203']);
+  assert.deepEqual(result.report.excludedIds, ['202']);
+  assert.deepEqual(result.pending.records.map(item => item.id), ['201', '203']);
+  assert.equal(result.pending.records[0].triageDecision, 'auto-include');
+  assert.equal(result.pending.records[1].triageDecision, 'review');
+  assert.deepEqual(result.state.ignored.map(item => item.id), ['202']);
+});
+
 test('parses explicit apply IDs and rejects an empty selection', () => {
   assert.deepEqual(parseApplyIds(['--ids', '103, 104']), {
     ids: ['103', '104'],
@@ -196,6 +238,32 @@ test('apply requires explicit IDs and removes only applied pending records', asy
   assert.deepEqual(result.appliedIds, ['103']);
   assert.deepEqual(result.remainingPending.records.map(item => item.id), ['104']);
   assert.ok(details.some(item => item.id === '103'));
+});
+
+test('apply auto selects only auto-included pending records', async () => {
+  const fixture = createFixtureRawDir({
+    pendingRecords: [
+      {
+        id: '103', boardPath: '/News/Notice', sourceBoards: ['notice-info'],
+        title: '明確時裝公告', date: '2026.09.24', fullText: '完整公告 103',
+        contentImages: [], triageDecision: 'auto-include', triageReason: '明確時裝線索',
+      },
+      {
+        id: '104', boardPath: '/News/Notice', sourceBoards: ['notice-info'],
+        title: '模糊公告', date: '2026.09.24', fullText: '完整公告 104',
+        contentImages: [], triageDecision: 'review', triageReason: '待確認',
+      },
+    ],
+  });
+  const result = await applyPending({
+    rawDir: fixture.rawDir,
+    applyAuto: true,
+    buildCandidates: async () => {},
+    buildDataset: async () => {},
+  });
+
+  assert.deepEqual(result.appliedIds, ['103']);
+  assert.deepEqual(result.remainingPending.records.map(item => item.id), ['104']);
 });
 
 test('apply rejects an ID that is not pending without changing raw data', async () => {

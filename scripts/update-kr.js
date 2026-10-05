@@ -3,6 +3,7 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 
 const { mergeBoardItems, scanBoardSince } = require('./kr-incremental.js');
+const { classifyNotice } = require('./kr-notice-triage.js');
 const { validateRecords, writeJsonAtomically } = require('./validate-raw-data.js');
 
 const BASE = 'https://mabinogimobile.nexon.com';
@@ -24,7 +25,7 @@ function emptyPending() {
 }
 
 function emptyState() {
-  return { version: 1, lastScanAt: null, boards: {} };
+  return { version: 1, lastScanAt: null, boards: {}, ignored: [] };
 }
 
 function loadJson(filePath, fallback) {
@@ -39,6 +40,7 @@ function loadSyncState(filePath = path.join(RAW, 'kr-sync-state.json')) {
     ...state,
     version: 1,
     boards: { ...(state.boards || {}) },
+    ignored: Array.isArray(state.ignored) ? state.ignored : [],
   };
 }
 
@@ -165,6 +167,52 @@ function normalizePending(value) {
   };
 }
 
+function triageFields(record, triage = classifyNotice(record)) {
+  return {
+    triageDecision: triage.decision,
+    triageReason: triage.reason,
+    triageSignals: triage.signals,
+    status: triage.decision === 'review' ? 'pending-review' : triage.decision,
+  };
+}
+
+function ignoredRecord(record, triage, ignoredAt) {
+  return {
+    id: String(record.id),
+    title: record.title || record.pageTitle || null,
+    date: record.date || record.exactDate || null,
+    url: record.url || `${BASE}${record.boardPath || '/News/Notice'}/${record.id}`,
+    reason: triage.reason,
+    signals: triage.signals,
+    ignoredAt,
+  };
+}
+
+function mergeIgnored(existing, additions) {
+  const byId = new Map((existing || []).map(item => [String(item.id), item]));
+  for (const item of additions) byId.set(String(item.id), item);
+  return [...byId.values()];
+}
+
+function classifyExistingPending(records, state, ignoredAt) {
+  const kept = [];
+  const ignored = [];
+  for (const record of records) {
+    const triage = record.triageDecision
+      ? {
+        decision: record.triageDecision,
+        reason: record.triageReason || '既有待確認資料。',
+        signals: record.triageSignals || [],
+      }
+      : classifyNotice(record);
+    const enriched = { ...record, ...triageFields(record, triage) };
+    if (triage.decision === 'auto-exclude') ignored.push(ignoredRecord(enriched, triage, ignoredAt));
+    else kept.push(enriched);
+  }
+  state.ignored = mergeIgnored(state.ignored, ignored);
+  return kept;
+}
+
 async function scanIncrementally({
   rawDir = RAW,
   boards = BOARDS,
@@ -174,14 +222,17 @@ async function scanIncrementally({
   existingPending,
 } = {}) {
   const pendingBefore = normalizePending(existingPending || loadJson(path.join(rawDir, 'kr-pending.json'), emptyPending()));
-  const knownIds = loadKnownIds(rawDir);
-  for (const record of pendingBefore.records) knownIds.add(String(record.id));
-
-  let pendingRecords = [...pendingBefore.records];
-  const failures = [];
-  const boardReports = [];
   const state = loadSyncState(path.join(rawDir, 'kr-sync-state.json'));
   const startedAt = now();
+  let pendingRecords = classifyExistingPending(pendingBefore.records, state, startedAt);
+  const knownIds = loadKnownIds(rawDir);
+  for (const record of pendingBefore.records) knownIds.add(String(record.id));
+  for (const record of state.ignored) knownIds.add(String(record.id));
+
+  const failures = [];
+  const boardReports = [];
+  const newCandidates = [];
+  const newlyIgnored = [];
 
   for (const board of boards) {
     try {
@@ -198,18 +249,27 @@ async function scanIncrementally({
       for (const item of discovered) knownIds.add(String(item.id));
 
       const added = [];
+      const excluded = [];
       for (const item of discovered) {
         try {
           const detail = await fetchDetailFn(item);
-          added.push({
+          const record = {
             ...item,
             ...detail,
             id: String(item.id),
             boardPath: item.boardPath || detail.boardPath || board.path,
             sourceBoards: item.sourceBoards,
             discoveredAt: startedAt,
-            status: 'pending',
-          });
+          };
+          const triage = classifyNotice(record);
+          const enriched = { ...record, ...triageFields(record, triage) };
+          if (triage.decision === 'auto-exclude') {
+            newlyIgnored.push(ignoredRecord(enriched, triage, startedAt));
+            excluded.push(String(item.id));
+          } else {
+            added.push(enriched);
+            newCandidates.push(enriched);
+          }
         } catch (error) {
           failures.push({ kind: 'detail', board: board.key, id: item.id, message: error.message });
         }
@@ -224,6 +284,7 @@ async function scanIncrementally({
         pagesRead: scan.pagesRead,
         discovered: discovered.map(item => item.id),
         added: added.map(item => item.id),
+        excluded,
         stoppedOnKnownPage: scan.stoppedOnKnownPage,
       });
     } catch (error) {
@@ -234,12 +295,15 @@ async function scanIncrementally({
   const report = {
     startedAt,
     finishedAt: now(),
-    newIds: pendingRecords
-      .filter(item => item.discoveredAt === startedAt)
-      .map(item => item.id),
+    newIds: [...new Set([...newCandidates.map(item => item.id), ...newlyIgnored.map(item => item.id)])],
+    autoIncludeIds: [...new Set(newCandidates.filter(item => item.triageDecision === 'auto-include').map(item => item.id))],
+    reviewIds: [...new Set(newCandidates.filter(item => item.triageDecision === 'review').map(item => item.id))],
+    excludedIds: [...new Set(newlyIgnored.map(item => item.id))],
+    excluded: newlyIgnored,
     failures,
     boards: boardReports,
   };
+  state.ignored = mergeIgnored(state.ignored, newlyIgnored);
   state.lastScanAt = report.finishedAt;
   return {
     pending: { version: 1, updatedAt: report.finishedAt, records: pendingRecords },
@@ -249,6 +313,8 @@ async function scanIncrementally({
 }
 
 function renderReviewMarkdown(pending, report) {
+  const autoInclude = pending.records.filter(item => item.triageDecision === 'auto-include');
+  const review = pending.records.filter(item => item.triageDecision !== 'auto-include');
   const lines = [
     '# Korean Pending Updates',
     '',
@@ -257,19 +323,33 @@ function renderReviewMarkdown(pending, report) {
     `- Failures: ${report.failures.length}`,
     '',
   ];
-  if (!pending.records.length) {
-    lines.push('No pending notices.');
-  } else {
-    for (const item of pending.records) {
-      lines.push(`## ${item.id} — ${item.title || item.pageTitle || 'Untitled'}`);
+  if (autoInclude.length) {
+    lines.push('## Auto-include', '', `Run \`npm run update:kr:apply -- --auto\` to apply ${autoInclude.length} clear candidates.`, '');
+    for (const item of autoInclude) {
+      lines.push(`- ${item.id} — ${item.title || item.pageTitle || 'Untitled'} (${item.triageReason || 'clear product signal'})`);
+    }
+    lines.push('');
+  }
+  if (review.length) {
+    lines.push('## Manual review', '');
+    for (const item of review) {
+      lines.push(`### ${item.id} — ${item.title || item.pageTitle || 'Untitled'}`);
       lines.push('');
-      lines.push(`- Status: ${item.status || 'pending'}`);
+      lines.push(`- Status: ${item.status || 'pending-review'}`);
+      lines.push(`- Reason: ${item.triageReason || '待確認'}`);
       lines.push(`- Date: ${item.date || item.exactDate || 'unknown'}`);
       lines.push(`- Notice: [Open official notice](${item.url || `${BASE}${item.boardPath}/${item.id}`})`);
       lines.push(`- Images: ${(item.contentImages || []).length}`);
-      for (const image of item.contentImages || []) lines.push(`  - ${image}`);
       lines.push('');
     }
+  }
+  if (!autoInclude.length && !review.length) {
+    lines.push('No pending notices.');
+  }
+  if (report.excluded?.length) {
+    lines.push('## Auto-excluded in this scan', '');
+    for (const item of report.excluded) lines.push(`- ${item.id} — ${item.title || 'Untitled'} (${item.reason})`);
+    lines.push('');
   }
   if (report.failures.length) {
     lines.push('## Failures', '');
@@ -297,8 +377,13 @@ function printReview(pendingPath = path.join(RAW, 'kr-pending.json')) {
     console.log('No pending Korean notices.');
     return pending;
   }
-  for (const item of pending.records) {
-    console.log(`${item.id}\t${item.date || item.exactDate || '?'}\t${item.title || item.pageTitle || 'Untitled'}\t${(item.contentImages || []).length} images\t${item.url || `${BASE}${item.boardPath}/${item.id}`}`);
+  for (const [decision, heading] of [['auto-include', 'Auto-include'], ['review', 'Manual review']]) {
+    const records = pending.records.filter(item => (item.triageDecision || 'review') === decision);
+    if (!records.length) continue;
+    console.log(`\n${heading}:`);
+    for (const item of records) {
+      console.log(`${item.id}\t${item.date || item.exactDate || '?'}\t${item.title || item.pageTitle || 'Untitled'}\t${item.triageReason || '待確認'}\t${(item.contentImages || []).length} images\t${item.url || `${BASE}${item.boardPath}/${item.id}`}`);
+    }
   }
   return pending;
 }
@@ -307,10 +392,15 @@ function parseApplyIds(argv) {
   const args = [...argv];
   const ids = [];
   let applyAll = false;
+  let applyAuto = false;
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
     if (arg === '--all') {
       applyAll = true;
+      continue;
+    }
+    if (arg === '--auto') {
+      applyAuto = true;
       continue;
     }
     if (arg === '--ids') {
@@ -322,9 +412,12 @@ function parseApplyIds(argv) {
     throw new Error(`Unknown apply option: ${arg}`);
   }
   const uniqueIds = [...new Set(ids)];
+  if (applyAuto && (applyAll || uniqueIds.length)) throw new Error('use only one of --auto, --ids, or --all');
   if (applyAll && uniqueIds.length) throw new Error('use either --ids or --all, not both');
-  if (!applyAll && !uniqueIds.length) throw new Error('apply requires an explicit --ids or --all selection');
-  return { ids: uniqueIds, applyAll };
+  if (!applyAuto && !applyAll && !uniqueIds.length) throw new Error('apply requires an explicit --ids or --all (or --auto) selection');
+  const result = { ids: uniqueIds, applyAll };
+  if (applyAuto) result.applyAuto = true;
+  return result;
 }
 
 function listFileForSourceBoard(sourceBoard) {
@@ -356,14 +449,22 @@ function runBuildScript(scriptName) {
 async function applyPending({
   ids = [],
   applyAll = false,
+  applyAuto = false,
   rawDir = RAW,
   buildCandidates = () => {},
   buildDataset = () => {},
 } = {}) {
   const pendingPath = path.join(rawDir, 'kr-pending.json');
   const pending = normalizePending(loadJson(pendingPath, emptyPending()));
-  const selectedIds = applyAll ? pending.records.map(record => String(record.id)) : [...new Set(ids.map(String))];
-  if (!selectedIds.length) throw new Error('no pending records to apply');
+  const selectedIds = applyAll
+    ? pending.records.map(record => String(record.id))
+    : applyAuto
+      ? pending.records.filter(record => record.triageDecision === 'auto-include').map(record => String(record.id))
+      : [...new Set(ids.map(String))];
+  if (!selectedIds.length) {
+    if (!applyAuto) throw new Error('no pending records to apply');
+    return { rawDir, appliedIds: [], details: loadJson(path.join(rawDir, 'kr-details.json'), []), remainingPending: pending };
+  }
 
   const pendingById = new Map(pending.records.map(record => [String(record.id), record]));
   const missing = selectedIds.filter(id => !pendingById.has(id));
@@ -447,10 +548,11 @@ async function applyPending({
 }
 
 async function runApply(argv) {
-  const { ids, applyAll } = parseApplyIds(argv);
+  const { ids, applyAll, applyAuto = false } = parseApplyIds(argv);
   const result = await applyPending({
     ids,
     applyAll,
+    applyAuto,
     buildCandidates: () => runBuildScript('filter-kr-candidates.js'),
     buildDataset: () => runBuildScript('build-dataset.js'),
   });
@@ -459,14 +561,14 @@ async function runApply(argv) {
 }
 
 function usage() {
-  console.log('Usage: node scripts/update-kr.js <scan|review|apply> [--ids id1,id2 | --all]');
+  console.log('Usage: node scripts/update-kr.js <scan|review|apply> [--ids id1,id2 | --auto | --all]');
 }
 
 async function main(argv = process.argv.slice(2)) {
   const [command, ...rest] = argv;
   if (command === 'scan') {
     const result = await runScan();
-    console.log(`Scanned Korean notices: ${result.report.newIds.length} new pending records`);
+    console.log(`Scanned Korean notices: ${result.report.newIds.length} new notices (${result.report.autoIncludeIds.length} auto-include, ${result.report.reviewIds.length} review, ${result.report.excludedIds.length} excluded)`);
     if (result.report.failures.length) {
       console.error(`Failures: ${result.report.failures.length}`);
       process.exitCode = 1;
@@ -500,6 +602,7 @@ module.exports = {
   parseListHtml,
   parseDetailHtml,
   parseApplyIds,
+  classifyNotice,
   renderReviewMarkdown,
   applyPending,
   scanIncrementally,

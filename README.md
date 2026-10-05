@@ -18,13 +18,17 @@
 一般更新只查找新的韓服公告，不重新搜尋或抓取過往公告。執行前請先開啟可連線韓國網站的 VPN。
 
 ```bash
-# 掃描新公告；只寫入待確認資料，不會直接修改正式時間軸
+# 掃描新公告；只查找上次同步後的新公告，不重新抓取過往公告
+# 掃描結果會分成自動收錄、自動排除、待確認三組，不會直接修改正式時間軸
 npm run update:kr:scan
 
-# 查看待確認公告
+# 套用分類器判定明確的新內容
+npm run update:kr:apply:auto
+
+# 查看剩下需要人工判斷的公告
 npm run update:kr:review
 
-# 確認後，只套用指定公告 ID
+# 確認後，只套用指定公告 ID；這是處理模糊公告的方式
 npm run update:kr:apply -- --ids <ID1,ID2>
 
 # 下載這次新增項目的圖片並壓縮成 WebP
@@ -39,4 +43,4 @@ git commit -m "data: update Korean timeline"
 git push origin main
 ```
 
-`update:kr:apply` 只會套用明確指定的待確認 ID；完成驗證後推送到 `main`，GitHub Pages 會自動更新網站。
+分類器會把維修、伺服器異常、單純再販／復刻與明確的照片活動記入 `kr-sync-state.json` 的排除清單，之後的增量掃描不會再次要求判斷；出現時裝、外觀、動作、樂器或染色等明確線索的公告可由 `--auto` 套用。無法安全判斷的公告會留在待確認清單，仍可用 `--ids` 手動收錄。完成驗證後推送到 `main`，GitHub Pages 會自動更新網站。

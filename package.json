@@ -13,6 +13,7 @@
     "update:kr:scan": "node scripts/update-kr.js scan",
     "update:kr:review": "node scripts/update-kr.js review",
     "update:kr:apply": "node scripts/update-kr.js apply",
+    "update:kr:apply:auto": "node scripts/update-kr.js apply --auto",
     "build:dataset": "node scripts/build-dataset.js",
     "build:images": "node scripts/download-images.js && node scripts/optimize-images.js && node scripts/build-thumbnails.js",
     "build:thumbnails": "node scripts/build-thumbnails.js",
