@@ -14,6 +14,7 @@
     "update:kr:review": "node scripts/update-kr.js review",
     "update:kr:apply": "node scripts/update-kr.js apply",
     "update:kr:apply:auto": "node scripts/update-kr.js apply --auto",
+    "translate:kr": "node scripts/pretranslate-kr.js",
     "prepare:pages": "node scripts/cache-version.js",
     "build:dataset": "node scripts/build-dataset.js",
     "build:images": "node scripts/download-images.js && node scripts/optimize-images.js && node scripts/build-thumbnails.js",

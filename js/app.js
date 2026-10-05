@@ -16,6 +16,7 @@
     order: "asc",
     query: "",
     view: "timeline",
+    showOriginal: false,
   };
 
   const timelineEl = document.getElementById("timeline");
@@ -25,6 +26,7 @@
   const statusFilter = document.getElementById("statusFilter");
   const monthFilter = document.getElementById("monthFilter");
   const sortOrder = document.getElementById("sortOrder");
+  const originalNamesToggle = document.getElementById("originalNamesToggle");
   const jumpToday = document.getElementById("jumpToday");
   const clearFilters = document.getElementById("clearFilters");
   const viewButtons = [...document.querySelectorAll(".view-button")];
@@ -137,7 +139,7 @@
   function openDyeDialog(item) {
     if (!item.colorCodes?.length) return;
     dyeDialogItem = item;
-    dyeDialogTitle.textContent = item.displayName || item.name;
+    dyeDialogTitle.textContent = utils.getPrimaryItemName(item, showTaiwanStatus, state.showOriginal);
     dyeDialogMeta.textContent = `共 ${item.colorCodes.length} 種顏色 · 點擊外側或按 Esc 關閉`;
     dyeDialogColors.replaceChildren();
     item.colorCodes.forEach((code, index) => {
@@ -173,7 +175,7 @@
   }
 
   async function loadData() {
-    const response = await fetch("data/fashion.json?v=b30dec5c90fd");
+    const response = await fetch("data/fashion.json?v=6d1b5efa8469");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const items = await response.json();
     return items.filter((item) => utils.isPublicTimelineItem(item, HIDDEN_CHOICE_KINDS));
@@ -253,6 +255,7 @@
     card.className = "card";
     card.dataset.itemId = item.id;
     card.dataset.rerun = item.isRerun ? "true" : "false";
+    const primaryName = utils.getPrimaryItemName(item, showTaiwanStatus, state.showOriginal);
 
     const media = document.createElement("div");
     media.className = "card-media";
@@ -265,7 +268,7 @@
     } else if (images.length) {
       const image = document.createElement("img");
       image.src = cardImages[0];
-      image.alt = item.displayName || item.name || "瑪奇 Mobile 商品預覽";
+      image.alt = primaryName || "瑪奇 Mobile 商品預覽";
       image.loading = "lazy";
       image.decoding = "async";
       media.appendChild(image);
@@ -313,9 +316,6 @@
     }
     body.appendChild(labels);
 
-    const primaryName = showTaiwanStatus && info.status === "confirmed" && item.displayName
-      ? item.displayName
-      : item.name;
     const name = document.createElement("h3");
     name.className = "card-name";
     name.textContent = primaryName;
@@ -334,7 +334,7 @@
       nameRow.appendChild(tip);
     }
     body.appendChild(nameRow);
-    const secondaryName = primaryName === item.name ? (item.displayName && item.displayName !== item.name ? `中文：${item.displayName}` : "") : `韓文：${item.name}`;
+    const secondaryName = utils.getSecondaryItemName(item, primaryName, state.showOriginal);
     if (secondaryName) {
       const secondary = document.createElement("p");
       secondary.className = "card-name-secondary";
@@ -422,15 +422,19 @@
     } else {
       lightboxImg.src = image.src;
     }
-    lightboxImg.alt = lightboxItem.name;
+    const primaryName = utils.getPrimaryItemName(lightboxItem, showTaiwanStatus, state.showOriginal);
+    const secondaryName = utils.getSecondaryItemName(lightboxItem, primaryName, state.showOriginal);
+    lightboxImg.alt = primaryName;
     lightboxCounter.textContent = `${lightboxIndex + 1} / ${images.length}`;
     lightboxCategory.textContent = utils.getCategoryDisplayName(lightboxItem);
-    lightboxTitle.textContent = lightboxItem.displayName || lightboxItem.name;
+    lightboxTitle.textContent = primaryName;
     const componentNote = lightboxItem.choiceKind === "instrument" && lightboxItem.components?.length
       ? ` · ${lightboxItem.components.length} 種可選樂器`
       : "";
     const imageNote = image.note ? ` · ${image.note}` : "";
-    lightboxMeta.textContent = `韓文：${lightboxItem.name} · 韓服上線 ${lightboxItem.krDate}${componentNote}${imageNote}`;
+    lightboxMeta.textContent = [secondaryName, `韓服上線 ${lightboxItem.krDate}${componentNote}${imageNote}`]
+      .filter(Boolean)
+      .join(" · ");
     lightboxPrev.hidden = images.length < 2;
     lightboxNext.hidden = images.length < 2;
   }
@@ -569,6 +573,11 @@
   statusFilter?.addEventListener("change", (event) => { state.twStatus = event.target.value; render(); });
   monthFilter.addEventListener("change", (event) => { state.month = event.target.value; render(); });
   sortOrder.addEventListener("change", (event) => { state.order = event.target.value; render(); });
+  originalNamesToggle?.addEventListener("change", (event) => {
+    state.showOriginal = event.target.checked;
+    render();
+    if (lightboxItem && lightbox.classList.contains("open")) updateLightbox();
+  });
   clearFilters.addEventListener("click", () => {
     state.category = "all";
     state.twStatus = "all";

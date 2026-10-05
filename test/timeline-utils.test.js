@@ -5,6 +5,8 @@ const {
   getCategoryFilterKey,
   getMonthOptions,
   getCategoryDisplayName,
+  getPrimaryItemName,
+  getSecondaryItemName,
   getImageCountHint,
   getViewModeLabel,
   normalizeViewMode,
@@ -33,6 +35,31 @@ test('filters by category, Taiwan status, month and bilingual search fields', ()
   assert.deepEqual(filterTimelineItems(items, { twStatus: 'confirmed' }).map(item => item.id), ['old', 'mid']);
   assert.deepEqual(filterTimelineItems(items, { month: '2026-02' }).map(item => item.id), ['new']);
   assert.deepEqual(filterTimelineItems(items, { query: '宇宙星' }).map(item => item.id), ['old']);
+});
+
+test('prefers pretranslated names while preserving the Korean secondary label', () => {
+  const item = {
+    name: '크리온 스트라이커 세트',
+    zhName: '克里昂打擊者套裝',
+    displayName: '크리온 스트라이커 세트',
+    twStatus: 'unmatched',
+  };
+  const primary = getPrimaryItemName(item, false);
+  assert.equal(primary, '克里昂打擊者套裝');
+  assert.equal(getSecondaryItemName(item, primary), '韓文：크리온 스트라이커 세트');
+  assert.equal(getPrimaryItemName(item, true), '克里昂打擊者套裝');
+});
+
+test('can switch cards to the original Korean name while keeping the translation available', () => {
+  const item = {
+    name: '크리온 스트라이커 세트',
+    zhName: '克里昂打擊者套裝',
+    displayName: '크리온 스트라이커 세트',
+    twStatus: 'unmatched',
+  };
+  const primary = getPrimaryItemName(item, false, true);
+  assert.equal(primary, '크리온 스트라이커 세트');
+  assert.equal(getSecondaryItemName(item, primary, true), '中文：克里昂打擊者套裝');
 });
 
 test('uses compact labels for long category filter names', () => {

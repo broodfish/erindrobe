@@ -7,6 +7,7 @@ const {
   parseChoiceBoxes,
   parseLuckyBoxNotice,
   parseFashionShopProducts,
+  parseFashionPreviewProducts,
   parseAppearanceProducts,
 } = require('../scripts/parse-kr-text.js');
 
@@ -141,6 +142,35 @@ test('parses every accessory in a table with purchase limits and preview names',
   assert.deepEqual(parseFashionShopProducts(text).map(product => product.name), [
     '레이어드 아이 밴디지', '플랫 아이 드레싱', '크라켄 레더 아이가드',
   ]);
+});
+
+test('splits package notices that expose a fashion-equipment preview section', () => {
+  const notices = require('../data/raw/kr-details.json');
+  const notice = notices.find(item => item.id === '3554491');
+  const products = parseFashionPreviewProducts(notice.fullText, notice.contentImages);
+
+  assert.deepEqual(products.map(product => product.name), [
+    '크리온 스트라이커 세트',
+    '크리온 독 택 세트',
+    '크리온 팝 패치 세트',
+    '크리온 와이어 세트',
+    '크리온 파이브스타 이어링',
+    '크리온 펜듈럼 앤 핀 커프',
+    '크리온 카모플라쥬 백팩',
+  ]);
+  assert.deepEqual(products.map(product => product.images), notice.contentImages.slice(0, 7).map(image => [image]));
+  assert.deepEqual(products.slice(0, 4).map(product => product.kind), [
+    'fashion-set', 'fashion-set', 'fashion-set', 'fashion-set',
+  ]);
+  assert.deepEqual(products.slice(4).map(product => product.kind), [
+    'accessory', 'accessory', 'accessory',
+  ]);
+});
+
+test('does not treat a preview usage note as a product preview section', () => {
+  const notices = require('../data/raw/kr-details.json');
+  const notice = notices.find(item => item.id === '3407264');
+  assert.deepEqual(parseFashionPreviewProducts(notice.fullText, notice.contentImages), []);
 });
 
 test('parses hair products and their official preview images', () => {

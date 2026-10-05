@@ -53,7 +53,7 @@
   }
 }
 </script>
-<link rel="stylesheet" href="css/style.css?v=07f010c51e07" />
+<link rel="stylesheet" href="css/style.css?v=ab15b162132c" />
 </head>
 <body>
 <header class="site-header">
@@ -87,6 +87,11 @@
       </label>
       <label class="select-field"><span>月份</span><select id="monthFilter"><option value="all">全部月份</option></select></label>
       <label class="select-field"><span>時間順序</span><select id="sortOrder"><option value="asc">由舊到新</option><option value="desc">由新到舊</option></select></label>
+      <label class="original-toggle" for="originalNamesToggle">
+        <input type="checkbox" id="originalNamesToggle" />
+        <span class="original-toggle-track" aria-hidden="true"><span></span></span>
+        <span>顯示原文</span>
+      </label>
       <button class="today-button" id="jumpToday" type="button">跳到今天附近</button>
     </div>
     <div class="category-row">
@@ -206,8 +211,8 @@
   </div>
 </div>
 
-<script src="js/timeline-utils.js?v=e59f75b739c0"></script>
+<script src="js/timeline-utils.js?v=534ee407e93c"></script>
 <script src="js/ui-formatters.js?v=e5e01ce32cd8"></script>
-<script src="js/app.js?v=ddc035413616"></script>
+<script src="js/app.js?v=dd11ec51a802"></script>
 </body>
 </html>

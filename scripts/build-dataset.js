@@ -7,6 +7,7 @@ const tw = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-details.json'), 'utf8')
 const twReleaseDates = JSON.parse(fs.readFileSync(path.join(RAW, 'tw-release-dates.json'), 'utf8'));
 const {
   parseFashionShopProducts,
+  parseFashionPreviewProducts,
   parseActionPreviews,
   parseHairProducts,
   parseLuckyBoxNotice,
@@ -17,6 +18,7 @@ const {
 } = require('./parse-kr-text.js');
 const { normalizeName, deriveTwStatus, createEvidence } = require('./tw-match.js');
 const { annotateRepeatItems } = require('./timeline-history.js');
+const { applyCachedTranslations, loadTranslationCache } = require('./pretranslate-kr.js');
 const {
   classifyKrProduct,
   isRelevantKrProductNotice,
@@ -511,6 +513,31 @@ function appendFashionShopItems(notice) {
   return matchedCount;
 }
 
+function appendFashionPreviewItems(notice) {
+  const products = parseFashionPreviewProducts(notice.fullText, notice.contentImages);
+  products.forEach((product, productIndex) => {
+    const itemId = `${notice.id}_shop${productIndex}`;
+    const images = product.images;
+    const verifiedMatch = VERIFIED_TW_MAP[itemId];
+    const twInfo = matchTwForImages(images, verifiedMatch, itemId, product.name);
+    items.push({
+      id: itemId,
+      title: decodeEntities(notice.title).replace(/\s+/g, ' ').trim(),
+      name: product.name,
+      displayName: verifiedMatch?.twName || product.name,
+      category: '其他商城',
+      productTypeOverride: product.kind === 'accessory' ? '新造型' : '商店時裝',
+      shopProductKind: product.kind === 'accessory' ? 'accessory' : 'coord',
+      isShopProduct: true,
+      krDate: notice.date,
+      images,
+      sourceUrl: notice.url,
+      ...twInfo,
+    });
+  });
+  return products.length;
+}
+
 function appendDerivedPreviewItems(notice) {
   let matchedCount = 0;
   if (notice.boardPath !== '/News/Notice') return matchedCount;
@@ -612,6 +639,7 @@ for (const r of kr) {
   const verifiedMatch = VERIFIED_TW_MAP[r.id];
   const derivedPreviewCount = appendDerivedPreviewItems(r);
   const shopItemCount = appendFashionShopItems(r);
+  const packagePreviewCount = appendFashionPreviewItems(r);
 
   const choiceSource = [r.title, r.fullText || ''].join(' ');
   const canParseChoiceBoxes = r.boardPath === '/News/Notice' && !/정기\s*점검|임시\s*점검/u.test(r.title);
@@ -653,7 +681,8 @@ for (const r of kr) {
     });
     const noticeCore = [r.title, String(r.fullText || '').split(/\s+목록\s+(?:전체|안내|공지사항)/u)[0]].join(' ');
     const hasOtherNoticeProducts = splitMap.has(r.id)
-      || /럭키\s*박스|토탈\s*패키지|패션샵|꾸미기/u.test(noticeCore);
+      || /럭키\s*박스|토탈\s*패키지|패션샵|꾸미기/u.test(noticeCore)
+      || packagePreviewCount > 0;
     if (!hasOtherNoticeProducts) continue;
   }
 
@@ -746,7 +775,7 @@ for (const r of kr) {
     continue;
   }
 
-  if (shopItemCount > 0) continue;
+  if (shopItemCount > 0 || packagePreviewCount > 0) continue;
 
   const twInfo = matchTwForImages(r.contentImages, verifiedMatch, r.id, name);
   const twNameOverride = verifiedMatch ? verifiedMatch.twName : null;
@@ -893,6 +922,7 @@ function existingWebAssets(itemId) {
 if (fs.existsSync(outPath)) {
   const prev = JSON.parse(fs.readFileSync(outPath, 'utf8'));
   const prevMap = new Map(prev.map(p => [p.id, {
+    images: p.images,
     localImages: p.localImages,
     motionImages: p.motionImages,
     lightboxImages: p.lightboxImages,
@@ -905,7 +935,8 @@ if (fs.existsSync(outPath)) {
       delete i.lightboxImages;
       return;
     }
-    const previous = prevMap.get(i.id);
+    const previous = prevMap.get(i.id)
+      || prevMap.get(String(i.id).replace(/_shop\d+$/u, ''));
     const sameImageSources = previous
       && JSON.stringify(previous.galleryImages || previous.cardImages || [])
         === JSON.stringify(i.galleryImages || i.cardImages || []);
@@ -922,18 +953,36 @@ if (fs.existsSync(outPath)) {
       if (previous.lightboxImages?.length) i.lightboxImages = previous.lightboxImages;
     }
     if (!i.localImages?.length) {
+      const previousSourceImages = previous?.images
+        || previous?.galleryImages
+        || previous?.cardImages
+        || [];
+      const currentSourceImages = i.galleryImages || i.cardImages || [];
+      const inherited = currentSourceImages.map(source => {
+        const sourceIndex = previousSourceImages.indexOf(source);
+        return sourceIndex >= 0 ? previous.localImages?.[sourceIndex] : null;
+      });
+      if (inherited.length === expectedImageCount && inherited.every(Boolean)) {
+        i.localImages = inherited;
+      }
+    }
+    if (!i.localImages?.length) {
       if (recovered.length === expectedImageCount) i.localImages = recovered;
     }
   });
 }
 
-fs.writeFileSync(outPath, JSON.stringify(annotatedItems, null, 2));
-console.log('Built', annotatedItems.length, 'items');
+const translatedItems = applyCachedTranslations(
+  annotatedItems,
+  loadTranslationCache(path.join(RAW, 'kr-translations.json')),
+);
+fs.writeFileSync(outPath, JSON.stringify(translatedItems, null, 2));
+console.log('Built', translatedItems.length, 'items');
 const byCat = {};
-annotatedItems.forEach(i => byCat[i.category] = (byCat[i.category] || 0) + 1);
+translatedItems.forEach(i => byCat[i.category] = (byCat[i.category] || 0) + 1);
 console.log(byCat);
-console.log('Reruns:', annotatedItems.filter(i => i.isRerun).length);
-console.log('TW released (any piece):', annotatedItems.filter(i => i.twReleased).length);
-console.log('TW fully released (all pieces):', annotatedItems.filter(i => i.twFullyReleased).length);
-console.log('TW partially released:', annotatedItems.filter(i => i.twReleased && !i.twFullyReleased).length);
-console.log('Items missing localImages:', annotatedItems.filter(i => !i.localImages?.length).length);
+console.log('Reruns:', translatedItems.filter(i => i.isRerun).length);
+console.log('TW released (any piece):', translatedItems.filter(i => i.twReleased).length);
+console.log('TW fully released (all pieces):', translatedItems.filter(i => i.twFullyReleased).length);
+console.log('TW partially released:', translatedItems.filter(i => i.twReleased && !i.twFullyReleased).length);
+console.log('Items missing localImages:', translatedItems.filter(i => !i.localImages?.length).length);

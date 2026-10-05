@@ -6,6 +6,8 @@
 
 網站以韓服上線日期排序，收錄時裝、套組、通行證、樂器、染色劑、造型、髮型、動作與活動等項目；染色劑選擇箱的卡片以色塊縮圖呈現，點擊後可查看完整色碼。
 
+卡片預設顯示預先翻譯的繁體中文名稱；篩選列的「顯示原文」開關可切換成韓文名稱，搜尋仍同時支援中韓文。
+
 ## 資料來源與版權聲明
 
 - 韓服官方公告：https://mabinogimobile.nexon.com/
@@ -34,8 +36,16 @@ npm run update:kr:apply -- --ids <ID1,ID2>
 # 下載這次新增項目的圖片並壓縮成 WebP
 MBC_IMAGE_IDS=<ID1,ID2> npm run build:images
 
+# 將新收錄的韓文商品名稱預先翻譯成繁體中文（需要 OpenAI API 金鑰）
+OPENAI_API_KEY=<你的API金鑰> npm run translate:kr
+
+# 翻譯既有資料（平常增量更新不會重新查找過往公告）
+OPENAI_API_KEY=<你的API金鑰> npm run translate:kr -- --all
+
+# update:kr:apply 會在重建資料後自動執行翻譯；未設定金鑰時會保留韓文，不會讓更新失敗
+
 # 同步前端資源版本，避免 GitHub Pages 沿用舊的 CSS、JS 或資料快取
-# update:kr:apply 會自動執行；若是手動修改資料或介面，請執行這行
+# 若是手動修改資料或介面，請執行這行
 npm run prepare:pages
 
 # 發布前驗證

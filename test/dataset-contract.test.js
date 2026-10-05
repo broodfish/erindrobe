@@ -44,6 +44,36 @@ test('keeps mixed fashion and pet lucky boxes in their respective filters', () =
   assert.equal(hamster.productType, '寵物幸運盒');
 });
 
+test('splits the 10/1 fashion package into named preview cards', () => {
+  const items = require('../data/fashion.json').filter(item => item.id.startsWith('3554491_'));
+  assert.deepEqual(items.map(item => item.name), [
+    '크리온 스트라이커 세트',
+    '크리온 독 택 세트',
+    '크리온 팝 패치 세트',
+    '크리온 와이어 세트',
+    '크리온 파이브스타 이어링',
+    '크리온 펜듈럼 앤 핀 커프',
+    '크리온 카모플라쥬 백팩',
+  ]);
+  assert.deepEqual(items.slice(0, 4).map(item => item.productType), [
+    '商店時裝', '商店時裝', '商店時裝', '商店時裝',
+  ]);
+  assert.deepEqual(items.slice(4).map(item => item.productType), [
+    '新造型', '新造型', '新造型',
+  ]);
+  assert.deepEqual(items.map(item => item.zhName), [
+    '克里昂打擊者套裝',
+    '克里昂狗牌套裝',
+    '克里昂流行徽章套裝',
+    '克里昂鐵絲套裝',
+    '克里昂五星耳環',
+    '克里昂吊墜與別針袖扣',
+    '克里昂迷彩背包',
+  ]);
+  assert.ok(items.every(item => item.cardImages?.length === 1));
+  assert.ok(items.every(item => item.localImages?.length === 1));
+});
+
 test('repeated official products remain in the timeline and are marked as reruns', () => {
   const wolf = require('../data/fashion.json').filter(item => item.name === '아기 늑대');
   assert.deepEqual(wolf.map(item => [item.krDate, item.isRerun]), [

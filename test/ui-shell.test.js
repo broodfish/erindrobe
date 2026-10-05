@@ -50,6 +50,19 @@ test('timeline cards use generated thumbnails while the lightbox keeps full imag
   assert.match(thumbnailBuilder, /resize\(\{ width: 600, withoutEnlargement: true \}\)/);
 });
 
+test('timeline cards render the pretranslated product name when available', () => {
+  assert.match(appJs, /getPrimaryItemName\(item, showTaiwanStatus, state\.showOriginal\)/);
+  assert.match(appJs, /getSecondaryItemName\(item, primaryName, state\.showOriginal\)/);
+});
+
+test('timeline cards expose a switch for showing original Korean names', () => {
+  assert.match(indexHtml, /id="originalNamesToggle"/);
+  assert.match(indexHtml, /顯示原文/);
+  assert.match(appJs, /showOriginal/);
+  assert.match(appJs, /originalNamesToggle/);
+  assert.match(styleCss, /\.original-toggle/);
+});
+
 test('view switch uses Google Material Symbols and exposes timeline/grid modes', () => {
   assert.match(indexHtml, /fonts\.googleapis\.com\/css2\?family=Material\+Symbols\+Outlined/);
   assert.match(indexHtml, /data-view-mode="timeline"/);

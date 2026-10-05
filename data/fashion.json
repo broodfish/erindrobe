@@ -66,7 +66,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2757709_0.webp"
-    ]
+    ],
+    "zhName": "神秘奧術"
   },
   {
     "id": "2757708",
@@ -149,7 +150,8 @@
         "className": "lightbox-image-official-full",
         "note": "台服官方高清同套裝圖（男女完整）"
       }
-    ]
+    ],
+    "zhName": "宇宙星之子"
   },
   {
     "id": "2757703_box0",
@@ -202,7 +204,8 @@
     "firstReleaseId": "2757703_box0",
     "firstReleaseDate": "2025.03.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：綻放薰衣草"
   },
   {
     "id": "2757703_box1",
@@ -255,7 +258,8 @@
     "firstReleaseId": "2757703_box1",
     "firstReleaseDate": "2025.03.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：紫羅蘭天鵝絨"
   },
   {
     "id": "2757707",
@@ -320,7 +324,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2757707_0.webp"
-    ]
+    ],
+    "zhName": "冒險家通行證公告"
   },
   {
     "id": "2757703_0",
@@ -386,7 +391,8 @@
     "isRerun": false,
     "firstReleaseId": "2757703_0",
     "firstReleaseDate": "2025.03.27",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "zhName": "綻放的春光"
   },
   {
     "id": "2757703_1",
@@ -452,7 +458,8 @@
     "isRerun": false,
     "firstReleaseId": "2757703_1",
     "firstReleaseDate": "2025.03.27",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "zhName": "星之誓約"
   },
   {
     "id": "2839212_box0",
@@ -505,7 +512,8 @@
     "firstReleaseId": "2839212_box0",
     "firstReleaseDate": "2025.04.24",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：寧靜藍"
   },
   {
     "id": "2839212_box1",
@@ -558,7 +566,8 @@
     "firstReleaseId": "2839212_box1",
     "firstReleaseDate": "2025.04.24",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：黃色微風"
   },
   {
     "id": "2839212_0",
@@ -624,7 +633,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2839212_0_0.webp"
-    ]
+    ],
+    "zhName": "熱情之舞"
   },
   {
     "id": "2839212_1",
@@ -690,7 +700,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2839212_1_0.webp"
-    ]
+    ],
+    "zhName": "寂靜的審判"
   },
   {
     "id": "2839212_2",
@@ -756,7 +767,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2839212_2_0.webp"
-    ]
+    ],
+    "zhName": "小狼"
   },
   {
     "id": "2871407",
@@ -806,7 +818,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2871407_0.webp"
-    ]
+    ],
+    "zhName": "可愛紙帽選擇包公告"
   },
   {
     "id": "2906352_0",
@@ -874,7 +887,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2906352_0_0.webp"
-    ]
+    ],
+    "zhName": "春季運動會"
   },
   {
     "id": "2906352_1",
@@ -942,7 +956,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2906352_1_0.webp"
-    ]
+    ],
+    "zhName": "閃耀的應援"
   },
   {
     "id": "2906348_box0",
@@ -995,7 +1010,8 @@
     "firstReleaseId": "2906348_box0",
     "firstReleaseDate": "2025.05.22",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：櫻花"
   },
   {
     "id": "2906348_box1",
@@ -1048,7 +1064,8 @@
     "firstReleaseId": "2906348_box1",
     "firstReleaseDate": "2025.05.22",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：大地灰"
   },
   {
     "id": "2918992_box0",
@@ -1149,7 +1166,8 @@
       "assets/fashion-web/2918992_box0_1.webp",
       "assets/fashion-web/2918992_box0_2.webp",
       "assets/fashion-web/2918992_box0_3.webp"
-    ]
+    ],
+    "zhName": "淘氣應援團樂器選擇箱"
   },
   {
     "id": "2918992_box1",
@@ -1264,7 +1282,8 @@
       "assets/fashion-web/2918992_box1_1.webp",
       "assets/fashion-web/2918992_box1_2.webp",
       "assets/fashion-web/2918992_box1_3.webp"
-    ]
+    ],
+    "zhName": "春之旋律樂器選擇箱"
   },
   {
     "id": "2957955",
@@ -1360,7 +1379,8 @@
       "assets/fashion-web/2957955_2.webp",
       "assets/fashion-web/2957955_3.webp",
       "assets/fashion-web/2957955_4.webp"
-    ]
+    ],
+    "zhName": "皇家和聲"
   },
   {
     "id": "2957849",
@@ -1458,7 +1478,8 @@
       "assets/fashion-web/2957849_6.webp",
       "assets/fashion-web/2957849_7.webp",
       "assets/fashion-web/2957849_8.webp"
-    ]
+    ],
+    "zhName": "古老木之君"
   },
   {
     "id": "2957846_shop2",
@@ -1512,7 +1533,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_shop2_0.webp"
-    ]
+    ],
+    "zhName": "鳥藤眼罩"
   },
   {
     "id": "2957846_shop3",
@@ -1566,7 +1588,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_shop3_0.webp"
-    ]
+    ],
+    "zhName": "蝴蝶墜飾耳環"
   },
   {
     "id": "2957846_shop4",
@@ -1620,7 +1643,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_shop4_0.webp"
-    ]
+    ],
+    "zhName": "單葉耳環"
   },
   {
     "id": "2957846_0",
@@ -1671,7 +1695,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_0_0.webp"
-    ]
+    ],
+    "zhName": "月影騎士團"
   },
   {
     "id": "2957846_1",
@@ -1722,7 +1747,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_1_0.webp"
-    ]
+    ],
+    "zhName": "霜花的宴會"
   },
   {
     "id": "2957846_2",
@@ -1789,7 +1815,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957846_2_0.webp"
-    ]
+    ],
+    "zhName": "小貓頭鷹"
   },
   {
     "id": "2957842",
@@ -1838,7 +1865,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957842_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證"
   },
   {
     "id": "2957837_box0",
@@ -1922,7 +1950,8 @@
       "assets/fashion-web/2957837_box0_3.webp",
       "assets/fashion-web/2957837_box0_4.webp",
       "assets/fashion-web/2957837_box0_5.webp"
-    ]
+    ],
+    "zhName": "森林讚歌樂器選擇箱"
   },
   {
     "id": "2957837_box1",
@@ -1979,7 +2008,8 @@
     "firstReleaseId": "2957837_box1",
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：摩洛哥薄荷"
   },
   {
     "id": "2957837_box2",
@@ -2036,7 +2066,8 @@
     "firstReleaseId": "2957837_box2",
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：冥想"
   },
   {
     "id": "2918987",
@@ -2102,7 +2133,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2918987_0.webp"
-    ]
+    ],
+    "zhName": "宇宙星之子"
   },
   {
     "id": "2957791",
@@ -2162,7 +2194,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2957791_0.webp"
-    ]
+    ],
+    "zhName": "邀請朋友來玩瑪奇 Mobile！活動公告"
   },
   {
     "id": "2998805",
@@ -2225,7 +2258,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/2998805_0.webp"
-    ]
+    ],
+    "zhName": "給冒險家的感謝禮物：100天紀念感謝優惠券公告"
   },
   {
     "id": "3037059_action0",
@@ -2302,7 +2336,8 @@
       "assets/fashion-motion/3037059_action0_0.webp",
       "assets/fashion-motion/3037059_action0_1.webp",
       "assets/fashion-motion/3037059_action0_2.webp"
-    ]
+    ],
+    "zhName": "動作：放煙火"
   },
   {
     "id": "3037067_shop0",
@@ -2366,7 +2401,8 @@
       "assets/fashion-web/3037067_shop0_0.webp",
       "assets/fashion-web/3037067_shop0_1.webp",
       "assets/fashion-web/3037067_shop0_2.webp"
-    ]
+    ],
+    "zhName": "海濱彩繪"
   },
   {
     "id": "3037067_shop1",
@@ -2425,7 +2461,8 @@
     "isRerun": false,
     "firstReleaseId": "3037067_shop1",
     "firstReleaseDate": "2025.07.17",
-    "rerunIndex": 0
+    "rerunIndex": 0,
+    "zhName": "可愛夏日彩繪"
   },
   {
     "id": "3037067_0",
@@ -2493,7 +2530,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3037067_0_0.webp"
-    ]
+    ],
+    "zhName": "細浪的記憶"
   },
   {
     "id": "3037067_1",
@@ -2545,7 +2583,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3037067_1_0.webp"
-    ]
+    ],
+    "zhName": "海灘風景"
   },
   {
     "id": "3037059_box0",
@@ -2620,7 +2659,8 @@
       "assets/fashion-web/3037059_box0_0.webp",
       "assets/fashion-web/3037059_box0_1.webp",
       "assets/fashion-web/3037059_box0_2.webp"
-    ]
+    ],
+    "zhName": "夏日祭典樂器選擇箱"
   },
   {
     "id": "3037059_box1",
@@ -2677,7 +2717,8 @@
     "firstReleaseId": "3037059_box1",
     "firstReleaseDate": "2025.07.17",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：夕陽紅"
   },
   {
     "id": "3037059_box2",
@@ -2734,7 +2775,8 @@
     "firstReleaseId": "3037059_box2",
     "firstReleaseDate": "2025.07.17",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：海洋藍"
   },
   {
     "id": "3037089",
@@ -2796,7 +2838,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3037089_0.webp"
-    ]
+    ],
+    "zhName": "跟著海浪聲，前往海邊攤位吧！活動公告"
   },
   {
     "id": "3064410",
@@ -2848,7 +2891,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3064410_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證"
   },
   {
     "id": "3064408",
@@ -2900,7 +2944,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3064408_0.webp"
-    ]
+    ],
+    "zhName": "新套組與時裝商店公告"
   },
   {
     "id": "3063593",
@@ -2963,7 +3008,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3063593_0.webp"
-    ]
+    ],
+    "zhName": "在耀眼陽光下，前往海邊攤位吧！活動公告"
   },
   {
     "id": "3075719",
@@ -3027,7 +3073,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3075719_0.webp"
-    ]
+    ],
+    "zhName": "本月優秀遊戲"
   },
   {
     "id": "3100664_action0",
@@ -3088,7 +3135,8 @@
       "assets/fashion-motion/3100664_action0_0.webp",
       "assets/fashion-motion/3100664_action0_1.webp",
       "assets/fashion-motion/3100664_action0_2.webp"
-    ]
+    ],
+    "zhName": "動作：巴洛納"
   },
   {
     "id": "3100664_action1",
@@ -3149,7 +3197,8 @@
       "assets/fashion-motion/3100664_action1_0.webp",
       "assets/fashion-motion/3100664_action1_1.webp",
       "assets/fashion-motion/3100664_action1_2.webp"
-    ]
+    ],
+    "zhName": "動作：納亞妮"
   },
   {
     "id": "3100664_action2",
@@ -3210,7 +3259,8 @@
       "assets/fashion-motion/3100664_action2_0.webp",
       "assets/fashion-motion/3100664_action2_1.webp",
       "assets/fashion-motion/3100664_action2_2.webp"
-    ]
+    ],
+    "zhName": "動作：聽音樂"
   },
   {
     "id": "3100664_action3",
@@ -3271,7 +3321,8 @@
       "assets/fashion-motion/3100664_action3_0.webp",
       "assets/fashion-motion/3100664_action3_1.webp",
       "assets/fashion-motion/3100664_action3_2.webp"
-    ]
+    ],
+    "zhName": "動作：捕捉螢火蟲"
   },
   {
     "id": "3100668_shop0",
@@ -3329,7 +3380,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_shop0_0.webp"
-    ]
+    ],
+    "zhName": "自然葉片耳環"
   },
   {
     "id": "3100668_shop1",
@@ -3387,7 +3439,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_shop1_0.webp"
-    ]
+    ],
+    "zhName": "不對稱羽毛耳環"
   },
   {
     "id": "3100668_shop2",
@@ -3445,7 +3498,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_shop2_0.webp"
-    ]
+    ],
+    "zhName": "冒險時尚背包"
   },
   {
     "id": "3100668_0",
@@ -3499,7 +3553,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_0_0.webp"
-    ]
+    ],
+    "zhName": "心跳探險隊"
   },
   {
     "id": "3100668_1",
@@ -3553,7 +3608,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100668_1_0.webp"
-    ]
+    ],
+    "zhName": "清新微風"
   },
   {
     "id": "3100667_0",
@@ -3602,7 +3658,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3100667_0_0.webp"
-    ]
+    ],
+    "zhName": "西施犬"
   },
   {
     "id": "3100666_box0",
@@ -3657,7 +3714,8 @@
     "firstReleaseId": "3100666_box0",
     "firstReleaseDate": "2025.08.21",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：蜂蜜滴"
   },
   {
     "id": "3100666_box1",
@@ -3715,7 +3773,8 @@
     "firstReleaseId": "3100666_box1",
     "firstReleaseDate": "2025.08.21",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：鮮明時光"
   },
   {
     "id": "3100664_box0",
@@ -3799,7 +3858,8 @@
       "assets/fashion-web/3100664_box0_3.webp",
       "assets/fashion-web/3100664_box0_4.webp",
       "assets/fashion-web/3100664_box0_5.webp"
-    ]
+    ],
+    "zhName": "微風樂器選擇箱"
   },
   {
     "id": "3100664_box1",
@@ -3856,7 +3916,8 @@
     "firstReleaseId": "3100664_box1",
     "firstReleaseDate": "2025.08.21",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：冷石"
   },
   {
     "id": "3147459_action0",
@@ -3912,7 +3973,8 @@
     "motionImages": [
       "assets/fashion-motion/3147459_action0_0.webp",
       "assets/fashion-motion/3147459_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：閱讀"
   },
   {
     "id": "3147459_action1",
@@ -3968,7 +4030,8 @@
     "motionImages": [
       "assets/fashion-motion/3147459_action1_0.webp",
       "assets/fashion-motion/3147459_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：演講"
   },
   {
     "id": "3147454_action0",
@@ -4029,7 +4092,8 @@
       "assets/fashion-motion/3147454_action0_0.webp",
       "assets/fashion-motion/3147454_action0_1.webp",
       "assets/fashion-motion/3147454_action0_2.webp"
-    ]
+    ],
+    "zhName": "動作：下定決心"
   },
   {
     "id": "3147454_action1",
@@ -4090,7 +4154,8 @@
       "assets/fashion-motion/3147454_action1_0.webp",
       "assets/fashion-motion/3147454_action1_1.webp",
       "assets/fashion-motion/3147454_action1_2.webp"
-    ]
+    ],
+    "zhName": "動作：懇求"
   },
   {
     "id": "3147454_action2",
@@ -4151,7 +4216,8 @@
       "assets/fashion-motion/3147454_action2_0.webp",
       "assets/fashion-motion/3147454_action2_1.webp",
       "assets/fashion-motion/3147454_action2_2.webp"
-    ]
+    ],
+    "zhName": "動作：祈禱"
   },
   {
     "id": "3147459",
@@ -4237,7 +4303,8 @@
       "assets/fashion-web/3147459_2.webp",
       "assets/fashion-web/3147459_3.webp",
       "assets/fashion-web/3147459_4.webp"
-    ]
+    ],
+    "zhName": "領主騎士"
   },
   {
     "id": "3147458",
@@ -4318,7 +4385,8 @@
       "assets/fashion-web/3147458_6.webp",
       "assets/fashion-web/3147458_7.webp",
       "assets/fashion-web/3147458_8.webp"
-    ]
+    ],
+    "zhName": "神聖露潔特"
   },
   {
     "id": "3147457_shop0",
@@ -4374,7 +4442,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147457_shop0_0.webp"
-    ]
+    ],
+    "zhName": "刀刃十字耳環"
   },
   {
     "id": "3147457_shop1",
@@ -4430,7 +4499,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147457_shop1_0.webp"
-    ]
+    ],
+    "zhName": "惡魔霸主眼罩"
   },
   {
     "id": "3147457_shop2",
@@ -4484,7 +4554,8 @@
     "firstReleaseId": "3147457_shop2",
     "firstReleaseDate": "2025.09.25",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "王國騎士眼罩"
   },
   {
     "id": "3147457_shop3",
@@ -4538,7 +4609,8 @@
     "firstReleaseId": "3147457_shop3",
     "firstReleaseDate": "2025.09.25",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "秘密霧面太陽眼鏡"
   },
   {
     "id": "3147457_0",
@@ -4590,7 +4662,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147457_0_0.webp"
-    ]
+    ],
+    "zhName": "神聖信念"
   },
   {
     "id": "3147457_1",
@@ -4642,7 +4715,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147457_1_0.webp"
-    ]
+    ],
+    "zhName": "淨化之光"
   },
   {
     "id": "3147456",
@@ -4691,7 +4765,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3147456_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證"
   },
   {
     "id": "3147454_box0",
@@ -4749,7 +4824,8 @@
     "firstReleaseId": "3147454_box0",
     "firstReleaseDate": "2025.09.25",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：融化巧克力"
   },
   {
     "id": "3147454_box1",
@@ -4807,7 +4883,8 @@
     "firstReleaseId": "3147454_box1",
     "firstReleaseDate": "2025.09.25",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：砂糖紫羅蘭"
   },
   {
     "id": "3147454_box2",
@@ -4904,7 +4981,8 @@
       "assets/fashion-web/3147454_box2_3.webp",
       "assets/fashion-web/3147454_box2_4.webp",
       "assets/fashion-web/3147454_box2_5.webp"
-    ]
+    ],
+    "zhName": "祝福之光樂器選擇箱"
   },
   {
     "id": "3163638",
@@ -4964,7 +5042,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3163638_0.webp"
-    ]
+    ],
+    "zhName": "中秋節戴月兔帽！活動公告"
   },
   {
     "id": "3190409_0",
@@ -5013,7 +5092,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3190409_0_0.webp"
-    ]
+    ],
+    "zhName": "倉鼠"
   },
   {
     "id": "3201519_action0",
@@ -5069,7 +5149,8 @@
     "motionImages": [
       "assets/fashion-motion/3201519_action0_0.webp",
       "assets/fashion-motion/3201519_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：扭轉舞"
   },
   {
     "id": "3201519_action1",
@@ -5120,7 +5201,8 @@
     ],
     "motionImages": [
       "assets/fashion-motion/3201519_action1_0.webp"
-    ]
+    ],
+    "zhName": "動作：V字踏步舞"
   },
   {
     "id": "3201519_action2",
@@ -5171,7 +5253,8 @@
     ],
     "motionImages": [
       "assets/fashion-motion/3201519_action2_0.webp"
-    ]
+    ],
+    "zhName": "動作：兩步舞"
   },
   {
     "id": "3201520_hair0",
@@ -5222,7 +5305,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201520_hair0_0.webp"
-    ]
+    ],
+    "zhName": "混合層次短髮"
   },
   {
     "id": "3201520_hair1",
@@ -5273,7 +5357,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201520_hair1_0.webp"
-    ]
+    ],
+    "zhName": "混合雙髻髮型"
   },
   {
     "id": "3201524_shop0",
@@ -5330,7 +5415,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201524_shop0_0.webp"
-    ]
+    ],
+    "zhName": "高貴派對面具"
   },
   {
     "id": "3201524_shop1",
@@ -5387,7 +5473,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201524_shop1_0.webp"
-    ]
+    ],
+    "zhName": "玫瑰墜飾耳環"
   },
   {
     "id": "3201524_0",
@@ -5456,7 +5543,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201524_0_0.webp"
-    ]
+    ],
+    "zhName": "淡淡的吸引力"
   },
   {
     "id": "3201524_1",
@@ -5525,7 +5613,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3201524_1_0.webp"
-    ]
+    ],
+    "zhName": "宴會主人"
   },
   {
     "id": "3201519_box0",
@@ -5582,7 +5671,8 @@
     "firstReleaseId": "3201519_box0",
     "firstReleaseDate": "2025.10.30",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：勃根地紅"
   },
   {
     "id": "3201519_box1",
@@ -5639,7 +5729,8 @@
     "firstReleaseId": "3201519_box1",
     "firstReleaseDate": "2025.10.30",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：深藍"
   },
   {
     "id": "3201519_box2",
@@ -5729,7 +5820,8 @@
       "assets/fashion-web/3201519_box2_3.webp",
       "assets/fashion-web/3201519_box2_4.webp",
       "assets/fashion-web/3201519_box2_5.webp"
-    ]
+    ],
+    "zhName": "舞會樂器選擇箱"
   },
   {
     "id": "3212047",
@@ -5778,7 +5870,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3212047_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證"
   },
   {
     "id": "3213444",
@@ -5840,7 +5933,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3213444_0.webp"
-    ]
+    ],
+    "zhName": "謝謝你，冒險家！Roll Roll 優惠券公告"
   },
   {
     "id": "3272482_action0",
@@ -5896,7 +5990,8 @@
     "motionImages": [
       "assets/fashion-motion/3272482_action0_0.webp",
       "assets/fashion-motion/3272482_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：使用望遠鏡"
   },
   {
     "id": "3272482_action1",
@@ -5952,7 +6047,8 @@
     "motionImages": [
       "assets/fashion-motion/3272482_action1_0.webp",
       "assets/fashion-motion/3272482_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：海洋之舞"
   },
   {
     "id": "3272483_shop0",
@@ -6006,7 +6102,8 @@
     "firstReleaseId": "3272483_shop0",
     "firstReleaseDate": "2025.11.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "層次眼部繃帶"
   },
   {
     "id": "3272483_shop1",
@@ -6060,7 +6157,8 @@
     "firstReleaseId": "3272483_shop1",
     "firstReleaseDate": "2025.11.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "平眼妝飾"
   },
   {
     "id": "3272483_shop2",
@@ -6114,7 +6212,8 @@
     "firstReleaseId": "3272483_shop2",
     "firstReleaseDate": "2025.11.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "克拉肯皮革護眼罩"
   },
   {
     "id": "3272483_0",
@@ -6166,7 +6265,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3272483_0_0.webp"
-    ]
+    ],
+    "zhName": "海洋的氣勢"
   },
   {
     "id": "3272483_1",
@@ -6218,7 +6318,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3272483_1_0.webp"
-    ]
+    ],
+    "zhName": "自由之波"
   },
   {
     "id": "3272482_box0",
@@ -6275,7 +6376,8 @@
     "firstReleaseId": "3272482_box0",
     "firstReleaseDate": "2025.11.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：蜜桃梅"
   },
   {
     "id": "3272482_box1",
@@ -6332,7 +6434,8 @@
     "firstReleaseId": "3272482_box1",
     "firstReleaseDate": "2025.11.27",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：金橄欖"
   },
   {
     "id": "3272482_box2",
@@ -6428,7 +6531,8 @@
       "assets/fashion-web/3272482_box2_3.webp",
       "assets/fashion-web/3272482_box2_4.webp",
       "assets/fashion-web/3272482_box2_5.webp"
-    ]
+    ],
+    "zhName": "黑海樂器選擇箱"
   },
   {
     "id": "3272481",
@@ -6489,7 +6593,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3272481_0.webp"
-    ]
+    ],
+    "zhName": "歡迎來到綠色菜園＆狸貓商店活動公告"
   },
   {
     "id": "3311098_action0",
@@ -6545,7 +6650,8 @@
     "motionImages": [
       "assets/fashion-motion/3311098_action0_0.webp",
       "assets/fashion-motion/3311098_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：下雪"
   },
   {
     "id": "3311098_action1",
@@ -6601,7 +6707,8 @@
     "motionImages": [
       "assets/fashion-motion/3311098_action1_0.webp",
       "assets/fashion-motion/3311098_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：撒雪花"
   },
   {
     "id": "3311098_action2",
@@ -6657,7 +6764,8 @@
     "motionImages": [
       "assets/fashion-motion/3311098_action2_0.webp",
       "assets/fashion-motion/3311098_action2_1.webp"
-    ]
+    ],
+    "zhName": "動作：吃鯛魚燒"
   },
   {
     "id": "3311098_action3",
@@ -6713,7 +6821,8 @@
     "motionImages": [
       "assets/fashion-motion/3311098_action3_0.webp",
       "assets/fashion-motion/3311098_action3_1.webp"
-    ]
+    ],
+    "zhName": "動作：吃烤地瓜"
   },
   {
     "id": "3311093_action0",
@@ -6769,7 +6878,8 @@
     "motionImages": [
       "assets/fashion-motion/3311093_action0_0.webp",
       "assets/fashion-motion/3311093_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：我就是禮物"
   },
   {
     "id": "3311093_action1",
@@ -6825,7 +6935,8 @@
     "motionImages": [
       "assets/fashion-motion/3311093_action1_0.webp",
       "assets/fashion-motion/3311093_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：噴雪"
   },
   {
     "id": "3311093_action2",
@@ -6881,7 +6992,8 @@
     "motionImages": [
       "assets/fashion-motion/3311093_action2_0.webp",
       "assets/fashion-motion/3311093_action2_1.webp"
-    ]
+    ],
+    "zhName": "動作：堆雪人"
   },
   {
     "id": "3311101_box0",
@@ -6955,7 +7067,8 @@
       "assets/fashion-web/3311101_box0_0.webp",
       "assets/fashion-web/3311101_box0_1.webp",
       "assets/fashion-web/3311101_box0_2.webp"
-    ]
+    ],
+    "zhName": "三麗鷗角色樂器選擇箱"
   },
   {
     "id": "3311101_0",
@@ -7007,7 +7120,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311101_0_0.webp"
-    ]
+    ],
+    "zhName": "Hello Kitty"
   },
   {
     "id": "3311101_1",
@@ -7059,7 +7173,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311101_1_0.webp"
-    ]
+    ],
+    "zhName": "酷洛米"
   },
   {
     "id": "3311101_2",
@@ -7111,7 +7226,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311101_2_0.webp"
-    ]
+    ],
+    "zhName": "汪汪！布丁狗"
   },
   {
     "id": "3311099",
@@ -7193,7 +7309,8 @@
       "assets/fashion-web/3311099_6.webp",
       "assets/fashion-web/3311099_7.webp",
       "assets/fashion-web/3311099_8.webp"
-    ]
+    ],
+    "zhName": "霜凍避風港"
   },
   {
     "id": "3311098",
@@ -7278,7 +7395,8 @@
       "assets/fashion-web/3311098_2.webp",
       "assets/fashion-web/3311098_3.webp",
       "assets/fashion-web/3311098_4.webp"
-    ]
+    ],
+    "zhName": "貴族榮耀"
   },
   {
     "id": "3311096_shop0",
@@ -7332,7 +7450,8 @@
     "firstReleaseId": "3311096_shop0",
     "firstReleaseDate": "2025.12.18",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "雪境邊緣彩繪（正面）"
   },
   {
     "id": "3311096_shop1",
@@ -7388,7 +7507,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311096_shop1_0.webp"
-    ]
+    ],
+    "zhName": "雪球耳環"
   },
   {
     "id": "3311096_shop2",
@@ -7444,7 +7564,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311096_shop2_0.webp"
-    ]
+    ],
+    "zhName": "發光鼻飾"
   },
   {
     "id": "3311096_0",
@@ -7496,7 +7617,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311096_0_0.webp"
-    ]
+    ],
+    "zhName": "冬日小徑"
   },
   {
     "id": "3311096_1",
@@ -7548,7 +7670,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311096_1_0.webp"
-    ]
+    ],
+    "zhName": "冰海吐息"
   },
   {
     "id": "3311095_0",
@@ -7597,7 +7720,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311095_0_0.webp"
-    ]
+    ],
+    "zhName": "小熊貓"
   },
   {
     "id": "3311094",
@@ -7646,7 +7770,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311094_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證"
   },
   {
     "id": "3311093_box0",
@@ -7704,7 +7829,8 @@
     "firstReleaseId": "3311093_box0",
     "firstReleaseDate": "2025.12.18",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：冬莓紅"
   },
   {
     "id": "3311093_box1",
@@ -7762,7 +7888,8 @@
     "firstReleaseId": "3311093_box1",
     "firstReleaseDate": "2025.12.18",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：節慶樹"
   },
   {
     "id": "3311093_box2",
@@ -7853,7 +7980,8 @@
       "assets/fashion-web/3311093_box2_3.webp",
       "assets/fashion-web/3311093_box2_4.webp",
       "assets/fashion-web/3311093_box2_5.webp"
-    ]
+    ],
+    "zhName": "冬夜之夢樂器選擇箱"
   },
   {
     "id": "3311070_0",
@@ -7904,7 +8032,8 @@
     "localImages": [
       "assets/fashion-web/3311070_0_0.webp",
       "assets/fashion-web/3311070_0_1.webp"
-    ]
+    ],
+    "zhName": "黛西的小小時尚工坊閃亮開幕！"
   },
   {
     "id": "3311069",
@@ -7966,7 +8095,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311069_0.webp"
-    ]
+    ],
+    "zhName": "瑪奇 Mobile × 三麗鷗角色的特別相遇！活動公告"
   },
   {
     "id": "3311067",
@@ -8027,7 +8157,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3311067_0.webp"
-    ]
+    ],
+    "zhName": "為了大家的冬日祭典樹！活動公告"
   },
   {
     "id": "3345414_shop0",
@@ -8084,7 +8215,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_shop0_0.webp"
-    ]
+    ],
+    "zhName": "深植靈魂面具（正面）"
   },
   {
     "id": "3345414_shop1",
@@ -8141,7 +8273,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_shop1_0.webp"
-    ]
+    ],
+    "zhName": "鋼鐵心智耳環"
   },
   {
     "id": "3345414_shop2",
@@ -8198,7 +8331,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_shop2_0.webp"
-    ]
+    ],
+    "zhName": "命運織紋耳環"
   },
   {
     "id": "3345414_0",
@@ -8251,7 +8385,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_0_0.webp"
-    ]
+    ],
+    "zhName": "冬日旅程"
   },
   {
     "id": "3345414_1",
@@ -8304,7 +8439,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_1_0.webp"
-    ]
+    ],
+    "zhName": "寂靜同行"
   },
   {
     "id": "3345414_2",
@@ -8357,7 +8493,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3345414_2_0.webp"
-    ]
+    ],
+    "zhName": "預言的隱士"
   },
   {
     "id": "3345413_box0",
@@ -8430,7 +8567,8 @@
     "firstReleaseId": "3345413_box0",
     "firstReleaseDate": "2026.01.15",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：金色光輝"
   },
   {
     "id": "3345413_box1",
@@ -8503,7 +8641,8 @@
     "firstReleaseId": "3345413_box1",
     "firstReleaseDate": "2026.01.15",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：藍色微風"
   },
   {
     "id": "3345413_box2",
@@ -8593,7 +8732,8 @@
       "assets/fashion-web/3345413_box2_3.webp",
       "assets/fashion-web/3345413_box2_4.webp",
       "assets/fashion-web/3345413_box2_5.webp"
-    ]
+    ],
+    "zhName": "宇宙旋律樂器選擇箱"
   },
   {
     "id": "3359490",
@@ -8642,7 +8782,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3359490_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證公告"
   },
   {
     "id": "3359489",
@@ -8702,7 +8843,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3359489_0.webp"
-    ]
+    ],
+    "zhName": "魔族討伐獎金活動公告"
   },
   {
     "id": "3373324_hair0",
@@ -8757,7 +8899,8 @@
     "localImages": [
       "assets/fashion-web/3373324_hair0_0.webp",
       "assets/fashion-web/3373324_hair0_1.webp"
-    ]
+    ],
+    "zhName": "輕盈長波浪燙髮"
   },
   {
     "id": "3373324_hair1",
@@ -8812,7 +8955,8 @@
     "localImages": [
       "assets/fashion-web/3373324_hair1_0.webp",
       "assets/fashion-web/3373324_hair1_1.webp"
-    ]
+    ],
+    "zhName": "Undercut 層次髮型"
   },
   {
     "id": "3373324_hair2",
@@ -8863,7 +9007,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373324_hair2_0.webp"
-    ]
+    ],
+    "zhName": "正式油頭"
   },
   {
     "id": "3373324_hair3",
@@ -8914,7 +9059,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373324_hair3_0.webp"
-    ]
+    ],
+    "zhName": "編髮雙馬尾"
   },
   {
     "id": "3373324_action0",
@@ -8975,7 +9121,8 @@
       "assets/fashion-motion/3373324_action0_0.webp",
       "assets/fashion-motion/3373324_action0_1.webp",
       "assets/fashion-motion/3373324_action0_2.webp"
-    ]
+    ],
+    "zhName": "動作：贈送巧克力"
   },
   {
     "id": "3373324_action1",
@@ -9031,7 +9178,8 @@
     "motionImages": [
       "assets/fashion-motion/3373324_action1_0.webp",
       "assets/fashion-motion/3373324_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：情侶舞"
   },
   {
     "id": "3373326_shop0",
@@ -9088,7 +9236,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373326_shop0_0.webp"
-    ]
+    ],
+    "zhName": "棉花熊背包"
   },
   {
     "id": "3373326_shop1",
@@ -9145,7 +9294,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373326_shop1_0.webp"
-    ]
+    ],
+    "zhName": "東方流蘇耳環"
   },
   {
     "id": "3373326_0",
@@ -9198,7 +9348,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373326_0_0.webp"
-    ]
+    ],
+    "zhName": "玫瑰色心動"
   },
   {
     "id": "3373326_1",
@@ -9251,7 +9402,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373326_1_0.webp"
-    ]
+    ],
+    "zhName": "甜蜜告白"
   },
   {
     "id": "3373326_2",
@@ -9304,7 +9456,8 @@
     "rerunIndex": 1,
     "localImages": [
       "assets/fashion-web/3373326_2_0.webp"
-    ]
+    ],
+    "zhName": "小狼"
   },
   {
     "id": "3373324_box0",
@@ -9363,7 +9516,8 @@
     "firstReleaseId": "3373324_box0",
     "firstReleaseDate": "2026.02.12",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：可愛粉紅"
   },
   {
     "id": "3373323_box0",
@@ -9419,7 +9573,8 @@
     "firstReleaseId": "3373323_box0",
     "firstReleaseDate": "2026.02.12",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：粉灰"
   },
   {
     "id": "3373323_box1",
@@ -9475,7 +9630,8 @@
     "firstReleaseId": "3373323_box1",
     "firstReleaseDate": "2026.02.12",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：可可"
   },
   {
     "id": "3373323_box2",
@@ -9570,7 +9726,8 @@
       "assets/fashion-web/3373323_box2_3.webp",
       "assets/fashion-web/3373323_box2_4.webp",
       "assets/fashion-web/3373323_box2_5.webp"
-    ]
+    ],
+    "zhName": "告白時刻樂器選擇箱"
   },
   {
     "id": "3373322",
@@ -9633,7 +9790,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373322_0.webp"
-    ]
+    ],
+    "zhName": "想吃扎魯珀喵！活動公告"
   },
   {
     "id": "3373321",
@@ -9693,7 +9851,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373321_0.webp"
-    ]
+    ],
+    "zhName": "新年的開始就在艾琳！活動公告"
   },
   {
     "id": "3373319",
@@ -9753,7 +9912,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3373319_0.webp"
-    ]
+    ],
+    "zhName": "Daily Weekly！幸運滿滿活動公告"
   },
   {
     "id": "3398065_0",
@@ -9802,7 +9962,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3398065_0_0.webp"
-    ]
+    ],
+    "zhName": "楓葉朋友們"
   },
   {
     "id": "3398062",
@@ -9851,7 +10012,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3398062_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證公告"
   },
   {
     "id": "3398052",
@@ -9909,7 +10071,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3398052_0.webp"
-    ]
+    ],
+    "zhName": "咚！咚！史萊姆地城！活動公告"
   },
   {
     "id": "3398055",
@@ -9969,7 +10132,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3398055_0.webp"
-    ]
+    ],
+    "zhName": "艾琳的黃金馬車活動公告"
   },
   {
     "id": "3398043",
@@ -10034,7 +10198,8 @@
     "localImages": [
       "assets/fashion-web/3398043_0.webp",
       "assets/fashion-web/3398043_1.webp"
-    ]
+    ],
+    "zhName": "大家一起來，深淵！＆大家一起來，Raid！活動公告"
   },
   {
     "id": "3407265_action0",
@@ -10090,7 +10255,8 @@
     "motionImages": [
       "assets/fashion-motion/3407265_action0_0.webp",
       "assets/fashion-motion/3407265_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：吹起花風"
   },
   {
     "id": "3407265_action1",
@@ -10146,7 +10312,8 @@
     "motionImages": [
       "assets/fashion-motion/3407265_action1_0.webp",
       "assets/fashion-motion/3407265_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：淋花雨"
   },
   {
     "id": "3407265_action2",
@@ -10197,7 +10364,8 @@
     ],
     "motionImages": [
       "assets/fashion-motion/3407265_action2_0.webp"
-    ]
+    ],
+    "zhName": "動作：裝飾慶典"
   },
   {
     "id": "3407265_action3",
@@ -10263,7 +10431,8 @@
       "assets/fashion-motion/3407265_action3_1.webp",
       "assets/fashion-motion/3407265_action3_2.webp",
       "assets/fashion-motion/3407265_action3_3.webp"
-    ]
+    ],
+    "zhName": "動作：吹蠟燭"
   },
   {
     "id": "3407265_action4",
@@ -10329,7 +10498,8 @@
       "assets/fashion-motion/3407265_action4_1.webp",
       "assets/fashion-motion/3407265_action4_2.webp",
       "assets/fashion-motion/3407265_action4_3.webp"
-    ]
+    ],
+    "zhName": "動作：慶祝氣球"
   },
   {
     "id": "3407261_action0",
@@ -10385,7 +10555,8 @@
     "motionImages": [
       "assets/fashion-motion/3407261_action0_0.webp",
       "assets/fashion-motion/3407261_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：飛機"
   },
   {
     "id": "3407261_action1",
@@ -10441,7 +10612,8 @@
     "motionImages": [
       "assets/fashion-motion/3407261_action1_0.webp",
       "assets/fashion-motion/3407261_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：偶爾轉圈"
   },
   {
     "id": "3407261_action2",
@@ -10497,7 +10669,8 @@
     "motionImages": [
       "assets/fashion-motion/3407261_action2_4.webp",
       "assets/fashion-motion/3407261_action2_5.webp"
-    ]
+    ],
+    "zhName": "動作：鏘鏘"
   },
   {
     "id": "3407266",
@@ -10554,7 +10727,8 @@
       "assets/fashion-web/3407266_0.webp",
       "assets/fashion-web/3407266_1.webp",
       "assets/fashion-web/3407266_2.webp"
-    ]
+    ],
+    "zhName": "晨曦塞雷妮亞"
   },
   {
     "id": "3407265",
@@ -10643,7 +10817,8 @@
       "assets/fashion-web/3407265_2.webp",
       "assets/fashion-web/3407265_3.webp",
       "assets/fashion-web/3407265_4.webp"
-    ]
+    ],
+    "zhName": "邊境漫遊者"
   },
   {
     "id": "3407264_shop0",
@@ -10700,7 +10875,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407264_shop0_0.webp"
-    ]
+    ],
+    "zhName": "每日旅程背包"
   },
   {
     "id": "3407264_shop1",
@@ -10757,7 +10933,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407264_shop1_0.webp"
-    ]
+    ],
+    "zhName": "趣味時刻髮帶"
   },
   {
     "id": "3407264_0",
@@ -10810,7 +10987,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407264_0_0.webp"
-    ]
+    ],
+    "zhName": "綻放的陽光"
   },
   {
     "id": "3407264_1",
@@ -10863,7 +11041,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407264_1_0.webp"
-    ]
+    ],
+    "zhName": "高中戀曲"
   },
   {
     "id": "3407263_0",
@@ -10912,7 +11091,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407263_0_0.webp"
-    ]
+    ],
+    "zhName": "挪威森林"
   },
   {
     "id": "3407263_1",
@@ -10961,7 +11141,8 @@
     "rerunIndex": 1,
     "localImages": [
       "assets/fashion-web/3407263_1_0.webp"
-    ]
+    ],
+    "zhName": "小貓頭鷹"
   },
   {
     "id": "3407262",
@@ -11017,7 +11198,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3407262_0.webp"
-    ]
+    ],
+    "zhName": "（修訂）3/26（四）新套組公告"
   },
   {
     "id": "3407261_box0",
@@ -11075,7 +11257,8 @@
     "firstReleaseId": "3407261_box0",
     "firstReleaseDate": "2026.03.26",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：迷霧薰衣草"
   },
   {
     "id": "3407261_box1",
@@ -11133,7 +11316,8 @@
     "firstReleaseId": "3407261_box1",
     "firstReleaseDate": "2026.03.26",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：鼠尾草花園"
   },
   {
     "id": "3407261_box2",
@@ -11191,7 +11375,8 @@
     "firstReleaseId": "2957837_box2",
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：冥想"
   },
   {
     "id": "3407261_box3",
@@ -11249,7 +11434,8 @@
     "firstReleaseId": "2906348_box0",
     "firstReleaseDate": "2025.05.22",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：櫻花"
   },
   {
     "id": "3407261_box4",
@@ -11307,7 +11493,8 @@
     "firstReleaseId": "2757703_box0",
     "firstReleaseDate": "2025.03.27",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：綻放薰衣草"
   },
   {
     "id": "3407261_box5",
@@ -11365,7 +11552,8 @@
     "firstReleaseId": "3407261_box5",
     "firstReleaseDate": "2026.03.26",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：黃色微風"
   },
   {
     "id": "3407261_box6",
@@ -11462,7 +11650,8 @@
       "assets/fashion-web/3407261_box6_3.webp",
       "assets/fashion-web/3407261_box6_4.webp",
       "assets/fashion-web/3407261_box6_5.webp"
-    ]
+    ],
+    "zhName": "春日小夜曲樂器選擇箱"
   },
   {
     "id": "3406748",
@@ -11523,7 +11712,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3406748_0.webp"
-    ]
+    ],
+    "zhName": "艾琳燃燒嘉年華活動公告"
   },
   {
     "id": "3406750",
@@ -11591,7 +11781,8 @@
     "localImages": [
       "assets/fashion-web/3406750_0.webp",
       "assets/fashion-web/3406750_1.webp"
-    ]
+    ],
+    "zhName": "一週年艾爾尼德島大祭典活動公告"
   },
   {
     "id": "3414447_0",
@@ -11642,7 +11833,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3414447_0_0.webp"
-    ]
+    ],
+    "zhName": "隨風而行的松鼠"
   },
   {
     "id": "3414447_1",
@@ -11693,7 +11885,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3414447_1_0.webp"
-    ]
+    ],
+    "zhName": "橡果倉鼠"
   },
   {
     "id": "3428339_action0",
@@ -11769,7 +11962,8 @@
       "assets/fashion-motion/3428339_action0_3.webp",
       "assets/fashion-motion/3428339_action0_4.webp",
       "assets/fashion-motion/3428339_action0_5.webp"
-    ]
+    ],
+    "zhName": "動作：帽子魔術"
   },
   {
     "id": "3428339_action1",
@@ -11835,7 +12029,8 @@
       "assets/fashion-motion/3428339_action1_1.webp",
       "assets/fashion-motion/3428339_action1_2.webp",
       "assets/fashion-motion/3428339_action1_3.webp"
-    ]
+    ],
+    "zhName": "動作：紙牌魔術"
   },
   {
     "id": "3428339_action2",
@@ -11886,7 +12081,8 @@
     ],
     "motionImages": [
       "assets/fashion-motion/3428339_action2_0.webp"
-    ]
+    ],
+    "zhName": "動作：轉盤子"
   },
   {
     "id": "3428346_shop0",
@@ -11942,7 +12138,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428346_shop0_0.webp"
-    ]
+    ],
+    "zhName": "實心核心面具"
   },
   {
     "id": "3428346_0",
@@ -11994,7 +12191,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428346_0_0.webp"
-    ]
+    ],
+    "zhName": "街頭節拍"
   },
   {
     "id": "3428346_1",
@@ -12046,7 +12244,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428346_1_0.webp"
-    ]
+    ],
+    "zhName": "銀色王冠"
   },
   {
     "id": "3428337",
@@ -12095,7 +12294,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428337_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證公告"
   },
   {
     "id": "3428339_box0",
@@ -12152,7 +12352,8 @@
     "firstReleaseId": "3428339_box0",
     "firstReleaseDate": "2026.04.23",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：柔和長春花"
   },
   {
     "id": "3428339_box1",
@@ -12209,7 +12410,8 @@
     "firstReleaseId": "3428339_box1",
     "firstReleaseDate": "2026.04.23",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：春日玫瑰"
   },
   {
     "id": "3428339_box2",
@@ -12299,7 +12501,8 @@
       "assets/fashion-web/3428339_box2_3.webp",
       "assets/fashion-web/3428339_box2_4.webp",
       "assets/fashion-web/3428339_box2_5.webp"
-    ]
+    ],
+    "zhName": "科技律動樂器選擇箱"
   },
   {
     "id": "3428241",
@@ -12359,7 +12562,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3428241_0.webp"
-    ]
+    ],
+    "zhName": "每日毛絨小雞玩偶活動公告"
   },
   {
     "id": "3447992_hair0",
@@ -12410,7 +12614,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447992_hair0_0.webp"
-    ]
+    ],
+    "zhName": "雙髻長髮"
   },
   {
     "id": "3447992_hair1",
@@ -12461,7 +12666,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447992_hair1_0.webp"
-    ]
+    ],
+    "zhName": "捲曲葉形燙髮"
   },
   {
     "id": "3447992_hair2",
@@ -12516,7 +12722,8 @@
     "localImages": [
       "assets/fashion-web/3447992_hair2_0.webp",
       "assets/fashion-web/3447992_hair2_1.webp"
-    ]
+    ],
+    "zhName": "齊瀏海盤髮"
   },
   {
     "id": "3447992_hair3",
@@ -12571,7 +12778,8 @@
     "localImages": [
       "assets/fashion-web/3447992_hair3_0.webp",
       "assets/fashion-web/3447992_hair3_1.webp"
-    ]
+    ],
+    "zhName": "風剪短髮"
   },
   {
     "id": "3447996_shop0",
@@ -12627,7 +12835,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447996_shop0_0.webp"
-    ]
+    ],
+    "zhName": "永恆優雅耳環"
   },
   {
     "id": "3447996_0",
@@ -12679,7 +12888,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447996_0_0.webp"
-    ]
+    ],
+    "zhName": "親愛的優雅"
   },
   {
     "id": "3447996_1",
@@ -12731,7 +12941,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447996_1_0.webp"
-    ]
+    ],
+    "zhName": "紳士優雅"
   },
   {
     "id": "3447994_0",
@@ -12780,7 +12991,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3447994_0_0.webp"
-    ]
+    ],
+    "zhName": "小豬"
   },
   {
     "id": "3447990_box0",
@@ -12837,7 +13049,8 @@
     "firstReleaseId": "3447990_box0",
     "firstReleaseDate": "2026.05.21",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：柔和香草"
   },
   {
     "id": "3447990_box1",
@@ -12894,7 +13107,8 @@
     "firstReleaseId": "3447990_box1",
     "firstReleaseDate": "2026.05.21",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：午夜藍"
   },
   {
     "id": "3447990_box2",
@@ -12984,7 +13198,8 @@
       "assets/fashion-web/3447990_box2_3.webp",
       "assets/fashion-web/3447990_box2_4.webp",
       "assets/fashion-web/3447990_box2_5.webp"
-    ]
+    ],
+    "zhName": "燦爛約定樂器選擇箱"
   },
   {
     "id": "3466205",
@@ -13044,7 +13259,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3466205_0.webp"
-    ]
+    ],
+    "zhName": "挑戰！紅眼格拉斯基布恩活動公告"
   },
   {
     "id": "3473711_hair0",
@@ -13099,7 +13315,8 @@
     "localImages": [
       "assets/fashion-web/3473711_hair0_0.webp",
       "assets/fashion-web/3473711_hair0_1.webp"
-    ]
+    ],
+    "zhName": "齊瀏海長髮"
   },
   {
     "id": "3473711_hair1",
@@ -13154,7 +13371,8 @@
     "localImages": [
       "assets/fashion-web/3473711_hair1_0.webp",
       "assets/fashion-web/3473711_hair1_1.webp"
-    ]
+    ],
+    "zhName": "秘密混合短髮"
   },
   {
     "id": "3473711_hair2",
@@ -13209,7 +13427,8 @@
     "localImages": [
       "assets/fashion-web/3473711_hair2_0.webp",
       "assets/fashion-web/3473711_hair2_1.webp"
-    ]
+    ],
+    "zhName": "旁分短髮"
   },
   {
     "id": "3473710",
@@ -13271,7 +13490,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3473710_0.webp"
-    ]
+    ],
+    "zhName": "冰川峽谷，與巨大野獸相遇活動公告"
   },
   {
     "id": "3481578_action0",
@@ -13327,7 +13547,8 @@
     "motionImages": [
       "assets/fashion-motion/3481578_action0_0.webp",
       "assets/fashion-motion/3481578_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：撐傘"
   },
   {
     "id": "3481578_action1",
@@ -13383,7 +13604,8 @@
     "motionImages": [
       "assets/fashion-motion/3481578_action1_0.webp",
       "assets/fashion-motion/3481578_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：戴荷葉"
   },
   {
     "id": "3481578_action2",
@@ -13444,7 +13666,8 @@
       "assets/fashion-motion/3481578_action2_0.webp",
       "assets/fashion-motion/3481578_action2_1.webp",
       "assets/fashion-motion/3481578_action2_2.webp"
-    ]
+    ],
+    "zhName": "動作：玩娃娃"
   },
   {
     "id": "3481578_action3",
@@ -13505,7 +13728,8 @@
       "assets/fashion-motion/3481578_action3_0.webp",
       "assets/fashion-motion/3481578_action3_1.webp",
       "assets/fashion-motion/3481578_action3_2.webp"
-    ]
+    ],
+    "zhName": "動作：玩水槍"
   },
   {
     "id": "3481571_action0",
@@ -13561,7 +13785,8 @@
     "motionImages": [
       "assets/fashion-motion/3481571_action0_0.webp",
       "assets/fashion-motion/3481571_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：搖搖晃晃"
   },
   {
     "id": "3481571_action1",
@@ -13617,7 +13842,8 @@
     "motionImages": [
       "assets/fashion-motion/3481571_action1_0.webp",
       "assets/fashion-motion/3481571_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：模仿動物"
   },
   {
     "id": "3481571_action2",
@@ -13673,7 +13899,8 @@
     "motionImages": [
       "assets/fashion-motion/3481571_action2_0.webp",
       "assets/fashion-motion/3481571_action2_1.webp"
-    ]
+    ],
+    "zhName": "動作：環顧四周"
   },
   {
     "id": "3481579",
@@ -13730,7 +13957,8 @@
       "assets/fashion-web/3481579_0.webp",
       "assets/fashion-web/3481579_1.webp",
       "assets/fashion-web/3481579_2.webp"
-    ]
+    ],
+    "zhName": "幻影卡爾德莉亞"
   },
   {
     "id": "3481578",
@@ -13817,7 +14045,8 @@
       "assets/fashion-web/3481578_2.webp",
       "assets/fashion-web/3481578_3.webp",
       "assets/fashion-web/3481578_4.webp"
-    ]
+    ],
+    "zhName": "鼠尾草羅倫"
   },
   {
     "id": "3481577_shop0",
@@ -13885,7 +14114,8 @@
       "assets/fashion-web/3481577_shop0_1.webp",
       "assets/fashion-web/3481577_shop0_2.webp",
       "assets/fashion-web/3481577_shop0_3.webp"
-    ]
+    ],
+    "zhName": "甜蜜月夜夢境面具"
   },
   {
     "id": "3481577_0",
@@ -13937,7 +14167,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481577_0_0.webp"
-    ]
+    ],
+    "zhName": "甜蜜月夜"
   },
   {
     "id": "3481577_1",
@@ -13989,7 +14220,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481577_1_0.webp"
-    ]
+    ],
+    "zhName": "鐘形王冠"
   },
   {
     "id": "3481576",
@@ -14038,7 +14270,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3481576_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證公告"
   },
   {
     "id": "3481571_box0",
@@ -14096,7 +14329,8 @@
     "firstReleaseId": "3481571_box0",
     "firstReleaseDate": "2026.06.25",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：柔和紅寶石"
   },
   {
     "id": "3481571_box1",
@@ -14154,7 +14388,8 @@
     "firstReleaseId": "3481571_box1",
     "firstReleaseDate": "2026.06.25",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：奶油蜜瓜"
   },
   {
     "id": "3481571_box2",
@@ -14245,7 +14480,8 @@
       "assets/fashion-web/3481571_box2_3.webp",
       "assets/fashion-web/3481571_box2_4.webp",
       "assets/fashion-web/3481571_box2_5.webp"
-    ]
+    ],
+    "zhName": "甦醒氣息樂器選擇箱"
   },
   {
     "id": "3481567",
@@ -14342,7 +14578,8 @@
       "assets/fashion-web/3481567_3.webp",
       "assets/fashion-web/3481567_4.webp",
       "assets/fashion-web/3481567_5.webp"
-    ]
+    ],
+    "zhName": "奇怪貓咪的旅程商店活動公告"
   },
   {
     "id": "3500242_action0",
@@ -14398,7 +14635,8 @@
     "motionImages": [
       "assets/fashion-motion/3500242_action0_0.webp",
       "assets/fashion-motion/3500242_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：瑟瑟發抖"
   },
   {
     "id": "3500242_action1",
@@ -14454,7 +14692,8 @@
     "motionImages": [
       "assets/fashion-motion/3500242_action1_0.webp",
       "assets/fashion-motion/3500242_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：魂飛魄散"
   },
   {
     "id": "3500242_action2",
@@ -14510,7 +14749,8 @@
     "motionImages": [
       "assets/fashion-motion/3500242_action2_0.webp",
       "assets/fashion-motion/3500242_action2_1.webp"
-    ]
+    ],
+    "zhName": "動作：驚訝"
   },
   {
     "id": "3500242_action3",
@@ -14566,7 +14806,8 @@
     "motionImages": [
       "assets/fashion-motion/3500242_action3_0.webp",
       "assets/fashion-motion/3500242_action3_1.webp"
-    ]
+    ],
+    "zhName": "動作：嚇人"
   },
   {
     "id": "3500246_shop0",
@@ -14622,7 +14863,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3500246_shop0_0.webp"
-    ]
+    ],
+    "zhName": "迷霧圓框太陽眼鏡"
   },
   {
     "id": "3500246_0",
@@ -14674,7 +14916,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3500246_0_0.webp"
-    ]
+    ],
+    "zhName": "珍珠海洋泳裝"
   },
   {
     "id": "3500246_1",
@@ -14726,7 +14969,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3500246_1_0.webp"
-    ]
+    ],
+    "zhName": "海洋波浪制服"
   },
   {
     "id": "3500242_box0",
@@ -14784,7 +15028,8 @@
     "firstReleaseId": "2906348_box0",
     "firstReleaseDate": "2025.05.22",
     "rerunIndex": 2,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：櫻花"
   },
   {
     "id": "3500242_box1",
@@ -14842,7 +15087,8 @@
     "firstReleaseId": "2906348_box1",
     "firstReleaseDate": "2025.05.22",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：大地灰"
   },
   {
     "id": "3500242_box2",
@@ -14939,7 +15185,8 @@
       "assets/fashion-web/3500242_box2_3.webp",
       "assets/fashion-web/3500242_box2_4.webp",
       "assets/fashion-web/3500242_box2_5.webp"
-    ]
+    ],
+    "zhName": "夏日航海樂器選擇箱"
   },
   {
     "id": "3500234",
@@ -15011,7 +15258,8 @@
     "localImages": [
       "assets/fashion-web/3500234_0.webp",
       "assets/fashion-web/3500234_1.webp"
-    ]
+    ],
+    "zhName": "請給我健康的雞蛋活動公告"
   },
   {
     "id": "3505478_0",
@@ -15060,7 +15308,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3505478_0_0.webp"
-    ]
+    ],
+    "zhName": "壁虎"
   },
   {
     "id": "3505478_1",
@@ -15109,7 +15358,8 @@
     "rerunIndex": 1,
     "localImages": [
       "assets/fashion-web/3505478_1_0.webp"
-    ]
+    ],
+    "zhName": "西施犬"
   },
   {
     "id": "3511363",
@@ -15225,7 +15475,8 @@
       "assets/fashion-web/3511363_3.webp",
       "assets/fashion-web/3511363_4.webp",
       "assets/fashion-web/3511363_5.webp"
-    ]
+    ],
+    "zhName": "貓咪祭典幸運箱商品公告"
   },
   {
     "id": "3511361",
@@ -15459,7 +15710,8 @@
       "assets/fashion-web/3511361_39.webp",
       "assets/fashion-web/3511361_40.webp",
       "assets/fashion-web/3511361_41.webp"
-    ]
+    ],
+    "zhName": "貓咪祭典！天下第一鏟屎官大賽活動公告"
   },
   {
     "id": "3516480",
@@ -15511,7 +15763,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3516480_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證＆鄉村旅程收藏包商品公告"
   },
   {
     "id": "3521630_hair0",
@@ -15562,7 +15815,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521630_hair0_0.webp"
-    ]
+    ],
+    "zhName": "半紮長髮鬆捲"
   },
   {
     "id": "3521630_hair1",
@@ -15613,7 +15867,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521630_hair1_0.webp"
-    ]
+    ],
+    "zhName": "側梳 Undercut 髮型"
   },
   {
     "id": "3521627_action0",
@@ -15669,7 +15924,8 @@
     "motionImages": [
       "assets/fashion-motion/3521627_action0_0.webp",
       "assets/fashion-motion/3521627_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：吃棉花糖"
   },
   {
     "id": "3521627_action1",
@@ -15725,7 +15981,8 @@
     "motionImages": [
       "assets/fashion-motion/3521627_action1_0.webp",
       "assets/fashion-motion/3521627_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：吃玉米"
   },
   {
     "id": "3521627_action2",
@@ -15781,7 +16038,8 @@
     "motionImages": [
       "assets/fashion-motion/3521627_action2_0.webp",
       "assets/fashion-motion/3521627_action2_1.webp"
-    ]
+    ],
+    "zhName": "動作：喝飲料"
   },
   {
     "id": "3521633_shop0",
@@ -15837,7 +16095,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521633_shop0_0.webp"
-    ]
+    ],
+    "zhName": "融化甜蜜冰棒"
   },
   {
     "id": "3521633_0",
@@ -15889,7 +16148,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521633_0_0.webp"
-    ]
+    ],
+    "zhName": "布丁狗蘇打泳裝"
   },
   {
     "id": "3521633_1",
@@ -15941,7 +16201,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521633_1_0.webp"
-    ]
+    ],
+    "zhName": "熱帶日出"
   },
   {
     "id": "3521627_box0",
@@ -15998,7 +16259,8 @@
     "firstReleaseId": "2957837_box1",
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：摩洛哥薄荷"
   },
   {
     "id": "3521627_box1",
@@ -16055,7 +16317,8 @@
     "firstReleaseId": "2957837_box2",
     "firstReleaseDate": "2025.06.19",
     "rerunIndex": 2,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：冥想"
   },
   {
     "id": "3521627_box2",
@@ -16145,7 +16408,8 @@
       "assets/fashion-web/3521627_box2_3.webp",
       "assets/fashion-web/3521627_box2_4.webp",
       "assets/fashion-web/3521627_box2_5.webp"
-    ]
+    ],
+    "zhName": "熱帶樂器選擇箱"
   },
   {
     "id": "3521642",
@@ -16207,7 +16471,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3521642_0.webp"
-    ]
+    ],
+    "zhName": "大頭雞活動公告"
   },
   {
     "id": "3527888",
@@ -16259,7 +16524,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3527888_0.webp"
-    ]
+    ],
+    "zhName": "夏日假期收藏包公告"
   },
   {
     "id": "3532703_hair0",
@@ -16310,7 +16576,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3532703_hair0_0.webp"
-    ]
+    ],
+    "zhName": "編髮半馬尾"
   },
   {
     "id": "3532703_hair1",
@@ -16361,7 +16628,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3532703_hair1_0.webp"
-    ]
+    ],
+    "zhName": "鬆捲低馬尾"
   },
   {
     "id": "3545055_action0",
@@ -16417,7 +16685,8 @@
     "motionImages": [
       "assets/fashion-motion/3545055_action0_0.webp",
       "assets/fashion-motion/3545055_action0_1.webp"
-    ]
+    ],
+    "zhName": "動作：喜悅的節奏"
   },
   {
     "id": "3545055_action1",
@@ -16473,7 +16742,8 @@
     "motionImages": [
       "assets/fashion-motion/3545055_action1_0.webp",
       "assets/fashion-motion/3545055_action1_1.webp"
-    ]
+    ],
+    "zhName": "動作：喜悅的歡呼"
   },
   {
     "id": "3545055_action2",
@@ -16529,7 +16799,8 @@
     "motionImages": [
       "assets/fashion-motion/3545055_action2_0.webp",
       "assets/fashion-motion/3545055_action2_1.webp"
-    ]
+    ],
+    "zhName": "動作：洗牌舞"
   },
   {
     "id": "3545055_action3",
@@ -16585,7 +16856,8 @@
     "motionImages": [
       "assets/fashion-motion/3545055_action3_0.webp",
       "assets/fashion-motion/3545055_action3_1.webp"
-    ]
+    ],
+    "zhName": "動作：小鳥舞"
   },
   {
     "id": "3545049_action_bundle",
@@ -16642,7 +16914,8 @@
     "motionImages": [
       "assets/fashion-motion/3545049_action_bundle_0.webp",
       "assets/fashion-motion/3545049_action_bundle_1.webp"
-    ]
+    ],
+    "zhName": "震撼登場動作！箱子"
   },
   {
     "id": "3545058",
@@ -16699,7 +16972,8 @@
       "assets/fashion-web/3545058_0.webp",
       "assets/fashion-web/3545058_1.webp",
       "assets/fashion-web/3545058_2.webp"
-    ]
+    ],
+    "zhName": "哈維斯蒂亞祝福"
   },
   {
     "id": "3545055",
@@ -16784,7 +17058,8 @@
       "assets/fashion-web/3545055_2.webp",
       "assets/fashion-web/3545055_3.webp",
       "assets/fashion-web/3545055_4.webp"
-    ]
+    ],
+    "zhName": "盛大合奏"
   },
   {
     "id": "3545054_shop0",
@@ -16844,7 +17119,8 @@
     "localImages": [
       "assets/fashion-web/3545054_shop0_0.webp",
       "assets/fashion-web/3545054_shop0_1.webp"
-    ]
+    ],
+    "zhName": "甜蜜小羊縫製包"
   },
   {
     "id": "3545054_0",
@@ -16896,7 +17172,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545054_0_0.webp"
-    ]
+    ],
+    "zhName": "雲朵拉米"
   },
   {
     "id": "3545054_1",
@@ -16948,7 +17225,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545054_1_0.webp"
-    ]
+    ],
+    "zhName": "明澈奧斯"
   },
   {
     "id": "3545054_2",
@@ -17000,7 +17278,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545054_2_0.webp"
-    ]
+    ],
+    "zhName": "艾琳新手套裝"
   },
   {
     "id": "3545053_0",
@@ -17049,7 +17328,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545053_0_0.webp"
-    ]
+    ],
+    "zhName": "英國牧羊犬"
   },
   {
     "id": "3545050",
@@ -17098,7 +17378,8 @@
     "rerunIndex": 0,
     "localImages": [
       "assets/fashion-web/3545050_0.webp"
-    ]
+    ],
+    "zhName": "新手冒險家高級通行證＆柔和收穫收藏包公告"
   },
   {
     "id": "3545049_box0",
@@ -17195,7 +17476,8 @@
       "assets/fashion-web/3545049_box0_3.webp",
       "assets/fashion-web/3545049_box0_4.webp",
       "assets/fashion-web/3545049_box0_5.webp"
-    ]
+    ],
+    "zhName": "夕陽牧場樂器選擇箱"
   },
   {
     "id": "3545049_box1",
@@ -17253,7 +17535,8 @@
     "firstReleaseId": "3545049_box1",
     "firstReleaseDate": "2026.09.17",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：摩卡灰"
   },
   {
     "id": "3545049_box2",
@@ -17311,7 +17594,8 @@
     "firstReleaseId": "3545049_box2",
     "firstReleaseDate": "2026.09.17",
     "rerunIndex": 0,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：牛奶洋紅"
   },
   {
     "id": "3545049_box3",
@@ -17369,7 +17653,8 @@
     "firstReleaseId": "3037059_box1",
     "firstReleaseDate": "2025.07.17",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：夕陽紅"
   },
   {
     "id": "3545049_box4",
@@ -17427,7 +17712,8 @@
     "firstReleaseId": "3037059_box2",
     "firstReleaseDate": "2025.07.17",
     "rerunIndex": 1,
-    "localImages": []
+    "localImages": [],
+    "zhName": "染色劑選擇箱：海洋藍"
   },
   {
     "id": "3545042",
@@ -17495,24 +17781,21 @@
       "assets/fashion-web/3545042_0.webp",
       "assets/fashion-web/3545042_1.webp",
       "assets/fashion-web/3545042_2.webp"
-    ]
+    ],
+    "zhName": "中秋松糕交換所！活動公告"
   },
   {
-    "id": "3554491",
+    "id": "3554491_shop0",
     "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
-    "name": "크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
-    "displayName": "크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 스트라이커 세트",
+    "displayName": "크리온 스트라이커 세트",
     "category": "其他商城",
+    "productTypeOverride": "商店時裝",
+    "shopProductKind": "coord",
+    "isShopProduct": true,
     "krDate": "2026.10.01",
     "images": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/cf500303-7cb8-44ba-b5b8-3e7c48e51c74/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%BB%A4%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/a68e70a4-82a5-4728-9263-d11c07cdeb96/%ED%81%AC%EB%A6%AC%EC%98%A8%EB%8F%85%ED%83%9D%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/88f168a7-ebd5-4354-9725-39c21b472b96/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%9D%ED%8C%A8%EC%B9%98%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/3f69d8e8-b64b-424c-ae2c-5ffd24f9e642/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%99%80%EC%9D%B4%EC%96%B4%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/8e18e1dc-d7b5-4c82-8188-9ffc8dda7b64/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%8A%A4%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/751aaaac-b682-4662-aac4-2adfff7917bd/%EA%B7%80%EA%B1%B8%EC%9D%B4B.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/4e322341-e49a-46b0-83a0-81e887478ca1/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%B9%B4%EB%AA%A8%ED%94%8C%EB%9D%BC%EC%A5%AC%EB%B0%B1%ED%8C%A9.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/e72652ec-a17c-44fb-9d15-cb84bf521061/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%99%8D%EB%B3%B4%ED%8F%AC%EC%8A%A4%ED%84%B0.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/cf500303-7cb8-44ba-b5b8-3e7c48e51c74/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%BB%A4%EC%88%98%EC%A0%95.png"
     ],
     "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
     "twStatus": "unmatched",
@@ -17522,14 +17805,14 @@
     "twReleased": false,
     "twFullyReleased": false,
     "twMatchedImageCount": 0,
-    "twTotalImageCount": 8,
+    "twTotalImageCount": 1,
     "twDate": null,
     "twDateSource": null,
     "twSaleDateText": null,
     "twDates": [],
     "twTitles": [],
     "twEvidence": [],
-    "productType": "特殊活動抽獎盒",
+    "productType": "商店時裝",
     "relatedTypes": [
       "預覽"
     ],
@@ -17549,38 +17832,390 @@
     "legacyCategory": "其他商城",
     "sourceBoard": "/News/Notice",
     "galleryImages": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/cf500303-7cb8-44ba-b5b8-3e7c48e51c74/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%BB%A4%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/a68e70a4-82a5-4728-9263-d11c07cdeb96/%ED%81%AC%EB%A6%AC%EC%98%A8%EB%8F%85%ED%83%9D%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/88f168a7-ebd5-4354-9725-39c21b472b96/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%9D%ED%8C%A8%EC%B9%98%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/3f69d8e8-b64b-424c-ae2c-5ffd24f9e642/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%99%80%EC%9D%B4%EC%96%B4%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/8e18e1dc-d7b5-4c82-8188-9ffc8dda7b64/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%8A%A4%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/751aaaac-b682-4662-aac4-2adfff7917bd/%EA%B7%80%EA%B1%B8%EC%9D%B4B.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/4e322341-e49a-46b0-83a0-81e887478ca1/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%B9%B4%EB%AA%A8%ED%94%8C%EB%9D%BC%EC%A5%AC%EB%B0%B1%ED%8C%A9.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/e72652ec-a17c-44fb-9d15-cb84bf521061/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%99%8D%EB%B3%B4%ED%8F%AC%EC%8A%A4%ED%84%B0.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/cf500303-7cb8-44ba-b5b8-3e7c48e51c74/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%BB%A4%EC%88%98%EC%A0%95.png"
     ],
     "cardImages": [
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/cf500303-7cb8-44ba-b5b8-3e7c48e51c74/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%BB%A4%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/a68e70a4-82a5-4728-9263-d11c07cdeb96/%ED%81%AC%EB%A6%AC%EC%98%A8%EB%8F%85%ED%83%9D%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/88f168a7-ebd5-4354-9725-39c21b472b96/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%9D%ED%8C%A8%EC%B9%98%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/3f69d8e8-b64b-424c-ae2c-5ffd24f9e642/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%99%80%EC%9D%B4%EC%96%B4%EC%88%98%EC%A0%95.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/8e18e1dc-d7b5-4c82-8188-9ffc8dda7b64/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%8A%A4%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%81.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/751aaaac-b682-4662-aac4-2adfff7917bd/%EA%B7%80%EA%B1%B8%EC%9D%B4B.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/4e322341-e49a-46b0-83a0-81e887478ca1/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%B9%B4%EB%AA%A8%ED%94%8C%EB%9D%BC%EC%A5%AC%EB%B0%B1%ED%8C%A9.png",
-      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/e72652ec-a17c-44fb-9d15-cb84bf521061/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%99%8D%EB%B3%B4%ED%8F%AC%EC%8A%A4%ED%84%B0.png"
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/cf500303-7cb8-44ba-b5b8-3e7c48e51c74/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%8A%A4%ED%8A%B8%EB%9D%BC%EC%9D%B4%EC%BB%A4%EC%88%98%EC%A0%95.png"
     ],
     "isRerun": false,
-    "firstReleaseId": "3554491",
+    "firstReleaseId": "3554491_shop0",
     "firstReleaseDate": "2026.10.01",
     "rerunIndex": 0,
     "localImages": [
-      "assets/fashion-web/3554491_0.webp",
-      "assets/fashion-web/3554491_1.webp",
-      "assets/fashion-web/3554491_2.webp",
-      "assets/fashion-web/3554491_3.webp",
-      "assets/fashion-web/3554491_4.webp",
-      "assets/fashion-web/3554491_5.webp",
-      "assets/fashion-web/3554491_6.webp",
-      "assets/fashion-web/3554491_7.webp"
-    ]
+      "assets/fashion-web/3554491_0.webp"
+    ],
+    "zhName": "克里昂打擊者套裝"
+  },
+  {
+    "id": "3554491_shop1",
+    "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 독 택 세트",
+    "displayName": "크리온 독 택 세트",
+    "category": "其他商城",
+    "productTypeOverride": "商店時裝",
+    "shopProductKind": "coord",
+    "isShopProduct": true,
+    "krDate": "2026.10.01",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/a68e70a4-82a5-4728-9263-d11c07cdeb96/%ED%81%AC%EB%A6%AC%EC%98%A8%EB%8F%85%ED%83%9D%EC%88%98%EC%A0%95.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
+    "twStatus": "unmatched",
+    "twNameMatch": false,
+    "twImageMatch": false,
+    "twManualMatch": false,
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDateSource": null,
+    "twSaleDateText": null,
+    "twDates": [],
+    "twTitles": [],
+    "twEvidence": [],
+    "productType": "商店時裝",
+    "relatedTypes": [
+      "預覽"
+    ],
+    "shopPath": [
+      "캐시샵",
+      "패키지",
+      "크리온",
+      "게임 내 메뉴",
+      "캐시샵",
+      "패키지",
+      "선물하기",
+      "선물하기",
+      "선물하기"
+    ],
+    "colorCodes": [],
+    "includePreviewImages": true,
+    "legacyCategory": "其他商城",
+    "sourceBoard": "/News/Notice",
+    "galleryImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/a68e70a4-82a5-4728-9263-d11c07cdeb96/%ED%81%AC%EB%A6%AC%EC%98%A8%EB%8F%85%ED%83%9D%EC%88%98%EC%A0%95.png"
+    ],
+    "cardImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/a68e70a4-82a5-4728-9263-d11c07cdeb96/%ED%81%AC%EB%A6%AC%EC%98%A8%EB%8F%85%ED%83%9D%EC%88%98%EC%A0%95.png"
+    ],
+    "isRerun": false,
+    "firstReleaseId": "3554491_shop1",
+    "firstReleaseDate": "2026.10.01",
+    "rerunIndex": 0,
+    "localImages": [
+      "assets/fashion-web/3554491_1.webp"
+    ],
+    "zhName": "克里昂狗牌套裝"
+  },
+  {
+    "id": "3554491_shop2",
+    "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 팝 패치 세트",
+    "displayName": "크리온 팝 패치 세트",
+    "category": "其他商城",
+    "productTypeOverride": "商店時裝",
+    "shopProductKind": "coord",
+    "isShopProduct": true,
+    "krDate": "2026.10.01",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/88f168a7-ebd5-4354-9725-39c21b472b96/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%9D%ED%8C%A8%EC%B9%98%EC%88%98%EC%A0%95.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
+    "twStatus": "unmatched",
+    "twNameMatch": false,
+    "twImageMatch": false,
+    "twManualMatch": false,
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDateSource": null,
+    "twSaleDateText": null,
+    "twDates": [],
+    "twTitles": [],
+    "twEvidence": [],
+    "productType": "商店時裝",
+    "relatedTypes": [
+      "預覽"
+    ],
+    "shopPath": [
+      "캐시샵",
+      "패키지",
+      "크리온",
+      "게임 내 메뉴",
+      "캐시샵",
+      "패키지",
+      "선물하기",
+      "선물하기",
+      "선물하기"
+    ],
+    "colorCodes": [],
+    "includePreviewImages": true,
+    "legacyCategory": "其他商城",
+    "sourceBoard": "/News/Notice",
+    "galleryImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/88f168a7-ebd5-4354-9725-39c21b472b96/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%9D%ED%8C%A8%EC%B9%98%EC%88%98%EC%A0%95.png"
+    ],
+    "cardImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/88f168a7-ebd5-4354-9725-39c21b472b96/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%9D%ED%8C%A8%EC%B9%98%EC%88%98%EC%A0%95.png"
+    ],
+    "isRerun": false,
+    "firstReleaseId": "3554491_shop2",
+    "firstReleaseDate": "2026.10.01",
+    "rerunIndex": 0,
+    "localImages": [
+      "assets/fashion-web/3554491_2.webp"
+    ],
+    "zhName": "克里昂流行徽章套裝"
+  },
+  {
+    "id": "3554491_shop3",
+    "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 와이어 세트",
+    "displayName": "크리온 와이어 세트",
+    "category": "其他商城",
+    "productTypeOverride": "商店時裝",
+    "shopProductKind": "coord",
+    "isShopProduct": true,
+    "krDate": "2026.10.01",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/3f69d8e8-b64b-424c-ae2c-5ffd24f9e642/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%99%80%EC%9D%B4%EC%96%B4%EC%88%98%EC%A0%95.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
+    "twStatus": "unmatched",
+    "twNameMatch": false,
+    "twImageMatch": false,
+    "twManualMatch": false,
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDateSource": null,
+    "twSaleDateText": null,
+    "twDates": [],
+    "twTitles": [],
+    "twEvidence": [],
+    "productType": "商店時裝",
+    "relatedTypes": [
+      "預覽"
+    ],
+    "shopPath": [
+      "캐시샵",
+      "패키지",
+      "크리온",
+      "게임 내 메뉴",
+      "캐시샵",
+      "패키지",
+      "선물하기",
+      "선물하기",
+      "선물하기"
+    ],
+    "colorCodes": [],
+    "includePreviewImages": true,
+    "legacyCategory": "其他商城",
+    "sourceBoard": "/News/Notice",
+    "galleryImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/3f69d8e8-b64b-424c-ae2c-5ffd24f9e642/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%99%80%EC%9D%B4%EC%96%B4%EC%88%98%EC%A0%95.png"
+    ],
+    "cardImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/3f69d8e8-b64b-424c-ae2c-5ffd24f9e642/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%99%80%EC%9D%B4%EC%96%B4%EC%88%98%EC%A0%95.png"
+    ],
+    "isRerun": false,
+    "firstReleaseId": "3554491_shop3",
+    "firstReleaseDate": "2026.10.01",
+    "rerunIndex": 0,
+    "localImages": [
+      "assets/fashion-web/3554491_3.webp"
+    ],
+    "zhName": "克里昂鐵絲套裝"
+  },
+  {
+    "id": "3554491_shop4",
+    "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 파이브스타 이어링",
+    "displayName": "크리온 파이브스타 이어링",
+    "category": "其他商城",
+    "productTypeOverride": "新造型",
+    "shopProductKind": "accessory",
+    "isShopProduct": true,
+    "krDate": "2026.10.01",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/8e18e1dc-d7b5-4c82-8188-9ffc8dda7b64/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%8A%A4%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
+    "twStatus": "unmatched",
+    "twNameMatch": false,
+    "twImageMatch": false,
+    "twManualMatch": false,
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDateSource": null,
+    "twSaleDateText": null,
+    "twDates": [],
+    "twTitles": [],
+    "twEvidence": [],
+    "productType": "新造型",
+    "relatedTypes": [
+      "預覽"
+    ],
+    "shopPath": [
+      "캐시샵",
+      "패키지",
+      "크리온",
+      "게임 내 메뉴",
+      "캐시샵",
+      "패키지",
+      "선물하기",
+      "선물하기",
+      "선물하기"
+    ],
+    "colorCodes": [],
+    "includePreviewImages": true,
+    "legacyCategory": "其他商城",
+    "sourceBoard": "/News/Notice",
+    "galleryImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/8e18e1dc-d7b5-4c82-8188-9ffc8dda7b64/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%8A%A4%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+    ],
+    "cardImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260930/8e18e1dc-d7b5-4c82-8188-9ffc8dda7b64/%ED%81%AC%EB%A6%AC%EC%98%A8%ED%8C%8C%EC%9D%B4%EB%B8%8C%EC%8A%A4%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%81.png"
+    ],
+    "isRerun": false,
+    "firstReleaseId": "3554491_shop4",
+    "firstReleaseDate": "2026.10.01",
+    "rerunIndex": 0,
+    "localImages": [
+      "assets/fashion-web/3554491_4.webp"
+    ],
+    "zhName": "克里昂五星耳環"
+  },
+  {
+    "id": "3554491_shop5",
+    "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 펜듈럼 앤 핀 커프",
+    "displayName": "크리온 펜듈럼 앤 핀 커프",
+    "category": "其他商城",
+    "productTypeOverride": "新造型",
+    "shopProductKind": "accessory",
+    "isShopProduct": true,
+    "krDate": "2026.10.01",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/751aaaac-b682-4662-aac4-2adfff7917bd/%EA%B7%80%EA%B1%B8%EC%9D%B4B.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
+    "twStatus": "unmatched",
+    "twNameMatch": false,
+    "twImageMatch": false,
+    "twManualMatch": false,
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDateSource": null,
+    "twSaleDateText": null,
+    "twDates": [],
+    "twTitles": [],
+    "twEvidence": [],
+    "productType": "新造型",
+    "relatedTypes": [
+      "預覽"
+    ],
+    "shopPath": [
+      "캐시샵",
+      "패키지",
+      "크리온",
+      "게임 내 메뉴",
+      "캐시샵",
+      "패키지",
+      "선물하기",
+      "선물하기",
+      "선물하기"
+    ],
+    "colorCodes": [],
+    "includePreviewImages": true,
+    "legacyCategory": "其他商城",
+    "sourceBoard": "/News/Notice",
+    "galleryImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/751aaaac-b682-4662-aac4-2adfff7917bd/%EA%B7%80%EA%B1%B8%EC%9D%B4B.png"
+    ],
+    "cardImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/751aaaac-b682-4662-aac4-2adfff7917bd/%EA%B7%80%EA%B1%B8%EC%9D%B4B.png"
+    ],
+    "isRerun": false,
+    "firstReleaseId": "3554491_shop5",
+    "firstReleaseDate": "2026.10.01",
+    "rerunIndex": 0,
+    "localImages": [
+      "assets/fashion-web/3554491_5.webp"
+    ],
+    "zhName": "克里昂吊墜與別針袖扣"
+  },
+  {
+    "id": "3554491_shop6",
+    "title": "10/1(목) 크리온 팝업 스토어 패키지 안내 (남성 캐릭터 전용 패션 장비 상품)",
+    "name": "크리온 카모플라쥬 백팩",
+    "displayName": "크리온 카모플라쥬 백팩",
+    "category": "其他商城",
+    "productTypeOverride": "新造型",
+    "shopProductKind": "accessory",
+    "isShopProduct": true,
+    "krDate": "2026.10.01",
+    "images": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/4e322341-e49a-46b0-83a0-81e887478ca1/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%B9%B4%EB%AA%A8%ED%94%8C%EB%9D%BC%EC%A5%AC%EB%B0%B1%ED%8C%A9.png"
+    ],
+    "sourceUrl": "https://mabinogimobile.nexon.com/News/Notice/3554491",
+    "twStatus": "unmatched",
+    "twNameMatch": false,
+    "twImageMatch": false,
+    "twManualMatch": false,
+    "twReleased": false,
+    "twFullyReleased": false,
+    "twMatchedImageCount": 0,
+    "twTotalImageCount": 1,
+    "twDate": null,
+    "twDateSource": null,
+    "twSaleDateText": null,
+    "twDates": [],
+    "twTitles": [],
+    "twEvidence": [],
+    "productType": "新造型",
+    "relatedTypes": [
+      "預覽"
+    ],
+    "shopPath": [
+      "캐시샵",
+      "패키지",
+      "크리온",
+      "게임 내 메뉴",
+      "캐시샵",
+      "패키지",
+      "선물하기",
+      "선물하기",
+      "선물하기"
+    ],
+    "colorCodes": [],
+    "includePreviewImages": true,
+    "legacyCategory": "其他商城",
+    "sourceBoard": "/News/Notice",
+    "galleryImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/4e322341-e49a-46b0-83a0-81e887478ca1/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%B9%B4%EB%AA%A8%ED%94%8C%EB%9D%BC%EC%A5%AC%EB%B0%B1%ED%8C%A9.png"
+    ],
+    "cardImages": [
+      "https://dszw1qtcnsa5e.cloudfront.net/community/20260929/4e322341-e49a-46b0-83a0-81e887478ca1/%ED%81%AC%EB%A6%AC%EC%98%A8%EC%B9%B4%EB%AA%A8%ED%94%8C%EB%9D%BC%EC%A5%AC%EB%B0%B1%ED%8C%A9.png"
+    ],
+    "isRerun": false,
+    "firstReleaseId": "3554491_shop6",
+    "firstReleaseDate": "2026.10.01",
+    "rerunIndex": 0,
+    "localImages": [
+      "assets/fashion-web/3554491_6.webp"
+    ],
+    "zhName": "克里昂迷彩背包"
   }
 ]

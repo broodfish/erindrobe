@@ -454,6 +454,7 @@ async function applyPending({
   rawDir = RAW,
   buildCandidates = () => {},
   buildDataset = () => {},
+  pretranslate = () => {},
   syncCacheVersions: syncCache = () => {},
 } = {}) {
   const pendingPath = path.join(rawDir, 'kr-pending.json');
@@ -512,6 +513,7 @@ async function applyPending({
     path.join(rawDir, 'kr-events-merged.json'),
     path.join(rawDir, 'kr-candidates.json'),
     path.join(ROOT, 'data', 'fashion.json'),
+    path.join(rawDir, 'kr-translations.json'),
   ]);
   for (const file of listUpdates.keys()) rollbackPaths.add(path.join(rawDir, file));
   const snapshots = new Map([...rollbackPaths].map(file => [
@@ -536,6 +538,7 @@ async function applyPending({
     writeJsonAtomically(pendingPath, remainingPending);
     await buildCandidates();
     await buildDataset();
+    await pretranslate();
     syncCache();
   } catch (error) {
     restore();
@@ -558,6 +561,7 @@ async function runApply(argv) {
     applyAuto,
     buildCandidates: () => runBuildScript('filter-kr-candidates.js'),
     buildDataset: () => runBuildScript('build-dataset.js'),
+    pretranslate: () => runBuildScript('pretranslate-kr.js'),
     syncCacheVersions: () => syncCacheVersions(ROOT),
   });
   console.log(`Applied ${result.appliedIds.length} Korean pending records: ${result.appliedIds.join(', ')}`);

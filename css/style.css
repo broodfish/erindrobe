@@ -217,6 +217,14 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 
 .select-field { display: grid; gap: 3px; min-width: 138px; color: var(--color-text-muted); font-size: 0.68rem; font-weight: 700; }
 .select-field select { min-height: 42px; padding: 0 30px 0 10px; border: 1px solid var(--color-border-strong); border-radius: 0; background: var(--color-bg-surface); color: var(--color-text); font-size: 0.8rem; }
+.original-toggle { display: inline-flex; align-items: center; align-self: end; gap: 8px; min-height: 42px; padding: 0 10px; border: 1px solid var(--color-border-strong); background: var(--color-bg-surface); color: var(--color-text-secondary); cursor: pointer; font-size: 0.76rem; font-weight: 700; white-space: nowrap; }
+.original-toggle input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.original-toggle-track { position: relative; display: block; width: 30px; height: 17px; border-radius: 999px; background: var(--color-border-strong); transition: background 150ms ease; }
+.original-toggle-track span { position: absolute; top: 3px; left: 3px; width: 11px; height: 11px; border-radius: 50%; background: var(--color-bg-surface); box-shadow: 0 1px 2px rgb(28 22 18 / 0.24); transition: transform 150ms ease; }
+.original-toggle input:checked + .original-toggle-track { background: var(--color-brand); }
+.original-toggle input:checked + .original-toggle-track span { transform: translateX(13px); }
+.original-toggle input:focus-visible + .original-toggle-track { outline: 2px solid var(--color-border-focus); outline-offset: 3px; }
+.original-toggle:hover { border-color: var(--color-brand); color: var(--color-brand); }
 .today-button, .clear-button { min-height: 42px; padding: 0 14px; border: 1px solid var(--color-bg-inverse); border-radius: 0; cursor: pointer; }
 .today-button { background: var(--color-bg-inverse); color: var(--color-text-inverse); font-size: 0.78rem; font-weight: 700; }
 .today-button:hover { background: var(--color-brand); border-color: var(--color-brand); }
@@ -419,6 +427,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   .control-row { display: grid; grid-template-columns: 1fr 1fr; }
   .search-field { grid-column: 1 / -1; }
   .select-field { min-width: 0; }
+  .original-toggle { justify-content: center; min-width: 0; }
   .today-button { grid-column: 1 / -1; }
   .category-row { align-items: flex-start; }
   .category-label { padding-top: 8px; }

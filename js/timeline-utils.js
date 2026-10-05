@@ -16,6 +16,29 @@
     return item && (item.twStatus === 'confirmed' || item.twReleased === true) ? 'confirmed' : 'unmatched';
   }
 
+  function getPrimaryItemName(item, showTaiwanStatus = false, showOriginal = false) {
+    if (showOriginal && item.name) return item.name;
+    if (showTaiwanStatus && getPublicTwStatus(item) === 'confirmed' && item.displayName) {
+      return item.displayName;
+    }
+    return item.zhName || item.name;
+  }
+
+  function getSecondaryItemName(item, primaryName, showOriginal = false) {
+    if (showOriginal) {
+      const translatedName = item.zhName
+        || (item.displayName && /[\u3400-\u9fff]/u.test(item.displayName) ? item.displayName : '');
+      return translatedName && translatedName !== item.name ? `中文：${translatedName}` : '';
+    }
+    if (primaryName !== item.name) return `韓文：${item.name}`;
+    const existingChineseName = item.displayName
+      && item.displayName !== item.name
+      && /[\u3400-\u9fff]/u.test(item.displayName)
+      ? item.displayName
+      : '';
+    return existingChineseName ? `中文：${existingChineseName}` : '';
+  }
+
   function isPublicTimelineItem(item, hiddenChoiceKinds = []) {
     return !hiddenChoiceKinds.includes(item?.choiceKind);
   }
@@ -110,7 +133,7 @@
       if (month !== 'all' && String(item.krDate || '').slice(0, 7).replace('.', '-') !== month) return false;
       if (normalizedQuery) {
         const haystack = [
-          item.name, item.displayName, item.title, item.category, item.productType,
+          item.name, item.zhName, item.displayName, item.title, item.category, item.productType,
           ...(item.relatedTypes || []), ...(item.shopPath || []), ...(item.components || []),
           ...(item.colorCodes || []), item.id,
         ]
@@ -152,6 +175,8 @@
 
   return {
     filterTimelineItems,
+    getPrimaryItemName,
+    getSecondaryItemName,
     getCategoryFilterKey,
     getCategoryDisplayName,
     getImageCountHint,

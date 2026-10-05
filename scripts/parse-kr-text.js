@@ -366,6 +366,10 @@ function parseFashionShopProducts(text) {
   const uniqueProducts = [];
   for (const product of products) {
     if (!product.name) continue;
+    // Lucky-box component rows can be mistaken for shop continuation rows when a notice contains
+    // both sections. Gender-specific component labels are not standalone shop products; discard
+    // them before they reach the timeline.
+    if (/(?:남성용|여성용)/u.test(product.name)) continue;
     const escapedProductName = product.name.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
     if (new RegExp(`${escapedProductName}\\s+이미지가\\s*삭제되었습니다`, 'u').test(source)) continue;
     const existingIndex = uniqueProducts.findIndex(existing => existing.name === product.name);
@@ -395,6 +399,82 @@ function parseFashionShopProducts(text) {
     const baseName = name => name.replace(/\s+\([^)]*\)$/u, '');
     return source.indexOf(baseName(a.name)) - source.indexOf(baseName(b.name));
   });
+}
+
+// Parse the newer package-notice preview block. These notices do not expose a 패션샵/꾸미기
+// table, but the official preview heading still lists each named fashion equipment product in
+// display order. Keep this parser scoped to that heading so package contents and promotional
+// posters do not become cards.
+function parseFashionPreviewProducts(text, images = []) {
+  const source = String(text || '').replace(/\s+/g, ' ').trim();
+  const marker = source.match(/패션\s*장비\s*미리보기/u);
+  if (!marker) return [];
+
+  const start = marker.index + marker[0].length;
+  // Some lucky-box notices only describe how to use the preview viewer. They do not contain a
+  // named product preview block and must continue through the existing lucky-box path.
+  if (/^\s*유의\s*사항/u.test(source.slice(start))) return [];
+  const endCandidates = [
+    source.indexOf('🐈‍⬛', start),
+    source.indexOf('📢', start),
+    source.indexOf('유의사항', start),
+  ].filter(index => index >= 0);
+  const section = source.slice(start, endCandidates.length ? Math.min(...endCandidates) : source.length);
+  const sectionNames = [];
+  const seenNames = new Set();
+  const addName = (name, kind) => {
+    const normalized = name.replace(/\s+/g, ' ').trim();
+    if (!normalized || seenNames.has(normalized)) return;
+    seenNames.add(normalized);
+    sectionNames.push({ name: normalized, kind, index: section.indexOf(normalized) });
+  };
+
+  // Set names are listed directly after the preview marker, for example "크리온 스트라이커 세트".
+  // The marker has already been removed from `section`, preventing it from being captured as part
+  // of the first product name.
+  const setRe = /([가-힣A-Za-z0-9]+(?:\s+[가-힣A-Za-z0-9]+){1,4})\s+세트(?=\s|$)/gu;
+  for (const match of section.matchAll(setRe)) addName(`${match[1]} 세트`, 'fashion-set');
+
+  // Accessories are named in the package-component rows and repeated in the preview heading.
+  // Select the longest suffix before each character-specific component marker that actually
+  // occurs in the preview section, avoiding the many individual set pieces in the same table.
+  const sectionNormalized = normalizeImageName(section);
+  for (const match of source.matchAll(/\(남성용\)/gu)) {
+    const precedingTokens = (source.slice(Math.max(0, match.index - 100), match.index).match(/[가-힣A-Za-z0-9]+/gu) || []);
+    for (let length = Math.min(6, precedingTokens.length); length >= 2; length -= 1) {
+      const candidate = precedingTokens.slice(-length).join(' ');
+      if (sectionNormalized.includes(normalizeImageName(candidate))) {
+        addName(candidate, 'accessory');
+        break;
+      }
+    }
+  }
+
+  sectionNames.sort((a, b) => a.index - b.index);
+  const unusedImages = [...new Set(images || [])];
+  const usedImages = new Set();
+  const imageStem = image => normalizeImageName(
+    decodeURIComponent(String(image)).split('/').pop().replace(/\.[^.]+$/u, ''),
+  );
+  const imageFor = name => {
+    const normalizedName = normalizeImageName(name);
+    const setPrefix = normalizedName.replace(/세트$/u, '');
+    const match = unusedImages.find(image => {
+      const stem = imageStem(image);
+      return !usedImages.has(image)
+        && (stem.includes(normalizedName) || (setPrefix && stem.includes(setPrefix)));
+    });
+    const fallback = unusedImages.find(image => !usedImages.has(image));
+    const selected = match || fallback;
+    if (selected) usedImages.add(selected);
+    return selected ? [selected] : [];
+  };
+
+  return sectionNames.map(({ name, kind }) => ({
+    name,
+    kind,
+    images: imageFor(name),
+  }));
 }
 
 function parseAppearanceProducts(text) {
@@ -514,6 +594,7 @@ if (require.main === module) {
 module.exports = {
   parseActionPreviews,
   parseFashionShopProducts,
+  parseFashionPreviewProducts,
   parseAppearanceProducts,
   parseHairProducts,
   parseLuckyBoxNotice,
