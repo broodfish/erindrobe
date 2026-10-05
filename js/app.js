@@ -173,7 +173,7 @@
   }
 
   async function loadData() {
-    const response = await fetch("data/fashion.json?v=timeline-26");
+    const response = await fetch("data/fashion.json?v=b30dec5c90fd");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const items = await response.json();
     return items.filter((item) => utils.isPublicTimelineItem(item, HIDDEN_CHOICE_KINDS));

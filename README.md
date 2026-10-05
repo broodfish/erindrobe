@@ -34,6 +34,10 @@ npm run update:kr:apply -- --ids <ID1,ID2>
 # 下載這次新增項目的圖片並壓縮成 WebP
 MBC_IMAGE_IDS=<ID1,ID2> npm run build:images
 
+# 同步前端資源版本，避免 GitHub Pages 沿用舊的 CSS、JS 或資料快取
+# update:kr:apply 會自動執行；若是手動修改資料或介面，請執行這行
+npm run prepare:pages
+
 # 發布前驗證
 npm test && npm run validate:data && git diff --check
 

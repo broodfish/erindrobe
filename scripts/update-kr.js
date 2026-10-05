@@ -5,6 +5,7 @@ const { execFileSync } = require('node:child_process');
 const { mergeBoardItems, scanBoardSince } = require('./kr-incremental.js');
 const { classifyNotice } = require('./kr-notice-triage.js');
 const { validateRecords, writeJsonAtomically } = require('./validate-raw-data.js');
+const { syncCacheVersions } = require('./cache-version.js');
 
 const BASE = 'https://mabinogimobile.nexon.com';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
@@ -453,6 +454,7 @@ async function applyPending({
   rawDir = RAW,
   buildCandidates = () => {},
   buildDataset = () => {},
+  syncCacheVersions: syncCache = () => {},
 } = {}) {
   const pendingPath = path.join(rawDir, 'kr-pending.json');
   const pending = normalizePending(loadJson(pendingPath, emptyPending()));
@@ -534,6 +536,7 @@ async function applyPending({
     writeJsonAtomically(pendingPath, remainingPending);
     await buildCandidates();
     await buildDataset();
+    syncCache();
   } catch (error) {
     restore();
     throw error;
@@ -555,6 +558,7 @@ async function runApply(argv) {
     applyAuto,
     buildCandidates: () => runBuildScript('filter-kr-candidates.js'),
     buildDataset: () => runBuildScript('build-dataset.js'),
+    syncCacheVersions: () => syncCacheVersions(ROOT),
   });
   console.log(`Applied ${result.appliedIds.length} Korean pending records: ${result.appliedIds.join(', ')}`);
   return result;

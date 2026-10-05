@@ -266,6 +266,19 @@ test('apply auto selects only auto-included pending records', async () => {
   assert.deepEqual(result.remainingPending.records.map(item => item.id), ['104']);
 });
 
+test('apply synchronizes asset cache versions after rebuilding the dataset', async () => {
+  const fixture = fixtureApplyOptions();
+  let syncCalls = 0;
+
+  const result = await applyPending({
+    ...fixture,
+    syncCacheVersions: () => { syncCalls += 1; },
+  });
+
+  assert.deepEqual(result.appliedIds, ['103']);
+  assert.equal(syncCalls, 1);
+});
+
 test('apply rejects an ID that is not pending without changing raw data', async () => {
   const options = fixtureApplyOptions();
   const detailsPath = path.join(options.rawDir, 'kr-details.json');
